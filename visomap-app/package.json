@@ -1,7 +1,7 @@
 {
   "name": "visomap-app",
   "private": true,
-  "homepage": "https://alekssultanov.github.io/VisioMapGps/settings",
+  "homepage": "https://alekssultanov.github.io/VisioMapGps",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
