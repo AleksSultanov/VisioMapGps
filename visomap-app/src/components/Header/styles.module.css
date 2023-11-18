@@ -1,0 +1,16 @@
+.box {
+  margin-top: 0;
+  
+}  
+.headers {
+  display: flex;
+  flex-direction:row;
+  list-style-type:none;
+}
+
+.hlinks {
+  margin-left: 15px;
+}  
+.isActive {
+  text-decoration: underline;
+}

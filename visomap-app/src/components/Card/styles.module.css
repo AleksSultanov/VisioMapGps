@@ -1,0 +1,39 @@
+.box{
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.img{
+  max-width: 360px; 
+  border-radius: 20px;
+}
+
+.boxfooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin-left: 10px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}
+
+.button{
+  
+  background-color: rgba(0,0,0,0.05);
+  max-height: 36px;
+  border-radius: 18px;
+  margin-top: 5px;
+  align-self: flex-start;
+  
+}
+

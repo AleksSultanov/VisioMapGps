@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <script>
+   L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+  </script>
+  <style>
+   html, body {width: 100%;height: 100%;margin: 0;padding: 0;}
+  </style>
+  <style>
+   #map {position:absolute;top:0;bottom:0;right:0;left:0;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js">
+  </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js">
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" rel="stylesheet"/>
+  <meta content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <style>
+   #map_bad0bc39ce61af795acf716dab2dfbbd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js">
+  </script>
+  <link href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="folium-map" id="map_bad0bc39ce61af795acf716dab2dfbbd">
+  </div>
+  <script src="../js/editMappoint.js" type="text/javascript">
+  </script>
+ </body>
+ <script>
+  var map_bad0bc39ce61af795acf716dab2dfbbd = L.map(
+                "map_bad0bc39ce61af795acf716dab2dfbbd",
+                {
+                    center: [41.5543611, 70.1186754],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4ab81ade3b0e03bf71cf6e2a6798b19a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var tile_layer_6d5fd7d62406f939c93400047c4cd91f = L.tileLayer(
+                "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png",
+                {"attribution": "\u003ca href=\"https://github.com/cyclosm/cyclosm-cartocss-style/releases\" title=\"CyclOSM - Open Bicycle render\"\u003eCyclOSM\u003c/a\u003e | Map data: \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var tile_layer_2f2010c13c2a1258df2cf747ece21aac = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var tile_layer_7137696c30b831b814d5077d899bd906 = L.tileLayer(
+                "http://{s}.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "google", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": ["mt0", "mt1", "mt2", "mt3"], "tms": false}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var tile_layer_37cae32b773b71436256fcfd6ca7ca52 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var feature_group_c77547656684cce61f8a3caffce69083 = L.featureGroup(
+                {}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var marker_71438bbd5871514bc7f4bb61bfbfe636 = L.marker(
+                [41.55, 70.12],
+                {}
+            ).addTo(feature_group_c77547656684cce61f8a3caffce69083);
+        
+    
+            var icon_066395f3174064b21d639c1c94cef0b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_71438bbd5871514bc7f4bb61bfbfe636.setIcon(icon_066395f3174064b21d639c1c94cef0b6);
+        
+    
+        var popup_418b3b77b3a2dbeca2f0d04a73ac9fcd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd2279647471671db5dc1d5bbde7918f = $(`<div id="html_dd2279647471671db5dc1d5bbde7918f" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.55&lon=70.12&detailLat=41.55&detailLon=70.121&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_418b3b77b3a2dbeca2f0d04a73ac9fcd.setContent(html_dd2279647471671db5dc1d5bbde7918f);
+            
+        
+
+        marker_71438bbd5871514bc7f4bb61bfbfe636.bindPopup(popup_418b3b77b3a2dbeca2f0d04a73ac9fcd)
+        ;
+
+        
+    
+    
+            var marker_8ca721cf8e845f49d56854bb74aeaee6 = L.marker(
+                [41.54, 70.14],
+                {}
+            ).addTo(feature_group_c77547656684cce61f8a3caffce69083);
+        
+    
+            var icon_58c09b666c30967d10b158cbfe84775a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_8ca721cf8e845f49d56854bb74aeaee6.setIcon(icon_58c09b666c30967d10b158cbfe84775a);
+        
+    
+        var popup_d51fe264bf64e01a2e417550a6ae4eee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9dbf9afa53c77dbd55d3f8250dbc23e6 = $(`<div id="html_9dbf9afa53c77dbd55d3f8250dbc23e6" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.54&lon=70.14&detailLat=41.54&detailLon=70.141&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_d51fe264bf64e01a2e417550a6ae4eee.setContent(html_9dbf9afa53c77dbd55d3f8250dbc23e6);
+            
+        
+
+        marker_8ca721cf8e845f49d56854bb74aeaee6.bindPopup(popup_d51fe264bf64e01a2e417550a6ae4eee)
+        ;
+
+        
+    
+    
+            var marker_702ab9df5cfc61bd9c650196144de001 = L.marker(
+                [41.57, 70.17],
+                {}
+            ).addTo(feature_group_c77547656684cce61f8a3caffce69083);
+        
+    
+            var icon_416a8766748ed37b5e5c89a765efedcf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_702ab9df5cfc61bd9c650196144de001.setIcon(icon_416a8766748ed37b5e5c89a765efedcf);
+        
+    
+        var popup_3466af08d804dcdca38576d16177aac2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ede5d7141af66025be0469250c26b58 = $(`<div id="html_1ede5d7141af66025be0469250c26b58" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.57&lon=70.17&detailLat=41.57&detailLon=70.171&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_3466af08d804dcdca38576d16177aac2.setContent(html_1ede5d7141af66025be0469250c26b58);
+            
+        
+
+        marker_702ab9df5cfc61bd9c650196144de001.bindPopup(popup_3466af08d804dcdca38576d16177aac2)
+        ;
+
+        
+    
+    
+            var marker_a98d699248f5d848cbfcba2de8acddb0 = L.marker(
+                [41.54, 70.15],
+                {}
+            ).addTo(feature_group_c77547656684cce61f8a3caffce69083);
+        
+    
+            var icon_cbd0cc3ba05100b45a0c201a0267a8f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a98d699248f5d848cbfcba2de8acddb0.setIcon(icon_cbd0cc3ba05100b45a0c201a0267a8f8);
+        
+    
+        var popup_9a7272b2178615021e7a7e5dba60cb7f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_185110873afcf87c3ea7d206b7eb46de = $(`<div id="html_185110873afcf87c3ea7d206b7eb46de" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.54&lon=70.15&detailLat=41.54&detailLon=70.151&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_9a7272b2178615021e7a7e5dba60cb7f.setContent(html_185110873afcf87c3ea7d206b7eb46de);
+            
+        
+
+        marker_a98d699248f5d848cbfcba2de8acddb0.bindPopup(popup_9a7272b2178615021e7a7e5dba60cb7f)
+        ;
+
+        
+    
+    
+            var feature_group_083b711bc6e6203cc294704a4170b8bc = L.featureGroup(
+                {}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var marker_2acf4b9de0ba50774a57ce8bacade1ba = L.marker(
+                [41.53785, 70.1422],
+                {}
+            ).addTo(feature_group_083b711bc6e6203cc294704a4170b8bc);
+        
+    
+            var icon_42778a64261b97f39606f993c5a596ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_2acf4b9de0ba50774a57ce8bacade1ba.setIcon(icon_42778a64261b97f39606f993c5a596ee);
+        
+    
+        var popup_970fabaf01de1d130a6fd466cc1bd24a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2670c7ba35e11c13796561fd2a87f2d1 = $(`<div id="html_2670c7ba35e11c13796561fd2a87f2d1" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://disk.yandex.uz/i/lIgsSi5Ala26IA"></div><hr><a href = "https://disk.yandex.uz/i/lIgsSi5Ala26IA" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.53785,70.1422" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.53785/70.1422"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.53785&lon=70.1422&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1422,41.53785&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.53785&lon=70.1422" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.53785/70.1422&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+                popup_970fabaf01de1d130a6fd466cc1bd24a.setContent(html_2670c7ba35e11c13796561fd2a87f2d1);
+            
+        
+
+        marker_2acf4b9de0ba50774a57ce8bacade1ba.bindPopup(popup_970fabaf01de1d130a6fd466cc1bd24a)
+        ;
+
+        
+    
+    
+            var marker_98ff320ac043a4892e31600a0b0494c7 = L.marker(
+                [41.53975, 70.14515],
+                {}
+            ).addTo(feature_group_083b711bc6e6203cc294704a4170b8bc);
+        
+    
+            var icon_e3b70e47f5364e3aa2b3684b39ac98a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_98ff320ac043a4892e31600a0b0494c7.setIcon(icon_e3b70e47f5364e3aa2b3684b39ac98a2);
+        
+    
+        var popup_738e6c2e36d2a7cbb1177cf59c08b580 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_414282a9bb3584b952d2c40b2c1f62fc = $(`<div id="html_414282a9bb3584b952d2c40b2c1f62fc" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://disk.yandex.uz/i/K3DDVx_fVZWJYA"></div><hr><a href = "https://disk.yandex.uz/i/K3DDVx_fVZWJYA" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.53975,70.14515" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.53975/70.14515"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.53975&lon=70.14515&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.14515,41.53975&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.53975&lon=70.14515" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.53975/70.14515&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+                popup_738e6c2e36d2a7cbb1177cf59c08b580.setContent(html_414282a9bb3584b952d2c40b2c1f62fc);
+            
+        
+
+        marker_98ff320ac043a4892e31600a0b0494c7.bindPopup(popup_738e6c2e36d2a7cbb1177cf59c08b580)
+        ;
+
+        
+    
+    
+            var marker_d635861d2b6590c1f8326e12b03f105f = L.marker(
+                [41.56477, 70.1417],
+                {}
+            ).addTo(feature_group_083b711bc6e6203cc294704a4170b8bc);
+        
+    
+            var icon_1aa66aeceec195338d2ad65545a7de3c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_d635861d2b6590c1f8326e12b03f105f.setIcon(icon_1aa66aeceec195338d2ad65545a7de3c);
+        
+    
+        var popup_82c564bcc5887d10d5021485d9731c7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc5ada46f6fe15dd6468e1d9e6e56ee3 = $(`<div id="html_bc5ada46f6fe15dd6468e1d9e6e56ee3" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://disk.yandex.uz/i/ta87ydNM2jHLIQ"></div><hr><a href = "https://disk.yandex.uz/i/ta87ydNM2jHLIQ" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.56477,70.1417" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.56477/70.1417"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.56477&lon=70.1417&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1417,41.56477&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.56477&lon=70.1417" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.56477/70.1417&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+                popup_82c564bcc5887d10d5021485d9731c7a.setContent(html_bc5ada46f6fe15dd6468e1d9e6e56ee3);
+            
+        
+
+        marker_d635861d2b6590c1f8326e12b03f105f.bindPopup(popup_82c564bcc5887d10d5021485d9731c7a)
+        ;
+
+        
+    
+    
+            var marker_d49df5490783f5440626edb9f1e53fa8 = L.marker(
+                [41.56989, 70.17259],
+                {}
+            ).addTo(feature_group_083b711bc6e6203cc294704a4170b8bc);
+        
+    
+            var icon_e495a3566f9ea465d4ad061153d393c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_d49df5490783f5440626edb9f1e53fa8.setIcon(icon_e495a3566f9ea465d4ad061153d393c3);
+        
+    
+        var popup_480fe9aaf912c3043940d8173d323705 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48a2f865955ac1db114cf425853c977b = $(`<div id="html_48a2f865955ac1db114cf425853c977b" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://disk.yandex.uz/i/qcn2bWZQZ4trDw"></div><hr><a href = "https://disk.yandex.uz/i/qcn2bWZQZ4trDw" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.56989,70.17259" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.56989/70.17259"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.56989&lon=70.17259&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.17259,41.56989&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.56989&lon=70.17259" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.56989/70.17259&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+                popup_480fe9aaf912c3043940d8173d323705.setContent(html_48a2f865955ac1db114cf425853c977b);
+            
+        
+
+        marker_d49df5490783f5440626edb9f1e53fa8.bindPopup(popup_480fe9aaf912c3043940d8173d323705)
+        ;
+
+        
+    
+    
+            var marker_c9c9d9b4fb7e94092d950dac6748096c = L.marker(
+                [41.56975, 70.16105],
+                {}
+            ).addTo(feature_group_083b711bc6e6203cc294704a4170b8bc);
+        
+    
+            var icon_e2a9b51100283379c7365f20c426f14f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_c9c9d9b4fb7e94092d950dac6748096c.setIcon(icon_e2a9b51100283379c7365f20c426f14f);
+        
+    
+        var popup_929668f55b1673d57cbcd028384416c0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4287b026589b6aeb780d180b5b260e5f = $(`<div id="html_4287b026589b6aeb780d180b5b260e5f" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://disk.yandex.uz/i/e5SQeD-9rda98w"></div><hr><a href = "https://disk.yandex.uz/i/e5SQeD-9rda98w" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.56975,70.16105" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.56975/70.16105"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.56975&lon=70.16105&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.16105,41.56975&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.56975&lon=70.16105" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.56975/70.16105&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+                popup_929668f55b1673d57cbcd028384416c0.setContent(html_4287b026589b6aeb780d180b5b260e5f);
+            
+        
+
+        marker_c9c9d9b4fb7e94092d950dac6748096c.bindPopup(popup_929668f55b1673d57cbcd028384416c0)
+        ;
+
+        
+    
+    
+            var marker_ebc007200c3eebe132ee1dded0cf14fd = L.marker(
+                [41.56973, 70.16107],
+                {}
+            ).addTo(feature_group_083b711bc6e6203cc294704a4170b8bc);
+        
+    
+            var icon_e52a649c22e4ef4f5289d49ecf4a3001 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_ebc007200c3eebe132ee1dded0cf14fd.setIcon(icon_e52a649c22e4ef4f5289d49ecf4a3001);
+        
+    
+        var popup_f5f1a3ca04248f2ab02a595769f36149 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cfd948874b1cc8b95b5b3573b8b2ba01 = $(`<div id="html_cfd948874b1cc8b95b5b3573b8b2ba01" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://disk.yandex.uz/i/iaJnvwBrzGaiYw"></div><hr><a href = "https://disk.yandex.uz/i/iaJnvwBrzGaiYw" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.56973,70.16107" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.56973/70.16107"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.56973&lon=70.16107&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.16107,41.56973&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.56973&lon=70.16107" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.56973/70.16107&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+                popup_f5f1a3ca04248f2ab02a595769f36149.setContent(html_cfd948874b1cc8b95b5b3573b8b2ba01);
+            
+        
+
+        marker_ebc007200c3eebe132ee1dded0cf14fd.bindPopup(popup_f5f1a3ca04248f2ab02a595769f36149)
+        ;
+
+        
+    
+    
+            var feature_group_0282cc3bc4d1617394433ffd80171a5e = L.featureGroup(
+                {}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var poly_line_7099899ce6067d3e3907352df5d73d37 = L.polyline(
+                [[41.5397446, 70.1451375], [41.5396717, 70.1452398], [41.5396047, 70.1451548], [41.5395573, 70.1450385], [41.5395054, 70.1449398], [41.5394044, 70.144909], [41.539347, 70.1447993], [41.5392925, 70.1446902], [41.5392508, 70.1445632], [41.5392011, 70.1444334], [41.5391907, 70.1443118], [41.5392074, 70.1441895], [41.539152, 70.1440746], [41.5391886, 70.1439463], [41.5391312, 70.1438273], [41.5390977, 70.1436986], [41.5391402, 70.1435924], [41.5390703, 70.1434993], [41.5390312, 70.1433608], [41.5390384, 70.1432247], [41.5389454, 70.14316], [41.5389124, 70.1430303], [41.5388312, 70.1429564], [41.5387357, 70.1429449], [41.5386761, 70.1428354], [41.5385771, 70.1427858], [41.5384969, 70.1427102], [41.5383893, 70.1426402], [41.5383035, 70.1425653], [41.5382136, 70.1424907], [41.5381315, 70.1424119], [41.5380396, 70.1423691], [41.5379552, 70.1423061], [41.537884, 70.142203]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": "4.5"}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+            var circle_marker_003c30795b9bc8a5c7bb5b21cc6e64d4 = L.circleMarker(
+                [41.5397446, 70.1451375],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_e683a04ea8d0ae36f5fc122ed32ea2db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b2116df108979e3db1f8eb444f480a6 = $(`<div id="html_7b2116df108979e3db1f8eb444f480a6" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>995.0 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 09:55</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5397446</td></tr><tr><td>долгота:</td><td>70.1451375</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5397446,70.1451375" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5397446/70.1451375"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5397446&lon=70.1451375&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1451375,41.5397446&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5397446&lon=70.1451375" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5397446/70.1451375&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_e683a04ea8d0ae36f5fc122ed32ea2db.setContent(html_7b2116df108979e3db1f8eb444f480a6);
+            
+        
+
+        circle_marker_003c30795b9bc8a5c7bb5b21cc6e64d4.bindPopup(popup_e683a04ea8d0ae36f5fc122ed32ea2db)
+        ;
+
+        
+    
+    
+            var marker_1ccfa6fe65f902f54dfcabdf6a807031 = L.marker(
+                [41.5397446, 70.1451375],
+                {}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+            var icon_79c5092062736fcb977481474210fc04 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "purple", "iconSize": [5, 5], "markerColor": "purple", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_1ccfa6fe65f902f54dfcabdf6a807031.setIcon(icon_79c5092062736fcb977481474210fc04);
+        
+    
+        var popup_2f842741ec68e07f458a954d85e4f87c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4babfb3cd254a5f6c93953e65769368e = $(`<div id="html_4babfb3cd254a5f6c93953e65769368e" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>995.0 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 09:55</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5397446</td></tr><tr><td>долгота:</td><td>70.1451375</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5397446,70.1451375" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5397446/70.1451375"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5397446&lon=70.1451375&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1451375,41.5397446&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5397446&lon=70.1451375" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5397446/70.1451375&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_2f842741ec68e07f458a954d85e4f87c.setContent(html_4babfb3cd254a5f6c93953e65769368e);
+            
+        
+
+        marker_1ccfa6fe65f902f54dfcabdf6a807031.bindPopup(popup_2f842741ec68e07f458a954d85e4f87c)
+        ;
+
+        
+    
+    
+            var circle_marker_7bb02023c8c34c6606e6ba47bd6dd23f = L.circleMarker(
+                [41.5395573, 70.1450385],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_d5d4837fea2f1f938d6eac3fbc5e2028 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7aa28da12c456430c3b2fc5705390648 = $(`<div id="html_7aa28da12c456430c3b2fc5705390648" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>988.0 м</td></tr><tr><td>изменение:</td><td>-7.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 09:57</nobr></td></tr><tr><td>в пути:</td><td>0:01:59</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>34.66 м</td></tr><tr><td>рассчет 2:</td><td>36.96 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5395573</td></tr><tr><td>долгота:</td><td>70.1450385</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5395573,70.1450385" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5395573/70.1450385"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5395573&lon=70.1450385&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1450385,41.5395573&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5395573&lon=70.1450385" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5395573/70.1450385&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_d5d4837fea2f1f938d6eac3fbc5e2028.setContent(html_7aa28da12c456430c3b2fc5705390648);
+            
+        
+
+        circle_marker_7bb02023c8c34c6606e6ba47bd6dd23f.bindPopup(popup_d5d4837fea2f1f938d6eac3fbc5e2028)
+        ;
+
+        
+    
+    
+            var circle_marker_4df6ea8ff23209931b6eb46a88310ff8 = L.circleMarker(
+                [41.539347, 70.1447993],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_ef2965140ed6dd7fbf3bc706862bee83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ebe65e57b834f4acb67cd41303219f4 = $(`<div id="html_5ebe65e57b834f4acb67cd41303219f4" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>977.0 м</td></tr><tr><td>изменение:</td><td>-18.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 09:58</nobr></td></tr><tr><td>в пути:</td><td>0:03:29</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>63.43 м</td></tr><tr><td>рассчет 2:</td><td>67.9 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.539347</td></tr><tr><td>долгота:</td><td>70.1447993</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.539347,70.1447993" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.539347/70.1447993"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.539347&lon=70.1447993&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1447993,41.539347&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.539347&lon=70.1447993" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.539347/70.1447993&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_ef2965140ed6dd7fbf3bc706862bee83.setContent(html_5ebe65e57b834f4acb67cd41303219f4);
+            
+        
+
+        circle_marker_4df6ea8ff23209931b6eb46a88310ff8.bindPopup(popup_ef2965140ed6dd7fbf3bc706862bee83)
+        ;
+
+        
+    
+    
+            var marker_ac88424d889d16c9038281f705bf82e4 = L.marker(
+                [41.539347, 70.1447993],
+                {}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+            var icon_01a105089dbb92b887b3df391d5921c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "purple", "iconSize": [5, 5], "markerColor": "purple", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_ac88424d889d16c9038281f705bf82e4.setIcon(icon_01a105089dbb92b887b3df391d5921c7);
+        
+    
+        var popup_7a8d41f7fe72e4ea8478ce938913b20e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fdc4d45bd503aed23bc2aafca9190e7f = $(`<div id="html_fdc4d45bd503aed23bc2aafca9190e7f" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>977.0 м</td></tr><tr><td>изменение:</td><td>-18.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 09:58</nobr></td></tr><tr><td>в пути:</td><td>0:03:29</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>63.43 м</td></tr><tr><td>рассчет 2:</td><td>67.9 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.539347</td></tr><tr><td>долгота:</td><td>70.1447993</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.539347,70.1447993" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.539347/70.1447993"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.539347&lon=70.1447993&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1447993,41.539347&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.539347&lon=70.1447993" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.539347/70.1447993&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_7a8d41f7fe72e4ea8478ce938913b20e.setContent(html_fdc4d45bd503aed23bc2aafca9190e7f);
+            
+        
+
+        marker_ac88424d889d16c9038281f705bf82e4.bindPopup(popup_7a8d41f7fe72e4ea8478ce938913b20e)
+        ;
+
+        
+    
+    
+            var circle_marker_e3b8c08f2484580e68ca81768334fd58 = L.circleMarker(
+                [41.5392011, 70.1444334],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_527c07ac1135f5973a7b36aaa5d2ce81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48098f058f8d2ed88b45704cd4bd9ec5 = $(`<div id="html_48098f058f8d2ed88b45704cd4bd9ec5" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>972.0 м</td></tr><tr><td>изменение:</td><td>-23.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:00</nobr></td></tr><tr><td>в пути:</td><td>0:05:30</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>104.64 м</td></tr><tr><td>рассчет 2:</td><td>111.02 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5392011</td></tr><tr><td>долгота:</td><td>70.1444334</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5392011,70.1444334" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5392011/70.1444334"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5392011&lon=70.1444334&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1444334,41.5392011&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5392011&lon=70.1444334" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5392011/70.1444334&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_527c07ac1135f5973a7b36aaa5d2ce81.setContent(html_48098f058f8d2ed88b45704cd4bd9ec5);
+            
+        
+
+        circle_marker_e3b8c08f2484580e68ca81768334fd58.bindPopup(popup_527c07ac1135f5973a7b36aaa5d2ce81)
+        ;
+
+        
+    
+    
+            var circle_marker_050e9c5550adbd7f49a2badb1546fb18 = L.circleMarker(
+                [41.539152, 70.1440746],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_5493ac784ef2b47874295b37a525bf65 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f010bc50a04418f711d71bc65dcd025 = $(`<div id="html_7f010bc50a04418f711d71bc65dcd025" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>952.0 м</td></tr><tr><td>изменение:</td><td>-43.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:02</nobr></td></tr><tr><td>в пути:</td><td>0:07:05</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>144.86 м</td></tr><tr><td>рассчет 2:</td><td>157.37 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.539152</td></tr><tr><td>долгота:</td><td>70.1440746</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.539152,70.1440746" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.539152/70.1440746"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.539152&lon=70.1440746&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1440746,41.539152&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.539152&lon=70.1440746" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.539152/70.1440746&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_5493ac784ef2b47874295b37a525bf65.setContent(html_7f010bc50a04418f711d71bc65dcd025);
+            
+        
+
+        circle_marker_050e9c5550adbd7f49a2badb1546fb18.bindPopup(popup_5493ac784ef2b47874295b37a525bf65)
+        ;
+
+        
+    
+    
+            var marker_a2c98c7d6200f3ecae2691d663e4e56f = L.marker(
+                [41.539152, 70.1440746],
+                {}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+            var icon_44bd31cdc18fa3c85970b3c10e2c173c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "purple", "iconSize": [5, 5], "markerColor": "purple", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_a2c98c7d6200f3ecae2691d663e4e56f.setIcon(icon_44bd31cdc18fa3c85970b3c10e2c173c);
+        
+    
+        var popup_8fe2dd911b1b7797a3066782e9b69f5a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7cd6882cdad60192029872ad49837ad = $(`<div id="html_f7cd6882cdad60192029872ad49837ad" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>952.0 м</td></tr><tr><td>изменение:</td><td>-43.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:02</nobr></td></tr><tr><td>в пути:</td><td>0:07:05</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>144.86 м</td></tr><tr><td>рассчет 2:</td><td>157.37 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.539152</td></tr><tr><td>долгота:</td><td>70.1440746</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.539152,70.1440746" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.539152/70.1440746"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.539152&lon=70.1440746&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1440746,41.539152&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.539152&lon=70.1440746" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.539152/70.1440746&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_8fe2dd911b1b7797a3066782e9b69f5a.setContent(html_f7cd6882cdad60192029872ad49837ad);
+            
+        
+
+        marker_a2c98c7d6200f3ecae2691d663e4e56f.bindPopup(popup_8fe2dd911b1b7797a3066782e9b69f5a)
+        ;
+
+        
+    
+    
+            var circle_marker_fc48730a1e4c91047e8e693a38385e9a = L.circleMarker(
+                [41.5390977, 70.1436986],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_f40f7dcab80bf3a7dd9d8a33213d8c9e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2aa7259c03dc87b54b2e1630d0dcad4 = $(`<div id="html_e2aa7259c03dc87b54b2e1630d0dcad4" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>941.0 м</td></tr><tr><td>изменение:</td><td>-54.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:05</nobr></td></tr><tr><td>в пути:</td><td>0:10:27</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>187.1 м</td></tr><tr><td>рассчет 2:</td><td>201.04 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5390977</td></tr><tr><td>долгота:</td><td>70.1436986</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5390977,70.1436986" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5390977/70.1436986"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5390977&lon=70.1436986&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1436986,41.5390977&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5390977&lon=70.1436986" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5390977/70.1436986&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_f40f7dcab80bf3a7dd9d8a33213d8c9e.setContent(html_e2aa7259c03dc87b54b2e1630d0dcad4);
+            
+        
+
+        circle_marker_fc48730a1e4c91047e8e693a38385e9a.bindPopup(popup_f40f7dcab80bf3a7dd9d8a33213d8c9e)
+        ;
+
+        
+    
+    
+            var circle_marker_c4f1600a31e0333b07237d41dde4dd58 = L.circleMarker(
+                [41.5390312, 70.1433608],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_9602a071f25e70f1da982f7c5dba2073 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_021e921af85de8579e908ebd275192b0 = $(`<div id="html_021e921af85de8579e908ebd275192b0" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>935.0 м</td></tr><tr><td>изменение:</td><td>-60.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:07</nobr></td></tr><tr><td>в пути:</td><td>0:12:06</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>225.3 м</td></tr><tr><td>рассчет 2:</td><td>239.91 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5390312</td></tr><tr><td>долгота:</td><td>70.1433608</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5390312,70.1433608" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5390312/70.1433608"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5390312&lon=70.1433608&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1433608,41.5390312&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5390312&lon=70.1433608" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5390312/70.1433608&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_9602a071f25e70f1da982f7c5dba2073.setContent(html_021e921af85de8579e908ebd275192b0);
+            
+        
+
+        circle_marker_c4f1600a31e0333b07237d41dde4dd58.bindPopup(popup_9602a071f25e70f1da982f7c5dba2073)
+        ;
+
+        
+    
+    
+            var marker_6e9ef8a62560bc0dd0589c0e8340466a = L.marker(
+                [41.5390312, 70.1433608],
+                {}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+            var icon_9e343f1e2f2871fa4bd024376fc9c101 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "purple", "iconSize": [5, 5], "markerColor": "purple", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_6e9ef8a62560bc0dd0589c0e8340466a.setIcon(icon_9e343f1e2f2871fa4bd024376fc9c101);
+        
+    
+        var popup_1f5a3d79d1f58940200137865a32b2ef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a37eac77f72a2716aa31247b30c2b2ce = $(`<div id="html_a37eac77f72a2716aa31247b30c2b2ce" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>935.0 м</td></tr><tr><td>изменение:</td><td>-60.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:07</nobr></td></tr><tr><td>в пути:</td><td>0:12:06</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>225.3 м</td></tr><tr><td>рассчет 2:</td><td>239.91 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5390312</td></tr><tr><td>долгота:</td><td>70.1433608</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5390312,70.1433608" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5390312/70.1433608"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5390312&lon=70.1433608&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1433608,41.5390312&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5390312&lon=70.1433608" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5390312/70.1433608&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_1f5a3d79d1f58940200137865a32b2ef.setContent(html_a37eac77f72a2716aa31247b30c2b2ce);
+            
+        
+
+        marker_6e9ef8a62560bc0dd0589c0e8340466a.bindPopup(popup_1f5a3d79d1f58940200137865a32b2ef)
+        ;
+
+        
+    
+    
+            var circle_marker_71fa6a90704d00e0a69e271573d307df = L.circleMarker(
+                [41.5389124, 70.1430303],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_4dd26f2bbce4a189478ade1932c6290c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a08d4acc54cc86f0f9f4ee82946f6995 = $(`<div id="html_a08d4acc54cc86f0f9f4ee82946f6995" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>922.0 м</td></tr><tr><td>изменение:</td><td>-73.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:10</nobr></td></tr><tr><td>в пути:</td><td>0:14:40</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>263.04 м</td></tr><tr><td>рассчет 2:</td><td>283.0 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5389124</td></tr><tr><td>долгота:</td><td>70.1430303</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5389124,70.1430303" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5389124/70.1430303"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5389124&lon=70.1430303&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1430303,41.5389124&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5389124&lon=70.1430303" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5389124/70.1430303&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_4dd26f2bbce4a189478ade1932c6290c.setContent(html_a08d4acc54cc86f0f9f4ee82946f6995);
+            
+        
+
+        circle_marker_71fa6a90704d00e0a69e271573d307df.bindPopup(popup_4dd26f2bbce4a189478ade1932c6290c)
+        ;
+
+        
+    
+    
+            var circle_marker_fdd6737696e1c647511878799a8ece28 = L.circleMarker(
+                [41.5386761, 70.1428354],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_b460fe2ee0d08809fee9c99c4cfe2634 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92ed8947106193fd265ec974dc319d93 = $(`<div id="html_92ed8947106193fd265ec974dc319d93" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>899.0 м</td></tr><tr><td>изменение:</td><td>-96.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:11</nobr></td></tr><tr><td>в пути:</td><td>0:15:50</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>288.1 м</td></tr><tr><td>рассчет 2:</td><td>318.76 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5386761</td></tr><tr><td>долгота:</td><td>70.1428354</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5386761,70.1428354" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5386761/70.1428354"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5386761&lon=70.1428354&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1428354,41.5386761&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5386761&lon=70.1428354" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5386761/70.1428354&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_b460fe2ee0d08809fee9c99c4cfe2634.setContent(html_92ed8947106193fd265ec974dc319d93);
+            
+        
+
+        circle_marker_fdd6737696e1c647511878799a8ece28.bindPopup(popup_b460fe2ee0d08809fee9c99c4cfe2634)
+        ;
+
+        
+    
+    
+            var marker_3a7d88570bd8871de83b06cf0d28f805 = L.marker(
+                [41.5386761, 70.1428354],
+                {}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+            var icon_f9ea72eb07a202801415c5c9d666b5f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "purple", "iconSize": [5, 5], "markerColor": "purple", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_3a7d88570bd8871de83b06cf0d28f805.setIcon(icon_f9ea72eb07a202801415c5c9d666b5f3);
+        
+    
+        var popup_2c56f77edc416f499481eadee229c1ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be2bb4591a57ab6a2d2ca3d1dad199f9 = $(`<div id="html_be2bb4591a57ab6a2d2ca3d1dad199f9" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>899.0 м</td></tr><tr><td>изменение:</td><td>-96.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:11</nobr></td></tr><tr><td>в пути:</td><td>0:15:50</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>288.1 м</td></tr><tr><td>рассчет 2:</td><td>318.76 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5386761</td></tr><tr><td>долгота:</td><td>70.1428354</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5386761,70.1428354" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5386761/70.1428354"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5386761&lon=70.1428354&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1428354,41.5386761&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5386761&lon=70.1428354" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5386761/70.1428354&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_2c56f77edc416f499481eadee229c1ba.setContent(html_be2bb4591a57ab6a2d2ca3d1dad199f9);
+            
+        
+
+        marker_3a7d88570bd8871de83b06cf0d28f805.bindPopup(popup_2c56f77edc416f499481eadee229c1ba)
+        ;
+
+        
+    
+    
+            var circle_marker_48fdc57909a50dfc1a63d46177ee3682 = L.circleMarker(
+                [41.5383893, 70.1426402],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_ffaff43fd68a8dbb1063354530ce55e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7042c8a8c429698963e7dfd0ded03dd = $(`<div id="html_f7042c8a8c429698963e7dfd0ded03dd" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>890.0 м</td></tr><tr><td>изменение:</td><td>-105.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:13</nobr></td></tr><tr><td>в пути:</td><td>0:17:44</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>312.57 м</td></tr><tr><td>рассчет 2:</td><td>344.95 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5383893</td></tr><tr><td>долгота:</td><td>70.1426402</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5383893,70.1426402" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5383893/70.1426402"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5383893&lon=70.1426402&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1426402,41.5383893&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5383893&lon=70.1426402" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5383893/70.1426402&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_ffaff43fd68a8dbb1063354530ce55e6.setContent(html_f7042c8a8c429698963e7dfd0ded03dd);
+            
+        
+
+        circle_marker_48fdc57909a50dfc1a63d46177ee3682.bindPopup(popup_ffaff43fd68a8dbb1063354530ce55e6)
+        ;
+
+        
+    
+    
+            var circle_marker_7bb13811e7b77477efacb88c7e153600 = L.circleMarker(
+                [41.5381315, 70.1424119],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+        var popup_a794dc7e8da63b9cb7157d4f73452aad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_abf8eff975c5bd5e2023a703ae32fb2e = $(`<div id="html_abf8eff975c5bd5e2023a703ae32fb2e" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>885.0 м</td></tr><tr><td>изменение:</td><td>-110.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:14</nobr></td></tr><tr><td>в пути:</td><td>0:18:35</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>339.86 м</td></tr><tr><td>рассчет 2:</td><td>373.25 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5381315</td></tr><tr><td>долгота:</td><td>70.1424119</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5381315,70.1424119" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5381315/70.1424119"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5381315&lon=70.1424119&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1424119,41.5381315&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5381315&lon=70.1424119" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5381315/70.1424119&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_a794dc7e8da63b9cb7157d4f73452aad.setContent(html_abf8eff975c5bd5e2023a703ae32fb2e);
+            
+        
+
+        circle_marker_7bb13811e7b77477efacb88c7e153600.bindPopup(popup_a794dc7e8da63b9cb7157d4f73452aad)
+        ;
+
+        
+    
+    
+            var marker_ab5e3dfb943025621f1ab7657c873ec2 = L.marker(
+                [41.5381315, 70.1424119],
+                {}
+            ).addTo(feature_group_0282cc3bc4d1617394433ffd80171a5e);
+        
+    
+            var icon_2c43beb76bdb5f1e94ebeaf5e4748863 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "purple", "iconSize": [5, 5], "markerColor": "purple", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_ab5e3dfb943025621f1ab7657c873ec2.setIcon(icon_2c43beb76bdb5f1e94ebeaf5e4748863);
+        
+    
+        var popup_3b0936421ae66413d3a8f68a735edb74 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7e4cff884f4998e07b33a1f5c2b86df = $(`<div id="html_b7e4cff884f4998e07b33a1f5c2b86df" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Водопад Чукураксу 371м</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>885.0 м</td></tr><tr><td>изменение:</td><td>-110.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:14</nobr></td></tr><tr><td>в пути:</td><td>0:18:35</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>339.86 м</td></tr><tr><td>рассчет 2:</td><td>373.25 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5381315</td></tr><tr><td>долгота:</td><td>70.1424119</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5381315,70.1424119" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5381315/70.1424119"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5381315&lon=70.1424119&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1424119,41.5381315&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5381315&lon=70.1424119" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5381315/70.1424119&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_3b0936421ae66413d3a8f68a735edb74.setContent(html_b7e4cff884f4998e07b33a1f5c2b86df);
+            
+        
+
+        marker_ab5e3dfb943025621f1ab7657c873ec2.bindPopup(popup_3b0936421ae66413d3a8f68a735edb74)
+        ;
+
+        
+    
+    
+            var feature_group_bf99672e071fe5635dff0bfb22970b69 = L.featureGroup(
+                {}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var poly_line_1fcd395f78e5a8298c69f23cf0a116ca = L.polyline(
+                [[41.5378057, 70.1421039], [41.5378016, 70.1419596], [41.5377562, 70.1418511], [41.537873, 70.1417326], [41.5380426, 70.1416091], [41.5382128, 70.1414893], [41.5383131, 70.1413854], [41.5384007, 70.1412412], [41.5385086, 70.1411134], [41.5386616, 70.1410138], [41.5388156, 70.1408579], [41.5389465, 70.1406224], [41.5390665, 70.1404289], [41.5392262, 70.1403403], [41.5393715, 70.140249], [41.539485, 70.1400369], [41.5395973, 70.1398694], [41.5397587, 70.1397769], [41.5398766, 70.1396819], [41.5400035, 70.1396271], [41.5401281, 70.1395797], [41.540241, 70.1395407], [41.540408, 70.1394784], [41.5405043, 70.1394663], [41.540578, 70.13937], [41.5406851, 70.1392995], [41.5407924, 70.139259], [41.5408582, 70.1391637], [41.5408968, 70.1390537], [41.5409522, 70.1388815], [41.5410354, 70.1387667], [41.5411235, 70.1386373], [41.5412219, 70.1385032], [41.5413353, 70.1384024], [41.5414228, 70.1382887], [41.5414553, 70.1380846], [41.5415614, 70.1378995], [41.5416305, 70.1377508], [41.5416983, 70.1376113], [41.5418189, 70.1374825], [41.5419036, 70.1373501], [41.5419611, 70.1371917], [41.542004, 70.1370319], [41.5420746, 70.1368815], [41.5421583, 70.1367542], [41.5422422, 70.1366549], [41.5422935, 70.136513], [41.5423392, 70.1363127], [41.5423936, 70.136209], [41.542505, 70.1360744], [41.5426086, 70.1359646], [41.5427518, 70.1358598], [41.5428386, 70.1356964], [41.5429496, 70.1355251], [41.543075, 70.1353833], [41.5432174, 70.135269], [41.5433029, 70.1351759], [41.543389, 70.1350511], [41.5434625, 70.1349614], [41.5436067, 70.1349591], [41.5437858, 70.1348864], [41.5438966, 70.1347993], [41.5440078, 70.134724], [41.5441114, 70.1346648], [41.5442134, 70.1345963], [41.5443167, 70.1345185], [41.5443916, 70.1344281], [41.5444692, 70.1343573], [41.544557, 70.1342851], [41.5446416, 70.1342116], [41.5447162, 70.1341182], [41.5447593, 70.1340036], [41.5448041, 70.1338968], [41.5448586, 70.1337913], [41.5449233, 70.1336759], [41.544987, 70.1335782], [41.5450588, 70.1334339], [41.5452037, 70.1333723], [41.5452992, 70.1333405], [41.5454373, 70.1332976], [41.5455467, 70.1331547], [41.5456276, 70.1330981], [41.5457393, 70.1329818], [41.5458135, 70.132835], [41.5458572, 70.1326192], [41.5459176, 70.1324503], [41.546026, 70.1323346], [41.5461404, 70.1322525], [41.5463154, 70.1321233], [41.5464772, 70.1320461], [41.5466296, 70.1319286], [41.5467469, 70.1317781], [41.5468526, 70.1316192], [41.5469623, 70.1314598], [41.5470889, 70.1313243], [41.5472172, 70.1311691], [41.5473191, 70.1309795], [41.5473954, 70.1307775], [41.5474753, 70.1305804], [41.5475548, 70.1304463], [41.5476651, 70.1303681], [41.5477956, 70.1303231], [41.5478906, 70.1303019], [41.5481006, 70.1301999], [41.5482667, 70.1301108], [41.5484358, 70.1300026], [41.5485898, 70.1298876], [41.5487439, 70.1297558], [41.5488954, 70.129615], [41.5490407, 70.1294729], [41.5491909, 70.1293211], [41.549329, 70.1291833], [41.5494633, 70.1290498], [41.549622, 70.1289095], [41.5497845, 70.1287652], [41.5499384, 70.1286152], [41.5500865, 70.1284527], [41.5502314, 70.1283026], [41.5503617, 70.1281585], [41.5504784, 70.1280331], [41.5505951, 70.1279583], [41.5507251, 70.1279257], [41.5508457, 70.1278625], [41.5509304, 70.1277045], [41.5510156, 70.1275265], [41.5511184, 70.1273502], [41.5512058, 70.1272096], [41.5512905, 70.127093], [41.5513585, 70.126986], [41.5514149, 70.1268693], [41.5514583, 70.1267278], [41.5515125, 70.1265875], [41.5516008, 70.1264288], [41.5516969, 70.1262477], [41.551795, 70.1260781], [41.5519078, 70.1259276], [41.5520357, 70.1258014], [41.5521733, 70.1257256], [41.5523229, 70.1256386], [41.552448, 70.1255228], [41.5525565, 70.1253881], [41.552659, 70.1252372], [41.55276, 70.1250665], [41.5528804, 70.1249355], [41.5530206, 70.1248153], [41.5531394, 70.124674], [41.5532304, 70.1244871], [41.5532665, 70.1242762], [41.5532493, 70.1240547], [41.5531923, 70.1238393], [41.553129, 70.1236307], [41.5530551, 70.1234465], [41.5530136, 70.1232586], [41.5530156, 70.1230802], [41.5530642, 70.1228853], [41.5531368, 70.1226986], [41.5532138, 70.1225036], [41.553287, 70.1223095], [41.553355, 70.1221175], [41.5534096, 70.121944], [41.5534615, 70.121762], [41.5535392, 70.1216], [41.5536193, 70.1214471], [41.5536887, 70.1212767], [41.5537399, 70.1210975], [41.5538009, 70.120896], [41.553864, 70.1206964], [41.5539218, 70.1205104], [41.5539681, 70.1203247], [41.5540078, 70.1201452], [41.5540593, 70.1199668], [41.5541174, 70.1197615], [41.5541539, 70.1195588], [41.554172, 70.119381], [41.5541894, 70.1192244], [41.5542344, 70.1191037], [41.554288, 70.1189583], [41.5543236, 70.1188002], [41.5543611, 70.1186754]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": "4"}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+            var circle_marker_03112365aa40c93e5c819eeff89d9833 = L.circleMarker(
+                [41.5378057, 70.1421039],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+        var popup_90f5cf3654ae39c23561a918895d70f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_76683cd173b2b5d01ca9f074bc2f92b4 = $(`<div id="html_76683cd173b2b5d01ca9f074bc2f92b4" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>878.0 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:15</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5378057</td></tr><tr><td>долгота:</td><td>70.1421039</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5378057,70.1421039" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5378057/70.1421039"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5378057&lon=70.1421039&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1421039,41.5378057&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5378057&lon=70.1421039" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5378057/70.1421039&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_90f5cf3654ae39c23561a918895d70f5.setContent(html_76683cd173b2b5d01ca9f074bc2f92b4);
+            
+        
+
+        circle_marker_03112365aa40c93e5c819eeff89d9833.bindPopup(popup_90f5cf3654ae39c23561a918895d70f5)
+        ;
+
+        
+    
+    
+            var marker_4291e8daed33899f68a6ea6c3911b556 = L.marker(
+                [41.5378057, 70.1421039],
+                {}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+            var icon_18bfa988a2cde1d93d7cb4434fb36971 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_4291e8daed33899f68a6ea6c3911b556.setIcon(icon_18bfa988a2cde1d93d7cb4434fb36971);
+        
+    
+        var popup_15fd391fdcdd3ffcb1d993adf1ad2697 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_38e1346f775c896812f0006389a5913d = $(`<div id="html_38e1346f775c896812f0006389a5913d" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>878.0 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:15</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5378057</td></tr><tr><td>долгота:</td><td>70.1421039</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5378057,70.1421039" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5378057/70.1421039"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5378057&lon=70.1421039&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1421039,41.5378057&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5378057&lon=70.1421039" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5378057/70.1421039&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_15fd391fdcdd3ffcb1d993adf1ad2697.setContent(html_38e1346f775c896812f0006389a5913d);
+            
+        
+
+        marker_4291e8daed33899f68a6ea6c3911b556.bindPopup(popup_15fd391fdcdd3ffcb1d993adf1ad2697)
+        ;
+
+        
+    
+    
+            var circle_marker_aa102f649c657b6f57038d1ed359fc57 = L.circleMarker(
+                [41.5398766, 70.1396819],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+        var popup_bf1e46d114b8a5e966ecbb7682becfc1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24758dad2cff3d3335b9e0e1567bb0cb = $(`<div id="html_24758dad2cff3d3335b9e0e1567bb0cb" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>872.0 м</td></tr><tr><td>изменение:</td><td>-6.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:20</nobr></td></tr><tr><td>в пути:</td><td>0:04:19</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>285.36 м</td></tr><tr><td>рассчет 2:</td><td>286.39 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5398766</td></tr><tr><td>долгота:</td><td>70.1396819</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5398766,70.1396819" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5398766/70.1396819"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5398766&lon=70.1396819&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1396819,41.5398766&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5398766&lon=70.1396819" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5398766/70.1396819&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_bf1e46d114b8a5e966ecbb7682becfc1.setContent(html_24758dad2cff3d3335b9e0e1567bb0cb);
+            
+        
+
+        circle_marker_aa102f649c657b6f57038d1ed359fc57.bindPopup(popup_bf1e46d114b8a5e966ecbb7682becfc1)
+        ;
+
+        
+    
+    
+            var circle_marker_3666620be88e3b8fea0017311ec9cab8 = L.circleMarker(
+                [41.5415614, 70.1378995],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+        var popup_7fb46219eae3744e420b478dc2eb03f2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5a8c703dd865fa6566ed2745f2a4bc0 = $(`<div id="html_c5a8c703dd865fa6566ed2745f2a4bc0" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>863.0 м</td></tr><tr><td>изменение:</td><td>-15.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:21</nobr></td></tr><tr><td>в пути:</td><td>0:05:48</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>500.68 м</td></tr><tr><td>рассчет 2:</td><td>504.39 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5415614</td></tr><tr><td>долгота:</td><td>70.1378995</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5415614,70.1378995" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5415614/70.1378995"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5415614&lon=70.1378995&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1378995,41.5415614&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5415614&lon=70.1378995" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5415614/70.1378995&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_7fb46219eae3744e420b478dc2eb03f2.setContent(html_c5a8c703dd865fa6566ed2745f2a4bc0);
+            
+        
+
+        circle_marker_3666620be88e3b8fea0017311ec9cab8.bindPopup(popup_7fb46219eae3744e420b478dc2eb03f2)
+        ;
+
+        
+    
+    
+            var marker_e1f37347d756e99e6fe187f7ed9f87f2 = L.marker(
+                [41.5415614, 70.1378995],
+                {}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+            var icon_4e06082df661989cb1aae8795e001f53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_e1f37347d756e99e6fe187f7ed9f87f2.setIcon(icon_4e06082df661989cb1aae8795e001f53);
+        
+    
+        var popup_d47cad904da4783b7054db8537ffaf3e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f24c5427d97837490ba0e905b79fbf3 = $(`<div id="html_9f24c5427d97837490ba0e905b79fbf3" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>863.0 м</td></tr><tr><td>изменение:</td><td>-15.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:21</nobr></td></tr><tr><td>в пути:</td><td>0:05:48</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>500.68 м</td></tr><tr><td>рассчет 2:</td><td>504.39 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5415614</td></tr><tr><td>долгота:</td><td>70.1378995</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5415614,70.1378995" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5415614/70.1378995"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5415614&lon=70.1378995&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1378995,41.5415614&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5415614&lon=70.1378995" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5415614/70.1378995&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_d47cad904da4783b7054db8537ffaf3e.setContent(html_9f24c5427d97837490ba0e905b79fbf3);
+            
+        
+
+        marker_e1f37347d756e99e6fe187f7ed9f87f2.bindPopup(popup_d47cad904da4783b7054db8537ffaf3e)
+        ;
+
+        
+    
+    
+            var circle_marker_86fb905b296e1a1913e96c7646a7f25c = L.circleMarker(
+                [41.543075, 70.1353833],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+        var popup_962691e4426d7f185cba244b59918414 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11a1f01c54e35dc12c30561970627710 = $(`<div id="html_11a1f01c54e35dc12c30561970627710" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>865.0 м</td></tr><tr><td>изменение:</td><td>-13.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:22</nobr></td></tr><tr><td>в пути:</td><td>0:06:58</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>788.3 м</td></tr><tr><td>рассчет 2:</td><td>792.27 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.543075</td></tr><tr><td>долгота:</td><td>70.1353833</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.543075,70.1353833" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.543075/70.1353833"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.543075&lon=70.1353833&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1353833,41.543075&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.543075&lon=70.1353833" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.543075/70.1353833&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_962691e4426d7f185cba244b59918414.setContent(html_11a1f01c54e35dc12c30561970627710);
+            
+        
+
+        circle_marker_86fb905b296e1a1913e96c7646a7f25c.bindPopup(popup_962691e4426d7f185cba244b59918414)
+        ;
+
+        
+    
+    
+            var circle_marker_5405c5326b2797186e4f4ad8da8b8b38 = L.circleMarker(
+                [41.5448041, 70.1338968],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+        var popup_e0ff71d90045bef55a37102ad0e53e52 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc20aeaa6a253da2fd280cdab6bca8f3 = $(`<div id="html_fc20aeaa6a253da2fd280cdab6bca8f3" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>870.0 м</td></tr><tr><td>изменение:</td><td>-8.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:23</nobr></td></tr><tr><td>в пути:</td><td>0:07:42</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>971.72 м</td></tr><tr><td>рассчет 2:</td><td>976.16 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5448041</td></tr><tr><td>долгота:</td><td>70.1338968</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5448041,70.1338968" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5448041/70.1338968"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5448041&lon=70.1338968&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1338968,41.5448041&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5448041&lon=70.1338968" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5448041/70.1338968&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_e0ff71d90045bef55a37102ad0e53e52.setContent(html_fc20aeaa6a253da2fd280cdab6bca8f3);
+            
+        
+
+        circle_marker_5405c5326b2797186e4f4ad8da8b8b38.bindPopup(popup_e0ff71d90045bef55a37102ad0e53e52)
+        ;
+
+        
+    
+    
+            var marker_032599e2ebbe42db43e9623718cb48f7 = L.marker(
+                [41.5448041, 70.1338968],
+                {}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+            var icon_9278d11946245c2a5b074d1530313781 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_032599e2ebbe42db43e9623718cb48f7.setIcon(icon_9278d11946245c2a5b074d1530313781);
+        
+    
+        var popup_9a20feb8874e33289715b254fa623045 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24f4d01215136219f8c9ad71e8f56f8a = $(`<div id="html_24f4d01215136219f8c9ad71e8f56f8a" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>870.0 м</td></tr><tr><td>изменение:</td><td>-8.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:23</nobr></td></tr><tr><td>в пути:</td><td>0:07:42</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>971.72 м</td></tr><tr><td>рассчет 2:</td><td>976.16 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5448041</td></tr><tr><td>долгота:</td><td>70.1338968</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5448041,70.1338968" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5448041/70.1338968"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5448041&lon=70.1338968&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1338968,41.5448041&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5448041&lon=70.1338968" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5448041/70.1338968&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_9a20feb8874e33289715b254fa623045.setContent(html_24f4d01215136219f8c9ad71e8f56f8a);
+            
+        
+
+        marker_032599e2ebbe42db43e9623718cb48f7.bindPopup(popup_9a20feb8874e33289715b254fa623045)
+        ;
+
+        
+    
+    
+            var circle_marker_3dbc5e120dbbfed2c87151028592a104 = L.circleMarker(
+                [41.5466296, 70.1319286],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+        var popup_addbc543e2e0b26bad2dfe379badeb68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ec2ba8e18bbdc2aa93c86dd48afd62a = $(`<div id="html_9ec2ba8e18bbdc2aa93c86dd48afd62a" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>882.0 м</td></tr><tr><td>изменение:</td><td>4.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:24</nobr></td></tr><tr><td>в пути:</td><td>0:09:10</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.21 км</td></tr><tr><td>рассчет 2:</td><td>1.21 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5466296</td></tr><tr><td>долгота:</td><td>70.1319286</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5466296,70.1319286" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5466296/70.1319286"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5466296&lon=70.1319286&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1319286,41.5466296&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5466296&lon=70.1319286" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5466296/70.1319286&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_addbc543e2e0b26bad2dfe379badeb68.setContent(html_9ec2ba8e18bbdc2aa93c86dd48afd62a);
+            
+        
+
+        circle_marker_3dbc5e120dbbfed2c87151028592a104.bindPopup(popup_addbc543e2e0b26bad2dfe379badeb68)
+        ;
+
+        
+    
+    
+            var circle_marker_feeaa47def61f1c7a9a5f04ae24f7147 = L.circleMarker(
+                [41.5488954, 70.129615],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+        var popup_d81022c7c40777ac25580573c59e8964 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8b6ef34417e60a106bc9990cc6033282 = $(`<div id="html_8b6ef34417e60a106bc9990cc6033282" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>884.0 м</td></tr><tr><td>изменение:</td><td>6.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:25</nobr></td></tr><tr><td>в пути:</td><td>0:09:48</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.48 км</td></tr><tr><td>рассчет 2:</td><td>1.49 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5488954</td></tr><tr><td>долгота:</td><td>70.129615</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5488954,70.129615" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5488954/70.129615"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5488954&lon=70.129615&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.129615,41.5488954&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5488954&lon=70.129615" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5488954/70.129615&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_d81022c7c40777ac25580573c59e8964.setContent(html_8b6ef34417e60a106bc9990cc6033282);
+            
+        
+
+        circle_marker_feeaa47def61f1c7a9a5f04ae24f7147.bindPopup(popup_d81022c7c40777ac25580573c59e8964)
+        ;
+
+        
+    
+    
+            var marker_9eaf3d1851ef8d47927fda875419dd73 = L.marker(
+                [41.5488954, 70.129615],
+                {}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+            var icon_41af3ce60b29952e89b33cac72e3eec0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_9eaf3d1851ef8d47927fda875419dd73.setIcon(icon_41af3ce60b29952e89b33cac72e3eec0);
+        
+    
+        var popup_101eec8e41c6d83794f10a7d4768c647 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d854fd076479e5aeca2475235177813b = $(`<div id="html_d854fd076479e5aeca2475235177813b" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>884.0 м</td></tr><tr><td>изменение:</td><td>6.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:25</nobr></td></tr><tr><td>в пути:</td><td>0:09:48</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.48 км</td></tr><tr><td>рассчет 2:</td><td>1.49 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5488954</td></tr><tr><td>долгота:</td><td>70.129615</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5488954,70.129615" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5488954/70.129615"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5488954&lon=70.129615&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.129615,41.5488954&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5488954&lon=70.129615" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5488954/70.129615&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_101eec8e41c6d83794f10a7d4768c647.setContent(html_d854fd076479e5aeca2475235177813b);
+            
+        
+
+        marker_9eaf3d1851ef8d47927fda875419dd73.bindPopup(popup_101eec8e41c6d83794f10a7d4768c647)
+        ;
+
+        
+    
+    
+            var circle_marker_8f011598d87644d49e45a71888a7303d = L.circleMarker(
+                [41.5512058, 70.1272096],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+        var popup_19a1b1ead4f8d49896afc7060660a391 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_27b03a1be2dc6010730fb3049c90ed0e = $(`<div id="html_27b03a1be2dc6010730fb3049c90ed0e" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>890.0 м</td></tr><tr><td>изменение:</td><td>12.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:26</nobr></td></tr><tr><td>в пути:</td><td>0:10:24</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.77 км</td></tr><tr><td>рассчет 2:</td><td>1.77 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5512058</td></tr><tr><td>долгота:</td><td>70.1272096</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5512058,70.1272096" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5512058/70.1272096"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5512058&lon=70.1272096&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1272096,41.5512058&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5512058&lon=70.1272096" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5512058/70.1272096&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_19a1b1ead4f8d49896afc7060660a391.setContent(html_27b03a1be2dc6010730fb3049c90ed0e);
+            
+        
+
+        circle_marker_8f011598d87644d49e45a71888a7303d.bindPopup(popup_19a1b1ead4f8d49896afc7060660a391)
+        ;
+
+        
+    
+    
+            var circle_marker_3deb67fbe1ff7d14f4f7dace3fd44fa3 = L.circleMarker(
+                [41.5530206, 70.1248153],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+        var popup_fe0eb88ea63ece6aac97aff6f31636b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8fc977ff87bdc3f14b5a652be9bd5af4 = $(`<div id="html_8fc977ff87bdc3f14b5a652be9bd5af4" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>898.0 м</td></tr><tr><td>изменение:</td><td>20.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:26</nobr></td></tr><tr><td>в пути:</td><td>0:11:00</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.04 км</td></tr><tr><td>рассчет 2:</td><td>2.05 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5530206</td></tr><tr><td>долгота:</td><td>70.1248153</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5530206,70.1248153" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5530206/70.1248153"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5530206&lon=70.1248153&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1248153,41.5530206&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5530206&lon=70.1248153" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5530206/70.1248153&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_fe0eb88ea63ece6aac97aff6f31636b8.setContent(html_8fc977ff87bdc3f14b5a652be9bd5af4);
+            
+        
+
+        circle_marker_3deb67fbe1ff7d14f4f7dace3fd44fa3.bindPopup(popup_fe0eb88ea63ece6aac97aff6f31636b8)
+        ;
+
+        
+    
+    
+            var marker_4ed0bccf943b480a0f0bc54338e9dd50 = L.marker(
+                [41.5530206, 70.1248153],
+                {}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+            var icon_7207da7f8cf2e919ef1957b5c0949103 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_4ed0bccf943b480a0f0bc54338e9dd50.setIcon(icon_7207da7f8cf2e919ef1957b5c0949103);
+        
+    
+        var popup_ff0783602b95489207107674fd7f7afa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_98d1a6e847f60c64d7c364bb54d5b00b = $(`<div id="html_98d1a6e847f60c64d7c364bb54d5b00b" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>898.0 м</td></tr><tr><td>изменение:</td><td>20.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:26</nobr></td></tr><tr><td>в пути:</td><td>0:11:00</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.04 км</td></tr><tr><td>рассчет 2:</td><td>2.05 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5530206</td></tr><tr><td>долгота:</td><td>70.1248153</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5530206,70.1248153" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5530206/70.1248153"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5530206&lon=70.1248153&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1248153,41.5530206&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5530206&lon=70.1248153" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5530206/70.1248153&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_ff0783602b95489207107674fd7f7afa.setContent(html_98d1a6e847f60c64d7c364bb54d5b00b);
+            
+        
+
+        marker_4ed0bccf943b480a0f0bc54338e9dd50.bindPopup(popup_ff0783602b95489207107674fd7f7afa)
+        ;
+
+        
+    
+    
+            var circle_marker_61b4b146c048422b2fee79c8c18007b8 = L.circleMarker(
+                [41.5536193, 70.1214471],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+        var popup_f3ac3b90e3537823c819ca25e96ab8fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_628fa20075df4c1ac3dbc652d81d7e09 = $(`<div id="html_628fa20075df4c1ac3dbc652d81d7e09" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>924.0 м</td></tr><tr><td>изменение:</td><td>46.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:27</nobr></td></tr><tr><td>в пути:</td><td>0:11:36</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.42 км</td></tr><tr><td>рассчет 2:</td><td>2.43 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5536193</td></tr><tr><td>долгота:</td><td>70.1214471</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5536193,70.1214471" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5536193/70.1214471"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5536193&lon=70.1214471&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1214471,41.5536193&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5536193&lon=70.1214471" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5536193/70.1214471&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_f3ac3b90e3537823c819ca25e96ab8fc.setContent(html_628fa20075df4c1ac3dbc652d81d7e09);
+            
+        
+
+        circle_marker_61b4b146c048422b2fee79c8c18007b8.bindPopup(popup_f3ac3b90e3537823c819ca25e96ab8fc)
+        ;
+
+        
+    
+    
+            var marker_1911f7a10af3d9cdad4ef525c6fad337 = L.marker(
+                [41.5543611, 70.1186754],
+                {}
+            ).addTo(feature_group_bf99672e071fe5635dff0bfb22970b69);
+        
+    
+            var icon_0523a4d1d416f0a5505eb78031523889 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_1911f7a10af3d9cdad4ef525c6fad337.setIcon(icon_0523a4d1d416f0a5505eb78031523889);
+        
+    
+        var popup_2200c76bfebeecf052197501a8e7d019 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d19887144a789ec3bafc8586125daeb = $(`<div id="html_1d19887144a789ec3bafc8586125daeb" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Чукураксу-малый пост 2.8км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>931.0 м</td></tr><tr><td>изменение:</td><td>53.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:27</nobr></td></tr><tr><td>в пути:</td><td>0:12:08</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.73 км</td></tr><tr><td>рассчет 2:</td><td>2.74 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5543611</td></tr><tr><td>долгота:</td><td>70.1186754</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5543611,70.1186754" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5543611/70.1186754"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5543611&lon=70.1186754&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1186754,41.5543611&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5543611&lon=70.1186754" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5543611/70.1186754&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_2200c76bfebeecf052197501a8e7d019.setContent(html_1d19887144a789ec3bafc8586125daeb);
+            
+        
+
+        marker_1911f7a10af3d9cdad4ef525c6fad337.bindPopup(popup_2200c76bfebeecf052197501a8e7d019)
+        ;
+
+        
+    
+    
+            var feature_group_a8b2c3b146f07329acfaab7309c8840f = L.featureGroup(
+                {}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var poly_line_84d225eda1b3aa31bfec1be191498459 = L.polyline(
+                [[41.5543611, 70.1186754], [41.5545248, 70.1186243], [41.5546355, 70.1188206], [41.5546695, 70.1190021], [41.5546965, 70.1191541], [41.5547286, 70.11929], [41.554779, 70.1194341], [41.5548277, 70.1195677], [41.5548816, 70.1196978], [41.5549414, 70.1198492], [41.5550184, 70.1199781], [41.5551084, 70.120111], [41.5552103, 70.1202287], [41.5552973, 70.1203502], [41.5553907, 70.1204762], [41.5555031, 70.1206017], [41.5556111, 70.1207094], [41.5557079, 70.1208037], [41.555801, 70.1209035], [41.5558701, 70.1210185], [41.555925, 70.121133], [41.55599, 70.12132], [41.5560496, 70.1214128], [41.5561519, 70.1215592], [41.556247, 70.1216939], [41.5563202, 70.1218092], [41.55642, 70.1219601], [41.5565075, 70.1221008], [41.5566083, 70.1222392], [41.5567194, 70.1223844], [41.5568405, 70.1225517], [41.5569602, 70.1226956], [41.5570595, 70.1228382], [41.5571446, 70.1229631], [41.5572589, 70.1230581], [41.5573624, 70.1231952], [41.5574125, 70.1232969], [41.5574483, 70.1234474], [41.5575114, 70.1235855], [41.5575562, 70.1237508], [41.5575899, 70.1238804], [41.5576595, 70.1240317], [41.5577567, 70.1241584], [41.5578532, 70.1242677], [41.5579552, 70.1243677], [41.5580592, 70.124471], [41.5581727, 70.1245396], [41.5582722, 70.1246429], [41.5583387, 70.1247247], [41.5584616, 70.1248622], [41.558555, 70.1250013], [41.5586774, 70.1251196], [41.5588029, 70.125241], [41.5588973, 70.1253601], [41.5590356, 70.1254701], [41.5591601, 70.1256083], [41.559252, 70.1257447], [41.5593051, 70.1258435], [41.5594274, 70.1260323], [41.5595069, 70.1261364], [41.559624, 70.1263093], [41.559734, 70.1264957], [41.5598475, 70.1266901], [41.5599298, 70.1268594], [41.5599484, 70.127064], [41.5599693, 70.1272658], [41.5600191, 70.1274409], [41.5600862, 70.1276479], [41.5602184, 70.1277927], [41.5603118, 70.1278241], [41.5604231, 70.1278201], [41.5605209, 70.1278219], [41.5606284, 70.1279412], [41.5606066, 70.1280667], [41.5605352, 70.1282368], [41.5604887, 70.128434], [41.5604875, 70.1285977], [41.5604787, 70.1288193], [41.5604645, 70.1289453], [41.560458, 70.1291698], [41.5604742, 70.1293045], [41.5605079, 70.1294178], [41.5605204, 70.1296191], [41.5605521, 70.1297929], [41.5606233, 70.1298865], [41.5607291, 70.130045], [41.5607668, 70.1301546], [41.5608213, 70.1303401], [41.5608684, 70.1304904], [41.5608906, 70.1306391], [41.5609507, 70.1307803], [41.5610425, 70.1309037], [41.5611487, 70.1309928], [41.5612386, 70.1311049], [41.5613127, 70.1312012], [41.5614192, 70.1312226], [41.5615122, 70.1312839], [41.5615674, 70.1314053], [41.5616315, 70.1315247], [41.5617024, 70.1316348], [41.5617868, 70.131755], [41.5618421, 70.1318587], [41.5619156, 70.1319658], [41.5619988, 70.1320946], [41.5620951, 70.1322542], [41.562201, 70.1323514], [41.5623114, 70.1324053], [41.5624309, 70.1324968], [41.5625739, 70.1326096], [41.5626849, 70.1326885], [41.5628142, 70.1327253], [41.5629378, 70.1328233], [41.5630482, 70.1328967], [41.5631685, 70.1329597], [41.5632822, 70.1329961], [41.5634147, 70.1330518], [41.5635229, 70.1331152], [41.5636201, 70.1331625], [41.5637173, 70.1332362], [41.5638394, 70.1333083], [41.5639611, 70.1333989], [41.5640839, 70.1335134], [41.5642288, 70.1336377], [41.5643302, 70.133747], [41.5643615, 70.1338985], [41.5643645, 70.1340627], [41.564385, 70.1342247], [41.5644106, 70.1343805], [41.5644161, 70.1345231], [41.5643963, 70.1346675], [41.5643602, 70.1348274], [41.5643392, 70.1349643], [41.5643269, 70.1351068], [41.5642988, 70.1352632], [41.5642718, 70.1354274], [41.5642592, 70.1356], [41.5642314, 70.1357388], [41.564208, 70.1358863], [41.564175, 70.1360256], [41.5640845, 70.1361462], [41.5640317, 70.1362713], [41.5639695, 70.1364104], [41.5638976, 70.1365437], [41.5639095, 70.1366986], [41.5640233, 70.1367648], [41.5641796, 70.13677], [41.5643016, 70.136762], [41.5644054, 70.1367452], [41.5644999, 70.1367146], [41.5646163, 70.1366562], [41.5647458, 70.1366612], [41.5648686, 70.1367266], [41.5649516, 70.1368696], [41.5649516, 70.1370412], [41.5649322, 70.1371972], [41.5649023, 70.1373533], [41.5648813, 70.1375125], [41.5648652, 70.1376857], [41.56486, 70.137861], [41.5648146, 70.1380018], [41.5647933, 70.1381868], [41.564842, 70.1383718], [41.5648708, 70.1385174], [41.5648712, 70.1386625], [41.5648888, 70.1388094], [41.5649659, 70.1389943], [41.5650419, 70.139128], [41.5650843, 70.139267], [41.565123, 70.1394678], [41.5651312, 70.1396403], [41.5650936, 70.1397701], [41.5650602, 70.1399201], [41.5650531, 70.1400854], [41.56507, 70.140268], [41.5650926, 70.1404053], [41.5650666, 70.1405855], [41.5650785, 70.1407364], [41.5649779, 70.1407905], [41.5649099, 70.1409131], [41.5648727, 70.1410385], [41.5648072, 70.1411665], [41.5647514, 70.1413193], [41.5648336, 70.1414597], [41.5648274, 70.1416061], [41.5647776, 70.1417174], [41.5648239, 70.1415919], [41.5648338, 70.1414504], [41.5649945, 70.1413666], [41.5650832, 70.1413062], [41.565226, 70.1412228], [41.5653165, 70.1411564], [41.5654569, 70.1411366], [41.5655932, 70.1410731], [41.5657128, 70.141003], [41.5658272, 70.1409717], [41.5659563, 70.1409762], [41.5660784, 70.1410149], [41.5661711, 70.1410674], [41.566261, 70.1410882], [41.5663398, 70.1411819], [41.5663973, 70.1413006], [41.5664594, 70.141405], [41.5665523, 70.141532], [41.5666239, 70.1416778], [41.5666713, 70.1417955], [41.5667172, 70.1419375], [41.5667601, 70.1420879], [41.5667975, 70.1422355], [41.5668213, 70.1423641], [41.5668571, 70.1424856], [41.5669171, 70.1425844], [41.5670174, 70.1426553], [41.567159, 70.1426711], [41.5673111, 70.14269], [41.5674375, 70.1427091], [41.5675694, 70.1427276], [41.5677065, 70.142726], [41.5678389, 70.1427557], [41.5679508, 70.1427965], [41.5680478, 70.142834], [41.5681616, 70.1428776], [41.568275, 70.1429522], [41.5683401, 70.1430805], [41.5684207, 70.1432073], [41.5685087, 70.1433165], [41.5685818, 70.1434326], [41.5686413, 70.1435775], [41.5687184, 70.1437545], [41.5687713, 70.1438982], [41.5688218, 70.1440508], [41.5688776, 70.1442097], [41.5689423, 70.1443607], [41.5690048, 70.1444787], [41.5690285, 70.1445973], [41.5691131, 70.1446666], [41.5692387, 70.1447905], [41.5693297, 70.1449208], [41.569404, 70.1450603], [41.5694562, 70.1451921], [41.5695233, 70.1453357], [41.5695685, 70.1454921], [41.5696205, 70.1456366], [41.5696695, 70.1458074], [41.569719, 70.1459649], [41.5697612, 70.1461237], [41.5698335, 70.1462678], [41.5698951, 70.1464102], [41.5699598, 70.1465283], [41.5700732, 70.1466647], [41.570207, 70.1467981], [41.5702771, 70.1468866], [41.5703465, 70.1470334], [41.5703031, 70.1471591], [41.5702016, 70.1472282], [41.570085, 70.1472884], [41.5699718, 70.1473431], [41.5698906, 70.1474157], [41.5697697, 70.1475057], [41.5696498, 70.1476019], [41.5695747, 70.1477374], [41.569573, 70.1479559], [41.5696088, 70.1481259], [41.5696215, 70.1482731], [41.5696217, 70.1484295], [41.5696118, 70.1485863], [41.5696042, 70.1487293], [41.56963, 70.1488523], [41.569647, 70.1489935], [41.5695735, 70.149146], [41.5694679, 70.1493146], [41.5694135, 70.1494713], [41.5693684, 70.1496009], [41.5693226, 70.1497586], [41.5692358, 70.149924], [41.5691988, 70.1500469], [41.5691346, 70.1501449], [41.5690693, 70.1502403], [41.5690222, 70.1503807], [41.5690291, 70.1505137], [41.5690978, 70.1506682], [41.5692043, 70.150717], [41.5692314, 70.1505821], [41.5693072, 70.1505053], [41.5694262, 70.1504412], [41.5695396, 70.1503959], [41.5696612, 70.1504202], [41.5697734, 70.1504268], [41.5699033, 70.1504173], [41.5700348, 70.1503939], [41.5701566, 70.1504198], [41.5701399, 70.1505697], [41.5700789, 70.1507026], [41.5700198, 70.1508311], [41.5699904, 70.1509749], [41.5699738, 70.1511183], [41.5699601, 70.1512878], [41.5699651, 70.1514389], [41.5699835, 70.1516027], [41.5699948, 70.1517795], [41.5699994, 70.1519718], [41.5699831, 70.152166], [41.5699631, 70.152351], [41.5699479, 70.1525314], [41.5699097, 70.152697], [41.5698739, 70.1528986], [41.5698448, 70.153108], [41.5698134, 70.153271], [41.5697784, 70.1534456], [41.5697561, 70.1536116], [41.5697336, 70.1537681], [41.5697032, 70.1539197], [41.5696828, 70.1540954], [41.5696687, 70.1542694], [41.5696763, 70.1544445], [41.5696718, 70.1546002], [41.5696309, 70.1547574], [41.5696137, 70.1549282], [41.5695962, 70.1550945], [41.5695595, 70.1552483], [41.5695031, 70.1553877], [41.5694609, 70.1555268], [41.5694521, 70.1556698], [41.5694443, 70.1558128], [41.5694483, 70.1559458], [41.5694119, 70.1561229], [41.5693995, 70.1562566], [41.5694029, 70.1563929], [41.5694056, 70.156523], [41.5693893, 70.1566713], [41.5693677, 70.1568298], [41.5693455, 70.157009], [41.5693316, 70.157185], [41.5693079, 70.1573579], [41.5692568, 70.157511], [41.5692021, 70.1576523], [41.5691563, 70.1577903], [41.569109, 70.1579358], [41.569092, 70.158087], [41.5691166, 70.1582334], [41.5691677, 70.1583884], [41.5692044, 70.1585493], [41.5692693, 70.1587172], [41.5693358, 70.1588752], [41.5694146, 70.1590246], [41.5694856, 70.1591431], [41.5694783, 70.1593055], [41.5694638, 70.1594676], [41.5695199, 70.1596537], [41.5696159, 70.1597686], [41.5697208, 70.1598618], [41.5697026, 70.1600036], [41.569619, 70.1601098], [41.5695827, 70.1602353], [41.5694964, 70.1603409], [41.5694535, 70.1604497], [41.5694651, 70.1606306], [41.5694817, 70.1607542], [41.569573, 70.160868], [41.5696487, 70.1609554], [41.5697334, 70.1610556], [41.5698338, 70.1611344], [41.5699669, 70.161169], [41.5700517, 70.1612243], [41.5701224, 70.161321], [41.5702308, 70.1614085], [41.5703368, 70.1614381], [41.5704439, 70.1613871], [41.5705279, 70.1613267], [41.5706316, 70.1612249], [41.5707038, 70.1612967], [41.5706605, 70.1614717], [41.5705951, 70.1615775], [41.5705321, 70.1616895], [41.5704724, 70.1617874], [41.5704824, 70.1619146], [41.5704984, 70.162063], [41.5705178, 70.1622007], [41.5705052, 70.1623299], [41.5704747, 70.1624598], [41.570473, 70.1626065], [41.5704892, 70.1627572], [41.5705279, 70.1628853], [41.5706084, 70.1629839], [41.5707027, 70.1630572], [41.5707983, 70.1631231], [41.5708539, 70.163225], [41.5708991, 70.1633453], [41.5709337, 70.1634644], [41.5709755, 70.1635853], [41.5709786, 70.1637302], [41.5709776, 70.1638732], [41.5709689, 70.1640273], [41.5709699, 70.1641707], [41.5709779, 70.1643345], [41.5709666, 70.1644867], [41.570914, 70.1646093], [41.5709279, 70.1647314], [41.5710183, 70.164868], [41.5710792, 70.1650528], [41.5710766, 70.1652084], [41.5710561, 70.1653553], [41.5710404, 70.1654872], [41.5710221, 70.1656132], [41.5709948, 70.1657461], [41.5709708, 70.1658778], [41.5709519, 70.1660241], [41.5709331, 70.1661564], [41.5709186, 70.1662954], [41.5708958, 70.1664286], [41.5708514, 70.1665521], [41.570752, 70.1666496], [41.5707083, 70.1667826], [41.5707047, 70.1669429], [41.5707132, 70.1671106], [41.5707258, 70.1672569], [41.5707804, 70.1674206], [41.5708403, 70.1675989], [41.5708959, 70.1677713], [41.5709452, 70.167969], [41.5709711, 70.168147], [41.5709896, 70.1683298], [41.5710011, 70.1685301], [41.5709786, 70.1687113], [41.5709592, 70.1688858], [41.5709663, 70.1690912], [41.57097, 70.1692899], [41.570958, 70.169476], [41.5709233, 70.1696591], [41.5708851, 70.1698264], [41.5708386, 70.169995], [41.5708152, 70.1701737], [41.5707623, 70.1703055], [41.5707215, 70.1704167], [41.570715, 70.1705584], [41.5706644, 70.1706895], [41.5707268, 70.1708124], [41.570779, 70.170963], [41.57071, 70.1710775], [41.5706187, 70.1711262], [41.5705397, 70.1712093], [41.5704713, 70.1713514], [41.5704658, 70.1714829], [41.5705083, 70.1716025], [41.5704864, 70.1717458], [41.5703736, 70.1717921], [41.5702489, 70.1718095], [41.5701503, 70.1718803], [41.5701019, 70.1719892], [41.5700036, 70.1720834], [41.5699209, 70.1721414], [41.5699612, 70.1722538], [41.5699427, 70.1723829], [41.5699255, 70.1725088], [41.5698758, 70.1726147]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": "4"}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+            var circle_marker_b99b88b4fea559deb19ca30567821250 = L.circleMarker(
+                [41.5543611, 70.1186754],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_540448be01adb53530af0447471f1025 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1d4478fdc2661852875f04e4691814b = $(`<div id="html_e1d4478fdc2661852875f04e4691814b" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>931.0 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:27</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5543611</td></tr><tr><td>долгота:</td><td>70.1186754</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5543611,70.1186754" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5543611/70.1186754"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5543611&lon=70.1186754&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1186754,41.5543611&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5543611&lon=70.1186754" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5543611/70.1186754&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_540448be01adb53530af0447471f1025.setContent(html_e1d4478fdc2661852875f04e4691814b);
+            
+        
+
+        circle_marker_b99b88b4fea559deb19ca30567821250.bindPopup(popup_540448be01adb53530af0447471f1025)
+        ;
+
+        
+    
+    
+            var marker_a75dcc19436ed48a251f2f7c156528e5 = L.marker(
+                [41.5543611, 70.1186754],
+                {}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+            var icon_aedf890f1559e37b90bb7ae30aea2671 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "darkblue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_a75dcc19436ed48a251f2f7c156528e5.setIcon(icon_aedf890f1559e37b90bb7ae30aea2671);
+        
+    
+        var popup_06be9fd78c7609582b4272820baef261 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4336b06dc7a566f3e4aae4c0bef9398b = $(`<div id="html_4336b06dc7a566f3e4aae4c0bef9398b" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>931.0 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:27</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5543611</td></tr><tr><td>долгота:</td><td>70.1186754</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5543611,70.1186754" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5543611/70.1186754"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5543611&lon=70.1186754&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1186754,41.5543611&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5543611&lon=70.1186754" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5543611/70.1186754&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_06be9fd78c7609582b4272820baef261.setContent(html_4336b06dc7a566f3e4aae4c0bef9398b);
+            
+        
+
+        marker_a75dcc19436ed48a251f2f7c156528e5.bindPopup(popup_06be9fd78c7609582b4272820baef261)
+        ;
+
+        
+    
+    
+            var circle_marker_73ec4cabcbc52074a7b3665cd09dd687 = L.circleMarker(
+                [41.5580592, 70.124471],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_ecbb439cc8e4ebd761bbaf118cd4b28c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e556d764d3405305eac54097aed7bc1 = $(`<div id="html_4e556d764d3405305eac54097aed7bc1" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>991.0 м</td></tr><tr><td>изменение:</td><td>60.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:30</nobr></td></tr><tr><td>в пути:</td><td>0:02:26</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>676.52 м</td></tr><tr><td>рассчет 2:</td><td>680.29 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5580592</td></tr><tr><td>долгота:</td><td>70.124471</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5580592,70.124471" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5580592/70.124471"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5580592&lon=70.124471&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.124471,41.5580592&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5580592&lon=70.124471" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5580592/70.124471&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_ecbb439cc8e4ebd761bbaf118cd4b28c.setContent(html_4e556d764d3405305eac54097aed7bc1);
+            
+        
+
+        circle_marker_73ec4cabcbc52074a7b3665cd09dd687.bindPopup(popup_ecbb439cc8e4ebd761bbaf118cd4b28c)
+        ;
+
+        
+    
+    
+            var circle_marker_0d4b7315963e6cd0fbd9d2a0bc1a85dd = L.circleMarker(
+                [41.5609507, 70.1307803],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_28693da285f2d1950b1735fff6fccfe6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_704669311f92d92b389889657a73ee73 = $(`<div id="html_704669311f92d92b389889657a73ee73" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1050.0 м</td></tr><tr><td>изменение:</td><td>119.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:32</nobr></td></tr><tr><td>в пути:</td><td>0:05:04</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.4 км</td></tr><tr><td>рассчет 2:</td><td>1.41 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5609507</td></tr><tr><td>долгота:</td><td>70.1307803</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5609507,70.1307803" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5609507/70.1307803"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5609507&lon=70.1307803&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1307803,41.5609507&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5609507&lon=70.1307803" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5609507/70.1307803&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_28693da285f2d1950b1735fff6fccfe6.setContent(html_704669311f92d92b389889657a73ee73);
+            
+        
+
+        circle_marker_0d4b7315963e6cd0fbd9d2a0bc1a85dd.bindPopup(popup_28693da285f2d1950b1735fff6fccfe6)
+        ;
+
+        
+    
+    
+            var marker_b16eac77d6c74c2b419d3e7fe3aa17ea = L.marker(
+                [41.5609507, 70.1307803],
+                {}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+            var icon_6a4af1dee29ded11dddd73c59bfb4edd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "darkblue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_b16eac77d6c74c2b419d3e7fe3aa17ea.setIcon(icon_6a4af1dee29ded11dddd73c59bfb4edd);
+        
+    
+        var popup_6a832a49741714e88fc438acd3922492 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11683a8ad487bbcadbd291c60811362d = $(`<div id="html_11683a8ad487bbcadbd291c60811362d" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1050.0 м</td></tr><tr><td>изменение:</td><td>119.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:32</nobr></td></tr><tr><td>в пути:</td><td>0:05:04</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.4 км</td></tr><tr><td>рассчет 2:</td><td>1.41 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5609507</td></tr><tr><td>долгота:</td><td>70.1307803</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5609507,70.1307803" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5609507/70.1307803"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5609507&lon=70.1307803&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1307803,41.5609507&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5609507&lon=70.1307803" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5609507/70.1307803&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_6a832a49741714e88fc438acd3922492.setContent(html_11683a8ad487bbcadbd291c60811362d);
+            
+        
+
+        marker_b16eac77d6c74c2b419d3e7fe3aa17ea.bindPopup(popup_6a832a49741714e88fc438acd3922492)
+        ;
+
+        
+    
+    
+            var circle_marker_b6b73ac5d617c3f9a9535b40da85e2b1 = L.circleMarker(
+                [41.5642592, 70.1356],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_1e42138e8a3368845df92d084698dcad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_587ec0c9018038bf6bf221cfa0058c82 = $(`<div id="html_587ec0c9018038bf6bf221cfa0058c82" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1141.0 м</td></tr><tr><td>изменение:</td><td>210.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:35</nobr></td></tr><tr><td>в пути:</td><td>0:08:06</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.97 км</td></tr><tr><td>рассчет 2:</td><td>1.99 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5642592</td></tr><tr><td>долгота:</td><td>70.1356</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5642592,70.1356" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5642592/70.1356"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5642592&lon=70.1356&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1356,41.5642592&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5642592&lon=70.1356" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5642592/70.1356&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_1e42138e8a3368845df92d084698dcad.setContent(html_587ec0c9018038bf6bf221cfa0058c82);
+            
+        
+
+        circle_marker_b6b73ac5d617c3f9a9535b40da85e2b1.bindPopup(popup_1e42138e8a3368845df92d084698dcad)
+        ;
+
+        
+    
+    
+            var circle_marker_5605ae51f06a03355eb86acd5b360de1 = L.circleMarker(
+                [41.5648072, 70.1411665],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_3a8703e59c91cf26de9313890aaa622a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f32decf4572e0ed32422883df553c9e7 = $(`<div id="html_f32decf4572e0ed32422883df553c9e7" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1286.0 м</td></tr><tr><td>изменение:</td><td>355.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:42</nobr></td></tr><tr><td>в пути:</td><td>0:14:43</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.64 км</td></tr><tr><td>рассчет 2:</td><td>2.71 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5648072</td></tr><tr><td>долгота:</td><td>70.1411665</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5648072,70.1411665" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5648072/70.1411665"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5648072&lon=70.1411665&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1411665,41.5648072&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5648072&lon=70.1411665" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5648072/70.1411665&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_3a8703e59c91cf26de9313890aaa622a.setContent(html_f32decf4572e0ed32422883df553c9e7);
+            
+        
+
+        circle_marker_5605ae51f06a03355eb86acd5b360de1.bindPopup(popup_3a8703e59c91cf26de9313890aaa622a)
+        ;
+
+        
+    
+    
+            var marker_94c3e7bb4e235918eb0390ef19b8c22d = L.marker(
+                [41.5648072, 70.1411665],
+                {}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+            var icon_939d10e81991decaa5bc4078f787d76d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "darkblue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_94c3e7bb4e235918eb0390ef19b8c22d.setIcon(icon_939d10e81991decaa5bc4078f787d76d);
+        
+    
+        var popup_668d303c5a3040c619e7f9de1224ef2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9e65eff34b2bcf0eecea0db4a8ce143 = $(`<div id="html_b9e65eff34b2bcf0eecea0db4a8ce143" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1286.0 м</td></tr><tr><td>изменение:</td><td>355.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:42</nobr></td></tr><tr><td>в пути:</td><td>0:14:43</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.64 км</td></tr><tr><td>рассчет 2:</td><td>2.71 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5648072</td></tr><tr><td>долгота:</td><td>70.1411665</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5648072,70.1411665" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5648072/70.1411665"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5648072&lon=70.1411665&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1411665,41.5648072&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5648072&lon=70.1411665" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5648072/70.1411665&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_668d303c5a3040c619e7f9de1224ef2a.setContent(html_b9e65eff34b2bcf0eecea0db4a8ce143);
+            
+        
+
+        marker_94c3e7bb4e235918eb0390ef19b8c22d.bindPopup(popup_668d303c5a3040c619e7f9de1224ef2a)
+        ;
+
+        
+    
+    
+            var circle_marker_d8ae737c403919c52adc6be458e290cd = L.circleMarker(
+                [41.5685818, 70.1434326],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_6a1a60dbd38476b6e03873cd537d7719 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_898956ea9926eb46b0e6ef185ca92c54 = $(`<div id="html_898956ea9926eb46b0e6ef185ca92c54" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1304.0 м</td></tr><tr><td>изменение:</td><td>373.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:53</nobr></td></tr><tr><td>в пути:</td><td>0:25:39</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.12 км</td></tr><tr><td>рассчет 2:</td><td>3.2 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5685818</td></tr><tr><td>долгота:</td><td>70.1434326</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5685818,70.1434326" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5685818/70.1434326"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5685818&lon=70.1434326&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1434326,41.5685818&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5685818&lon=70.1434326" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5685818/70.1434326&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_6a1a60dbd38476b6e03873cd537d7719.setContent(html_898956ea9926eb46b0e6ef185ca92c54);
+            
+        
+
+        circle_marker_d8ae737c403919c52adc6be458e290cd.bindPopup(popup_6a1a60dbd38476b6e03873cd537d7719)
+        ;
+
+        
+    
+    
+            var circle_marker_c384f1e13dadf49353197b6f71c3e0fd = L.circleMarker(
+                [41.5694135, 70.1494713],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_57734871ceaed7e67cf9ec7fef0e60d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af31d88316f261cc115420a41fd46821 = $(`<div id="html_af31d88316f261cc115420a41fd46821" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1325.0 м</td></tr><tr><td>изменение:</td><td>394.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:56</nobr></td></tr><tr><td>в пути:</td><td>0:28:55</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.81 км</td></tr><tr><td>рассчет 2:</td><td>3.89 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5694135</td></tr><tr><td>долгота:</td><td>70.1494713</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5694135,70.1494713" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5694135/70.1494713"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5694135&lon=70.1494713&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1494713,41.5694135&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5694135&lon=70.1494713" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5694135/70.1494713&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_57734871ceaed7e67cf9ec7fef0e60d1.setContent(html_af31d88316f261cc115420a41fd46821);
+            
+        
+
+        circle_marker_c384f1e13dadf49353197b6f71c3e0fd.bindPopup(popup_57734871ceaed7e67cf9ec7fef0e60d1)
+        ;
+
+        
+    
+    
+            var marker_abd1763f277541e1a976c015541f0899 = L.marker(
+                [41.5694135, 70.1494713],
+                {}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+            var icon_a9d10f258b0ec3784d83374e8ebf8a9a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "darkblue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_abd1763f277541e1a976c015541f0899.setIcon(icon_a9d10f258b0ec3784d83374e8ebf8a9a);
+        
+    
+        var popup_5f858c3696a86bff884e8f067cf9f6e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_71710c158a2704cf8a6c7b04d136ec85 = $(`<div id="html_71710c158a2704cf8a6c7b04d136ec85" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1325.0 м</td></tr><tr><td>изменение:</td><td>394.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 10:56</nobr></td></tr><tr><td>в пути:</td><td>0:28:55</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.81 км</td></tr><tr><td>рассчет 2:</td><td>3.89 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5694135</td></tr><tr><td>долгота:</td><td>70.1494713</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5694135,70.1494713" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5694135/70.1494713"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5694135&lon=70.1494713&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1494713,41.5694135&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5694135&lon=70.1494713" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5694135/70.1494713&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_5f858c3696a86bff884e8f067cf9f6e5.setContent(html_71710c158a2704cf8a6c7b04d136ec85);
+            
+        
+
+        marker_abd1763f277541e1a976c015541f0899.bindPopup(popup_5f858c3696a86bff884e8f067cf9f6e5)
+        ;
+
+        
+    
+    
+            var circle_marker_633d7006bcc138f2818f38bc8e318a28 = L.circleMarker(
+                [41.5696309, 70.1547574],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_4996576856a04cc784bff8f35b171eaa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd8fd7dd8963193b03cbb7fa4a1d916e = $(`<div id="html_dd8fd7dd8963193b03cbb7fa4a1d916e" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1347.0 м</td></tr><tr><td>изменение:</td><td>416.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 11:00</nobr></td></tr><tr><td>в пути:</td><td>0:32:37</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>4.5 км</td></tr><tr><td>рассчет 2:</td><td>4.58 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5696309</td></tr><tr><td>долгота:</td><td>70.1547574</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5696309,70.1547574" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5696309/70.1547574"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5696309&lon=70.1547574&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1547574,41.5696309&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5696309&lon=70.1547574" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5696309/70.1547574&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_4996576856a04cc784bff8f35b171eaa.setContent(html_dd8fd7dd8963193b03cbb7fa4a1d916e);
+            
+        
+
+        circle_marker_633d7006bcc138f2818f38bc8e318a28.bindPopup(popup_4996576856a04cc784bff8f35b171eaa)
+        ;
+
+        
+    
+    
+            var circle_marker_9d794849b8fbcdd72e10916eac87443e = L.circleMarker(
+                [41.5698338, 70.1611344],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_37830209a9254960f0177426dfe81389 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4974ea722b750d6410056e83e00c7d92 = $(`<div id="html_4974ea722b750d6410056e83e00c7d92" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1410.0 м</td></tr><tr><td>изменение:</td><td>479.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 11:04</nobr></td></tr><tr><td>в пути:</td><td>0:36:39</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>5.22 км</td></tr><tr><td>рассчет 2:</td><td>5.31 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5698338</td></tr><tr><td>долгота:</td><td>70.1611344</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5698338,70.1611344" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5698338/70.1611344"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5698338&lon=70.1611344&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1611344,41.5698338&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5698338&lon=70.1611344" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5698338/70.1611344&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_37830209a9254960f0177426dfe81389.setContent(html_4974ea722b750d6410056e83e00c7d92);
+            
+        
+
+        circle_marker_9d794849b8fbcdd72e10916eac87443e.bindPopup(popup_37830209a9254960f0177426dfe81389)
+        ;
+
+        
+    
+    
+            var marker_e8a6e3c03e712cb5e6f6c1641387b79f = L.marker(
+                [41.5698338, 70.1611344],
+                {}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+            var icon_c7113a1cdeece1f3af88245b39bd6a05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "darkblue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_e8a6e3c03e712cb5e6f6c1641387b79f.setIcon(icon_c7113a1cdeece1f3af88245b39bd6a05);
+        
+    
+        var popup_8d396398b16953b944555bbffdc3fdf5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af7b9c10f57ffbf8bc84d246211dfcc6 = $(`<div id="html_af7b9c10f57ffbf8bc84d246211dfcc6" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1410.0 м</td></tr><tr><td>изменение:</td><td>479.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 11:04</nobr></td></tr><tr><td>в пути:</td><td>0:36:39</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>5.22 км</td></tr><tr><td>рассчет 2:</td><td>5.31 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5698338</td></tr><tr><td>долгота:</td><td>70.1611344</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5698338,70.1611344" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5698338/70.1611344"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5698338&lon=70.1611344&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1611344,41.5698338&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5698338&lon=70.1611344" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5698338/70.1611344&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_8d396398b16953b944555bbffdc3fdf5.setContent(html_af7b9c10f57ffbf8bc84d246211dfcc6);
+            
+        
+
+        marker_e8a6e3c03e712cb5e6f6c1641387b79f.bindPopup(popup_8d396398b16953b944555bbffdc3fdf5)
+        ;
+
+        
+    
+    
+            var circle_marker_eda93f4c35723894225768fd5b7b8c42 = L.circleMarker(
+                [41.5709519, 70.1660241],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_6f5bbf4c865a6439890bb8f8b0447282 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64613d9e110ab7748fd6868e70392c8d = $(`<div id="html_64613d9e110ab7748fd6868e70392c8d" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1431.0 м</td></tr><tr><td>изменение:</td><td>500.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 11:08</nobr></td></tr><tr><td>в пути:</td><td>0:40:28</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>5.82 км</td></tr><tr><td>рассчет 2:</td><td>5.92 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5709519</td></tr><tr><td>долгота:</td><td>70.1660241</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5709519,70.1660241" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5709519/70.1660241"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5709519&lon=70.1660241&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1660241,41.5709519&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5709519&lon=70.1660241" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5709519/70.1660241&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_6f5bbf4c865a6439890bb8f8b0447282.setContent(html_64613d9e110ab7748fd6868e70392c8d);
+            
+        
+
+        circle_marker_eda93f4c35723894225768fd5b7b8c42.bindPopup(popup_6f5bbf4c865a6439890bb8f8b0447282)
+        ;
+
+        
+    
+    
+            var circle_marker_688c046ae0c0290e3c6eea5aa864ff32 = L.circleMarker(
+                [41.5699612, 70.1722538],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+        var popup_1ebfbf1f56bbd843fc47f60cfb1cf722 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ae17db5573210e996d0a0e36faeef7a = $(`<div id="html_1ae17db5573210e996d0a0e36faeef7a" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1515.0 м</td></tr><tr><td>изменение:</td><td>584.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 11:18</nobr></td></tr><tr><td>в пути:</td><td>0:51:08</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>6.53 км</td></tr><tr><td>рассчет 2:</td><td>6.65 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5699612</td></tr><tr><td>долгота:</td><td>70.1722538</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5699612,70.1722538" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5699612/70.1722538"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5699612&lon=70.1722538&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1722538,41.5699612&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5699612&lon=70.1722538" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5699612/70.1722538&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_1ebfbf1f56bbd843fc47f60cfb1cf722.setContent(html_1ae17db5573210e996d0a0e36faeef7a);
+            
+        
+
+        circle_marker_688c046ae0c0290e3c6eea5aa864ff32.bindPopup(popup_1ebfbf1f56bbd843fc47f60cfb1cf722)
+        ;
+
+        
+    
+    
+            var marker_df08e2d4ec69085824271f6c9bcc2dad = L.marker(
+                [41.5699612, 70.1722538],
+                {}
+            ).addTo(feature_group_a8b2c3b146f07329acfaab7309c8840f);
+        
+    
+            var icon_67710de75ccf3eb1993587cd0fb26d84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "darkblue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_df08e2d4ec69085824271f6c9bcc2dad.setIcon(icon_67710de75ccf3eb1993587cd0fb26d84);
+        
+    
+        var popup_44e04e1429f84ba0ba86c87cc2d230e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e33a148c3e42ea58bed342cca9bb73e6 = $(`<div id="html_e33a148c3e42ea58bed342cca9bb73e6" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Пальтау через сады до водопада в березовой рощи 6.19км</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>1515.0 м</td></tr><tr><td>изменение:</td><td>584.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.10.2023 11:18</nobr></td></tr><tr><td>в пути:</td><td>0:51:08</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>6.53 км</td></tr><tr><td>рассчет 2:</td><td>6.65 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.5699612</td></tr><tr><td>долгота:</td><td>70.1722538</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.5699612,70.1722538" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.5699612/70.1722538"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.5699612&lon=70.1722538&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=70.1722538,41.5699612&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.5699612&lon=70.1722538" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.5699612/70.1722538&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_44e04e1429f84ba0ba86c87cc2d230e5.setContent(html_e33a148c3e42ea58bed342cca9bb73e6);
+            
+        
+
+        marker_df08e2d4ec69085824271f6c9bcc2dad.bindPopup(popup_44e04e1429f84ba0ba86c87cc2d230e5)
+        ;
+
+        
+    
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topright", "title": "\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u043d\u0430 \u043f\u043e\u043b\u043d\u043e\u043c \u044d\u043a\u0440\u0430\u043d\u0435", "titleCancel": "\u041d\u0430\u0436\u043c\u0438 \u0434\u043b\u044f \u0432\u044b\u0445\u043e\u0434\u0430"}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+        
+    
+            var layer_control_fc7f67ddf499b7961cd5dce68d5d042c = {
+                base_layers : {
+                    "OpenStreet Map" : tile_layer_4ab81ade3b0e03bf71cf6e2a6798b19a,
+                    "CyclOSM" : tile_layer_6d5fd7d62406f939c93400047c4cd91f,
+                    "Stamen Terrain" : tile_layer_2f2010c13c2a1258df2cf747ece21aac,
+                    "Google Maps" : tile_layer_7137696c30b831b814d5077d899bd906,
+                    "Cartodb Positron" : tile_layer_37cae32b773b71436256fcfd6ca7ca52,
+                },
+                overlays :  {
+                    "\u003cfont color=\"purple\"\u003e\u041f\u0440\u043e\u0433\u043d\u043e\u0437 \u043f\u043e\u0433\u043e\u0434\u044b\u003c/font\u003e" : feature_group_c77547656684cce61f8a3caffce69083,
+                    "\u003cfont color=\"black\"\u003e\u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u0438\u003c/font\u003e" : feature_group_083b711bc6e6203cc294704a4170b8bc,
+                    "\u003cfont color=\"purple\" size=\"4\"\u003e---\u003c/font\u003e \u0412\u043e\u0434\u043e\u043f\u0430\u0434 \u0427\u0443\u043a\u0443\u0440\u0430\u043a\u0441\u0443 371\u043c  2023-10-22 " : feature_group_0282cc3bc4d1617394433ffd80171a5e,
+                    "\u003cfont color=\"red\" size=\"4\"\u003e---\u003c/font\u003e \u0427\u0443\u043a\u0443\u0440\u0430\u043a\u0441\u0443-\u043c\u0430\u043b\u044b\u0439 \u043f\u043e\u0441\u0442 2.8\u043a\u043c  2023-10-22 \u003cfont color=\"red\"\u003e \u003ci\u003e \u0430\u0432\u0442\u043e \u003c/i\u003e\u003c/font\u003e" : feature_group_bf99672e071fe5635dff0bfb22970b69,
+                    "\u003cfont color=\"darkblue\" size=\"4\"\u003e---\u003c/font\u003e \u041f\u0430\u043b\u044c\u0442\u0430\u0443 \u0447\u0435\u0440\u0435\u0437 \u0441\u0430\u0434\u044b \u0434\u043e \u0432\u043e\u0434\u043e\u043f\u0430\u0434\u0430 \u0432 \u0431\u0435\u0440\u0435\u0437\u043e\u0432\u043e\u0439 \u0440\u043e\u0449\u0438 6.19\u043a\u043c  2023-10-22 \u003cfont color=\"red\"\u003e \u003ci\u003e \u0430\u0432\u0442\u043e \u003c/i\u003e\u003c/font\u003e" : feature_group_a8b2c3b146f07329acfaab7309c8840f,
+                },
+            };
+            L.control.layers(
+                layer_control_fc7f67ddf499b7961cd5dce68d5d042c.base_layers,
+                layer_control_fc7f67ddf499b7961cd5dce68d5d042c.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_bad0bc39ce61af795acf716dab2dfbbd);
+            tile_layer_6d5fd7d62406f939c93400047c4cd91f.remove();
+            tile_layer_2f2010c13c2a1258df2cf747ece21aac.remove();
+            tile_layer_7137696c30b831b814d5077d899bd906.remove();
+            tile_layer_37cae32b773b71436256fcfd6ca7ca52.remove();
+            feature_group_c77547656684cce61f8a3caffce69083.remove();
+            feature_group_083b711bc6e6203cc294704a4170b8bc.remove();
+        
+    
+            var mouse_position_9ec8e774df5584188ef02b26b196c393 = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "", "separator": " : "}
+            );
+            mouse_position_9ec8e774df5584188ef02b26b196c393.options["latFormatter"] =
+                undefined;
+            mouse_position_9ec8e774df5584188ef02b26b196c393.options["lngFormatter"] =
+                undefined;
+            map_bad0bc39ce61af795acf716dab2dfbbd.addControl(mouse_position_9ec8e774df5584188ef02b26b196c393);
+ </script>
+</html>
