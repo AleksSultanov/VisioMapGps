@@ -11,7 +11,7 @@ export function Header() {
     <div className={classes.box}>
       <ul className={classes.headers}>
         <li className={classes.hlinks}>
-          <NavLink to={ROUTE_PATHES.root} className={setActiveClass}>
+          <NavLink to={ROUTE_PATHES.base} className={setActiveClass}>
             Все треки
           </NavLink>
         </li>

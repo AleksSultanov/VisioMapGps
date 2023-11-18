@@ -13,6 +13,10 @@ export const router = createBrowserRouter([
         element: <Root />,
       },
       {
+        path: ROUTE_PATHES.base,
+        element: <Root />,
+      },
+      {
         path: '*',
         element: <NotFoundPage />,
       },

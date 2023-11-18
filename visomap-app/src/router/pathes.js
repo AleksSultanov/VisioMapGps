@@ -1,5 +1,6 @@
 export const ROUTE_PATHES = {
   root: '/',
-  places: '/places',
-  place: '/place/:id',
+  base: '/VisioMapGps/',
+  places: '/VisioMapGps/places/',
+  place: '/place/:id/',
 };
