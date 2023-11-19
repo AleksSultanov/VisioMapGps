@@ -63,7 +63,7 @@ export const tracks = [
        , place: "badak", year: "2022"},    
     {map: "mapСукок2022.html", cover:"coverСукок2022.jpg", dscr: "Сукок 3 апреля 2022"
         , place: "sukok", year: "2022"},
-    {map: "mapKarankul.html", cover:"coverKarankul.jpg", dscr: "Каранкуль. Все походы", place: "karankul", year: ""},    
+    {map: "mapKarankul.html", cover:"coverKarankul.jpg", dscr: "Каранкуль. Походы 2014 и 2015", place: "karankul", year: ""},    
 
 ];                  
 
