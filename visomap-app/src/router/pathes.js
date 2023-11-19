@@ -1,6 +1,7 @@
+import { BASE_PAGE } from '../data/const.jsx';
 export const ROUTE_PATHES = {
   root: '/',
-  base: '/VisioMapGps/',
-  places: '/VisioMapGps/places/',
-  place: '/place/:id/',
+  base: BASE_PAGE,
+  places: BASE_PAGE+'places/',
+  place: BASE_PAGE+'place/:id/',
 };

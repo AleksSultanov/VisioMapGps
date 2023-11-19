@@ -1,8 +1,8 @@
 {
-  "name": "visomap-app",
+  "name": "visiomapgps",
   "private": true,
   "homepage": "https://alekssultanov.github.io/VisioMapGps",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
