@@ -11,6 +11,7 @@
 
 .hlinks {
   margin-left: 15px;
+  text-decoration: none;
 }  
 .isActive {
   text-decoration: underline;
