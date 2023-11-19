@@ -10,7 +10,7 @@ export function Root() {
           tracks.map((track) => {
             return (
               <Card
-                key={track.id}
+                key={track.map}
                 imglink = {track.cover}
                 caption = {track.dscr}
                 maplink = {track.map}

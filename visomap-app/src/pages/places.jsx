@@ -40,7 +40,7 @@ export function Places() {
           placetrack.map((track) => {
             return (
               <Card
-                key={track.id}
+                key={track.map}
                 imglink = {BASE_PAGE+track.cover}
                 caption = {track.dscr}
                 maplink = {BASE_PAGE+track.map}
