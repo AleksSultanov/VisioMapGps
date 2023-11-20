@@ -25,6 +25,7 @@
   box-sizing: border-box;
   text-decoration: none;
   color: black;
+  width: 100%;
 }
 
 .button{
@@ -33,7 +34,8 @@
   max-height: 36px;
   border-radius: 18px;
   margin-top: 5px;
-  align-self: flex-start;
+  right: 0px;
+  align-self:flex-start;
   
 }
 

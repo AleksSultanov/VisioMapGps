@@ -1,6 +1,10 @@
+import classes from './styles.module.css';
+
 import { Card } from '../components/Card/index.jsx';
 import { tracks } from '../data/traks.jsx';
-import classes from './styles.module.css';
+import { fimglink, fmaplink } from '../data/const.jsx';
+
+
 
 export function Root() {
   return (
@@ -11,9 +15,9 @@ export function Root() {
             return (
               <Card
                 key={track.map}
-                imglink = {track.cover}
+                imglink = {fimglink(track.cover)}
                 caption = {track.dscr}
-                maplink = {track.map}
+                maplink = {fmaplink(track.map)}
             />  
             );
           })
