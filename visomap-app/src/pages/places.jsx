@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 import { Card } from '../components/Card/index.jsx';
 import { places, tracks } from '../data/traks.jsx';
-import { fimglink, fplace, fmaplink } from '../data/const.jsx';
+import { fimglink, fplace, fmaplink } from '../data/utl.jsx';
 import classes from './styles.module.css';
 
 
@@ -45,6 +45,7 @@ export function Places() {
                 imglink = {fimglink(track.cover)}
                 caption = {track.dscr}
                 maplink = {fmaplink(track.map)}
+                isGeoMenu
             />  
             );
           })

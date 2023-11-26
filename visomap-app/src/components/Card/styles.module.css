@@ -26,8 +26,13 @@
   text-decoration: none;
   color: black;
   width: 100%;
+
 }
 
+.boxmenu{
+  position: relative;
+
+}
 .button{
   
   background-color: rgba(0,0,0,0.05);
@@ -37,5 +42,60 @@
   right: 0px;
   align-self:flex-start;
   
+ }
+
+.menu {
+  position: absolute;
+  top: calc(100% + 1px);
+  right: 0;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 7px;
+  width: 100px; 
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: 0.3s;
+} 
+
+.menu__active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
 
+.menu__items {
+  padding: 0;
+}  
+.menu__item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+.menu__item_link {
+  font-size: 0.9rem;
+  line-height: 1rem;
+  font-weight: 400;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.menu__item_link:hover {
+  background-color: lightgrey;
+  border-radius: 5px;
+}
+
+
+.item_point {
+  color: red;
+}
+
+.item_map {
+  color: yellowgreen;
+}
+
+.item_img {
+  margin-right: 15px;
+}

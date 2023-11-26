@@ -1,4 +1,4 @@
-import { BASE_PAGE } from '../data/const.jsx';
+import { BASE_PAGE } from '../data/utl.jsx';
 export const ROUTE_PATHES = {
   root: '/',
   base: BASE_PAGE,
