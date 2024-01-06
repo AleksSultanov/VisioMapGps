@@ -27,13 +27,13 @@ export function Root() {
                 <Card
                   idx={track.map}
                   key={track.map}
-                  imglink={fimglink(track.cover)}
+                  imglink={fimglink(track.map, track.cover)}
                   caption={track.dscr}
                   maplink={fmaplink(track.map)}
                   isGeoMenu
                   mapZiplink={fmapziplink(track.map)}
                   gpxZiplink={fgpxziplink(track.map)}
-                  menuOpenIdx={openMenuId}
+                  menuOpen={openMenuId === track.map}
                   setMenuOpenIdx={onOpenMenuId}
                 />
               );

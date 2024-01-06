@@ -5,18 +5,18 @@ import { FcMenu } from "react-icons/fc";
 import classNames from "classnames";
 
 export function Card({
-  idx,
+  idx = "0",
   imglink,
   caption,
   maplink,
   isGeoMenu = false,
   mapZiplink = "",
   gpxZiplink = "",
-  menuOpenIdx,
-  setMenuOpenIdx,
+  menuOpen = false,
+  setMenuOpenIdx = null,
 }) {
   function MenuOpenClose() {
-    if (idx === menuOpenIdx) {
+    if (menuOpen) {
       setMenuOpenIdx("0");
     } else {
       setMenuOpenIdx(idx);
@@ -34,14 +34,14 @@ export function Card({
         </a>
         {isGeoMenu && (
           <div className={classes.boxmenu}>
-            {!(idx === menuOpenIdx) && (
+            {!menuOpen && (
               <FcMenu
                 className={classes.button}
                 onClick={MenuOpenClose}
                 title="Открыть меню"
               />
             )}
-            {idx === menuOpenIdx && (
+            {menuOpen && (
               <BsXCircle
                 className={classes.button}
                 onClick={MenuOpenClose}
@@ -51,7 +51,7 @@ export function Card({
             <div
               className={classNames(
                 classes.menu,
-                idx === menuOpenIdx ? classes.menu__active : ""
+                menuOpen ? classes.menu__active : ""
               )}
             >
               <ul className={classes.menu__items}>
@@ -99,6 +99,6 @@ Card.propTypes = {
   isGeoMenu: PropTypes.bool,
   mapZiplink: PropTypes.string,
   gpxZiplink: PropTypes.string,
-  menuOpenIdx: PropTypes.string,
+  menuOpen: PropTypes.bool,
   setMenuOpenIdx: PropTypes.any,
 };

@@ -1,7 +1,8 @@
 import { useLocation } from "react-router-dom";
 import queryString from "query-string";
 import { Card } from "../components/Card/index.jsx";
-import { places, tracks } from "../data/traks.jsx";
+import { tracks } from "../data/traks.jsx";
+import { places } from "../data/place.jsx";
 import { fimglink, fplace, fmaplink } from "../data/utl.jsx";
 import classes from "./styles.module.css";
 import { useState } from "react";
@@ -18,11 +19,15 @@ export function Places() {
 
   let placetrack = {};
   if (Object.keys(prm).includes("place")) {
-    placetrack = tracks.filter((track) => track.place === prm.place);
+    placetrack = tracks.filter((track) =>
+      (track.place + ",").includes(prm.place + ",")
+    );
   }
 
   if (Object.keys(prm).includes("year")) {
-    placetrack = tracks.filter((track) => track.year === prm.year);
+    placetrack = tracks.filter((track) =>
+      (track.year + ",").includes(prm.year + ",")
+    );
   }
 
   const isPlace = placetrack.length > 0;
@@ -41,12 +46,9 @@ export function Places() {
               return (
                 <Card
                   key={index}
-                  idx={index}
-                  imglink={fimglink(places[index].cover)}
+                  imglink={fimglink("", places[index].cover)}
                   caption={places[index].name}
                   maplink={fplace(index)}
-                  menuOpenIdx={openMenuId}
-                  setMenuOpenIdx={onOpenMenuId}
                 />
               );
             })}
@@ -56,11 +58,11 @@ export function Places() {
                 <Card
                   key={track.map}
                   idx={track.map}
-                  imglink={fimglink(track.cover)}
+                  imglink={fimglink(track.map, track.cover)}
                   caption={track.dscr}
                   maplink={fmaplink(track.map)}
                   isGeoMenu
-                  menuOpenIdx={openMenuId}
+                  menuOpen={openMenuId === track.map}
                   setMenuOpenIdx={onOpenMenuId}
                 />
               );
