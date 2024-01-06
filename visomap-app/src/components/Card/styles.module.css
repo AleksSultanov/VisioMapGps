@@ -82,9 +82,10 @@
   padding-left: 10px;
 }
 
-.menu__item_link:hover {
-  background-color: lightgrey;
-  border-radius: 5px;
+
+.menu__item:hover {
+  background-color: #F0F0F4;
+
 }
 
 
