@@ -77,6 +77,13 @@ export const tracks = [
     year: "2022",
   },
   {
+    map: "mapKarakiya20220616.html",
+    cover: "gif",
+    dscr: "Каракия пикник 16 июня 2022",
+    place: "karakiya",
+    year: "2022",
+  },
+  {
     map: "mapSinegorie.html",
     cover: "jpg",
     dscr: "Синегорье 04 июня 2022",
@@ -91,6 +98,27 @@ export const tracks = [
     year: "2022",
   },
   {
+    map: "mapAzadbash.html",
+    cover: "gif",
+    dscr: "Разведка в Азадбаш 1 мая 2022",
+    place: "azadbash,tavaksay",
+    year: "2022",
+  },
+  {
+    map: "mapCharvack20220424.html",
+    cover: "gif",
+    dscr: "Вокруг чарвака 24 апреля 2022",
+    place: "charvak",
+    year: "2022",
+  },
+  {
+    map: "mapNanay20220424.html",
+    cover: "gif",
+    dscr: "Нанай 24 апреля 2022",
+    place: "nanay",
+    year: "2022",
+  },
+  {
     map: "mapСукок2022.html",
     cover: "jpg",
     dscr: "Сукок 3 апреля 2022",
@@ -102,6 +130,13 @@ export const tracks = [
     cover: "gif",
     dscr: "Чукураксу-Пальтау 20 февраля 2022",
     place: "palatau,chukuraksu",
+    year: "2022",
+  },
+  {
+    map: "mapLashkerek20220109.html",
+    cover: "gif",
+    dscr: "Лашкерек 9 января 2022",
+    place: "lashkerek",
     year: "2022",
   },
   {
