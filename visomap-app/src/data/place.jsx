@@ -5,7 +5,7 @@ export const places = {
   },
   acsacata: {
     name: "Аксаката",
-    cover: "coverAcsacota20230624.gif",
+    cover: "coverAcsacata.gif",
   },
   akbulak: {
     name: "Акбулак",
@@ -13,19 +13,27 @@ export const places = {
   },
   badak: {
     name: "Бадак",
-    cover: "coverБадак2022.jpg",
+    cover: "coverBadak.gif",
   },
   beldersay: {
     name: "Бельдерсай",
-    cover: "coverBeldersay20230528.gif",
+    cover: "coverBeldersay.gif",
+  },
+  ispay: {
+    name: "Испай",
+    cover: "coverIspay.gif",
   },
   karankul: {
     name: "Каранкуль",
-    cover: "coverKarankul.jpg",
+    cover: "coverKarankul.gif",
   },
   karakiya: {
     name: "Каракия",
     cover: "coverKarakiya.gif",
+  },
+  koksu: {
+    name: "Кок-су",
+    cover: "coverKoksu.gif",
   },
   lashkerek: {
     name: "Лашкерек",
@@ -35,9 +43,13 @@ export const places = {
     name: "Нанай",
     cover: "coverNanay.gif",
   },
+  novalisay: {
+    name: "Навалисай",
+    cover: "coverNovalisay.gif",
+  },
   palatau: {
     name: "Пальтау",
-    cover: "coverPalatau20220925.jpg",
+    cover: "coverPalatau.gif",
   },
   sinegorie: {
     name: "Синегорье",
@@ -45,30 +57,34 @@ export const places = {
   },
   sukok: {
     name: "Сукок",
-    cover: "coverСукок2022.jpg",
+    cover: "coverSukok.gif",
   },
   surenata: {
-    name: "Сурената",
-    cover: "coverSurenata.jpg",
+    name: "Сюрената",
+    cover: "coverSurenata.gif",
   },
   tavaksay: {
     name: "Таваксай",
     cover: "coverTavaksay.gif",
   },
+  tereklisay: {
+    name: "Тереклисай",
+    cover: "coverTereklisay.gif",
+  },
+  urungach: {
+    name: "Урунгач",
+    cover: "coverUrungach.gif",
+  },
   charvak: {
     name: "Чарвак",
-    cover: "coverCharvack20220424.gif",
+    cover: "coverCharvack.gif",
   },
   chimgan: {
     name: "Чимган",
-    cover: "Chimgan.gif",
+    cover: "coverChimgan.gif",
   },
   chukuraksu: {
     name: "Чукураксу",
     cover: "coverPalatau20231022.jpg",
-  },
-  urungach: {
-    name: "Урунгач",
-    cover: "coverUrungach20230409.gif",
   },
 };
