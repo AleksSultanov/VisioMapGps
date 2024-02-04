@@ -181,7 +181,7 @@ export const tracks = [
     cover: "gif",
     dscr: "Походы 2021",
     place:
-      "acsacata,novalisay,palatau,tereklisay,karakiya,ispay,lashkerek,surenata",
+      "acsacata,badak,beldersay,novalisay,palatau,tereklisay,karakiya,ispay,lashkerek,surenata,tavaksay,sukok,urungach",
     year: "2021",
   },
   {
@@ -252,6 +252,57 @@ export const tracks = [
     cover: "gif",
     dscr: "Сюрената 30 мая 2021",
     place: "surenata,acsacata",
+    year: "2021",
+  },
+  {
+    map: "mapBeldersay20210523.html",
+    cover: "gif",
+    dscr: "Бельдерсай 23 мая 2021",
+    place: "beldersay",
+    year: "2021",
+  },
+  {
+    map: "mapBadak20210515.html",
+    cover: "gif",
+    dscr: "Озеро Бадак 15 мая 2021",
+    place: "badak",
+    year: "2021",
+  },
+  {
+    map: "mapPalatau20210502.html",
+    cover: "gif",
+    dscr: "Пальтау 2 мая 2021",
+    place: "palatau",
+    year: "2021",
+  },
+  {
+    map: "mapAcsacota20210425.html",
+    cover: "gif",
+    dscr: "Аксаката по верху 25 апреля 2021",
+    place: "acsacata",
+    year: "2021",
+  },
+  {
+    map: "mapTavaksay20210411.html",
+    cover: "gif",
+    dscr: "Таваксай до водопада 11 апреля 2021",
+    place: "tavaksay",
+    year: "2021",
+  },
+
+  {
+    map: "mapSukok20210403.html",
+    cover: "gif",
+    dscr: "Сукок 3 апреля 2021",
+    place: "sukok",
+    year: "2021",
+  },
+
+  {
+    map: "mapUrungach20210102.html",
+    cover: "gif",
+    dscr: "Озеро Урунгач 2 января 2021",
+    place: "urungach",
     year: "2021",
   },
 
