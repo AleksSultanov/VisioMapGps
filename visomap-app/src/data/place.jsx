@@ -1,4 +1,8 @@
 export const places = {
+  arashan: {
+    name: "оз. Арашан",
+    cover: "coverArashan.gif",
+  },
   azadbash: {
     name: "Азадбаш",
     cover: "coverAzadbash.gif",
@@ -46,6 +50,10 @@ export const places = {
   novalisay: {
     name: "Навалисай",
     cover: "coverNovalisay.gif",
+  },
+  oygaing: {
+    name: "Ойгаинг",
+    cover: "coverOygaing.gif",
   },
   palatau: {
     name: "Пальтау",

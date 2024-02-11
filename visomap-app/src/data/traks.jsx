@@ -365,7 +365,7 @@ export const tracks = [
     map: "map2019.html",
     cover: "gif",
     dscr: "Походы 2019",
-    place: "charvak",
+    place: "arashan,charvak,tuzkan,oygaing",
     year: "2019",
   },
   {
@@ -376,11 +376,39 @@ export const tracks = [
     year: "2019",
   },
   {
+    map: "mapTuzkan20190831.html",
+    cover: "gif",
+    dscr: "Тузкан 31 августа - 1 сентября 2019",
+    place: "tuzkan",
+    year: "2019",
+  },
+  {
+    map: "mapOygaing20190810.html",
+    cover: "gif",
+    dscr: "Ойгаинг 10-11 августа 2019",
+    place: "oygaing",
+    year: "2019",
+  },
+  {
+    map: "mapArashan20190803.html",
+    cover: "gif",
+    dscr: "Арашан 3-4 августа 2019",
+    place: "arashan",
+    year: "2019",
+  },
+  {
     map: "map2012-2018.html",
     cover: "gif",
     dscr: "Походы 2012 - 2018",
     place: "",
     year: "2012,2013,2014,2015,2018",
+  },
+  {
+    map: "mapBeldersay20180506.html",
+    cover: "gif",
+    dscr: "Бельдерсай 12 ванночек",
+    place: "beldersay",
+    year: "2018",
   },
   {
     map: "mapKarankul.html",
