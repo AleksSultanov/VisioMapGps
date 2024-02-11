@@ -309,7 +309,7 @@ export const tracks = [
     map: "map2020.html",
     cover: "gif",
     dscr: "Походы 2020",
-    place: "palatau,ispay,beldersay,koksu,surenata",
+    place: "palatau,ispay,beldersay,koksu,surenata,tuzkan",
     year: "2020",
   },
   {
@@ -347,12 +347,32 @@ export const tracks = [
     place: "ispay",
     year: "2020",
   },
-
+  {
+    map: "mapTuzkan20200830.html",
+    cover: "gif",
+    dscr: "Тузкан 30-31 августа 2020",
+    place: "tuzkan",
+    year: "2020",
+  },
+  {
+    map: "mapSunInstitute20200315.html",
+    cover: "gif",
+    dscr: "Институт Солнце 15 марта 2020",
+    place: "suninstitute",
+    year: "2020",
+  },
   {
     map: "map2019.html",
     cover: "gif",
     dscr: "Походы 2019",
-    place: "",
+    place: "charvak",
+    year: "2019",
+  },
+  {
+    map: "mapCharvack20190928.html",
+    cover: "gif",
+    dscr: "Вокруг чарвака 28 сентября 2019",
+    place: "charvak",
     year: "2019",
   },
   {

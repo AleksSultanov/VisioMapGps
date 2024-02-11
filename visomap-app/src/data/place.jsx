@@ -12,7 +12,7 @@ export const places = {
     cover: "coverPalatau20230603.gif",
   },
   badak: {
-    name: "Бадак",
+    name: "оз. Бадак",
     cover: "coverBadak.gif",
   },
   beldersay: {
@@ -63,6 +63,10 @@ export const places = {
     name: "Сюрената",
     cover: "coverSurenata.gif",
   },
+  suninstitute: {
+    name: "Институт Солнце",
+    cover: "coverSunInstitute.gif",
+  },
   tavaksay: {
     name: "Таваксай",
     cover: "coverTavaksay.gif",
@@ -71,8 +75,12 @@ export const places = {
     name: "Тереклисай",
     cover: "coverTereklisay.gif",
   },
+  tuzkan: {
+    name: "оз. Тузкан",
+    cover: "coverTuzkan.gif",
+  },
   urungach: {
-    name: "Урунгач",
+    name: "оз. Урунгач",
     cover: "coverUrungach.gif",
   },
   charvak: {
