@@ -305,14 +305,49 @@ export const tracks = [
     place: "urungach",
     year: "2021",
   },
-
   {
     map: "map2020.html",
     cover: "gif",
     dscr: "Походы 2020",
-    place: "palatau,ispay,beldersay",
+    place: "palatau,ispay,beldersay,koksu,surenata",
     year: "2020",
   },
+  {
+    map: "mapKoksu20201108.html",
+    cover: "gif",
+    dscr: "Коксу 8 ноября 2020",
+    place: "koksu",
+    year: "2020",
+  },
+  {
+    map: "mapSurenata20201030.html",
+    cover: "gif",
+    dscr: "Сюрената 30 октября 2020",
+    place: "surenata",
+    year: "2020",
+  },
+  {
+    map: "mapPalatau20201017.html",
+    cover: "gif",
+    dscr: "Пальтау 17 октября 2020",
+    place: "palatau",
+    year: "2020",
+  },
+  {
+    map: "mapBeldersay20201010.html",
+    cover: "gif",
+    dscr: "Бельдерсай кольцо 10 октября 2020",
+    place: "beldersay",
+    year: "2020",
+  },
+  {
+    map: "mapIspay20200926.html",
+    cover: "gif",
+    dscr: "Испай до водопада 26 сентября 2020",
+    place: "ispay",
+    year: "2020",
+  },
+
   {
     map: "map2019.html",
     cover: "gif",
