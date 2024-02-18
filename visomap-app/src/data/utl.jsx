@@ -1,5 +1,36 @@
 export const BASE_PAGE = "/VisioMapGps/";
 
+function MonthStr(Month) {
+  switch (Number(Month)) {
+    case 1:
+      return "января";
+    case 2:
+      return "февраля";
+    case 3:
+      return "марта";
+    case 4:
+      return "апреля";
+    case 5:
+      return "мая";
+    case 6:
+      return "июня";
+    case 7:
+      return "июля";
+    case 8:
+      return "августа";
+    case 9:
+      return "сентября";
+    case 10:
+      return "октября";
+    case 11:
+      return "ноября";
+    case 12:
+      return "декабря";
+    default:
+      return "";
+  }
+}
+
 export function fimglink(map = "", cover) {
   let file = cover;
   if (map !== "") {
@@ -22,4 +53,40 @@ export function fmapziplink(map) {
 export function fgpxziplink(map) {
   const gpxZip = "gpx" + map.slice(3, -4) + "zip";
   return `${BASE_PAGE}zipGpx/${gpxZip}`;
+}
+
+export function fdateDscr(sdatelst) {
+  if (sdatelst === "") {
+    return "";
+  }
+
+  const a_date = sdatelst.split(",");
+  if (a_date.length === 0) {
+    return "";
+  }
+  const yearFrom = a_date[0].substr(0, 4);
+  const monthFrom = a_date[0].substr(4, 2);
+  const dayFrom = a_date[0].substr(6, 2);
+
+  if (a_date.length === 1) {
+    return `${Number(dayFrom)} ${MonthStr(monthFrom)} ${yearFrom} `;
+  } else {
+    const yearTo = a_date[1].substr(0, 4);
+    const monthTo = a_date[1].substr(4, 2);
+    const dayTo = a_date[1].substr(6, 2);
+    if (yearFrom != yearTo) {
+      return `${Number(dayFrom)} ${MonthStr(monthFrom)} ${yearFrom} - ${Number(
+        dayTo
+      )} ${MonthStr(monthTo)} ${yearTo}`;
+    }
+    if (monthFrom != monthTo) {
+      return `${Number(dayFrom)} ${MonthStr(monthFrom)} - ${Number(
+        dayTo
+      )} ${MonthStr(monthTo)} ${yearTo}`;
+    }
+
+    return `${Number(dayFrom)} - ${Number(dayTo)} ${MonthStr(
+      monthTo
+    )} ${yearTo}`;
+  }
 }

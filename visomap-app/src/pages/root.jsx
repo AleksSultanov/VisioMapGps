@@ -3,7 +3,13 @@ import classes from "./styles.module.css";
 import { useState } from "react";
 import { Card } from "../components/Card/index.jsx";
 import { tracks } from "../data/traks.jsx";
-import { fimglink, fmaplink, fmapziplink, fgpxziplink } from "../data/utl.jsx";
+import {
+  fimglink,
+  fmaplink,
+  fmapziplink,
+  fgpxziplink,
+  fdateDscr,
+} from "../data/utl.jsx";
 
 import { MenuContext } from "../store/context.jsx";
 
@@ -28,7 +34,7 @@ export function Root() {
                   idx={track.map}
                   key={track.map}
                   imglink={fimglink(track.map, track.cover)}
-                  caption={track.dscr}
+                  caption={`${track.dscr} ${fdateDscr(track.date)}`}
                   maplink={fmaplink(track.map)}
                   isGeoMenu
                   mapZiplink={fmapziplink(track.map)}

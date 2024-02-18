@@ -3,7 +3,7 @@ import queryString from "query-string";
 import { Card } from "../components/Card/index.jsx";
 import { tracks } from "../data/traks.jsx";
 import { places } from "../data/place.jsx";
-import { fimglink, fplace, fmaplink } from "../data/utl.jsx";
+import { fimglink, fplace, fmaplink, fdateDscr } from "../data/utl.jsx";
 import classes from "./styles.module.css";
 import { useState } from "react";
 
@@ -59,7 +59,7 @@ export function Places() {
                   key={track.map}
                   idx={track.map}
                   imglink={fimglink(track.map, track.cover)}
-                  caption={track.dscr}
+                  caption={`${track.dscr} ${fdateDscr(track.date)}`}
                   maplink={fmaplink(track.map)}
                   isGeoMenu
                   menuOpen={openMenuId === track.map}
