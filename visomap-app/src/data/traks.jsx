@@ -293,7 +293,7 @@ export const tracks = [
   {
     map: "mapBeldersay20210523.html",
     cover: "gif",
-    dscr: "Бельдерсай",
+    dscr: "Бельдерсай петроглифы",
     place: "beldersay",
     year: "2021",
     date: "20210523",
@@ -456,7 +456,7 @@ export const tracks = [
     map: "map2012-2018.html",
     cover: "gif",
     dscr: "Походы 2012 - 2018",
-    place: "karankul,chimgan,2018",
+    place: "beldersay,karankul,chimgan,zarkent,sukok",
     year: "2012,2013,2014,2015,2018",
     date: "",
   },
@@ -492,7 +492,14 @@ export const tracks = [
     year: "2015",
     date: "20150510",
   },
-
+  {
+    map: "mapBeldersay20140615.html",
+    cover: "gif",
+    dscr: "Бельдерсай петроглифы",
+    place: "beldersay",
+    year: "2014",
+    date: "20140615",
+  },
   {
     map: "mapKarankul20140525.html",
     cover: "gif",
@@ -508,5 +515,13 @@ export const tracks = [
     place: "karankul,chimgan",
     year: "2014,2015",
     date: "",
+  },
+  {
+    map: "mapZarkentSukok20140504.html",
+    cover: "gif",
+    dscr: "Заркент - Сукок",
+    place: "zarkent,sukok",
+    year: "2014",
+    date: "20140504",
   },
 ];
