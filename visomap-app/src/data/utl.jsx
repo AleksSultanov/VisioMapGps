@@ -55,6 +55,11 @@ export function fgpxziplink(map) {
   return `${BASE_PAGE}zipGpx/${gpxZip}`;
 }
 
+function fday(daystr) {
+  const day = Number(daystr);
+  if (day === 0) return "";
+  return day;
+}
 export function fdateDscr(sdatelst) {
   if (sdatelst === "") {
     return "";
@@ -69,24 +74,22 @@ export function fdateDscr(sdatelst) {
   const dayFrom = a_date[0].substr(6, 2);
 
   if (a_date.length === 1) {
-    return `${Number(dayFrom)} ${MonthStr(monthFrom)} ${yearFrom} `;
+    return `${fday(dayFrom)} ${MonthStr(monthFrom)} ${yearFrom} `;
   } else {
     const yearTo = a_date[1].substr(0, 4);
     const monthTo = a_date[1].substr(4, 2);
     const dayTo = a_date[1].substr(6, 2);
     if (yearFrom != yearTo) {
-      return `${Number(dayFrom)} ${MonthStr(monthFrom)} ${yearFrom} - ${Number(
+      return `${fday(dayFrom)} ${MonthStr(monthFrom)} ${yearFrom} - ${fday(
         dayTo
       )} ${MonthStr(monthTo)} ${yearTo}`;
     }
     if (monthFrom != monthTo) {
-      return `${Number(dayFrom)} ${MonthStr(monthFrom)} - ${Number(
+      return `${fday(dayFrom)} ${MonthStr(monthFrom)} - ${fday(
         dayTo
       )} ${MonthStr(monthTo)} ${yearTo}`;
     }
 
-    return `${Number(dayFrom)} - ${Number(dayTo)} ${MonthStr(
-      monthTo
-    )} ${yearTo}`;
+    return `${fday(dayFrom)} - ${fday(dayTo)} ${MonthStr(monthTo)} ${yearTo}`;
   }
 }

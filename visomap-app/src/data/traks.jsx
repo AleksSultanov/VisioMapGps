@@ -2,17 +2,15 @@ export const tracks = [
   {
     map: "map2023.html",
     cover: "jpg",
-    dscr: "Походы 2023",
+    dscr: "Походы",
     place: "akbulak,beldersay,palatau,chukuraksu,acsacata,urungach,tereklisay",
-    year: "2023",
-    date: "",
+    date: "2023",
   },
   {
     map: "mapPalatau20231022.html",
     cover: "jpg",
     dscr: "Чукураксу и Пальтау через сады на машине до водопада в поселке ",
     place: "palatau,chukuraksu",
-    year: "2023",
     date: "20231022",
   },
   {
@@ -20,7 +18,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Пальтау через сады на машине и пешком до водопада",
     place: "palatau",
-    year: "2023",
     date: "20230930",
   },
   {
@@ -28,7 +25,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Аксаката пикник",
     place: "acsacata",
-    year: "2023",
     date: "20230624",
   },
   {
@@ -36,7 +32,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Акбулак 3 июня 2023",
     place: "akbulak,tereklisay",
-    year: "2023",
     date: "20230603",
   },
   {
@@ -44,7 +39,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Бельдерсай, мраморная речка",
     place: "beldersay",
-    year: "2023",
     date: "20230528",
   },
   {
@@ -52,7 +46,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Маковое поле, Аксаката",
     place: "acsacata",
-    year: "2023",
     date: "20230506",
   },
   {
@@ -60,7 +53,6 @@ export const tracks = [
     cover: "jpg",
     dscr: "Чукураксу и Пальтау круговой маршрут через березовую рощу",
     place: "palatau,chukuraksu",
-    year: "2023",
     date: "20230416",
   },
   {
@@ -68,24 +60,21 @@ export const tracks = [
     cover: "gif",
     dscr: "Урунгач",
     place: "urungach",
-    year: "2023",
     date: "20230409",
   },
   {
     map: "map2022.html",
     cover: "gif",
-    dscr: "Походы 2022",
+    dscr: "Походы",
     place:
       "karakiya,ispay,koksu,palatau,acsacata,sinegorie,badak,azadbash,tavaksay,charvak,nanay,sukok,chukuraksu,lashkerek,urungach",
-    year: "2022",
-    date: "",
+    date: "2022",
   },
   {
     map: "mapUrungach20221127.html",
     cover: "gif",
     dscr: "Урунгач",
     place: "urungach",
-    year: "2022",
     date: "20221127",
   },
 
@@ -94,7 +83,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Каракия пикник",
     place: "karakiya",
-    year: "2022",
     date: "20221112",
   },
   {
@@ -102,7 +90,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Испай пикник",
     place: "ispay",
-    year: "2022",
     date: "20221009",
   },
   {
@@ -110,7 +97,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Кок-су пикник",
     place: "koksu",
-    year: "2022",
     date: "20221002",
   },
   {
@@ -118,7 +104,6 @@ export const tracks = [
     cover: "jpg",
     dscr: "Пальтау круговой маршрут через березовую рощу",
     place: "palatau",
-    year: "2022",
     date: "20220925",
   },
   {
@@ -126,7 +111,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Аксаката пикник",
     place: "acsacata",
-    year: "2022",
     date: "20220623",
   },
   {
@@ -134,7 +118,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Каракия пикник",
     place: "karakiya",
-    year: "2022",
     date: "20220616",
   },
   {
@@ -142,7 +125,6 @@ export const tracks = [
     cover: "jpg",
     dscr: "Синегорье",
     place: "sinegorie",
-    year: "2022",
     date: "20220604",
   },
   {
@@ -150,7 +132,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Озеро Бадак",
     place: "badak",
-    year: "2022",
     date: "20220515",
   },
   {
@@ -158,7 +139,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Разведка в Азадбаш",
     place: "azadbash,tavaksay",
-    year: "2022",
     date: "20220501",
   },
   {
@@ -166,7 +146,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Вокруг чарвака",
     place: "charvak",
-    year: "2022",
     date: "20220424",
   },
   {
@@ -174,7 +153,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Нанай",
     place: "nanay",
-    year: "2022",
     date: "20220424",
   },
   {
@@ -182,7 +160,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Сукок",
     place: "sukok",
-    year: "2022",
     date: "20220403",
   },
   {
@@ -190,7 +167,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Чукураксу-Пальтау",
     place: "palatau,chukuraksu",
-    year: "2022",
     date: "20220220",
   },
   {
@@ -198,24 +174,21 @@ export const tracks = [
     cover: "gif",
     dscr: "Лашкерек",
     place: "lashkerek",
-    year: "2022",
     date: "20220109",
   },
   {
     map: "map2021.html",
     cover: "gif",
-    dscr: "Походы 2021",
+    dscr: "Походы",
     place:
       "acsacata,badak,beldersay,novalisay,palatau,tereklisay,karakiya,ispay,lashkerek,surenata,tavaksay,sukok,urungach",
-    year: "2021",
-    date: "",
+    date: "2021",
   },
   {
     map: "mapPalatau20211212.html",
     cover: "gif",
     dscr: "Пальтау березовая роща через сады",
     place: "palatau",
-    year: "2021",
     date: "20211212",
   },
   {
@@ -223,7 +196,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Пальтау березовая роща круговой",
     place: "palatau",
-    year: "2021",
     date: "20211204",
   },
   {
@@ -231,7 +203,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Навалисай",
     place: "novalisay",
-    year: "2021",
     date: "20211031",
   },
   {
@@ -239,7 +210,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Тереликсай",
     place: "tereklisay,palatau",
-    year: "2021",
     date: "20211017",
   },
   {
@@ -247,7 +217,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Навалисай",
     place: "novalisay",
-    year: "2021",
     date: "20211003",
   },
   {
@@ -255,7 +224,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Каракия пикник",
     place: "karakiya",
-    year: "2021",
     date: "20210926",
   },
   {
@@ -263,7 +231,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Аксаката пикник",
     place: "acsacata",
-    year: "2021",
     date: "20210919",
   },
   {
@@ -271,7 +238,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Испай до водопада",
     place: "ispay",
-    year: "2021",
     date: "20210613",
   },
   {
@@ -279,7 +245,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Лашкерек пикник",
     place: "lashkerek",
-    year: "2021",
     date: "20210606",
   },
   {
@@ -287,7 +252,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Сюрената",
     place: "surenata,acsacata",
-    year: "2021",
     date: "20210530",
   },
   {
@@ -295,7 +259,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Бельдерсай петроглифы",
     place: "beldersay",
-    year: "2021",
     date: "20210523",
   },
   {
@@ -303,7 +266,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Озеро Бадак",
     place: "badak",
-    year: "2021",
     date: "20210515",
   },
   {
@@ -351,17 +313,15 @@ export const tracks = [
   {
     map: "map2020.html",
     cover: "gif",
-    dscr: "Походы 2020",
+    dscr: "Походы",
     place: "palatau,ispay,beldersay,koksu,surenata,tuzkan",
-    year: "2020",
-    date: "",
+    date: "2020",
   },
   {
     map: "mapKoksu20201108.html",
     cover: "gif",
     dscr: "Коксу до щели",
     place: "koksu",
-    year: "2020",
     date: "20201108",
   },
   {
@@ -369,7 +329,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Сюрената",
     place: "surenata",
-    year: "2020",
     date: "20201030",
   },
   {
@@ -377,7 +336,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Пальтау",
     place: "palatau",
-    year: "2020",
     date: "20201017",
   },
   {
@@ -385,7 +343,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Бельдерсай кольцо",
     place: "beldersay",
-    year: "2020",
     date: "20201010",
   },
   {
@@ -393,7 +350,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Испай до водопада",
     place: "ispay",
-    year: "2020",
     date: "20200926",
   },
   {
@@ -401,7 +357,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Тузкан",
     place: "tuzkan",
-    year: "2020",
     date: "20200830,20200831",
   },
   {
@@ -409,23 +364,20 @@ export const tracks = [
     cover: "gif",
     dscr: "Институт Солнце",
     place: "suninstitute",
-    year: "2020",
     date: "20200315",
   },
   {
     map: "map2019.html",
     cover: "gif",
-    dscr: "Походы 2019",
+    dscr: "Походы",
     place: "arashan,charvak,tuzkan,oygaing",
-    year: "2019",
-    date: "",
+    date: "2019",
   },
   {
     map: "mapCharvack20190928.html",
     cover: "gif",
     dscr: "Вокруг чарвака",
     place: "charvak",
-    year: "2019",
     date: "20190928",
   },
   {
@@ -433,7 +385,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Тузкан",
     place: "tuzkan",
-    year: "2019",
     date: "20190831,20190901",
   },
   {
@@ -441,7 +392,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Ойгаинг",
     place: "oygaing",
-    year: "2019",
     date: "20190810,20190811",
   },
   {
@@ -449,23 +399,21 @@ export const tracks = [
     cover: "gif",
     dscr: "Арашан",
     place: "arashan",
-    year: "2019",
     date: "20190803,20190804",
   },
   {
     map: "map2012-2018.html",
     cover: "gif",
-    dscr: "Походы 2012 - 2018",
+    dscr: "Походы",
     place: "beldersay,karankul,chimgan,zarkent,sukok",
     year: "2012,2013,2014,2015,2018",
-    date: "",
+    date: "2012,2018",
   },
   {
     map: "mapBeldersay20180506.html",
     cover: "gif",
     dscr: "Бельдерсай 12 ванночек",
     place: "beldersay",
-    year: "2018",
     date: "20180506",
   },
   {
@@ -473,7 +421,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Бельдерсай правая сторона",
     place: "beldersay",
-    year: "2015",
     date: "20150927",
   },
   {
@@ -481,7 +428,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Чимган - Каранкуль",
     place: "karankul,chimgan",
-    year: "2015",
     date: "20150719",
   },
   {
@@ -489,7 +435,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Бельдерсай прогулка с МТС",
     place: "beldersay",
-    year: "2015",
     date: "20150510",
   },
   {
@@ -497,7 +442,6 @@ export const tracks = [
     cover: "gif",
     dscr: "Бельдерсай петроглифы",
     place: "beldersay",
-    year: "2014",
     date: "20140615",
   },
   {
@@ -505,23 +449,48 @@ export const tracks = [
     cover: "gif",
     dscr: "Чимган - Каранкуль",
     place: "karankul,chimgan",
-    year: "2014",
     date: "20140525",
   },
   {
     map: "mapKarankul.html",
     cover: "jpg",
-    dscr: "Чимган - Каранкуль. Два похода 2014 и 2015",
+    dscr: "Чимган - Каранкуль. Два похода",
     place: "karankul,chimgan",
-    year: "2014,2015",
-    date: "",
+    date: "2014,2015",
   },
   {
     map: "mapZarkentSukok20140504.html",
     cover: "gif",
     dscr: "Заркент - Сукок",
     place: "zarkent,sukok",
-    year: "2014",
     date: "20140504",
+  },
+  {
+    map: "mapChimganBeldersay2012-2013.html",
+    cover: "gif",
+    dscr: "Чимган - Бельдерсай",
+    place: "chimgan,beldersay",
+    date: "2012,2013",
+  },
+  {
+    map: "mapChimganBelderday20130505.html",
+    cover: "gif",
+    dscr: "Чимган - Бельдерсай",
+    place: "chimgan,beldersay",
+    date: "20130505",
+  },
+  {
+    map: "mapBeldersayChimgan20120819.html",
+    cover: "gif",
+    dscr: "Бельдерсай - Чимган",
+    place: "chimgan,beldersay",
+    date: "20120819",
+  },
+  {
+    map: "mapChimganBeldersay20120624.html",
+    cover: "gif",
+    dscr: "Чимган - Бельдерсай",
+    place: "chimgan,beldersay",
+    date: "20120624",
   },
 ];
