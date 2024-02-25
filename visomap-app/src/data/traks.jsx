@@ -402,6 +402,20 @@ export const tracks = [
     date: "20190803,20190804",
   },
   {
+    map: "mapKarankul20190509.html",
+    cover: "gif",
+    dscr: "Рыбалка на Каранкульском водохранилище",
+    place: "karankul",
+    date: "20190509",
+  },
+  {
+    map: "mapTuyabuguz20190216.html",
+    cover: "gif",
+    dscr: "Рыбалка в лодке на Туябугузком водохранилище",
+    place: "tuyabuguz",
+    date: "20190216",
+  },
+  {
     map: "map2012-2018.html",
     cover: "gif",
     dscr: "Походы",
@@ -415,6 +429,20 @@ export const tracks = [
     dscr: "Бельдерсай 12 ванночек",
     place: "beldersay",
     date: "20180506",
+  },
+  {
+    map: "mapShuruzyak20180603.html",
+    cover: "gif",
+    dscr: "Рыбалка на к. Шурузяк",
+    place: "shuruzyak",
+    date: "20180603",
+  },
+  {
+    map: "mapTuyabuguz20170902.html",
+    cover: "gif",
+    dscr: "Рыбалка на Туябугузком водохранилище",
+    place: "tuyabuguz",
+    date: "20170902",
   },
   {
     map: "mapBeldersay20150927.html",
@@ -478,6 +506,13 @@ export const tracks = [
     dscr: "Чимган - Бельдерсай",
     place: "chimgan,beldersay",
     date: "20130505",
+  },
+  {
+    map: "mapSyrdarya20120902.html",
+    cover: "gif",
+    dscr: "Рыбалка на р.Сырдарья",
+    place: "syrdarya",
+    date: "201200902",
   },
   {
     map: "mapBeldersayChimgan20120819.html",

@@ -87,6 +87,10 @@ export const places = {
     name: "оз. Тузкан",
     cover: "coverTuzkan.gif",
   },
+  tuyabuguz: {
+    name: "Туябугузское водохранилище",
+    cover: "coverTuyabuguz.gif",
+  },
   urungach: {
     name: "оз. Урунгач",
     cover: "coverUrungach.gif",
@@ -102,5 +106,13 @@ export const places = {
   chukuraksu: {
     name: "Чукураксу",
     cover: "coverPalatau20231022.jpg",
+  },
+  shuruzyak: {
+    name: "к. Шурузяк",
+    cover: "coverShuruzyak.gif",
+  },
+  syrdarya: {
+    name: "р. Сырдарья",
+    cover: "coverSyrdarya.gif",
   },
 };
