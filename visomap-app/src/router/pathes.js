@@ -1,6 +1,7 @@
-import { BASE_PAGE } from '../data/utl.jsx';
+import { BASE_PAGE } from "../data/utl.jsx";
 export const ROUTE_PATHES = {
-  root: '/',
+  root: "/",
   base: BASE_PAGE,
-  places: BASE_PAGE+'places',
+  places: BASE_PAGE + "places",
+  years: BASE_PAGE + "yars",
 };

@@ -1,0 +1,40 @@
+@import "../../../styles/variables.css";
+.boxmenu{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+}
+.button{
+  background-color:var(--button-background-color);
+  margin-top: 15px;
+ 
+ }
+
+.menu {
+  background-color: var(--menu-background-color);
+  width: 400px; 
+  opacity: 0;
+  visibility: hidden;
+} 
+
+.menu__active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu__items {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}  
+.menu__item {
+  margin: 0;
+  list-style-type: none;
+}
+
+
+.menu__item:hover {
+  background-color: #F0F0F4;
+
+}
