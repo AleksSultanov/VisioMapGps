@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_330e5dc533c2484590e87248786ceb1f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_330e5dc533c2484590e87248786ceb1f" ></div>
+        
+</body>
+<script>    
+    
+            var map_330e5dc533c2484590e87248786ceb1f = L.map(
+                "map_330e5dc533c2484590e87248786ceb1f",
+                {
+                    center: [41.3160605, 69.269243],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0860ed0c2f0c485db3b61208a391e692 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_330e5dc533c2484590e87248786ceb1f);
+        
+    
+            var tile_layer_2f053625cd874b8eb88040ebd617259e = L.tileLayer(
+                "http://{s}.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "google", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": ["mt0", "mt1", "mt2", "mt3"], "tms": false}
+            ).addTo(map_330e5dc533c2484590e87248786ceb1f);
+        
+    
+            var tile_layer_75e0d3ab0bc24797a2b716b58467744d = L.tileLayer(
+                "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png",
+                {"attribution": "\u003ca href=\"https://github.com/cyclosm/cyclosm-cartocss-style/releases\" title=\"CyclOSM - Open Bicycle render\"\u003eCyclOSM\u003c/a\u003e | Map data: \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_330e5dc533c2484590e87248786ceb1f);
+        
+    
+            var feature_group_271b5216a8c24fa1a7fcb663e7fadfca = L.featureGroup(
+                {}
+            ).addTo(map_330e5dc533c2484590e87248786ceb1f);
+        
+    
+            var marker_ec7e4c7b8d4a4097be674e30e96fe4c7 = L.marker(
+                [41.32, 69.27],
+                {}
+            ).addTo(feature_group_271b5216a8c24fa1a7fcb663e7fadfca);
+        
+    
+            var icon_d87f9213081643e886d16936aa44b534 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ec7e4c7b8d4a4097be674e30e96fe4c7.setIcon(icon_d87f9213081643e886d16936aa44b534);
+        
+    
+        var popup_d0ebb61179094acc8fd57708f90c60a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_398af637461c4f5fa3ccb8838911e0da = $(`<div id="html_398af637461c4f5fa3ccb8838911e0da" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.32&lon=69.27&detailLat=41.32&detailLon=69.271&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+            popup_d0ebb61179094acc8fd57708f90c60a9.setContent(html_398af637461c4f5fa3ccb8838911e0da);
+        
+
+        marker_ec7e4c7b8d4a4097be674e30e96fe4c7.bindPopup(popup_d0ebb61179094acc8fd57708f90c60a9)
+        ;
+
+        
+    
+    
+            var marker_72ab358abbad4ac3a64093f06039fbb7 = L.marker(
+                [41.3, 69.24],
+                {}
+            ).addTo(feature_group_271b5216a8c24fa1a7fcb663e7fadfca);
+        
+    
+            var icon_bb5c1118f4974ffe814bbdd024d11d33 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_72ab358abbad4ac3a64093f06039fbb7.setIcon(icon_bb5c1118f4974ffe814bbdd024d11d33);
+        
+    
+        var popup_170c8a6935074c93aa8433cd87c9bf39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_059bac3860f346068f4f3819d93565f3 = $(`<div id="html_059bac3860f346068f4f3819d93565f3" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.3&lon=69.24&detailLat=41.3&detailLon=69.241&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+            popup_170c8a6935074c93aa8433cd87c9bf39.setContent(html_059bac3860f346068f4f3819d93565f3);
+        
+
+        marker_72ab358abbad4ac3a64093f06039fbb7.bindPopup(popup_170c8a6935074c93aa8433cd87c9bf39)
+        ;
+
+        
+    
+    
+            var feature_group_54b1ca351f86412883c3fada3dcc6646 = L.featureGroup(
+                {}
+            ).addTo(map_330e5dc533c2484590e87248786ceb1f);
+        
+    
+            var marker_e94354745e2f47e2877eb0e9b653d724 = L.marker(
+                [41.31451119972222, 69.27135509972221],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_ef6219e088b7421fbabb6c3a8649f8e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_e94354745e2f47e2877eb0e9b653d724.setIcon(icon_ef6219e088b7421fbabb6c3a8649f8e3);
+        
+    
+        var popup_2d98ba4167ad4514b4ce1990e46a77e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d2b55917e3e24dedbb2243e269aa6b73 = $(`<div id="html_d2b55917e3e24dedbb2243e269aa6b73" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/zhToHewDrW_6Xg"></div><hr><a href = "https://yadi.sk/i/zhToHewDrW_6Xg" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.31451119972222,69.27135509972221" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.31451119972222/69.27135509972221" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.31451119972222&lon=69.27135509972221&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.27135509972221,41.31451119972222&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.31451119972222/69.27135509972221&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_2d98ba4167ad4514b4ce1990e46a77e1.setContent(html_d2b55917e3e24dedbb2243e269aa6b73);
+        
+
+        marker_e94354745e2f47e2877eb0e9b653d724.bindPopup(popup_2d98ba4167ad4514b4ce1990e46a77e1)
+        ;
+
+        
+    
+    
+            var marker_f154555bd6194921ae4a085f963281f9 = L.marker(
+                [41.31291689972222, 69.2621361],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_78eef11dcb57485180a44f8fe8a4794e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_f154555bd6194921ae4a085f963281f9.setIcon(icon_78eef11dcb57485180a44f8fe8a4794e);
+        
+    
+        var popup_5cf052cebc524f3390b2afe6c4754147 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f72213c36cac45f3bc8cf21f34a040a6 = $(`<div id="html_f72213c36cac45f3bc8cf21f34a040a6" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/jSG5UWsN1TTRDw"></div><hr><a href = "https://yadi.sk/i/jSG5UWsN1TTRDw" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.31291689972222,69.2621361" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.31291689972222/69.2621361" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.31291689972222&lon=69.2621361&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2621361,41.31291689972222&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.31291689972222/69.2621361&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_5cf052cebc524f3390b2afe6c4754147.setContent(html_f72213c36cac45f3bc8cf21f34a040a6);
+        
+
+        marker_f154555bd6194921ae4a085f963281f9.bindPopup(popup_5cf052cebc524f3390b2afe6c4754147)
+        ;
+
+        
+    
+    
+            var marker_775afa1901dc4746bcdddc2b5c57dcac = L.marker(
+                [41.30806989972222, 69.25420239972222],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_50d02744f8de45c38fc208d4d9479c24 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_775afa1901dc4746bcdddc2b5c57dcac.setIcon(icon_50d02744f8de45c38fc208d4d9479c24);
+        
+    
+        var popup_1d924832598d4bb386040c8651aec1f2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3c0fb32e5bc4ec5b8c4972cd8748fa1 = $(`<div id="html_d3c0fb32e5bc4ec5b8c4972cd8748fa1" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/XsdP_X2liSCWxA"></div><hr><a href = "https://yadi.sk/i/XsdP_X2liSCWxA" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.30806989972222,69.25420239972222" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.30806989972222/69.25420239972222" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.30806989972222&lon=69.25420239972222&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.25420239972222,41.30806989972222&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.30806989972222/69.25420239972222&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_1d924832598d4bb386040c8651aec1f2.setContent(html_d3c0fb32e5bc4ec5b8c4972cd8748fa1);
+        
+
+        marker_775afa1901dc4746bcdddc2b5c57dcac.bindPopup(popup_1d924832598d4bb386040c8651aec1f2)
+        ;
+
+        
+    
+    
+            var marker_acd77bb42c4445ba99a6ba6f0e79c384 = L.marker(
+                [41.310728299999994, 69.25313839972222],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_47742e0efba84b16a4cbdc67d7b0f539 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_acd77bb42c4445ba99a6ba6f0e79c384.setIcon(icon_47742e0efba84b16a4cbdc67d7b0f539);
+        
+    
+        var popup_e0d8e911d75a43ebac78eff45187ad3d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_03625984d7114d1ba87a9fcef187aa68 = $(`<div id="html_03625984d7114d1ba87a9fcef187aa68" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/MQ_EGlTcM7tA7w"></div><hr><a href = "https://yadi.sk/i/MQ_EGlTcM7tA7w" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.310728299999994,69.25313839972222" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.310728299999994/69.25313839972222" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.310728299999994&lon=69.25313839972222&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.25313839972222,41.310728299999994&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.310728299999994/69.25313839972222&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_e0d8e911d75a43ebac78eff45187ad3d.setContent(html_03625984d7114d1ba87a9fcef187aa68);
+        
+
+        marker_acd77bb42c4445ba99a6ba6f0e79c384.bindPopup(popup_e0d8e911d75a43ebac78eff45187ad3d)
+        ;
+
+        
+    
+    
+            var marker_99c35ee7ca454ca2a0839f468c95e1db = L.marker(
+                [41.311233099999995, 69.24866919972223],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_ad45f7ba268b4f23a12a2d81213f1fc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_99c35ee7ca454ca2a0839f468c95e1db.setIcon(icon_ad45f7ba268b4f23a12a2d81213f1fc3);
+        
+    
+        var popup_1b72e4b6d6fc4321bfae8e38f57c4488 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50c7bcffccb0450e85ff239b70f3ba2e = $(`<div id="html_50c7bcffccb0450e85ff239b70f3ba2e" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/B2hrzfZdHkI4mg"></div><hr><a href = "https://yadi.sk/i/B2hrzfZdHkI4mg" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.311233099999995,69.24866919972223" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.311233099999995/69.24866919972223" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.311233099999995&lon=69.24866919972223&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.24866919972223,41.311233099999995&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.311233099999995/69.24866919972223&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_1b72e4b6d6fc4321bfae8e38f57c4488.setContent(html_50c7bcffccb0450e85ff239b70f3ba2e);
+        
+
+        marker_99c35ee7ca454ca2a0839f468c95e1db.bindPopup(popup_1b72e4b6d6fc4321bfae8e38f57c4488)
+        ;
+
+        
+    
+    
+            var marker_113a0363c5244eea90d66d50529e3292 = L.marker(
+                [41.3113101, 69.24761789972223],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_f673eb8b10844f0ea0aff0d6ab46b69f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_113a0363c5244eea90d66d50529e3292.setIcon(icon_f673eb8b10844f0ea0aff0d6ab46b69f);
+        
+    
+        var popup_9dbe3f5cbfef412ea548096a3e20b139 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85eff6ad058548149a99350340970c57 = $(`<div id="html_85eff6ad058548149a99350340970c57" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/fXw15zZFaImYPg"></div><hr><a href = "https://yadi.sk/i/fXw15zZFaImYPg" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.3113101,69.24761789972223" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3113101/69.24761789972223" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3113101&lon=69.24761789972223&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.24761789972223,41.3113101&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3113101/69.24761789972223&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_9dbe3f5cbfef412ea548096a3e20b139.setContent(html_85eff6ad058548149a99350340970c57);
+        
+
+        marker_113a0363c5244eea90d66d50529e3292.bindPopup(popup_9dbe3f5cbfef412ea548096a3e20b139)
+        ;
+
+        
+    
+    
+            var marker_f6faa79ac68444db8bc1e6234ba9e445 = L.marker(
+                [41.30517059972222, 69.2470354],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_5b428c5cb0234a0c8ab1fc6bff13e556 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_f6faa79ac68444db8bc1e6234ba9e445.setIcon(icon_5b428c5cb0234a0c8ab1fc6bff13e556);
+        
+    
+        var popup_95fc78fd37fd428cb05841b39cef34ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e49f5a31943e44e5a83261d581ce468d = $(`<div id="html_e49f5a31943e44e5a83261d581ce468d" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/WZbchOMhWrVjVQ"></div><hr><a href = "https://yadi.sk/i/WZbchOMhWrVjVQ" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.30517059972222,69.2470354" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.30517059972222/69.2470354" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.30517059972222&lon=69.2470354&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2470354,41.30517059972222&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.30517059972222/69.2470354&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_95fc78fd37fd428cb05841b39cef34ce.setContent(html_e49f5a31943e44e5a83261d581ce468d);
+        
+
+        marker_f6faa79ac68444db8bc1e6234ba9e445.bindPopup(popup_95fc78fd37fd428cb05841b39cef34ce)
+        ;
+
+        
+    
+    
+            var marker_41895a57087741bebb7d217fbb5a55de = L.marker(
+                [41.30360189972222, 69.24479089972222],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_70501338b4854e1a94b9b3f9e116c74e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_41895a57087741bebb7d217fbb5a55de.setIcon(icon_70501338b4854e1a94b9b3f9e116c74e);
+        
+    
+        var popup_42d740781df74a269b6a523686406bb6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_71fd912514e54925a759ddf67e337ca3 = $(`<div id="html_71fd912514e54925a759ddf67e337ca3" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/cwHfStg2P92xdQ"></div><hr><a href = "https://yadi.sk/i/cwHfStg2P92xdQ" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.30360189972222,69.24479089972222" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.30360189972222/69.24479089972222" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.30360189972222&lon=69.24479089972222&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.24479089972222,41.30360189972222&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.30360189972222/69.24479089972222&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_42d740781df74a269b6a523686406bb6.setContent(html_71fd912514e54925a759ddf67e337ca3);
+        
+
+        marker_41895a57087741bebb7d217fbb5a55de.bindPopup(popup_42d740781df74a269b6a523686406bb6)
+        ;
+
+        
+    
+    
+            var marker_e12f7266aaf844cdb4b184651e9a16ec = L.marker(
+                [41.30474149972222, 69.241916],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_59183374d5164da1a05cde3c6a9470a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_e12f7266aaf844cdb4b184651e9a16ec.setIcon(icon_59183374d5164da1a05cde3c6a9470a3);
+        
+    
+        var popup_fd0790a91abb401d85df09775424f4e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_509f4249a09d4d2aa9a13cce4fc80cd6 = $(`<div id="html_509f4249a09d4d2aa9a13cce4fc80cd6" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/1h78bAIP7G-dhg"></div><hr><a href = "https://yadi.sk/i/1h78bAIP7G-dhg" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.30474149972222,69.241916" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.30474149972222/69.241916" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.30474149972222&lon=69.241916&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.241916,41.30474149972222&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.30474149972222/69.241916&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_fd0790a91abb401d85df09775424f4e2.setContent(html_509f4249a09d4d2aa9a13cce4fc80cd6);
+        
+
+        marker_e12f7266aaf844cdb4b184651e9a16ec.bindPopup(popup_fd0790a91abb401d85df09775424f4e2)
+        ;
+
+        
+    
+    
+            var marker_aa7c6679fc7043cebc5445d10639aaf9 = L.marker(
+                [41.3025637, 69.23797849972222],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_c451520de12049e6a74d6a34d1b75e20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_aa7c6679fc7043cebc5445d10639aaf9.setIcon(icon_c451520de12049e6a74d6a34d1b75e20);
+        
+    
+        var popup_e581258d70004db19e8c03f476be7d2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b97103654fc4c61a2bbcf6db175ed1c = $(`<div id="html_3b97103654fc4c61a2bbcf6db175ed1c" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/AmuJlkT7kDXgHQ"></div><hr><a href = "https://yadi.sk/i/AmuJlkT7kDXgHQ" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.3025637,69.23797849972222" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3025637/69.23797849972222" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3025637&lon=69.23797849972222&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.23797849972222,41.3025637&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3025637/69.23797849972222&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_e581258d70004db19e8c03f476be7d2d.setContent(html_3b97103654fc4c61a2bbcf6db175ed1c);
+        
+
+        marker_aa7c6679fc7043cebc5445d10639aaf9.bindPopup(popup_e581258d70004db19e8c03f476be7d2d)
+        ;
+
+        
+    
+    
+            var marker_c04d2b72137b4892bb8f4a8291714f58 = L.marker(
+                [41.30664639972222, 69.2532584],
+                {}
+            ).addTo(feature_group_54b1ca351f86412883c3fada3dcc6646);
+        
+    
+            var icon_0dab81ab57d545d7ab6b8e60b15d63c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "camera", "iconAnchor": [0, 0], "iconColor": "darkred", "markerColor": "lightgreen", "prefix": "fa"}
+            );
+            marker_c04d2b72137b4892bb8f4a8291714f58.setIcon(icon_0dab81ab57d545d7ab6b8e60b15d63c3);
+        
+    
+        var popup_f12033235a5a4cb7a17252fe7f07be44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f9730e33db504cc285f6ffd5d4ea9419 = $(`<div id="html_f9730e33db504cc285f6ffd5d4ea9419" style="width: 100.0%; height: 100.0%;"><div> <img height="200"src="https://getfile.dokpub.com/yandex/get/https://yadi.sk/i/5lRJwbI4oLTdOQ"></div><hr><a href = "https://yadi.sk/i/5lRJwbI4oLTdOQ" target = "_blank">Полный размер </a><br>Точка на картах: <a href = "http://www.google.com/maps?q=41.30664639972222,69.2532584" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.30664639972222/69.2532584" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.30664639972222&lon=69.2532584&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2532584,41.30664639972222&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.30664639972222/69.2532584&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></div>`)[0];
+            popup_f12033235a5a4cb7a17252fe7f07be44.setContent(html_f9730e33db504cc285f6ffd5d4ea9419);
+        
+
+        marker_c04d2b72137b4892bb8f4a8291714f58.bindPopup(popup_f12033235a5a4cb7a17252fe7f07be44)
+        ;
+
+        
+    
+    
+            var feature_group_efa1972c2618443499272843c24c7b93 = L.featureGroup(
+                {}
+            ).addTo(map_330e5dc533c2484590e87248786ceb1f);
+        
+    
+            var poly_line_4401b2e6d5c243f498f5780781da9d32 = L.polyline(
+                [[41.3160605, 69.269243], [41.3160736, 69.2692395], [41.3160828, 69.2692402], [41.3161141, 69.269241], [41.3161483, 69.2692532], [41.3161632, 69.2692534], [41.3161867, 69.2692508], [41.3161983, 69.2692481], [41.3162163, 69.2692469], [41.3162445, 69.2692538], [41.3162605, 69.2692602], [41.3162783, 69.2692693], [41.316292, 69.2692738], [41.316306, 69.2692771], [41.3163231, 69.269281], [41.316345, 69.2692855], [41.3163594, 69.2692893], [41.3163809, 69.2692958], [41.3163919, 69.2692967], [41.316411, 69.2692954], [41.3164246, 69.2692964], [41.3164421, 69.2693026], [41.3164661, 69.2693159], [41.3164814, 69.2693224], [41.3164965, 69.2693318], [41.3165112, 69.2693427], [41.3165253, 69.2693528], [41.3165425, 69.2693639], [41.3165529, 69.2693697], [41.3165612, 69.2693734], [41.3165715, 69.2693773], [41.3165912, 69.2693793], [41.3166035, 69.2693795], [41.3166178, 69.269378], [41.3166321, 69.2693752], [41.3166526, 69.269371], [41.3166748, 69.2693705], [41.3166873, 69.2693703], [41.3166987, 69.2693709], [41.3167135, 69.269372], [41.3167333, 69.2693786], [41.3167503, 69.2693889], [41.316762, 69.2694006], [41.3167798, 69.2694143], [41.3167949, 69.2694246], [41.316813, 69.2694373], [41.3168293, 69.2694498], [41.3168511, 69.2694554], [41.3168663, 69.2694512], [41.3168827, 69.2694403], [41.3168973, 69.2694274], [41.3169098, 69.2694166], [41.3169277, 69.2693987], [41.3169464, 69.2693818], [41.3169619, 69.2693671], [41.3169751, 69.2693552], [41.3169903, 69.2693419], [41.3170141, 69.2693251], [41.3170344, 69.2693133], [41.3170502, 69.2693039], [41.317066, 69.2692923], [41.3170806, 69.2692804], [41.3170935, 69.2692698], [41.3171086, 69.2692587], [41.3171251, 69.2692464], [41.3171427, 69.2692325], [41.3171531, 69.2692219], [41.3171648, 69.2692084], [41.3171751, 69.2691974], [41.3171868, 69.2691853], [41.3172028, 69.2691718], [41.3172172, 69.2691643], [41.3172301, 69.2691563], [41.3172458, 69.2691469], [41.3172584, 69.2691407], [41.3172804, 69.2691278], [41.3172946, 69.2691191], [41.317309, 69.2691108], [41.3173235, 69.2691026], [41.3173378, 69.2690951], [41.3173533, 69.2690857], [41.3173701, 69.2690752], [41.3173839, 69.2690672], [41.3173985, 69.2690587], [41.3174127, 69.26905], [41.3174262, 69.269044], [41.3174396, 69.2690394], [41.3174563, 69.2690347], [41.3174772, 69.2690236], [41.3174894, 69.2690117], [41.317498, 69.2690017], [41.3175061, 69.2689916], [41.3175143, 69.2689802], [41.317523, 69.2689696], [41.3175322, 69.2689599], [41.3175473, 69.2689441], [41.3175588, 69.2689328], [41.3175712, 69.2689218], [41.3175826, 69.2689108], [41.3175932, 69.2688993], [41.317608, 69.2688837], [41.3176205, 69.2688707], [41.3176313, 69.2688592], [41.3176433, 69.2688468], [41.3176558, 69.2688332], [41.3176726, 69.2688149], [41.317691, 69.2687956], [41.3177038, 69.2687857], [41.3177164, 69.2687775], [41.3177276, 69.2687712], [41.3177403, 69.2687611], [41.3177523, 69.2687512], [41.3177725, 69.2687351], [41.317786, 69.2687231], [41.3177982, 69.2687104], [41.3178154, 69.268694], [41.3178387, 69.2686731], [41.3178529, 69.2686606], [41.317865, 69.2686478], [41.3178753, 69.2686322], [41.317884, 69.2686123], [41.3178945, 69.2685877], [41.3179038, 69.2685729], [41.3179111, 69.2685625], [41.3179285, 69.2685464], [41.3179434, 69.2685428], [41.3179616, 69.2685457], [41.3179699, 69.2685487], [41.3179855, 69.2685562], [41.3179964, 69.2685625], [41.3180085, 69.2685703], [41.3180258, 69.2685787], [41.3180441, 69.2685846], [41.3180596, 69.2685901], [41.3180748, 69.2685952], [41.318099, 69.2686034], [41.3181137, 69.2686082], [41.3181303, 69.2686154], [41.3181509, 69.2686268], [41.3181744, 69.2686331], [41.3181959, 69.2686377], [41.3182155, 69.2686405], [41.3182385, 69.2686456], [41.3182574, 69.2686523], [41.3182763, 69.2686593], [41.3183029, 69.2686679], [41.3183156, 69.268672], [41.3183263, 69.2686765], [41.3183329, 69.2686796], [41.3183495, 69.2686829], [41.3183605, 69.2686852], [41.318379, 69.26869], [41.3183947, 69.2686941], [41.31842, 69.2687049], [41.3184356, 69.2687162], [41.3184553, 69.2687302], [41.3184681, 69.268737], [41.3184856, 69.2687448], [41.3184979, 69.2687482], [41.3185126, 69.2687524], [41.3185287, 69.2687578], [41.3185506, 69.268765], [41.318562, 69.2687681], [41.318574, 69.268772], [41.3185975, 69.2687827], [41.3186117, 69.26879], [41.318624, 69.2687955], [41.3186365, 69.2687996], [41.318648, 69.2688006], [41.3186588, 69.268802], [41.31868, 69.2688069], [41.3186929, 69.2688097], [41.3187043, 69.2688122], [41.3187233, 69.2688182], [41.3187443, 69.2688255], [41.3187635, 69.2688321], [41.318773, 69.2688359], [41.3187888, 69.2688435], [41.3188087, 69.2688525], [41.3188244, 69.2688581], [41.3188368, 69.268863], [41.3188506, 69.2688702], [41.3188653, 69.2688793], [41.3188828, 69.2688908], [41.3188942, 69.2688983], [41.3189062, 69.2689054], [41.3189169, 69.2689116], [41.3189284, 69.2689138], [41.3189423, 69.2689065], [41.3189581, 69.2688854], [41.3189673, 69.2688678], [41.3189751, 69.2688485], [41.3189844, 69.2688277], [41.3189939, 69.2688122], [41.3190027, 69.2687989], [41.3190158, 69.2687827], [41.3190288, 69.2687599], [41.3190405, 69.2687373], [41.3190505, 69.268714], [41.3190616, 69.268697], [41.3190777, 69.2686806], [41.3190903, 69.2686629], [41.3191014, 69.2686492], [41.3191126, 69.2686349], [41.3191254, 69.2686182], [41.3191443, 69.2685993], [41.3191589, 69.2685831], [41.3191727, 69.2685671], [41.3191904, 69.2685457], [41.319211, 69.2685291], [41.3192251, 69.2685114], [41.3192367, 69.2684962], [41.3192457, 69.2684835], [41.3192543, 69.2684675], [41.3192621, 69.2684489], [41.3192696, 69.2684293], [41.3192768, 69.2684093], [41.3192833, 69.2683924], [41.3192887, 69.2683794], [41.3192951, 69.2683673], [41.3193027, 69.2683538], [41.319318, 69.2683233], [41.3193243, 69.2683107], [41.3193308, 69.2682937], [41.3193344, 69.268278], [41.3193386, 69.2682615], [41.3193443, 69.2682412], [41.3193481, 69.2682245], [41.3193546, 69.268198], [41.3193602, 69.2681802], [41.3193677, 69.2681619], [41.319375, 69.2681456], [41.3193862, 69.2681266], [41.3194025, 69.268103], [41.3194152, 69.2680873], [41.3194256, 69.2680743], [41.3194374, 69.2680603], [41.3194499, 69.2680452], [41.3194632, 69.2680297], [41.3194785, 69.2680064], [41.3194883, 69.267991], [41.3194967, 69.2679782], [41.3195059, 69.2679635], [41.3195154, 69.2679485], [41.3195249, 69.2679336], [41.3195352, 69.2679173], [41.3195449, 69.2679009], [41.3195527, 69.2678859], [41.319562, 69.2678683], [41.3195707, 69.2678506], [41.3195793, 69.2678307], [41.3195974, 69.2677957], [41.3196104, 69.2677719], [41.3196235, 69.2677495], [41.3196342, 69.267732], [41.3196445, 69.2677135], [41.3196564, 69.2676893], [41.3196676, 69.2676645], [41.3196748, 69.267644], [41.3196831, 69.2676199], [41.3196933, 69.2675849], [41.319704, 69.2675485], [41.3197118, 69.2675293], [41.3197223, 69.2674964], [41.3197283, 69.2674795], [41.3197349, 69.2674611], [41.3197408, 69.2674458], [41.3197487, 69.2674168], [41.3197525, 69.267398], [41.3197569, 69.2673769], [41.3197609, 69.2673541], [41.3197628, 69.2673289], [41.319765, 69.2672983], [41.319767, 69.2672733], [41.3197695, 69.2672418], [41.3197727, 69.2672199], [41.3197823, 69.2671873], [41.3197901, 69.2671646], [41.3197997, 69.2671273], [41.3198048, 69.2670938], [41.3197974, 69.2670635], [41.3197848, 69.267053], [41.3197797, 69.2670492], [41.3197774, 69.2670473], [41.3197768, 69.2670458], [41.3197747, 69.2670416], [41.3197647, 69.2670271], [41.3197543, 69.2670159], [41.3197372, 69.2670016], [41.3197209, 69.2669933], [41.3197055, 69.266986], [41.3196876, 69.2669776], [41.3196663, 69.2669658], [41.3196482, 69.2669568], [41.3196205, 69.2669475], [41.3195952, 69.2669376], [41.3195796, 69.2669324], [41.3195618, 69.2669254], [41.3195403, 69.266916], [41.3195198, 69.2669089], [41.3195048, 69.2669022], [41.3194904, 69.2668949], [41.3194741, 69.2668864], [41.3194573, 69.2668777], [41.3194362, 69.2668669], [41.3194081, 69.2668553], [41.319392, 69.2668482], [41.3193667, 69.266831], [41.31935, 69.2668167], [41.3193251, 69.2668016], [41.3192932, 69.2667901], [41.3192755, 69.2667825], [41.3192467, 69.2667745], [41.3192318, 69.2667698], [41.3192173, 69.2667649], [41.3192011, 69.2667594], [41.3191823, 69.2667538], [41.3191674, 69.2667523], [41.3191553, 69.2667497], [41.3191404, 69.2667464], [41.3191263, 69.2667417], [41.3191038, 69.2667328], [41.3190787, 69.2667222], [41.319057, 69.2667105], [41.3190424, 69.2667044], [41.3190259, 69.2666954], [41.319013, 69.2666877], [41.3190009, 69.266682], [41.3189887, 69.2666776], [41.3189747, 69.2666726], [41.3189593, 69.2666662], [41.3189426, 69.2666586], [41.3189284, 69.2666528], [41.3189096, 69.2666436], [41.3188944, 69.2666352], [41.3188715, 69.2666235], [41.3188566, 69.2666174], [41.3188399, 69.2666109], [41.3188204, 69.2666066], [41.3188053, 69.2666042], [41.31879, 69.2666011], [41.3187734, 69.2665953], [41.3187589, 69.2665875], [41.3187378, 69.2665758], [41.3187154, 69.2665624], [41.3186978, 69.2665502], [41.3186699, 69.2665338], [41.3186536, 69.2665259], [41.3186373, 69.2665182], [41.3186201, 69.2665105], [41.3186023, 69.2665033], [41.3185837, 69.2664978], [41.3185661, 69.2664939], [41.3185492, 69.2664889], [41.3185278, 69.2664813], [41.3185153, 69.2664771], [41.3185051, 69.266474], [41.3184846, 69.2664721], [41.3184682, 69.2664705], [41.3184521, 69.2664677], [41.3184351, 69.266462], [41.3184154, 69.2664518], [41.3184027, 69.2664433], [41.3183921, 69.2664357], [41.3183826, 69.2664293], [41.3183767, 69.2664247], [41.3183657, 69.2664176], [41.3183535, 69.2664088], [41.3183333, 69.2663925], [41.3183196, 69.266379], [41.3183086, 69.2663673], [41.3182969, 69.2663563], [41.3182839, 69.2663457], [41.3182717, 69.2663359], [41.3182592, 69.266326], [41.3182354, 69.2663062], [41.3182202, 69.2662957], [41.3182042, 69.2662845], [41.3181917, 69.2662758], [41.3181793, 69.2662657], [41.3181675, 69.2662576], [41.3181522, 69.2662456], [41.3181361, 69.2662341], [41.3181096, 69.2662174], [41.3180934, 69.2662105], [41.3180793, 69.2662012], [41.3180635, 69.2661913], [41.3180453, 69.2661828], [41.3180247, 69.2661738], [41.3180143, 69.266168], [41.3180063, 69.2661632], [41.3179976, 69.2661572], [41.3179788, 69.2661398], [41.317964, 69.2661249], [41.317946, 69.2661053], [41.3179355, 69.266093], [41.3179241, 69.2660786], [41.3179093, 69.2660621], [41.3178905, 69.266044], [41.3178776, 69.2660294], [41.3178608, 69.2660078], [41.3178494, 69.2659937], [41.3178352, 69.2659757], [41.3178249, 69.2659617], [41.3178138, 69.2659465], [41.3178024, 69.2659346], [41.3177922, 69.2659243], [41.3177802, 69.2659114], [41.3177675, 69.2658973], [41.317755, 69.2658838], [41.3177437, 69.2658738], [41.3177305, 69.265864], [41.3177175, 69.2658552], [41.3176982, 69.2658429], [41.3176806, 69.2658334], [41.3176679, 69.2658252], [41.3176562, 69.2658172], [41.3176398, 69.2658034], [41.3176281, 69.2657904], [41.3176165, 69.2657765], [41.3176031, 69.265758], [41.3175916, 69.2657427], [41.3175787, 69.2657274], [41.3175674, 69.2657141], [41.3175562, 69.2656998], [41.3175431, 69.2656842], [41.3175309, 69.2656734], [41.317516, 69.2656622], [41.3175027, 69.2656544], [41.317487, 69.2656447], [41.3174713, 69.2656342], [41.3174564, 69.2656244], [41.3174442, 69.2656168], [41.317433, 69.2656094], [41.31742, 69.2655996], [41.3174047, 69.2655863], [41.3173923, 69.2655758], [41.3173799, 69.2655653], [41.3173686, 69.2655533], [41.3173591, 69.2655414], [41.317347, 69.2655251], [41.3173339, 69.2655099], [41.3173191, 69.2654936], [41.3173011, 69.2654758], [41.3172839, 69.2654593], [41.3172483, 69.2654304], [41.3172302, 69.2654168], [41.3172116, 69.2654043], [41.3171951, 69.2653936], [41.3171808, 69.2653851], [41.3171648, 69.2653772], [41.3171513, 69.2653708], [41.3171362, 69.2653642], [41.3171226, 69.265358], [41.3171069, 69.2653512], [41.3170903, 69.2653438], [41.3170649, 69.2653332], [41.3170483, 69.2653257], [41.3170317, 69.2653192], [41.3170168, 69.2653124], [41.3169973, 69.2653033], [41.3169812, 69.2652957], [41.3169658, 69.2652893], [41.3169421, 69.2652779], [41.3169299, 69.265272], [41.3169153, 69.2652637], [41.3168986, 69.2652547], [41.3168777, 69.265245], [41.3168577, 69.2652369], [41.3168316, 69.2652259], [41.3167963, 69.2652154], [41.3167736, 69.2652092], [41.316757, 69.2652025], [41.3167387, 69.2651944], [41.3167192, 69.2651816], [41.3166947, 69.2651655], [41.3166667, 69.2651466], [41.3166496, 69.265138], [41.3166303, 69.2651282], [41.3166118, 69.2651117], [41.316602, 69.2650989], [41.316591, 69.2650852], [41.3165792, 69.2650718], [41.3165665, 69.2650592], [41.3165534, 69.2650438], [41.3165421, 69.2650286], [41.3165303, 69.2650115], [41.3165199, 69.2649962], [41.3165074, 69.2649797], [41.3164906, 69.2649575], [41.3164789, 69.2649447], [41.3164661, 69.2649328], [41.3164516, 69.2649174], [41.316438, 69.2649059], [41.3164141, 69.2648915], [41.3163987, 69.2648845], [41.3163846, 69.2648777], [41.3163706, 69.2648746], [41.3163581, 69.2648713], [41.316341, 69.2648666], [41.3163318, 69.2648652], [41.3163274, 69.264866], [41.3163246, 69.2648668], [41.3163203, 69.2648667], [41.3163119, 69.2648642], [41.3163015, 69.26486], [41.3162886, 69.2648545], [41.3162732, 69.2648478], [41.3162591, 69.2648417], [41.3162347, 69.2648345], [41.3162191, 69.2648295], [41.3162033, 69.2648251], [41.3161876, 69.2648209], [41.3161683, 69.2648129], [41.3161464, 69.2647987], [41.3161223, 69.2647807], [41.3161038, 69.2647681], [41.3160835, 69.2647584], [41.3160669, 69.2647496], [41.3160505, 69.2647403], [41.3160276, 69.2647292], [41.3160128, 69.264721], [41.3159987, 69.2647119], [41.315987, 69.2647047], [41.3159717, 69.2646971], [41.3159547, 69.2646909], [41.315936, 69.2646854], [41.3159189, 69.264679], [41.3159009, 69.2646715], [41.3158843, 69.2646679], [41.3158503, 69.2646681], [41.3158369, 69.2646659], [41.3158205, 69.2646636], [41.3157942, 69.2646582], [41.3157738, 69.2646521], [41.3157553, 69.264647], [41.3157445, 69.2646443], [41.3157319, 69.2646409], [41.3157167, 69.2646366], [41.3157042, 69.2646324], [41.3156904, 69.2646259], [41.3156763, 69.2646191], [41.3156609, 69.2646096], [41.3156405, 69.2645971], [41.3156152, 69.2645783], [41.3156054, 69.2645706], [41.3155933, 69.2645623], [41.3155781, 69.2645549], [41.3155606, 69.2645498], [41.3155425, 69.2645455], [41.3155255, 69.2645412], [41.3155085, 69.2645361], [41.315494, 69.2645309], [41.3154792, 69.2645247], [41.315464, 69.2645166], [41.3154478, 69.2645079], [41.3154313, 69.2645008], [41.3154133, 69.2644946], [41.3153962, 69.264489], [41.3153781, 69.2644828], [41.3153624, 69.2644779], [41.3153458, 69.2644731], [41.3153293, 69.2644679], [41.3153113, 69.2644629], [41.3152947, 69.2644584], [41.315271, 69.2644504], [41.3152555, 69.2644439], [41.3152432, 69.2644373], [41.3152222, 69.2644247], [41.3152068, 69.2644151], [41.315191, 69.2644042], [41.3151678, 69.2643906], [41.3151539, 69.2643833], [41.315145, 69.2643808], [41.3151371, 69.2643786], [41.3151281, 69.2643771], [41.3151142, 69.2643715], [41.315101, 69.2643663], [41.315087, 69.264362], [41.3150735, 69.2643561], [41.3150604, 69.2643489], [41.3150466, 69.2643383], [41.3150313, 69.2643222], [41.3150188, 69.2643074], [41.3150041, 69.2642919], [41.3149853, 69.2642758], [41.314967, 69.2642653], [41.3149433, 69.2642546], [41.3149183, 69.2642473], [41.3148979, 69.2642434], [41.3148779, 69.264239], [41.3148598, 69.2642334], [41.3148421, 69.2642236], [41.3148262, 69.2642106], [41.3148051, 69.2641923], [41.314793, 69.2641803], [41.3147805, 69.2641675], [41.3147675, 69.2641539], [41.3147569, 69.2641425], [41.3147451, 69.2641336], [41.3147245, 69.2641212], [41.3147083, 69.2641146], [41.3146905, 69.2641114], [41.3146715, 69.2641065], [41.3146503, 69.2641025], [41.3146329, 69.2641005], [41.3146058, 69.2640959], [41.314593, 69.2640917], [41.3145784, 69.2640868], [41.3145631, 69.2640814], [41.3145492, 69.2640759], [41.3145346, 69.2640695], [41.3145117, 69.2640581], [41.3144974, 69.2640513], [41.3144861, 69.2640456], [41.3144767, 69.2640408], [41.314467, 69.2640368], [41.3144556, 69.2640338], [41.3144385, 69.2640306], [41.3144253, 69.2640258], [41.3144033, 69.2640163], [41.3143929, 69.2640109], [41.3143787, 69.2640034], [41.3143639, 69.2639927], [41.3143491, 69.2639822], [41.3143273, 69.2639656], [41.3143122, 69.2639545], [41.3142977, 69.2639473], [41.3142839, 69.2639409], [41.3142706, 69.263936], [41.3142582, 69.2639321], [41.3142477, 69.2639286], [41.3142392, 69.263923], [41.3142273, 69.2639167], [41.3142089, 69.2639032], [41.314198, 69.2638942], [41.3141845, 69.2638845], [41.3141732, 69.2638769], [41.3141574, 69.2638679], [41.3141426, 69.26386], [41.3141284, 69.2638542], [41.3141073, 69.2638476], [41.3140993, 69.263847], [41.3140929, 69.2638467], [41.3140812, 69.2638446], [41.3140656, 69.2638416], [41.3140412, 69.2638361], [41.3140286, 69.2638319], [41.3140127, 69.2638244], [41.3139949, 69.2638144], [41.3139776, 69.2638029], [41.3139608, 69.2637905], [41.3139446, 69.2637758], [41.3139287, 69.2637611], [41.3139136, 69.2637488], [41.3138995, 69.2637373], [41.3138865, 69.2637266], [41.3138695, 69.2637144], [41.3138552, 69.2637077], [41.3138391, 69.2637029], [41.3138246, 69.263696], [41.3138097, 69.2636883], [41.3137949, 69.2636806], [41.3137799, 69.2636722], [41.3137565, 69.263657], [41.3137404, 69.2636467], [41.3137244, 69.2636357], [41.3137094, 69.2636234], [41.313698, 69.2636138], [41.3136857, 69.2636029], [41.3136698, 69.2635858], [41.3136572, 69.2635719], [41.3136437, 69.2635559], [41.3136298, 69.2635365], [41.3136185, 69.263519], [41.3136056, 69.2634998], [41.3135911, 69.2634804], [41.3135712, 69.2634524], [41.3135584, 69.2634346], [41.3135429, 69.2634159], [41.3135338, 69.2634057], [41.3135274, 69.2633985], [41.3135202, 69.2633899], [41.3135109, 69.2633779], [41.3135027, 69.2633662], [41.3134939, 69.2633505], [41.3134869, 69.2633366], [41.3134826, 69.263322], [41.3134788, 69.2633053], [41.3134719, 69.2632843], [41.3134646, 69.2632668], [41.3134562, 69.26325], [41.3134482, 69.2632362], [41.3134378, 69.2632203], [41.3134263, 69.2632042], [41.3134169, 69.2631899], [41.3134075, 69.2631738], [41.3133981, 69.2631554], [41.31339, 69.2631386], [41.313383, 69.2631225], [41.3133735, 69.2631031], [41.3133636, 69.2630845], [41.3133545, 69.2630669], [41.3133449, 69.2630478], [41.3133365, 69.263032], [41.3133271, 69.2630151], [41.3133192, 69.2630006], [41.3133113, 69.2629861], [41.3133027, 69.2629754], [41.3132917, 69.2629615], [41.3132802, 69.2629466], [41.3132711, 69.2629324], [41.3132639, 69.2629206], [41.3132556, 69.2629064], [41.3132433, 69.2628848], [41.3132342, 69.2628711], [41.3132269, 69.2628603], [41.3132205, 69.2628443], [41.3132149, 69.2628241], [41.3132107, 69.2628083], [41.3132068, 69.2627954], [41.3132027, 69.2627832], [41.3131993, 69.2627698], [41.3131982, 69.2627556], [41.3131945, 69.2627383], [41.3131893, 69.2627237], [41.3131833, 69.2627118], [41.3131749, 69.2626983], [41.3131613, 69.2626791], [41.3131516, 69.2626679], [41.3131406, 69.2626546], [41.3131301, 69.2626417], [41.3131181, 69.2626264], [41.3131072, 69.2626072], [41.3130897, 69.26257], [41.3130816, 69.2625527], [41.3130723, 69.2625343], [41.3130628, 69.2625155], [41.313054, 69.262496], [41.3130468, 69.2624751], [41.313042, 69.2624595], [41.3130364, 69.2624362], [41.3130284, 69.2624125], [41.3130209, 69.2623938], [41.3130129, 69.2623788], [41.3130046, 69.2623652], [41.3129983, 69.2623534], [41.3129916, 69.262339], [41.3129829, 69.262324], [41.312978, 69.2623159], [41.3129744, 69.2623095], [41.312967, 69.2622958], [41.3129547, 69.2622712], [41.3129469, 69.2622541], [41.3129396, 69.2622363], [41.312935, 69.2622207], [41.3129298, 69.2622007], [41.3129272, 69.2621916], [41.3129228, 69.2621818], [41.3129181, 69.2621714], [41.3129128, 69.2621594], [41.3129064, 69.2621458], [41.3128992, 69.2621315], [41.312891, 69.2621152], [41.3128835, 69.2621009], [41.312875, 69.2620853], [41.3128673, 69.2620678], [41.3128592, 69.262048], [41.3128444, 69.2620123], [41.3128386, 69.2619968], [41.3128277, 69.2619664], [41.3128198, 69.2619434], [41.3128122, 69.2619213], [41.3128052, 69.2618974], [41.3127952, 69.261872], [41.3127859, 69.2618501], [41.3127789, 69.2618319], [41.3127725, 69.2618147], [41.312767, 69.2617993], [41.3127594, 69.261779], [41.31275, 69.2617559], [41.3127418, 69.2617387], [41.3127342, 69.2617225], [41.3127269, 69.2617064], [41.312719, 69.2616875], [41.3127102, 69.2616685], [41.3127012, 69.2616499], [41.3126929, 69.2616317], [41.312687, 69.2616171], [41.3126809, 69.2616005], [41.3126738, 69.261581], [41.3126657, 69.2615591], [41.3126584, 69.2615394], [41.3126504, 69.2615193], [41.3126361, 69.2614885], [41.3126258, 69.2614694], [41.312615, 69.2614508], [41.3126067, 69.2614333], [41.3125963, 69.2614098], [41.312586, 69.2613801], [41.3125779, 69.2613533], [41.3125732, 69.2613317], [41.3125694, 69.2613145], [41.3125653, 69.2612956], [41.3125607, 69.2612754], [41.3125547, 69.2612535], [41.3125476, 69.2612299], [41.3125374, 69.2611944], [41.3125312, 69.2611708], [41.3125253, 69.2611505], [41.312519, 69.2611282], [41.3125135, 69.261106], [41.3125075, 69.2610821], [41.3125001, 69.2610463], [41.3124968, 69.2610205], [41.3124928, 69.2609997], [41.3124851, 69.2609754], [41.3124757, 69.2609427], [41.3124729, 69.2609083], [41.3124695, 69.260882], [41.3124644, 69.2608436], [41.3124599, 69.2608151], [41.3124537, 69.260787], [41.3124469, 69.2607613], [41.3124401, 69.2607375], [41.3124281, 69.2607026], [41.3124203, 69.2606807], [41.3124077, 69.260653], [41.3123987, 69.2606353], [41.3123864, 69.2606145], [41.3123757, 69.260598], [41.3123639, 69.2605796], [41.3123532, 69.2605608], [41.3123449, 69.2605407], [41.3123377, 69.2605212], [41.3123306, 69.260502], [41.312324, 69.2604872], [41.3123138, 69.2604689], [41.3123005, 69.2604458], [41.312291, 69.2604318], [41.3122822, 69.2604203], [41.3122749, 69.2604086], [41.312266, 69.2603949], [41.3122537, 69.2603802], [41.3122389, 69.2603663], [41.3122214, 69.2603533], [41.3122051, 69.2603421], [41.3121814, 69.2603273], [41.3121625, 69.2603173], [41.3121327, 69.2602978], [41.3121137, 69.2602827], [41.3120995, 69.2602708], [41.312086, 69.2602576], [41.3120725, 69.2602447], [41.3120585, 69.2602345], [41.3120458, 69.2602265], [41.3120349, 69.2602215], [41.3120273, 69.2602186], [41.3120158, 69.2602121], [41.311996, 69.2601998], [41.3119821, 69.2601905], [41.3119658, 69.260182], [41.3119433, 69.2601687], [41.3119296, 69.2601585], [41.3119113, 69.260142], [41.3119003, 69.2601311], [41.3118916, 69.2601224], [41.3118815, 69.2601108], [41.3118676, 69.2600932], [41.3118535, 69.2600782], [41.3118381, 69.2600637], [41.3118239, 69.2600556], [41.3117839, 69.2600368], [41.3117663, 69.2600303], [41.31175, 69.2600237], [41.3117382, 69.2600208], [41.3117236, 69.2600198], [41.3117083, 69.2600192], [41.3116745, 69.2600139], [41.3116484, 69.2600102], [41.3116334, 69.2600099], [41.3116192, 69.2600038], [41.3116023, 69.2599783], [41.3115972, 69.2599584], [41.311594, 69.2599347], [41.3115897, 69.2599179], [41.3115812, 69.2599045], [41.3115687, 69.2598926], [41.3115527, 69.259878], [41.3115381, 69.2598652], [41.3115225, 69.2598529], [41.3114947, 69.2598352], [41.3114646, 69.2598173], [41.3114418, 69.2598058], [41.3114279, 69.2597958], [41.3114167, 69.2597821], [41.311396, 69.2597667], [41.3113783, 69.2597606], [41.3113662, 69.2597618], [41.3113563, 69.2597737], [41.31133, 69.2597734], [41.3113105, 69.2597669], [41.3112993, 69.2597618], [41.3112871, 69.2597555], [41.311275, 69.2597481], [41.3112627, 69.2597403], [41.3112391, 69.259725], [41.311216, 69.2597071], [41.3112447, 69.2597449], [41.3110311, 69.2596449], [41.3109294, 69.2596012], [41.3109105, 69.2596069], [41.3108913, 69.2596263], [41.3108778, 69.259634], [41.3108669, 69.2596357], [41.3108473, 69.2596392], [41.3108308, 69.2596425], [41.3108131, 69.2596452], [41.3107981, 69.2596442], [41.3107897, 69.2596437], [41.3107728, 69.2596473], [41.3107656, 69.2596488], [41.3107443, 69.259653], [41.3107293, 69.2596569], [41.3107046, 69.2596624], [41.3106884, 69.2596631], [41.3106585, 69.2596581], [41.3106408, 69.2596548], [41.3106137, 69.2596503], [41.3105925, 69.2596457], [41.3105774, 69.2596413], [41.3105584, 69.2596335], [41.3105451, 69.2596269], [41.3105254, 69.2596135], [41.3105091, 69.2596004], [41.3104893, 69.2595815], [41.3104769, 69.2595681], [41.3104654, 69.2595536], [41.3104492, 69.2595251], [41.3104397, 69.2595039], [41.3104322, 69.2594871], [41.3104197, 69.2594637], [41.310412, 69.2594504], [41.3104018, 69.2594368], [41.3103842, 69.2594108], [41.3103747, 69.2593954], [41.3103611, 69.2593677], [41.3103548, 69.2593533], [41.3103485, 69.2593379], [41.3103389, 69.2593116], [41.3103334, 69.2592932], [41.3103284, 69.2592775], [41.3103225, 69.2592611], [41.3103163, 69.259245], [41.3103097, 69.2592271], [41.3103026, 69.2592059], [41.3102958, 69.2591864], [41.3102887, 69.2591654], [41.310282, 69.2591436], [41.3102734, 69.2591201], [41.3102578, 69.2590861], [41.3102488, 69.2590675], [41.3102416, 69.2590512], [41.3102352, 69.2590348], [41.310225, 69.2590231], [41.3102209, 69.2590121], [41.3102192, 69.2589905], [41.3102173, 69.2589521], [41.3102148, 69.2589311], [41.3102109, 69.2589088], [41.3102056, 69.2588855], [41.3101947, 69.2588505], [41.3101901, 69.2588317], [41.3101666, 69.2588201], [41.3101484, 69.2588154], [41.3101353, 69.2588103], [41.3101216, 69.2588014], [41.3100934, 69.2587824], [41.3100742, 69.2587706], [41.310052, 69.2587573], [41.3100184, 69.2587423], [41.3100011, 69.2587346], [41.3099875, 69.2587266], [41.3099665, 69.258714], [41.3099505, 69.2587057], [41.3099323, 69.2586967], [41.3099174, 69.2586899], [41.3099019, 69.2586831], [41.3098849, 69.2586773], [41.3098665, 69.2586742], [41.3098352, 69.2586686], [41.3098207, 69.2586672], [41.3098112, 69.258667], [41.3098012, 69.2586693], [41.3097998, 69.2586726], [41.3097967, 69.2586714], [41.3097885, 69.2586666], [41.3097794, 69.2586595], [41.3097696, 69.2586509], [41.3097616, 69.2586377], [41.3097512, 69.2586245], [41.3097356, 69.2586165], [41.309725, 69.2586134], [41.3097146, 69.2586072], [41.3097068, 69.2586], [41.3096925, 69.2585813], [41.3096752, 69.2585645], [41.3096601, 69.258541], [41.3096502, 69.2585284], [41.3096422, 69.2585207], [41.3096283, 69.2585077], [41.309614, 69.2584957], [41.3095933, 69.2584825], [41.3095822, 69.2584759], [41.3095727, 69.258473], [41.3095616, 69.2584689], [41.3095447, 69.2584612], [41.3095298, 69.258454], [41.3095194, 69.2584474], [41.3095075, 69.2584392], [41.3094904, 69.2584294], [41.3094756, 69.2584222], [41.3094574, 69.2584125], [41.3094425, 69.2584021], [41.3094223, 69.258385], [41.3094091, 69.2583759], [41.3093958, 69.2583668], [41.3093773, 69.2583532], [41.309366, 69.2583441], [41.309348, 69.2583292], [41.3093341, 69.2583202], [41.3093203, 69.2583109], [41.3093037, 69.2583006], [41.3092841, 69.2582882], [41.3092722, 69.2582805], [41.3092522, 69.2582745], [41.3092411, 69.2582726], [41.3092262, 69.2582651], [41.3092121, 69.2582554], [41.3091973, 69.2582457], [41.3091807, 69.2582333], [41.3091655, 69.2582205], [41.3091438, 69.258198], [41.3091316, 69.2581839], [41.3091115, 69.2581627], [41.3090948, 69.2581479], [41.3090719, 69.2581292], [41.3090504, 69.2581104], [41.3090334, 69.2580939], [41.3090103, 69.2580703], [41.3089911, 69.2580506], [41.3089702, 69.2580296], [41.3089429, 69.2580055], [41.3089128, 69.2579801], [41.3088943, 69.2579627], [41.3088825, 69.2579509], [41.3088725, 69.2579402], [41.3088621, 69.257929], [41.3088478, 69.2579145], [41.3088315, 69.2578981], [41.3088177, 69.2578844], [41.3088054, 69.257874], [41.3087947, 69.2578641], [41.3087805, 69.2578497], [41.3087681, 69.257837], [41.3087498, 69.2578192], [41.308737, 69.2578073], [41.3087247, 69.2577954], [41.3087106, 69.2577816], [41.3086983, 69.2577689], [41.3086828, 69.2577517], [41.3086725, 69.2577391], [41.3086588, 69.2577303], [41.3086463, 69.25773], [41.308638, 69.2577285], [41.3086301, 69.2577231], [41.3086201, 69.2577136], [41.3086081, 69.2577009], [41.308596, 69.2576864], [41.3085847, 69.2576717], [41.3085749, 69.2576585], [41.3085652, 69.2576447], [41.308535, 69.2576212], [41.3085162, 69.2575948], [41.3085086, 69.2575816], [41.3084912, 69.2575559], [41.3084829, 69.2575474], [41.3084675, 69.2575363], [41.3084593, 69.2575358], [41.3084488, 69.2575356], [41.3084398, 69.2575364], [41.3084334, 69.2575323], [41.30843, 69.2575319], [41.3084245, 69.2575337], [41.3083963, 69.2575348], [41.3083656, 69.2575289], [41.3083491, 69.2575129], [41.3083562, 69.2575101], [41.3083547, 69.2575106], [41.3083431, 69.2575045], [41.3083332, 69.2574973], [41.3083188, 69.2574836], [41.3083068, 69.2574664], [41.3082901, 69.2574429], [41.3082677, 69.2574144], [41.3082439, 69.2573841], [41.3082299, 69.2573634], [41.3082186, 69.2573474], [41.3082017, 69.2573239], [41.3081884, 69.2573022], [41.3081736, 69.2572763], [41.3081647, 69.2572623], [41.3081548, 69.2572474], [41.3081443, 69.2572323], [41.3081292, 69.25721], [41.3081178, 69.2571951], [41.3081059, 69.2571799], [41.3080917, 69.2571621], [41.3080766, 69.2571433], [41.3080599, 69.2571258], [41.3080459, 69.2571118], [41.3080263, 69.2570866], [41.3080142, 69.2570699], [41.308003, 69.2570557], [41.3079904, 69.257042], [41.3079746, 69.2570234], [41.307962, 69.2570115], [41.3079441, 69.2569926], [41.3079311, 69.2569757], [41.3079135, 69.2569489], [41.3079014, 69.2569306], [41.3078883, 69.2569121], [41.3078727, 69.2568923], [41.3078585, 69.2568705], [41.3078552, 69.2568631], [41.3078468, 69.2568453], [41.307841, 69.2568283], [41.3078367, 69.2568144], [41.3078275, 69.2567907], [41.3078204, 69.256776], [41.307813, 69.2567625], [41.3077953, 69.2567334], [41.3077874, 69.2567217], [41.3077728, 69.2566989], [41.3077654, 69.2566862], [41.3077539, 69.256665], [41.3077469, 69.2566509], [41.3077402, 69.2566372], [41.3077308, 69.2566175], [41.3077158, 69.2565882], [41.3077002, 69.2565614], [41.3076926, 69.2565489], [41.3076846, 69.2565361], [41.3076717, 69.2565143], [41.3076638, 69.2564999], [41.3076566, 69.2564855], [41.3076499, 69.2564715], [41.3076144, 69.2564438], [41.3075496, 69.2564177], [41.307506, 69.2563851], [41.3074678, 69.2563509], [41.3074284, 69.2562949], [41.3074131, 69.2562644], [41.3074063, 69.2562438], [41.307402, 69.2562286], [41.3074009, 69.2562104], [41.3073992, 69.2562005], [41.3073964, 69.2561891], [41.3073932, 69.2561777], [41.3073905, 69.2561661], [41.3073861, 69.2561477], [41.3073789, 69.2561311], [41.3073714, 69.2561153], [41.3073654, 69.2561012], [41.3073601, 69.2560891], [41.3073552, 69.2560743], [41.3073504, 69.2560576], [41.3073469, 69.2560395], [41.3073445, 69.2560153], [41.3073474, 69.2560015], [41.307351, 69.2559854], [41.3073571, 69.2559668], [41.3073639, 69.2559525], [41.3073729, 69.2559368], [41.3073876, 69.2559174], [41.3074031, 69.2558989], [41.3074707, 69.2558967], [41.3074962, 69.2558777], [41.307513, 69.2558603], [41.3075282, 69.2558381], [41.3075438, 69.2558113], [41.307552, 69.2557871], [41.3075582, 69.2557699], [41.3075652, 69.255751], [41.3075705, 69.2557307], [41.3075782, 69.2557003], [41.3075835, 69.2556827], [41.3075886, 69.2556678], [41.3075958, 69.2556509], [41.3076024, 69.2556355], [41.307607, 69.2556226], [41.3076114, 69.2556079], [41.307615, 69.2555928], [41.3076179, 69.2555781], [41.3076212, 69.2555616], [41.3076226, 69.2555371], [41.3076206, 69.25553], [41.3076187, 69.2555291], [41.3076192, 69.255529], [41.30762, 69.2555293], [41.3076212, 69.2555294], [41.3076279, 69.2555306], [41.3076341, 69.2555286], [41.307639, 69.2555264], [41.3076465, 69.2555238], [41.3076478, 69.2555194], [41.3076452, 69.2555189], [41.307633, 69.2554921], [41.3076332, 69.2554702], [41.3076334, 69.2554677], [41.3076348, 69.2554719], [41.3076351, 69.2554726], [41.3076353, 69.2554732], [41.3076354, 69.2554733], [41.3076354, 69.2554734], [41.3076241, 69.2554697], [41.3076122, 69.2554676], [41.3076094, 69.2554676], [41.3076082, 69.2554676], [41.3076079, 69.2554676], [41.3076113, 69.255463], [41.3076164, 69.2554522], [41.3076196, 69.2554502], [41.3076225, 69.2554485], [41.3076232, 69.2554481], [41.3076238, 69.2554478], [41.3076238, 69.2554477], [41.3076238, 69.2554477], [41.30762, 69.2554446], [41.3076224, 69.255442], [41.3076199, 69.2554326], [41.3076157, 69.2554165], [41.3076076, 69.2553958], [41.3075991, 69.2553757], [41.3075884, 69.2553568], [41.3075741, 69.2553338], [41.3075644, 69.255314], [41.3075553, 69.2552894], [41.3075486, 69.2552739], [41.3075379, 69.2552531], [41.3075275, 69.2552291], [41.3075182, 69.2552007], [41.3075103, 69.2551765], [41.3075045, 69.2551591], [41.3074896, 69.2551207], [41.307478, 69.2550934], [41.3074655, 69.2550671], [41.3074487, 69.2550356], [41.3074401, 69.2550159], [41.3074332, 69.2549963], [41.3074235, 69.2549656], [41.3074174, 69.2549469], [41.30741, 69.2549317], [41.3073962, 69.2549048], [41.3073842, 69.2548847], [41.3073656, 69.2548561], [41.307342, 69.254825], [41.307317, 69.254803], [41.3072884, 69.2547681], [41.3072682, 69.2547389], [41.3072538, 69.2547116], [41.3072388, 69.254685], [41.3072284, 69.2546643], [41.3072201, 69.2546444], [41.3072096, 69.2546196], [41.3071965, 69.2545867], [41.3071848, 69.2545588], [41.3071762, 69.2545366], [41.307159, 69.2545017], [41.3071459, 69.2544795], [41.30713, 69.2544548], [41.3071173, 69.2544382], [41.3071039, 69.2544184], [41.3070937, 69.2544004], [41.3070854, 69.2543833], [41.3070744, 69.2543646], [41.3070584, 69.254337], [41.3070509, 69.254321], [41.3070401, 69.2542948], [41.3070309, 69.2542753], [41.3070217, 69.254257], [41.3070121, 69.2542414], [41.3069994, 69.254223], [41.3069886, 69.2542061], [41.3069764, 69.2541872], [41.3069676, 69.2541721], [41.3069624, 69.2541577], [41.3069603, 69.2541316], [41.3069614, 69.2541094], [41.3069641, 69.2540845], [41.3069664, 69.2540443], [41.3069676, 69.2540199], [41.3069641, 69.2539934], [41.306961, 69.2539661], [41.3069568, 69.2539444], [41.3069488, 69.2539214], [41.306933, 69.2538892], [41.3069238, 69.2538689], [41.3069143, 69.2538474], [41.3069018, 69.2538154], [41.3068894, 69.2537719], [41.3068755, 69.2537367], [41.306864, 69.2537124], [41.3068389, 69.2536508], [41.3068214, 69.253611], [41.3068078, 69.2535842], [41.306796, 69.2535616], [41.3067788, 69.2535149], [41.306763, 69.2534724], [41.3067494, 69.2534346], [41.3067472, 69.2534119], [41.3067464, 69.2534036], [41.3067436, 69.2533945], [41.3067303, 69.2533738], [41.3067204, 69.2533664], [41.3067171, 69.2533671], [41.3067149, 69.2533695], [41.3067109, 69.2533686], [41.3066995, 69.2533639], [41.306687, 69.2533377], [41.306675, 69.2533021], [41.3066644, 69.2532804], [41.306659, 69.2532664], [41.3066488, 69.253261], [41.3066481, 69.2532616], [41.3066456, 69.2532602], [41.3066449, 69.2532591], [41.3066452, 69.2532585], [41.3066456, 69.2532585], [41.3066461, 69.2532584], [41.3066462, 69.2532584], [41.3066435, 69.2532545], [41.3066434, 69.2532367], [41.3066383, 69.2532233], [41.3066355, 69.2531988], [41.3066329, 69.2531827], [41.3066311, 69.2531683], [41.3066182, 69.2531229], [41.3066127, 69.2531142], [41.3065996, 69.253086], [41.3065888, 69.2530597], [41.3065774, 69.2530323], [41.3065625, 69.2530067], [41.3065491, 69.2529887], [41.3065431, 69.2529723], [41.3065315, 69.2529374], [41.3065215, 69.2529182], [41.3065139, 69.2529019], [41.3065009, 69.2528747], [41.3065011, 69.2528761], [41.3064958, 69.252869], [41.306486, 69.2528523], [41.3064718, 69.2528357], [41.30646, 69.2528266], [41.3064476, 69.2528129], [41.3064329, 69.2527922], [41.3064177, 69.2527639], [41.3064071, 69.252736], [41.3063999, 69.252715], [41.3063931, 69.2526936], [41.3063831, 69.2526684], [41.3063738, 69.2526513], [41.3063577, 69.2526248], [41.3063476, 69.2526053], [41.306338, 69.2525809], [41.3063287, 69.2525547], [41.3063192, 69.2525268], [41.3063114, 69.2524969], [41.306306, 69.2524751], [41.3063021, 69.2524545], [41.3062977, 69.2524232], [41.3062948, 69.2524033], [41.306294, 69.2523849], [41.3062921, 69.2523635], [41.3062883, 69.2523373], [41.3062832, 69.2523142], [41.3062762, 69.2522959], [41.3062694, 69.2522773], [41.3062621, 69.2522559], [41.3062567, 69.2522372], [41.3062507, 69.2522183], [41.3062436, 69.2521966], [41.3062371, 69.2521705], [41.3062366, 69.2521489], [41.3062376, 69.2521301], [41.3062366, 69.2521102], [41.3062332, 69.2520821], [41.3062284, 69.252066], [41.3062236, 69.2520476], [41.3062182, 69.252031], [41.3062095, 69.2520021], [41.3062053, 69.2519972], [41.306199, 69.2519827], [41.3061913, 69.2519688], [41.3061762, 69.2519473], [41.3061605, 69.2519297], [41.3061449, 69.2519009], [41.3061353, 69.2518834], [41.3061284, 69.2518664], [41.3061274, 69.2518523], [41.3061274, 69.2518378], [41.3061258, 69.2518178], [41.3061233, 69.2517987], [41.3061198, 69.2517786], [41.3061102, 69.2517566], [41.3061011, 69.2517403], [41.3060894, 69.2517237], [41.30607, 69.2517], [41.3060596, 69.2516776], [41.3060509, 69.251654], [41.3060447, 69.2516367], [41.306037, 69.2516111], [41.3060317, 69.2515983], [41.3060218, 69.2515758], [41.3060138, 69.2515563], [41.3060014, 69.2515262], [41.305993, 69.2515169], [41.3059818, 69.2515062], [41.3059682, 69.2514922], [41.3059537, 69.2514787], [41.3059309, 69.2514603], [41.3059132, 69.2514378], [41.3059041, 69.2514201], [41.3058969, 69.2514022], [41.3058861, 69.2513701], [41.3058826, 69.2513596], [41.3058754, 69.2513365], [41.3058682, 69.2513227], [41.30586, 69.2513121], [41.3058497, 69.2512973], [41.3058371, 69.2512781], [41.3058312, 69.2512677], [41.3058223, 69.2512531], [41.3058164, 69.2512407], [41.3058157, 69.2512357], [41.3058142, 69.2512301], [41.3058115, 69.2512207], [41.3058097, 69.2512057], [41.3058112, 69.2511914], [41.3058092, 69.2511722], [41.3058063, 69.2511494], [41.3058043, 69.2511275], [41.3058004, 69.2511075], [41.3057961, 69.2510882], [41.3057923, 69.2510721], [41.305787, 69.2510518], [41.3057819, 69.2510334], [41.3057748, 69.2510094], [41.3057715, 69.2510016], [41.3057669, 69.2509921], [41.305764, 69.2509842], [41.3057615, 69.2509744], [41.3057581, 69.2509644], [41.3057506, 69.2509401], [41.3057457, 69.2509247], [41.3057388, 69.2509062], [41.3057312, 69.2508952], [41.3057273, 69.2508859], [41.3057245, 69.250875], [41.3057239, 69.250864], [41.305724, 69.2508542], [41.3057282, 69.2508483], [41.3057302, 69.2508391], [41.30573, 69.2508312], [41.3057278, 69.2508196], [41.3057223, 69.250807], [41.3057138, 69.2507894], [41.3056962, 69.2507575], [41.305682, 69.2507309], [41.3056663, 69.2507092], [41.3056556, 69.2506936], [41.3056436, 69.2506749], [41.305634, 69.2506543], [41.3056295, 69.2506411], [41.3056252, 69.2506253], [41.3056211, 69.2506091], [41.305615, 69.2505757], [41.3056128, 69.2505606], [41.3056114, 69.2505431], [41.3056106, 69.2505277], [41.3056078, 69.2505003], [41.3056065, 69.2504867], [41.3056052, 69.2504724], [41.3056051, 69.2504577], [41.305602, 69.2504289], [41.3055996, 69.2504172], [41.3055912, 69.2503931], [41.3055844, 69.2503748], [41.3055777, 69.2503553], [41.3055724, 69.2503343], [41.3055657, 69.250311], [41.3055574, 69.250289], [41.3055454, 69.2502569], [41.3055324, 69.2502131], [41.3055291, 69.2501999], [41.3055232, 69.2501568], [41.3055108, 69.250106], [41.3054979, 69.2500827], [41.3054829, 69.250062], [41.3054566, 69.2500209], [41.3054413, 69.2499885], [41.3054364, 69.2499377], [41.3054344, 69.249901], [41.3054296, 69.2498677], [41.3054242, 69.249836], [41.3054176, 69.2498004], [41.3054091, 69.2497792], [41.3053893, 69.2497596], [41.3053716, 69.2497416], [41.3053578, 69.2497196], [41.3053394, 69.2496869], [41.305331, 69.2496799], [41.3053218, 69.2496526], [41.3053114, 69.2496304], [41.3052993, 69.2496101], [41.3052872, 69.2495862], [41.305278, 69.2495618], [41.3052722, 69.2495447], [41.3052659, 69.2495266], [41.3052596, 69.2495088], [41.3052545, 69.2494954], [41.3052468, 69.2494798], [41.305236, 69.2494543], [41.3052271, 69.2494347], [41.3052154, 69.2494103], [41.305204, 69.2493924], [41.3051929, 69.2493757], [41.3051743, 69.2493498], [41.3051584, 69.2493245], [41.3051477, 69.2493067], [41.3051402, 69.2492931], [41.3051312, 69.2492741], [41.3051154, 69.2492411], [41.3051005, 69.2492135], [41.3050915, 69.2491942], [41.3050821, 69.2491751], [41.3050721, 69.2491543], [41.3050609, 69.2491279], [41.3050546, 69.2491131], [41.3050472, 69.2490963], [41.3050339, 69.2490657], [41.3050241, 69.2490399], [41.3050162, 69.2490184], [41.3050092, 69.2489991], [41.3049974, 69.2489669], [41.3049844, 69.2489328], [41.3049782, 69.2489167], [41.3049717, 69.2488976], [41.3049632, 69.2488767], [41.3049481, 69.2488443], [41.3049373, 69.2488296], [41.3049286, 69.2488138], [41.3049194, 69.2487994], [41.3049086, 69.2487814], [41.3048958, 69.2487581], [41.3048893, 69.2487461], [41.3048829, 69.248734], [41.3048769, 69.2487203], [41.3048707, 69.2487046], [41.3048657, 69.2486884], [41.3048637, 69.2486747], [41.3048621, 69.2486564], [41.304861, 69.2486342], [41.3048587, 69.2486001], [41.3048565, 69.2485653], [41.3048532, 69.2485401], [41.3048462, 69.2485081], [41.3048391, 69.2484756], [41.3048356, 69.2484572], [41.3048267, 69.2484309], [41.3048128, 69.2483995], [41.3047975, 69.2483696], [41.3047828, 69.2483475], [41.3047726, 69.2483328], [41.3047591, 69.248306], [41.3047494, 69.248279], [41.3047393, 69.2482427], [41.3047286, 69.2482138], [41.304722, 69.2481976], [41.304712, 69.2481769], [41.3047022, 69.2481525], [41.3046908, 69.2481174], [41.3046862, 69.248091], [41.3046859, 69.2480726], [41.3046855, 69.2480575], [41.3046805, 69.2480264], [41.3046741, 69.2480083], [41.3046641, 69.2479938], [41.3046495, 69.2479855], [41.3046345, 69.2479743], [41.3046233, 69.2479627], [41.3046142, 69.2479532], [41.3046043, 69.2479484], [41.304597, 69.2479423], [41.3045884, 69.2479311], [41.3045796, 69.2479165], [41.3045724, 69.2478977], [41.3045606, 69.2478587], [41.3045589, 69.2478443], [41.3045594, 69.2478271], [41.3045587, 69.2478111], [41.3045555, 69.2477875], [41.3045482, 69.2477574], [41.304544, 69.2477346], [41.3045385, 69.2477095], [41.3045381, 69.2476924], [41.3045399, 69.2476832], [41.3045409, 69.2476752], [41.3045474, 69.2476661], [41.3045552, 69.2476643], [41.3045644, 69.2476615], [41.3045836, 69.2476549], [41.3045942, 69.2476221], [41.3045932, 69.2476075], [41.3045917, 69.2475842], [41.3045822, 69.2475454], [41.3045733, 69.2475007], [41.3045659, 69.2474733], [41.3045486, 69.2474255], [41.3045235, 69.2473771], [41.3045132, 69.2473478], [41.3045006, 69.247296], [41.3044954, 69.2472673], [41.3044355, 69.2469712], [41.3047574, 69.2480822], [41.3047574, 69.2480822], [41.3066593, 69.2518073], [41.3066593, 69.2518073], [41.304084, 69.2468775], [41.3040828, 69.2468884], [41.3040849, 69.2468887], [41.3040876, 69.2468857], [41.3040986, 69.2468772], [41.3041153, 69.2468488], [41.3041168, 69.2468327], [41.3041233, 69.2468037], [41.3041259, 69.2467929], [41.3041264, 69.2467834], [41.3041156, 69.2467681], [41.3041084, 69.2467385], [41.3041114, 69.2467131], [41.3041122, 69.2467022], [41.3041102, 69.2466688], [41.3041104, 69.246629], [41.3041149, 69.2466054], [41.3041195, 69.2465977], [41.3041262, 69.2465794], [41.3041337, 69.2465599], [41.3041422, 69.2465325], [41.3041485, 69.2465055], [41.3041531, 69.2464751], [41.304155, 69.2464546], [41.304157, 69.2464377], [41.3041588, 69.2464198], [41.304158, 69.2464019], [41.3041435, 69.2463557], [41.3041361, 69.246349], [41.3041264, 69.2463368], [41.3041211, 69.2463202], [41.3041139, 69.246293], [41.3041027, 69.2462679], [41.3040957, 69.2462591], [41.3040882, 69.2462421], [41.3040821, 69.2462207], [41.304078, 69.2461963], [41.3040793, 69.2461888], [41.3040803, 69.2461789], [41.3040828, 69.2461667], [41.3040855, 69.246142], [41.3040952, 69.2461237], [41.3040994, 69.2461081], [41.3041031, 69.2460925], [41.3041047, 69.2460746], [41.304101, 69.2460436], [41.3040982, 69.246032], [41.3040916, 69.2460111], [41.3040866, 69.2460018], [41.3040768, 69.2459861], [41.3040702, 69.2459773], [41.3040597, 69.2459579], [41.3040519, 69.2459436], [41.3040369, 69.2459213], [41.3040264, 69.2459105], [41.3040157, 69.2458972], [41.3040012, 69.2458742], [41.3039892, 69.2458499], [41.3039849, 69.2458393], [41.3039804, 69.2458261], [41.3039749, 69.2458098], [41.3039611, 69.2457688], [41.3039549, 69.2457503], [41.303948, 69.2457311], [41.3039362, 69.245696], [41.3039288, 69.2456779], [41.3039178, 69.2456571], [41.3039056, 69.2456334], [41.3038929, 69.2455951], [41.3038882, 69.2455733], [41.3038844, 69.2455523], [41.3038845, 69.2455321], [41.3038909, 69.2455169], [41.3039005, 69.2455053], [41.303911, 69.2454924], [41.3039243, 69.2454727], [41.303932, 69.2454605], [41.3039414, 69.245448], [41.3039515, 69.2454367], [41.3039608, 69.2454269], [41.303983, 69.2454022], [41.3039878, 69.2453964], [41.3039924, 69.2453867], [41.3039969, 69.2453727], [41.3040038, 69.2453569], [41.3040151, 69.2453259], [41.3040192, 69.2453001], [41.3040235, 69.2452675], [41.3040269, 69.2452452], [41.3040294, 69.2452167], [41.3040302, 69.2452006], [41.3040328, 69.2451833], [41.3040386, 69.2451605], [41.3040544, 69.2451256], [41.3040623, 69.2451131], [41.3040677, 69.2450992], [41.304072, 69.2450855], [41.3040787, 69.2450686], [41.3040906, 69.245047], [41.3040986, 69.2450342], [41.3041082, 69.2450191], [41.304122, 69.2449985], [41.3041411, 69.2449751], [41.3041549, 69.2449548], [41.3041644, 69.2449373], [41.3041715, 69.2449229], [41.3041775, 69.2449068], [41.304183, 69.244888], [41.3041892, 69.2448703], [41.3041949, 69.2448548], [41.3041999, 69.2448421], [41.3042079, 69.2448269], [41.304216, 69.2448136], [41.3042238, 69.2448028], [41.3042324, 69.2447905], [41.3042417, 69.2447777], [41.3042518, 69.2447659], [41.304263, 69.244753], [41.3042694, 69.2447451], [41.3042736, 69.2447393], [41.3042762, 69.2447328], [41.304277, 69.244729], [41.3042863, 69.2447158], [41.3042911, 69.2447112], [41.3042964, 69.2447056], [41.3043021, 69.2446984], [41.304298, 69.244691], [41.3042868, 69.2446896], [41.3042792, 69.2446871], [41.3042734, 69.2446777], [41.3042717, 69.2446702], [41.3042714, 69.2446673], [41.3042717, 69.2446483], [41.3042711, 69.2446262], [41.3042705, 69.2446158], [41.3042695, 69.2445988], [41.3042694, 69.2445861], [41.3042713, 69.2445542], [41.3042743, 69.244539], [41.3042774, 69.2445187], [41.3042794, 69.2445033], [41.304282, 69.2444736], [41.3042827, 69.244458], [41.3042826, 69.2444328], [41.3042823, 69.2444157], [41.3042807, 69.2443751], [41.3042803, 69.2443583], [41.3042802, 69.2443412], [41.3042806, 69.244324], [41.3042808, 69.2442901], [41.3042801, 69.2442742], [41.3042797, 69.2442598], [41.304278, 69.2442429], [41.3042766, 69.2442259], [41.3042739, 69.2441959], [41.3042708, 69.2441742], [41.3042681, 69.2441584], [41.3042663, 69.2441422], [41.3042644, 69.2441108], [41.3042656, 69.244094], [41.3042684, 69.2440715], [41.3042715, 69.2440545], [41.3042825, 69.2440117], [41.304289, 69.2439977], [41.3042962, 69.2439871], [41.3043162, 69.2439721], [41.3043274, 69.2439748], [41.3043373, 69.2439761], [41.304355, 69.2439787], [41.3043661, 69.2439811], [41.3043784, 69.2439816], [41.3043959, 69.2439796], [41.3044102, 69.2439718], [41.3044161, 69.2439643], [41.3044214, 69.2439556], [41.3044269, 69.2439453], [41.304433, 69.2439339], [41.3044393, 69.2439209], [41.3044482, 69.2439011], [41.3044538, 69.2438869], [41.3043746, 69.2442366], [41.3043521, 69.2443418], [41.3043265, 69.2444511], [41.3043027, 69.2445465], [41.3042811, 69.2446253], [41.3042613, 69.2446918], [41.3042451, 69.244743], [41.3042329, 69.2447798], [41.3043453, 69.2445732], [41.3043662, 69.2445688], [41.3043775, 69.2445744], [41.3043845, 69.2445815], [41.3043969, 69.2446006], [41.3044047, 69.2446178], [41.3044099, 69.2446524], [41.3044103, 69.2446659], [41.3044109, 69.2446906], [41.3044104, 69.2447132], [41.3044084, 69.2447481], [41.3044074, 69.2447643], [41.3044077, 69.244786], [41.3044093, 69.2448053], [41.3044123, 69.2448256], [41.304416, 69.2448438], [41.3044221, 69.2448594], [41.3044282, 69.2448734], [41.3044322, 69.2448865], [41.3044367, 69.2449167], [41.3044382, 69.2449295], [41.3044405, 69.2449457], [41.3044436, 69.2449627], [41.3044464, 69.244979], [41.3044484, 69.244995], [41.3044483, 69.2450105], [41.3044478, 69.2450283], [41.3044495, 69.2450457], [41.3044533, 69.245063], [41.3044562, 69.2450776], [41.3044567, 69.2450958], [41.3044442, 69.2451182], [41.3044385, 69.2451387], [41.3044372, 69.2451584], [41.3044379, 69.2451741], [41.3044395, 69.2451913], [41.3044403, 69.2452168], [41.3044392, 69.2452428], [41.3044387, 69.2452609], [41.3044392, 69.2452814], [41.3044389, 69.245301], [41.3044388, 69.2453248], [41.3044386, 69.2453568], [41.3044387, 69.245375], [41.3044399, 69.2453932], [41.3044421, 69.2454114], [41.3044437, 69.2454316], [41.3044431, 69.2454497], [41.3044416, 69.2454687], [41.3044406, 69.2455], [41.3044436, 69.2455286], [41.3044442, 69.2455498], [41.3044446, 69.2455709], [41.304446, 69.2455897], [41.3044476, 69.2456072], [41.3044472, 69.245622], [41.3044469, 69.2456364], [41.3044489, 69.2456505], [41.3044549, 69.2456658], [41.3044602, 69.2456923], [41.3044623, 69.2457094], [41.3044634, 69.2457273], [41.304462, 69.2457446], [41.3044562, 69.2457671], [41.3044514, 69.245783], [41.3044442, 69.2457982], [41.3044329, 69.2458131], [41.3044202, 69.2458239], [41.3044068, 69.2458334], [41.3043927, 69.2458418], [41.3043759, 69.2458497], [41.3043469, 69.2458616], [41.304332, 69.2458665], [41.3043173, 69.2458719], [41.3043068, 69.2458781], [41.3042862, 69.2458901], [41.3042711, 69.2459014], [41.3042602, 69.2459104], [41.3042469, 69.2459214], [41.3042346, 69.2459357], [41.3042236, 69.2459488], [41.3042124, 69.2459621], [41.3041989, 69.2459763], [41.304183, 69.2459931], [41.3041768, 69.2460069], [41.3041709, 69.2460224], [41.3041563, 69.2460442], [41.3041452, 69.2460534], [41.3041371, 69.2460617], [41.3041286, 69.2460714], [41.3041099, 69.2460872], [41.3040939, 69.2460939], [41.30408, 69.2460984], [41.3040648, 69.2461033], [41.3040396, 69.2461069], [41.304013, 69.2461135], [41.3039989, 69.2461199], [41.3039819, 69.2461312], [41.3039709, 69.2461426], [41.3039582, 69.2461568], [41.3039457, 69.2461695], [41.303934, 69.2461812], [41.3039258, 69.2461924], [41.303898, 69.2462141], [41.3038855, 69.2462226], [41.3038761, 69.2462297], [41.3038672, 69.2462371], [41.3038502, 69.2462526], [41.3038393, 69.2462656], [41.3038285, 69.2462785], [41.3038174, 69.2462888], [41.3037929, 69.2462956], [41.3037705, 69.2462899], [41.3037527, 69.2462718], [41.3037458, 69.2462551], [41.3037358, 69.2462345], [41.3037214, 69.2462228], [41.3037133, 69.2462077], [41.3037089, 69.2461896], [41.3037056, 69.2461713], [41.3037012, 69.2461538], [41.3036911, 69.2461434], [41.3036822, 69.2461328], [41.3036746, 69.2461246], [41.3036687, 69.2461187], [41.3036606, 69.2461138], [41.3036416, 69.2461103], [41.3036278, 69.2461087], [41.303615, 69.2461107], [41.3036027, 69.2461174], [41.3035855, 69.2461269], [41.3035726, 69.2461323], [41.3035652, 69.2461419], [41.3035558, 69.2461538], [41.3035466, 69.246164], [41.3035387, 69.24617], [41.3035297, 69.2461727], [41.3035147, 69.2461653], [41.3034995, 69.2461521], [41.3034893, 69.2461405], [41.3034721, 69.2461194], [41.3034568, 69.2461096], [41.3034404, 69.2460964], [41.3034225, 69.2460798], [41.3034117, 69.2460633], [41.3033867, 69.2460559], [41.3033685, 69.2460413], [41.3033595, 69.2460272], [41.3033512, 69.2460144], [41.3033314, 69.2460066], [41.3033247, 69.2459964], [41.3033194, 69.2459834], [41.3033154, 69.2459694], [41.3033093, 69.245957], [41.3032982, 69.2459488], [41.3032885, 69.2459406], [41.3032779, 69.245932], [41.3032693, 69.2459246], [41.3032597, 69.2459179], [41.3032427, 69.2459077], [41.303236, 69.2458989], [41.303238, 69.2458886], [41.3032312, 69.245881], [41.3032107, 69.2458819], [41.3031998, 69.2458793], [41.3031931, 69.2458742], [41.3031955, 69.2458664], [41.3031874, 69.2458596], [41.3031768, 69.2458546], [41.3031544, 69.2458484], [41.3031419, 69.2458449], [41.3031305, 69.2458387], [41.3031183, 69.2458339], [41.3030967, 69.2458192], [41.3030887, 69.2458142], [41.303081, 69.2458105], [41.3030705, 69.2458074], [41.3030641, 69.245806], [41.3030581, 69.2458048], [41.303045, 69.2458111], [41.3030219, 69.2458273], [41.303008, 69.2458321], [41.3030139, 69.2458473], [41.303017, 69.2458625], [41.3030142, 69.245868], [41.3030117, 69.2458748], [41.3030093, 69.2458846], [41.3030067, 69.2459076], [41.3029991, 69.2459241], [41.3029916, 69.2459353], [41.3029823, 69.2459444], [41.3029679, 69.2459523], [41.3029523, 69.2459473], [41.3029446, 69.2459369], [41.3029344, 69.2459264], [41.302927, 69.2459122], [41.3029209, 69.245899], [41.3029149, 69.2458816], [41.3029091, 69.2458686], [41.3029045, 69.2458544], [41.3029021, 69.2458397], [41.3029018, 69.2458183], [41.3029046, 69.2458015], [41.3029095, 69.245784], [41.3029135, 69.24577], [41.302915, 69.2457595], [41.30292, 69.2457426], [41.3029231, 69.2457311], [41.3029253, 69.2457085], [41.3029259, 69.2456897], [41.3029276, 69.2456802], [41.3029277, 69.245649], [41.3029351, 69.2456473], [41.302938, 69.2456455], [41.3029396, 69.2456437], [41.3029401, 69.2456397], [41.3029402, 69.2456322], [41.3029396, 69.2456235], [41.3029361, 69.245611], [41.302921, 69.2456042], [41.302917, 69.2456113], [41.3029174, 69.2456184], [41.3029182, 69.2456185], [41.3029189, 69.2456097], [41.3029208, 69.2455989], [41.3029226, 69.245578], [41.303023, 69.2458585], [41.3030243, 69.245861], [41.3030237, 69.2458604], [41.3030228, 69.2458596], [41.303027, 69.2458604], [41.3030406, 69.2458651], [41.3030373, 69.2458646], [41.30304, 69.2458629], [41.3029965, 69.2459042], [41.3030227, 69.2458513], [41.3030235, 69.2458564], [41.3030139, 69.2457608], [41.3028278, 69.2460603], [41.3028295, 69.2460626], [41.3028306, 69.2460663], [41.3028295, 69.2460673], [41.3028284, 69.2460684], [41.3028281, 69.2460716], [41.3028279, 69.2460738], [41.3028307, 69.246071], [41.3028377, 69.2460652], [41.3028399, 69.2460651], [41.3028408, 69.2460672], [41.3028404, 69.2460689], [41.3028407, 69.2460702], [41.302834, 69.2460724], [41.3028284, 69.2460741], [41.3028299, 69.2460753], [41.3028291, 69.246074], [41.3028233, 69.2460693], [41.3028218, 69.2460757], [41.3028208, 69.2460772], [41.3028204, 69.2460729], [41.3028216, 69.2460711], [41.3028269, 69.2460728], [41.3028289, 69.2460745], [41.3028251, 69.2460746], [41.302825, 69.2460752], [41.3028257, 69.2460751], [41.3028273, 69.2460745], [41.3028301, 69.2460733], [41.3028338, 69.2460721], [41.3028379, 69.246071], [41.3028423, 69.2460692], [41.3028461, 69.2460666], [41.3028501, 69.2460639], [41.3028514, 69.2460634], [41.3028524, 69.2460638], [41.3028533, 69.2460653], [41.3028531, 69.2460705], [41.3028534, 69.2460741], [41.3030647, 69.2459444], [41.3029744, 69.2459832], [41.3030048, 69.2459128], [41.3030861, 69.2455032], [41.3030785, 69.2455358], [41.3030554, 69.2456096], [41.3030429, 69.245768], [41.3030322, 69.2458573], [41.3030347, 69.2458939], [41.3030371, 69.245888], [41.3030383, 69.2458785], [41.3030399, 69.2458826], [41.3030393, 69.2458805], [41.3030398, 69.2458611], [41.3030456, 69.2458478], [41.3030487, 69.2458392], [41.3030505, 69.2458332], [41.3030535, 69.2458261], [41.3030444, 69.2458616], [41.3030435, 69.2458697], [41.3030429, 69.2458751], [41.3030431, 69.2458796], [41.3030428, 69.2458841], [41.3030429, 69.2458845], [41.3030437, 69.2458841], [41.3030476, 69.2458857], [41.3030522, 69.2458855], [41.3030565, 69.2458829], [41.3030586, 69.2458827], [41.3030575, 69.2458849], [41.3030554, 69.2458878], [41.3030552, 69.2458923], [41.303056, 69.2458994], [41.3030566, 69.2459103], [41.3030575, 69.2459166], [41.3030594, 69.2459275], [41.3030611, 69.2459387], [41.3030625, 69.2459499], [41.3030641, 69.2459614], [41.3030661, 69.2459732], [41.3030682, 69.2459834], [41.3030712, 69.2459963], [41.3030743, 69.2460074], [41.3030786, 69.2460234], [41.3030817, 69.2460355], [41.3030837, 69.2460466], [41.3030859, 69.2460639], [41.3030871, 69.2460737], [41.3030891, 69.2460876], [41.303092, 69.2461029], [41.3030964, 69.2461166], [41.3031025, 69.246127], [41.3031133, 69.2461473], [41.3031232, 69.2461541], [41.3031371, 69.2461511], [41.3031295, 69.246166], [41.3030181, 69.2461476], [41.3029451, 69.2461266], [41.3029265, 69.2461245], [41.3029088, 69.2461223], [41.3028919, 69.246119], [41.3028746, 69.2461137], [41.3028581, 69.2461057], [41.302842, 69.2460947], [41.3028269, 69.2460803], [41.3028107, 69.2460573], [41.3027998, 69.2460386], [41.3027917, 69.246018], [41.302787, 69.2459976], [41.302789, 69.2459675], [41.30279, 69.2459515], [41.3027918, 69.2459332], [41.3027923, 69.2459014], [41.3027991, 69.2458846], [41.3028066, 69.2458678], [41.3028138, 69.2458474], [41.30283, 69.245885], [41.302834, 69.2459113], [41.3028349, 69.2459115], [41.3028339, 69.2459081], [41.3028244, 69.2459207], [41.3028143, 69.2459364], [41.3028066, 69.2459386], [41.302799, 69.245933], [41.3027915, 69.245925], [41.3027837, 69.2459188], [41.30277, 69.2458961], [41.3027602, 69.2458979], [41.3027402, 69.2458844], [41.3027221, 69.2458868], [41.3027124, 69.2458648], [41.3027185, 69.2458817], [41.3027332, 69.2459083], [41.3027356, 69.2459081], [41.3027434, 69.2459023], [41.3027479, 69.2459026], [41.3027586, 69.2458809], [41.3027628, 69.2458717], [41.3027633, 69.2458501], [41.3027617, 69.2458427], [41.302755, 69.2458308], [41.3027517, 69.2458643], [41.3027584, 69.2459244], [41.302764, 69.2459588], [41.3027803, 69.2460467], [41.302782, 69.2460687], [41.3027945, 69.2461211], [41.3028054, 69.2461518], [41.3028097, 69.2461602], [41.3028146, 69.2461673], [41.3028193, 69.246168], [41.3028242, 69.2461649], [41.302829, 69.2461598], [41.302836, 69.2461566], [41.3028402, 69.2461444], [41.3028442, 69.2461353], [41.3028463, 69.2461331], [41.3028646, 69.2462988], [41.3029479, 69.2462065], [41.3031755, 69.2460747], [41.3031764, 69.246077], [41.3031818, 69.2460848], [41.303184, 69.2460882], [41.3031859, 69.2460912], [41.3031874, 69.2460946], [41.3031875, 69.2460952], [41.3031877, 69.2460957], [41.3031896, 69.2460965], [41.3031998, 69.2461023], [41.3031913, 69.2460944], [41.3031897, 69.246094], [41.3031887, 69.2460947], [41.3031876, 69.2460956], [41.3031872, 69.2460975], [41.3031884, 69.2461007], [41.3031833, 69.2460928], [41.3031889, 69.2460974], [41.3031927, 69.2460987], [41.3031967, 69.2460994], [41.3032009, 69.2461102], [41.3032019, 69.2461172], [41.303201, 69.2461214], [41.3031986, 69.2461253], [41.303196, 69.2461279], [41.3031906, 69.2461299], [41.3031873, 69.246124], [41.3031861, 69.2461201], [41.3031866, 69.2461148], [41.3031893, 69.2461084], [41.3031909, 69.2461064], [41.3031939, 69.2461048], [41.3032036, 69.2461008], [41.3032074, 69.2461002], [41.3032086, 69.2460949], [41.3032124, 69.2460927], [41.3032223, 69.2460911], [41.3032409, 69.2460888], [41.3032525, 69.2460865], [41.3032607, 69.2460782], [41.3032635, 69.2460605], [41.3032596, 69.2460458], [41.3032359, 69.2460021], [41.3032247, 69.2459691], [41.3032158, 69.2459406], [41.3031961, 69.2459155], [41.3031728, 69.2458967], [41.3031459, 69.2458806], [41.3031303, 69.2458644], [41.303126, 69.2458457], [41.3031212, 69.2458305], [41.3031144, 69.2458159], [41.3031053, 69.2458008], [41.3030977, 69.2457833], [41.3030914, 69.2457655], [41.3030869, 69.2457524], [41.3030815, 69.2457379], [41.3030775, 69.2457263], [41.3030692, 69.2457097], [41.3030627, 69.2456998], [41.3030563, 69.2456949], [41.3030444, 69.245692], [41.3030326, 69.2457065], [41.3030262, 69.245704], [41.3030188, 69.2456925], [41.3030119, 69.2456814], [41.3030055, 69.2456471], [41.3030027, 69.2456329], [41.3029934, 69.2456123], [41.3029837, 69.2455766], [41.302976, 69.2455588], [41.3029625, 69.2455489], [41.3029396, 69.2455471], [41.302918, 69.2455227], [41.302913, 69.2455108], [41.3029079, 69.2454811], [41.3028911, 69.2454504], [41.3028708, 69.2454124], [41.3028626, 69.2453933], [41.3028558, 69.245375], [41.3028434, 69.2453419], [41.3028343, 69.2453097], [41.3028243, 69.2452824], [41.30282, 69.2452682], [41.3028158, 69.2452561], [41.3028024, 69.2452368], [41.3027934, 69.2452293], [41.3027817, 69.2452137], [41.302767, 69.2452026], [41.3027613, 69.2451924], [41.302753, 69.2451659], [41.3027447, 69.2451436], [41.3027383, 69.2451272], [41.3027322, 69.2451103], [41.3027264, 69.2450939], [41.30272, 69.2450702], [41.3027169, 69.2450593], [41.3027093, 69.2450327], [41.3027041, 69.2449939], [41.3027003, 69.2449737], [41.3026947, 69.2449567], [41.3026845, 69.2449412], [41.3026775, 69.2449287], [41.3026698, 69.2449168], [41.3026608, 69.2449044], [41.3026514, 69.2448907], [41.3026419, 69.2448777], [41.302633, 69.2448604], [41.3026237, 69.2448487], [41.3026186, 69.2448412], [41.3026141, 69.244833], [41.3026098, 69.244822], [41.3026023, 69.2447977], [41.3025973, 69.2447789], [41.3025928, 69.2447597], [41.3025872, 69.2447409], [41.3025813, 69.2447231], [41.3025768, 69.2447058], [41.3025736, 69.2446878], [41.3025699, 69.2446715], [41.3025661, 69.2446541], [41.3025617, 69.2446383], [41.3025571, 69.2446231], [41.3025524, 69.2446059], [41.3025467, 69.2445862], [41.3025409, 69.2445712], [41.302533, 69.2445586], [41.3025264, 69.2445466], [41.3025169, 69.2445281], [41.3025126, 69.2445079], [41.302512, 69.2444823], [41.3025142, 69.2444251], [41.3025127, 69.2443919], [41.3025034, 69.2443482], [41.3024981, 69.2443292], [41.3024932, 69.2443136], [41.302483, 69.2442913], [41.3024789, 69.2442851], [41.3024617, 69.2442639], [41.3024475, 69.2442504], [41.3024352, 69.244241], [41.3024231, 69.2442291], [41.3024137, 69.2442055], [41.3024041, 69.2441652], [41.3024006, 69.2441394], [41.3024009, 69.2441166], [41.302403, 69.2440947], [41.3024046, 69.2440719], [41.3024053, 69.2440513], [41.302405, 69.2440336], [41.3024024, 69.2440195], [41.3023966, 69.2440116], [41.3023923, 69.2440007], [41.3023908, 69.2439761], [41.3023849, 69.2439665], [41.302381, 69.243953], [41.3023756, 69.2439389], [41.3023626, 69.2439339], [41.302354, 69.243927], [41.3023439, 69.2439149], [41.3023338, 69.2438973], [41.3023253, 69.2438788], [41.3023102, 69.243854], [41.3023017, 69.2438428], [41.3022934, 69.2438322], [41.3022849, 69.2438242], [41.3022758, 69.2438139], [41.3022707, 69.2438041], [41.3022649, 69.2437876], [41.30226, 69.2437691], [41.3022558, 69.2437521], [41.3022517, 69.2437313], [41.3022483, 69.243711], [41.3022445, 69.2436918], [41.3022404, 69.2436727], [41.3022371, 69.2436537], [41.3022334, 69.2436327], [41.3022294, 69.2436101], [41.3022256, 69.2435877], [41.3022214, 69.2435658], [41.302219, 69.2435438], [41.3022166, 69.2435226], [41.3022135, 69.2435022], [41.3022055, 69.2434801], [41.3021991, 69.2434537], [41.3021907, 69.2434321], [41.3021808, 69.2434109], [41.3021667, 69.2433884], [41.302157, 69.2433677], [41.3021429, 69.2433416], [41.3021335, 69.2433176], [41.3021261, 69.2432945], [41.3021187, 69.2432755], [41.3021095, 69.2432584], [41.3020992, 69.2432413], [41.3020897, 69.2432257], [41.3020793, 69.2432089], [41.302071, 69.2431972], [41.3020604, 69.2431848], [41.3020469, 69.2431684], [41.3020385, 69.2431589], [41.3020318, 69.2431489], [41.3020248, 69.243141], [41.3020178, 69.2431322], [41.3020096, 69.2431216], [41.3020018, 69.2431049], [41.3019917, 69.2430874], [41.3019791, 69.2430673], [41.3019707, 69.2430521], [41.3019602, 69.2430315], [41.3019533, 69.2430204], [41.3019452, 69.2430084], [41.3019374, 69.2429974], [41.3019326, 69.2429824], [41.3019268, 69.2429677], [41.3019178, 69.2429488], [41.3019083, 69.2429287], [41.3019008, 69.2429038], [41.3018961, 69.2428846], [41.3018904, 69.2428694], [41.3018796, 69.2428449], [41.301873, 69.2428283], [41.3018648, 69.2428114], [41.3018543, 69.2427959], [41.3018428, 69.2427807], [41.3018224, 69.2427582], [41.3018054, 69.2427466], [41.3017927, 69.2427419], [41.3017785, 69.2427389], [41.3017646, 69.2427384], [41.3017494, 69.2427378], [41.3017338, 69.242736], [41.3017176, 69.2427355], [41.3017011, 69.2427358], [41.3016844, 69.2427361], [41.3016609, 69.2427395], [41.3016483, 69.2427409], [41.301629, 69.2427424], [41.3016072, 69.2427431], [41.30159, 69.2427422], [41.3015729, 69.2427408], [41.3015555, 69.2427389], [41.3015393, 69.2427355], [41.3015267, 69.242731], [41.3015076, 69.242728], [41.301493, 69.2427205], [41.3014794, 69.2427126], [41.3014665, 69.2427083], [41.3014545, 69.2427023], [41.3014436, 69.2426919], [41.3014364, 69.2426753], [41.3014286, 69.2426628], [41.3014198, 69.2426496], [41.3014118, 69.2426347], [41.3014044, 69.2426155], [41.3014013, 69.2425854], [41.3014022, 69.2425475], [41.3014055, 69.2425116], [41.3014212, 69.2424775], [41.3014324, 69.2424467], [41.3014424, 69.242417], [41.3014477, 69.2423934], [41.3014506, 69.2423732], [41.3014521, 69.2423532], [41.3014526, 69.2423333], [41.3014533, 69.2423141], [41.3014538, 69.2422932], [41.3014522, 69.2422712], [41.3014466, 69.2422473], [41.3014404, 69.242219], [41.3014341, 69.2421884], [41.3014303, 69.2421625], [41.3014285, 69.2421444], [41.3014278, 69.2421241], [41.3014285, 69.2421057], [41.3014289, 69.2420853], [41.3014284, 69.2420651], [41.3014272, 69.2420465], [41.3014233, 69.242026], [41.301414, 69.2419877], [41.3014168, 69.2419695], [41.3014165, 69.2419569], [41.3014124, 69.2419394], [41.3013973, 69.2419192], [41.3013726, 69.241889], [41.3013595, 69.2418704], [41.3013539, 69.2418536], [41.3013441, 69.2418187], [41.3013392, 69.2418034], [41.3013349, 69.2417746], [41.3013331, 69.2417575], [41.3013286, 69.2417401], [41.3013226, 69.2417209], [41.3013212, 69.2417037], [41.3013224, 69.2416783], [41.301324, 69.2416599], [41.301322, 69.2416386], [41.3013144, 69.241616], [41.3013028, 69.2416022], [41.3012898, 69.2415921], [41.3012778, 69.2415817], [41.301274, 69.2415645], [41.3012691, 69.2415486], [41.301265, 69.2415282], [41.3012615, 69.2415086], [41.3012578, 69.2414903], [41.3012601, 69.2414721], [41.3012564, 69.2414446], [41.3012554, 69.241425], [41.3012575, 69.2413992], [41.3012639, 69.2413741], [41.3012695, 69.2413525], [41.3012746, 69.2413329], [41.3012799, 69.2413007], [41.3012826, 69.2412782], [41.3012959, 69.2412369], [41.3013072, 69.2412223], [41.301325, 69.2412087], [41.3013396, 69.2411915], [41.3013687, 69.2411693], [41.3013861, 69.2411578], [41.3014002, 69.2411477], [41.3014135, 69.2411403], [41.3014253, 69.2411332], [41.3014348, 69.241126], [41.3014437, 69.2411191], [41.3014535, 69.241111], [41.3014635, 69.241102], [41.3014745, 69.2410912], [41.301486, 69.2410687], [41.3014966, 69.2410567], [41.3015078, 69.2410479], [41.3015161, 69.2410426], [41.3015252, 69.2410367], [41.3015336, 69.241031], [41.301543, 69.2410247], [41.3015548, 69.241016], [41.3015689, 69.2410029], [41.3015873, 69.2409876], [41.3015989, 69.2409752], [41.301609, 69.2409615], [41.301615, 69.2409439], [41.3016206, 69.2409213], [41.3016264, 69.2409031], [41.301632, 69.2408809], [41.3016375, 69.240863], [41.3016414, 69.2408457], [41.3016495, 69.2408321], [41.3016592, 69.2408193], [41.3016771, 69.2408013], [41.3016889, 69.2407912], [41.301704, 69.2407807], [41.3017149, 69.2407741], [41.3017251, 69.2407669], [41.3017343, 69.2407569], [41.3017446, 69.2407501], [41.3017569, 69.2407425], [41.30177, 69.2407345], [41.3017885, 69.2407186], [41.3017944, 69.2406977], [41.3017966, 69.2406553], [41.3018021, 69.240631], [41.3018089, 69.2406081], [41.3018165, 69.2405918], [41.3018258, 69.2405801], [41.3018354, 69.2405664], [41.3018442, 69.2405525], [41.3018461, 69.2405342], [41.3018557, 69.2405186], [41.3018616, 69.2405108], [41.301875, 69.2404963], [41.3018809, 69.2404826], [41.3018905, 69.2404704], [41.3019008, 69.2404569], [41.3019103, 69.2404397], [41.3019174, 69.2404217], [41.301921, 69.2403973], [41.3019295, 69.2403655], [41.3019352, 69.2403483], [41.3019425, 69.240338], [41.3019596, 69.2403278], [41.3019729, 69.2403223], [41.3019869, 69.2403155], [41.3019988, 69.2403043], [41.3020112, 69.2402959], [41.3020248, 69.2402857], [41.302039, 69.2402727], [41.3020526, 69.2402586], [41.3020737, 69.2402457], [41.302087, 69.2402403], [41.3020999, 69.2402352], [41.3021097, 69.2402293], [41.3021214, 69.2402237], [41.3021376, 69.2402116], [41.3021493, 69.2402132], [41.3021613, 69.2402168], [41.3021733, 69.2402214], [41.3021813, 69.2402104], [41.3021937, 69.2402021], [41.3022101, 69.2401986], [41.3022257, 69.2401992], [41.3022486, 69.2402038], [41.3022613, 69.2402108], [41.3022767, 69.2402236], [41.3022874, 69.2402346], [41.302297, 69.2402454], [41.3023082, 69.2402602], [41.302315, 69.2402703], [41.3023214, 69.2402815], [41.3023278, 69.240292], [41.3023342, 69.2403038], [41.3023415, 69.2403155], [41.3023504, 69.2403273], [41.3023602, 69.2403356], [41.3023706, 69.2403454], [41.3023817, 69.2403581], [41.3023972, 69.2403787], [41.3024065, 69.240385], [41.3024241, 69.2403837], [41.3024391, 69.2403748], [41.302452, 69.2403615], [41.3024616, 69.2403435], [41.3024714, 69.2403344], [41.3024812, 69.2403294], [41.3024855, 69.2403164], [41.3024897, 69.2402995], [41.3024956, 69.2402898], [41.3025035, 69.2402797], [41.3025121, 69.2402656], [41.3025182, 69.240225], [41.302528, 69.2402109], [41.3025417, 69.2402008], [41.3025561, 69.2401914], [41.3025694, 69.2401796], [41.3025852, 69.2401571], [41.3025939, 69.240141], [41.3026024, 69.2401222], [41.3026068, 69.2401017], [41.3026014, 69.2400592], [41.3026034, 69.2400206], [41.3026061, 69.2399955], [41.3026078, 69.2399554], [41.3026086, 69.2399259], [41.3026015, 69.2398985], [41.3025947, 69.239877], [41.3025841, 69.2398471], [41.3025816, 69.2398254], [41.3025732, 69.2398024], [41.3025684, 69.2397823], [41.3025651, 69.2397608], [41.3025625, 69.2397397], [41.3025608, 69.2397206], [41.3025594, 69.2397004], [41.3025594, 69.2396816], [41.3025598, 69.2396613], [41.302562, 69.2396432], [41.302565, 69.2396261], [41.3025673, 69.2396086], [41.3025693, 69.2395908], [41.3025689, 69.2395732], [41.3025659, 69.2395582], [41.3025644, 69.239543], [41.3025618, 69.2395269], [41.3025642, 69.2394939], [41.3025654, 69.2394741], [41.3025694, 69.2394445], [41.3025729, 69.2394226], [41.3025769, 69.2394006], [41.3025816, 69.2393651], [41.3025817, 69.2393448], [41.3025807, 69.2393233], [41.3025809, 69.2393039], [41.3025809, 69.2392836], [41.302585, 69.2392651], [41.3025894, 69.2392418], [41.3025911, 69.2392222], [41.3025918, 69.2392041], [41.3025919, 69.2391833], [41.302591, 69.2391665], [41.3025879, 69.2391489], [41.3025828, 69.2391188], [41.3025818, 69.239101], [41.3025813, 69.2390852], [41.3025799, 69.2390595], [41.3025765, 69.2390357], [41.3025754, 69.2390174], [41.3025697, 69.2389964], [41.3025633, 69.2389748], [41.3025544, 69.2389554], [41.3025507, 69.2389409], [41.3025458, 69.2389111], [41.3025384, 69.2388831], [41.3025321, 69.238862], [41.3025254, 69.2388488], [41.3025145, 69.2388322], [41.3025003, 69.2388148], [41.302492, 69.2388018], [41.3024839, 69.2387898], [41.3024696, 69.238771], [41.3024581, 69.2387529], [41.3024478, 69.238737], [41.302438, 69.2387227], [41.3024185, 69.2387068], [41.3023922, 69.2386773], [41.302381, 69.2386658], [41.3023718, 69.2386545], [41.3023616, 69.2386458], [41.3023554, 69.2386368], [41.3023524, 69.2386298], [41.302353, 69.2386246], [41.3023547, 69.238615], [41.3023542, 69.238599], [41.3023574, 69.2385878], [41.302362, 69.2385768], [41.3023539, 69.2385504], [41.3023511, 69.2385286], [41.3023546, 69.2385132], [41.3023609, 69.2385008], [41.3023604, 69.2384871], [41.3023591, 69.2384726], [41.3023629, 69.2384626], [41.3023703, 69.2384542], [41.3023786, 69.2384408], [41.3023903, 69.2384287], [41.3023988, 69.2384233], [41.3024082, 69.2384199], [41.3024204, 69.2384188], [41.3024247, 69.2384142], [41.3024303, 69.2384096], [41.3024346, 69.2384014], [41.3024362, 69.2383903], [41.3024347, 69.2383723], [41.3024393, 69.2383659], [41.3024464, 69.2383609], [41.3024537, 69.2383512], [41.3024506, 69.2383162], [41.302438, 69.2382721], [41.3024226, 69.2382352], [41.3024057, 69.2382022], [41.3023934, 69.2381773], [41.302374, 69.2381576], [41.3023621, 69.2381437], [41.302337, 69.23812], [41.3023234, 69.2381076], [41.3023095, 69.2380982], [41.3022882, 69.2380846], [41.3022793, 69.2380713], [41.3022706, 69.2380574], [41.3022623, 69.2380383], [41.3022569, 69.2380247], [41.3022369, 69.2380192], [41.3021935, 69.2380214], [41.3021693, 69.2380142], [41.302155, 69.2380036], [41.3021469, 69.2379902], [41.3021403, 69.237977], [41.3021351, 69.2379644], [41.3021307, 69.2379514], [41.3021281, 69.2379362], [41.3021266, 69.2379185], [41.3021253, 69.2379001], [41.3021239, 69.2378824], [41.3021232, 69.2378613], [41.3021271, 69.2378426], [41.3021333, 69.2378234], [41.3021406, 69.2378065], [41.3021433, 69.2377906], [41.3021426, 69.237773], [41.3021464, 69.2377559], [41.3021521, 69.2377399], [41.3021608, 69.2377211], [41.3021642, 69.2377129], [41.3021692, 69.2377019], [41.3021747, 69.2376899], [41.3021799, 69.2376781], [41.3021654, 69.2376579], [41.3021541, 69.237642], [41.3021488, 69.2376308], [41.3021513, 69.2376065], [41.302158, 69.2375923], [41.3021738, 69.2375784], [41.3021833, 69.2375688], [41.3021877, 69.2375576], [41.3021927, 69.237547], [41.3021986, 69.2375253], [41.3021998, 69.2375105], [41.3021988, 69.2374959], [41.3021897, 69.2374732], [41.3021755, 69.2374517], [41.3021752, 69.2374381], [41.3021828, 69.2374305], [41.3021942, 69.2374294], [41.3022068, 69.2374326], [41.3022233, 69.2374415], [41.3022332, 69.2374498], [41.3022377, 69.2374536], [41.3022438, 69.2374576], [41.3022526, 69.2374604], [41.3022792, 69.2374483], [41.3022914, 69.2374464], [41.3023046, 69.2374416], [41.3023162, 69.2374378], [41.302321, 69.2374251], [41.3023235, 69.2374102], [41.3023275, 69.2373973], [41.3023332, 69.2373828], [41.3023404, 69.2373654], [41.302347, 69.2373607], [41.3023591, 69.2373413], [41.3023681, 69.2373252], [41.3023784, 69.2373072], [41.3023876, 69.2372867], [41.3023971, 69.2372691], [41.3024043, 69.23725], [41.3024104, 69.2372286], [41.3024162, 69.2371994], [41.3024239, 69.237178], [41.3024333, 69.2371575], [41.3024433, 69.2371379], [41.3024532, 69.2371199], [41.3024629, 69.2371035], [41.3024752, 69.2370864], [41.302487, 69.2370702], [41.3025054, 69.2370492], [41.3025153, 69.2370375], [41.3025257, 69.2370276], [41.3025366, 69.2370182], [41.3025544, 69.237002], [41.3025657, 69.2369898], [41.3025771, 69.2369762], [41.3025866, 69.2369594], [41.3025946, 69.2369321], [41.3025981, 69.2369132], [41.3026028, 69.2368952], [41.3026064, 69.2368766], [41.302605, 69.2368575], [41.3026036, 69.2368421], [41.3026027, 69.2368227], [41.3025982, 69.2367951], [41.302598, 69.2367736], [41.3025977, 69.2367548], [41.3025974, 69.2367249], [41.3025993, 69.2367048], [41.3025998, 69.236685], [41.3025953, 69.2366667], [41.3025892, 69.2366464], [41.3025796, 69.2366279], [41.3025679, 69.2365949], [41.3025613, 69.2365694], [41.3025522, 69.2365529], [41.3025535, 69.2365326], [41.3025587, 69.2364751], [41.3025588, 69.2364507], [41.3025607, 69.2364287], [41.3025613, 69.2364076], [41.3025619, 69.2363862], [41.3025636, 69.2363539], [41.3025655, 69.2363364], [41.3025677, 69.2363243], [41.3025708, 69.2363064], [41.3025767, 69.2362767], [41.3025867, 69.2362643], [41.3025953, 69.2362609], [41.3026009, 69.2362496], [41.3026052, 69.2362339], [41.3026111, 69.2362153], [41.3026182, 69.2361945], [41.3026268, 69.2361767], [41.3026373, 69.236164], [41.3026476, 69.2361504], [41.3026145, 69.236094], [41.3025839, 69.2360368], [41.3025761, 69.2360021], [41.3025738, 69.2359804], [41.3025713, 69.2359583], [41.3025691, 69.2359316], [41.3025665, 69.2359047], [41.30256, 69.2358849], [41.3025492, 69.2358601], [41.3025438, 69.2358437], [41.3025388, 69.2358278], [41.30259, 69.2358505], [41.3026285, 69.2358632], [41.3026627, 69.2358688], [41.3026997, 69.2358702], [41.30272, 69.2358702], [41.3027389, 69.2358751], [41.3027552, 69.235878], [41.3027717, 69.2358845], [41.3027863, 69.2358916], [41.3028078, 69.2358951], [41.3028227, 69.2358941], [41.3028355, 69.2358936], [41.3028486, 69.2358956], [41.3028711, 69.2358941]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 4.5}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+            var circle_marker_483e4506ddf94bd6b4b19f8c55137d97 = L.circleMarker(
+                [41.3160605, 69.269243],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+        var popup_6e0b3e855c234383a00bf2fe3c9c87f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d97f66ca11364645ab60bf16c7b638fb = $(`<div id="html_d97f66ca11364645ab60bf16c7b638fb" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>412.2 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 14:40</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3160605</td></tr><tr><td>долгота:</td><td>69.269243</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3160605,69.269243" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3160605/69.269243" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3160605&lon=69.269243&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.269243,41.3160605&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3160605/69.269243&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_6e0b3e855c234383a00bf2fe3c9c87f6.setContent(html_d97f66ca11364645ab60bf16c7b638fb);
+        
+
+        circle_marker_483e4506ddf94bd6b4b19f8c55137d97.bindPopup(popup_6e0b3e855c234383a00bf2fe3c9c87f6)
+        ;
+
+        
+    
+    
+            var marker_bf4d595af33b4b35a131dee37220dca9 = L.marker(
+                [41.3160605, 69.269243],
+                {}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+            var icon_a36275c76d7c4266bc732cbfab6e685a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_bf4d595af33b4b35a131dee37220dca9.setIcon(icon_a36275c76d7c4266bc732cbfab6e685a);
+        
+    
+        var popup_8f483e5db56048518fd174a503ba37d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_488cde7a7916432fb1e41e1e0f7e62d9 = $(`<div id="html_488cde7a7916432fb1e41e1e0f7e62d9" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>412.2 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 14:40</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3160605</td></tr><tr><td>долгота:</td><td>69.269243</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3160605,69.269243" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3160605/69.269243" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3160605&lon=69.269243&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.269243,41.3160605&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3160605/69.269243&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_8f483e5db56048518fd174a503ba37d2.setContent(html_488cde7a7916432fb1e41e1e0f7e62d9);
+        
+
+        marker_bf4d595af33b4b35a131dee37220dca9.bindPopup(popup_8f483e5db56048518fd174a503ba37d2)
+        ;
+
+        
+    
+    
+            var circle_marker_5bce45fbc91448e5b4c8f8676d55cb06 = L.circleMarker(
+                [41.3196663, 69.2669658],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+        var popup_676ef9053823492d88d7c9da3e99266a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_26b82a340bc549e5b00e7dee48be40f6 = $(`<div id="html_26b82a340bc549e5b00e7dee48be40f6" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>408.8 м</td></tr><tr><td>изменение:</td><td>-3.4 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 14:46</nobr></td></tr><tr><td>в пути:</td><td>0:05:59</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>436.84 м</td></tr><tr><td>рассчет 2:</td><td>718.72 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3196663</td></tr><tr><td>долгота:</td><td>69.2669658</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3196663,69.2669658" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3196663/69.2669658" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3196663&lon=69.2669658&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2669658,41.3196663&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3196663/69.2669658&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_676ef9053823492d88d7c9da3e99266a.setContent(html_26b82a340bc549e5b00e7dee48be40f6);
+        
+
+        circle_marker_5bce45fbc91448e5b4c8f8676d55cb06.bindPopup(popup_676ef9053823492d88d7c9da3e99266a)
+        ;
+
+        
+    
+    
+            var circle_marker_a5514cad722c4cd4b18599b97bce79d0 = L.circleMarker(
+                [41.3150041, 69.2642919],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+        var popup_df024dda9ed9403a90324bfc0ab8820d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af5244e9298f403a9c63092da8d9ccbd = $(`<div id="html_af5244e9298f403a9c63092da8d9ccbd" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>388.0 м</td></tr><tr><td>изменение:</td><td>-24.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 14:52</nobr></td></tr><tr><td>в пути:</td><td>0:11:46</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>796.72 м</td></tr><tr><td>рассчет 2:</td><td>1.11 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3150041</td></tr><tr><td>долгота:</td><td>69.2642919</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3150041,69.2642919" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3150041/69.2642919" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3150041&lon=69.2642919&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2642919,41.3150041&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3150041/69.2642919&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_df024dda9ed9403a90324bfc0ab8820d.setContent(html_af5244e9298f403a9c63092da8d9ccbd);
+        
+
+        circle_marker_a5514cad722c4cd4b18599b97bce79d0.bindPopup(popup_df024dda9ed9403a90324bfc0ab8820d)
+        ;
+
+        
+    
+    
+            var marker_39d5054f6a7144558b9d6c84158666bc = L.marker(
+                [41.3150041, 69.2642919],
+                {}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+            var icon_0993c58263bc42f38ef466b0e2b28ee8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_39d5054f6a7144558b9d6c84158666bc.setIcon(icon_0993c58263bc42f38ef466b0e2b28ee8);
+        
+    
+        var popup_80a528ffbfe3473fbfd596af052e4902 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1557919eac664043904558a578a05b70 = $(`<div id="html_1557919eac664043904558a578a05b70" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>388.0 м</td></tr><tr><td>изменение:</td><td>-24.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 14:52</nobr></td></tr><tr><td>в пути:</td><td>0:11:46</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>796.72 м</td></tr><tr><td>рассчет 2:</td><td>1.11 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3150041</td></tr><tr><td>долгота:</td><td>69.2642919</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3150041,69.2642919" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3150041/69.2642919" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3150041&lon=69.2642919&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2642919,41.3150041&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3150041/69.2642919&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_80a528ffbfe3473fbfd596af052e4902.setContent(html_1557919eac664043904558a578a05b70);
+        
+
+        marker_39d5054f6a7144558b9d6c84158666bc.bindPopup(popup_80a528ffbfe3473fbfd596af052e4902)
+        ;
+
+        
+    
+    
+            var circle_marker_83b2e5a5a3a9418d8106fe11d5aa8462 = L.circleMarker(
+                [41.3117236, 69.2600198],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+        var popup_5b7292287c654bef9e40d00447b08cf5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_40fffa5b96c143b3958bcad6bb3e89ea = $(`<div id="html_40fffa5b96c143b3958bcad6bb3e89ea" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>392.0 м</td></tr><tr><td>изменение:</td><td>-20.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 14:57</nobr></td></tr><tr><td>в пути:</td><td>0:17:26</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.3 км</td></tr><tr><td>рассчет 2:</td><td>1.64 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3117236</td></tr><tr><td>долгота:</td><td>69.2600198</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3117236,69.2600198" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3117236/69.2600198" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3117236&lon=69.2600198&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2600198,41.3117236&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3117236/69.2600198&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_5b7292287c654bef9e40d00447b08cf5.setContent(html_40fffa5b96c143b3958bcad6bb3e89ea);
+        
+
+        circle_marker_83b2e5a5a3a9418d8106fe11d5aa8462.bindPopup(popup_5b7292287c654bef9e40d00447b08cf5)
+        ;
+
+        
+    
+    
+            var circle_marker_f89602d912a84099ba5b82bb335dd10d = L.circleMarker(
+                [41.3073932, 69.2561777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+        var popup_530c8dedc5ca40e1a0f4e61adef84e81 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_16c4acc3e40e48aeb66cc8bfe02b6188 = $(`<div id="html_16c4acc3e40e48aeb66cc8bfe02b6188" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>412.2 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 15:04</nobr></td></tr><tr><td>в пути:</td><td>0:24:06</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.81 км</td></tr><tr><td>рассчет 2:</td><td>2.23 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3073932</td></tr><tr><td>долгота:</td><td>69.2561777</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3073932,69.2561777" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3073932/69.2561777" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3073932&lon=69.2561777&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2561777,41.3073932&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3073932/69.2561777&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_530c8dedc5ca40e1a0f4e61adef84e81.setContent(html_16c4acc3e40e48aeb66cc8bfe02b6188);
+        
+
+        circle_marker_f89602d912a84099ba5b82bb335dd10d.bindPopup(popup_530c8dedc5ca40e1a0f4e61adef84e81)
+        ;
+
+        
+    
+    
+            var marker_1a47bb6f17264f2f8726453d715362b9 = L.marker(
+                [41.3073932, 69.2561777],
+                {}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+            var icon_6c5c2963c9264612892182cbb287bf79 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_1a47bb6f17264f2f8726453d715362b9.setIcon(icon_6c5c2963c9264612892182cbb287bf79);
+        
+    
+        var popup_5cfb9fbd0b8c4273b07ab9aefb741460 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7859cb9ecfb6436bac57c46f8f4e2dbf = $(`<div id="html_7859cb9ecfb6436bac57c46f8f4e2dbf" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>412.2 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 15:04</nobr></td></tr><tr><td>в пути:</td><td>0:24:06</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.81 км</td></tr><tr><td>рассчет 2:</td><td>2.23 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3073932</td></tr><tr><td>долгота:</td><td>69.2561777</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3073932,69.2561777" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3073932/69.2561777" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3073932&lon=69.2561777&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2561777,41.3073932&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3073932/69.2561777&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_5cfb9fbd0b8c4273b07ab9aefb741460.setContent(html_7859cb9ecfb6436bac57c46f8f4e2dbf);
+        
+
+        marker_1a47bb6f17264f2f8726453d715362b9.bindPopup(popup_5cfb9fbd0b8c4273b07ab9aefb741460)
+        ;
+
+        
+    
+    
+            var circle_marker_123f40b6dd5140258ee721f98b3ac93d = L.circleMarker(
+                [41.305764, 69.2509842],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+        var popup_729142f357854168bc26a7ae4bef58c7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e488228b64164e57b0f7f75716cf9310 = $(`<div id="html_e488228b64164e57b0f7f75716cf9310" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>378.0 м</td></tr><tr><td>изменение:</td><td>-34.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 15:10</nobr></td></tr><tr><td>в пути:</td><td>0:30:28</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.4 км</td></tr><tr><td>рассчет 2:</td><td>2.85 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.305764</td></tr><tr><td>долгота:</td><td>69.2509842</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.305764,69.2509842" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.305764/69.2509842" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.305764&lon=69.2509842&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2509842,41.305764&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.305764/69.2509842&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_729142f357854168bc26a7ae4bef58c7.setContent(html_e488228b64164e57b0f7f75716cf9310);
+        
+
+        circle_marker_123f40b6dd5140258ee721f98b3ac93d.bindPopup(popup_729142f357854168bc26a7ae4bef58c7)
+        ;
+
+        
+    
+    
+            var circle_marker_f222141c54024e5b8f2700ced39b7d7b = L.circleMarker(
+                [41.3042324, 69.2447905],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+        var popup_3a930dedf570461eba7689541766b72c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ab88b7563cd4d6a8205ed6cea4949bc = $(`<div id="html_7ab88b7563cd4d6a8205ed6cea4949bc" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>380.0 м</td></tr><tr><td>изменение:</td><td>-32.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 15:17</nobr></td></tr><tr><td>в пути:</td><td>0:37:01</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>4.2 км</td></tr><tr><td>рассчет 2:</td><td>4.69 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3042324</td></tr><tr><td>долгота:</td><td>69.2447905</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3042324,69.2447905" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3042324/69.2447905" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3042324&lon=69.2447905&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2447905,41.3042324&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3042324/69.2447905&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_3a930dedf570461eba7689541766b72c.setContent(html_7ab88b7563cd4d6a8205ed6cea4949bc);
+        
+
+        circle_marker_f222141c54024e5b8f2700ced39b7d7b.bindPopup(popup_3a930dedf570461eba7689541766b72c)
+        ;
+
+        
+    
+    
+            var marker_e72e4254a2844091b5d5d65aba86e2c8 = L.marker(
+                [41.3042324, 69.2447905],
+                {}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+            var icon_7722aabc052f453d86c1c0c5f6d6bbee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_e72e4254a2844091b5d5d65aba86e2c8.setIcon(icon_7722aabc052f453d86c1c0c5f6d6bbee);
+        
+    
+        var popup_7c865fd0266e4bd7ad3c85cc192382ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_75dd5815f7d94e869035849ba8694db5 = $(`<div id="html_75dd5815f7d94e869035849ba8694db5" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>380.0 м</td></tr><tr><td>изменение:</td><td>-32.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 15:17</nobr></td></tr><tr><td>в пути:</td><td>0:37:01</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>4.2 км</td></tr><tr><td>рассчет 2:</td><td>4.69 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3042324</td></tr><tr><td>долгота:</td><td>69.2447905</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3042324,69.2447905" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3042324/69.2447905" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3042324&lon=69.2447905&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2447905,41.3042324&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3042324/69.2447905&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_7c865fd0266e4bd7ad3c85cc192382ca.setContent(html_75dd5815f7d94e869035849ba8694db5);
+        
+
+        marker_e72e4254a2844091b5d5d65aba86e2c8.bindPopup(popup_7c865fd0266e4bd7ad3c85cc192382ca)
+        ;
+
+        
+    
+    
+            var circle_marker_3ccf490d99814d5e9edd77e8c34a37ef = L.circleMarker(
+                [41.3029361, 69.245611],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+        var popup_67a5025970cc47a7b0d48893d562eef4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94014b429d6c4144aad50a418322494c = $(`<div id="html_94014b429d6c4144aad50a418322494c" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>403.7 м</td></tr><tr><td>изменение:</td><td>-8.5 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 15:24</nobr></td></tr><tr><td>в пути:</td><td>0:44:29</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>4.77 км</td></tr><tr><td>рассчет 2:</td><td>5.28 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3029361</td></tr><tr><td>долгота:</td><td>69.245611</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3029361,69.245611" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3029361/69.245611" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3029361&lon=69.245611&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.245611,41.3029361&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3029361/69.245611&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_67a5025970cc47a7b0d48893d562eef4.setContent(html_94014b429d6c4144aad50a418322494c);
+        
+
+        circle_marker_3ccf490d99814d5e9edd77e8c34a37ef.bindPopup(popup_67a5025970cc47a7b0d48893d562eef4)
+        ;
+
+        
+    
+    
+            var circle_marker_35525befffa94adb89f0296cd65b0134 = L.circleMarker(
+                [41.3025928, 69.2447597],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+        var popup_8da043b34c624408ba64def03a31d968 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7abeed3bda1840f6a175b23e0f580eb8 = $(`<div id="html_7abeed3bda1840f6a175b23e0f580eb8" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>417.5 м</td></tr><tr><td>изменение:</td><td>5.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 15:40</nobr></td></tr><tr><td>в пути:</td><td>1:00:22</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>5.38 км</td></tr><tr><td>рассчет 2:</td><td>5.91 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3025928</td></tr><tr><td>долгота:</td><td>69.2447597</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3025928,69.2447597" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3025928/69.2447597" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3025928&lon=69.2447597&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2447597,41.3025928&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3025928/69.2447597&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_8da043b34c624408ba64def03a31d968.setContent(html_7abeed3bda1840f6a175b23e0f580eb8);
+        
+
+        circle_marker_35525befffa94adb89f0296cd65b0134.bindPopup(popup_8da043b34c624408ba64def03a31d968)
+        ;
+
+        
+    
+    
+            var marker_eb45a1484c914905b8f3141ff1756b10 = L.marker(
+                [41.3025928, 69.2447597],
+                {}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+            var icon_a2d78d67864d4946864567a157ea3471 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_eb45a1484c914905b8f3141ff1756b10.setIcon(icon_a2d78d67864d4946864567a157ea3471);
+        
+    
+        var popup_2a0fdc5426dd4d41b621ad0b6dcc3a34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_84383a04c11b46908bc278903ad8f859 = $(`<div id="html_84383a04c11b46908bc278903ad8f859" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>417.5 м</td></tr><tr><td>изменение:</td><td>5.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 15:40</nobr></td></tr><tr><td>в пути:</td><td>1:00:22</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>5.38 км</td></tr><tr><td>рассчет 2:</td><td>5.91 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3025928</td></tr><tr><td>долгота:</td><td>69.2447597</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3025928,69.2447597" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3025928/69.2447597" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3025928&lon=69.2447597&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2447597,41.3025928&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3025928/69.2447597&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_2a0fdc5426dd4d41b621ad0b6dcc3a34.setContent(html_84383a04c11b46908bc278903ad8f859);
+        
+
+        marker_eb45a1484c914905b8f3141ff1756b10.bindPopup(popup_2a0fdc5426dd4d41b621ad0b6dcc3a34)
+        ;
+
+        
+    
+    
+            var circle_marker_1d09b6465cb7440bb1da57422d1bff14 = L.circleMarker(
+                [41.3023082, 69.2402602],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+        var popup_508d6900aa1e4ab8bec10fec58f75ad7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac3df6b5d3eb4934be9541c02b34c334 = $(`<div id="html_ac3df6b5d3eb4934be9541c02b34c334" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>401.9 м</td></tr><tr><td>изменение:</td><td>-10.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 15:46</nobr></td></tr><tr><td>в пути:</td><td>1:06:11</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>5.92 км</td></tr><tr><td>рассчет 2:</td><td>6.5 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3023082</td></tr><tr><td>долгота:</td><td>69.2402602</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3023082,69.2402602" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3023082/69.2402602" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3023082&lon=69.2402602&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2402602,41.3023082&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3023082/69.2402602&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_508d6900aa1e4ab8bec10fec58f75ad7.setContent(html_ac3df6b5d3eb4934be9541c02b34c334);
+        
+
+        circle_marker_1d09b6465cb7440bb1da57422d1bff14.bindPopup(popup_508d6900aa1e4ab8bec10fec58f75ad7)
+        ;
+
+        
+    
+    
+            var marker_b7a16f87b38d4b0390576e688b53ba0d = L.marker(
+                [41.3028711, 69.2358941],
+                {}
+            ).addTo(feature_group_efa1972c2618443499272843c24c7b93);
+        
+    
+            var icon_7d3b22101890494f831087fce66c97bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_b7a16f87b38d4b0390576e688b53ba0d.setIcon(icon_7d3b22101890494f831087fce66c97bb);
+        
+    
+        var popup_7e0200b199f14cf083b90819ec66e452 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2fff0c6ade3a47a39b3f639fa3b642eb = $(`<div id="html_2fff0c6ade3a47a39b3f639fa3b642eb" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик-Анхор-Magic Sity(6.8км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>397.9 м</td></tr><tr><td>изменение:</td><td>-14.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>06.11.2022 15:52</nobr></td></tr><tr><td>в пути:</td><td>1:11:59</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>6.48 км</td></tr><tr><td>рассчет 2:</td><td>7.06 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3028711</td></tr><tr><td>долгота:</td><td>69.2358941</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3028711,69.2358941" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3028711/69.2358941" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3028711&lon=69.2358941&z=16" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2358941,41.3028711&z=16" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3028711/69.2358941&z=16" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+            popup_7e0200b199f14cf083b90819ec66e452.setContent(html_2fff0c6ade3a47a39b3f639fa3b642eb);
+        
+
+        marker_b7a16f87b38d4b0390576e688b53ba0d.bindPopup(popup_7e0200b199f14cf083b90819ec66e452)
+        ;
+
+        
+    
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topright", "title": "\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u043d\u0430 \u043f\u043e\u043b\u043d\u043e\u043c \u044d\u043a\u0440\u0430\u043d\u0435", "titleCancel": "\u041d\u0430\u0436\u043c\u0438 \u0434\u043b\u044f \u0432\u044b\u0445\u043e\u0434\u0430"}
+            ).addTo(map_330e5dc533c2484590e87248786ceb1f);
+        
+    
+            var layer_control_178f3b3734cc45d191d8ae4ebaad9929 = {
+                base_layers : {
+                    "OpenStreet Map" : tile_layer_0860ed0c2f0c485db3b61208a391e692,
+                    "Google Maps" : tile_layer_2f053625cd874b8eb88040ebd617259e,
+                    "CyclOSM" : tile_layer_75e0d3ab0bc24797a2b716b58467744d,
+                },
+                overlays :  {
+                    "\u003cfont color=\"purple\"\u003e\u041f\u0440\u043e\u0433\u043d\u043e\u0437 \u043f\u043e\u0433\u043e\u0434\u044b\u003c/font\u003e" : feature_group_271b5216a8c24fa1a7fcb663e7fadfca,
+                    "\u003cfont color=\"black\"\u003e\u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u0438\u003c/font\u003e" : feature_group_54b1ca351f86412883c3fada3dcc6646,
+                    "\u041c\u0443\u0441\u0442\u0430\u043a\u0438\u043b\u043b\u0438\u043a-\u0410\u043d\u0445\u043e\u0440-Magic Sity(6.8\u043a\u043c)   2022-11-06 " : feature_group_efa1972c2618443499272843c24c7b93,
+                },
+            };
+            L.control.layers(
+                layer_control_178f3b3734cc45d191d8ae4ebaad9929.base_layers,
+                layer_control_178f3b3734cc45d191d8ae4ebaad9929.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_330e5dc533c2484590e87248786ceb1f);
+            tile_layer_2f053625cd874b8eb88040ebd617259e.remove();
+            tile_layer_75e0d3ab0bc24797a2b716b58467744d.remove();
+            feature_group_271b5216a8c24fa1a7fcb663e7fadfca.remove();
+        
+    
+            var mouse_position_d8fd0418dfd34322a49e201e1f8cb3e4 = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "", "separator": " : "}
+            );
+            mouse_position_d8fd0418dfd34322a49e201e1f8cb3e4.options["latFormatter"] =
+                undefined;
+            mouse_position_d8fd0418dfd34322a49e201e1f8cb3e4.options["lngFormatter"] =
+                undefined;
+            map_330e5dc533c2484590e87248786ceb1f.addControl(mouse_position_d8fd0418dfd34322a49e201e1f8cb3e4);
+        
+</script>
