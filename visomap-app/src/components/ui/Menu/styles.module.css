@@ -8,12 +8,14 @@
 .button{
   background-color:var(--button-background-color);
   margin-top: 15px;
+  border-radius:var(--button-border-radius);
  
  }
 
 .menu {
   background-color: var(--menu-background-color);
-  width: 400px; 
+  border-bottom-right-radius : var(--img-border-radius);
+  width: 300px; 
   opacity: 0;
   visibility: hidden;
 } 
@@ -31,6 +33,8 @@
 .menu__item {
   margin: 0;
   list-style-type: none;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 

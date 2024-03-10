@@ -45,6 +45,10 @@ export function fplace(link) {
   return `${BASE_PAGE}places?place=${link}`;
 }
 
+export function fyear(link) {
+  return `${BASE_PAGE}places?year=${link}`;
+}
+
 export function fmapziplink(map) {
   const mapZip = map.slice(0, -4) + "zip";
   return `${BASE_PAGE}zipMap/${mapZip}`;

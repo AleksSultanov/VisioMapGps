@@ -34,7 +34,8 @@ export function Root() {
                   idx={track.map}
                   key={track.map}
                   imglink={fimglink(track.map, track.cover)}
-                  caption={`${track.dscr} ${fdateDscr(track.date)}`}
+                  caption={`${track.dscr}`}
+                  textdata={`${fdateDscr(track.date)}`}
                   maplink={fmaplink(track.map)}
                   isGeoMenu
                   mapZiplink={fmapziplink(track.map)}

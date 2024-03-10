@@ -3,5 +3,5 @@ export const ROUTE_PATHES = {
   root: "/",
   base: BASE_PAGE,
   places: BASE_PAGE + "places",
-  years: BASE_PAGE + "yars",
+  years: BASE_PAGE + "years",
 };

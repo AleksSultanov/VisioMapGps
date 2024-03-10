@@ -25,9 +25,17 @@ export function Places() {
   }
 
   if (Object.keys(prm).includes("year")) {
-    placetrack = tracks.filter((track) =>
-      (track.year + ",").includes(prm.year + ",")
-    );
+    placetrack = tracks.filter((track) => {
+      let datestr = track.date;
+      let a_date = datestr.split(",");
+      if (a_date.length === 0) {
+        return false;
+      }
+      return (
+        a_date[0].substring(0, 4) === prm.year ||
+        (a_date.length === 2 && a_date[1].substring(0, 4) === prm.year)
+      );
+    });
   }
 
   const isPlace = placetrack.length > 0;
@@ -59,7 +67,8 @@ export function Places() {
                   key={track.map}
                   idx={track.map}
                   imglink={fimglink(track.map, track.cover)}
-                  caption={`${track.dscr} ${fdateDscr(track.date)}`}
+                  caption={`${track.dscr}`}
+                  textdata={`${fdateDscr(track.date)}`}
                   maplink={fmaplink(track.map)}
                   isGeoMenu
                   menuOpen={openMenuId === track.map}

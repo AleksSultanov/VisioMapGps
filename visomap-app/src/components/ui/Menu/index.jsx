@@ -10,9 +10,7 @@ import { useState } from "react";
 export function MainMenu() {
   const [menuOpen, setMenuOpen] = useState(false);
   function MenuOpenClose() {
-    console.log("menuOpen", menuOpen);
     setMenuOpen(!menuOpen);
-    console.log("menuOpen", menuOpen);
   }
 
   return (
@@ -48,6 +46,11 @@ export function MainMenu() {
           <li className={classes.menu__item}>
             <NavLink to={ROUTE_PATHES.places} onClick={MenuOpenClose}>
               Треки по местам
+            </NavLink>
+          </li>
+          <li className={classes.menu__item}>
+            <NavLink to={ROUTE_PATHES.years} onClick={MenuOpenClose}>
+              Треки по годам
             </NavLink>
           </li>
         </ul>

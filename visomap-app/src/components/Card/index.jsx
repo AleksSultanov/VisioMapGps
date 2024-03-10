@@ -8,6 +8,7 @@ export function Card({
   idx = "0",
   imglink,
   caption,
+  textdata = "",
   maplink,
   isGeoMenu = false,
   mapZiplink = "",
@@ -26,8 +27,12 @@ export function Card({
   return (
     <div className={classes.box}>
       <a href={maplink}>
-        <img src={imglink} className={classes.img} />
+        <div className={classes.boximg}>
+          <img src={imglink} className={classes.img} />
+          <div className={classes.data}>{textdata}</div>
+        </div>
       </a>
+
       <div className={classes.boxfooter}>
         <a href={maplink} className={classes.title}>
           {caption}
@@ -95,6 +100,7 @@ Card.propTypes = {
   idx: PropTypes.string,
   imglink: PropTypes.string,
   caption: PropTypes.string,
+  textdata: PropTypes.string,
   maplink: PropTypes.string,
   isGeoMenu: PropTypes.bool,
   mapZiplink: PropTypes.string,

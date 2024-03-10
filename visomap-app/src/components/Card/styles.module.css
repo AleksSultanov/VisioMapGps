@@ -6,10 +6,24 @@
   flex-direction: column;
 }
 
+.boximg{
+  position: relative;
+}
+
 .img{
   width: 360px; 
   height: 240px;
-  border-radius: 20px;
+  border-radius: var(--img-border-radius);
+  position: relative;
+}
+
+.data {
+  background-color:rgba(0, 0, 0, 0.3);
+  color: white;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+
 }
 
 .boxfooter{
@@ -39,7 +53,7 @@
 .button{
   background-color:var(--button-background-color);
   max-height: 36px;
-  border-radius: 18px;
+  border-radius:var(--button-border-radius);
   margin-top: 5px;
   right: 0px;
   align-self:flex-start;
