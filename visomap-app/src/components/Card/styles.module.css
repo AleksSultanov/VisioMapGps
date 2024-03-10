@@ -92,6 +92,7 @@
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
+  z-index: 9;
 }
 
 .menu__items {
