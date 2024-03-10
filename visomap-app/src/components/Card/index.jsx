@@ -15,6 +15,7 @@ export function Card({
   gpxZiplink = "",
   menuOpen = false,
   setMenuOpenIdx = null,
+  cnt = "",
 }) {
   function MenuOpenClose() {
     if (menuOpen) {
@@ -30,6 +31,7 @@ export function Card({
         <div className={classes.boximg}>
           <img src={imglink} className={classes.img} />
           <div className={classes.data}>{textdata}</div>
+          <div className={classes.cnt}>{cnt}</div>
         </div>
       </a>
 
@@ -107,4 +109,5 @@ Card.propTypes = {
   gpxZiplink: PropTypes.string,
   menuOpen: PropTypes.bool,
   setMenuOpenIdx: PropTypes.any,
+  cnt: PropTypes.string,
 };

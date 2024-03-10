@@ -40,6 +40,15 @@ export function Places() {
 
   const isPlace = placetrack.length > 0;
 
+  if (!isPlace) {
+    Object.keys(places).map((index) => {
+      let p = tracks.filter((track) =>
+        (track.place + ",").includes(index + ",")
+      );
+      places[index]["cnt"] = p.length;
+    });
+  }
+
   return (
     <>
       <MenuContext.Provider
@@ -57,6 +66,7 @@ export function Places() {
                   imglink={fimglink("", places[index].cover)}
                   caption={places[index].name}
                   maplink={fplace(index)}
+                  cnt={places[index].cnt}
                 />
               );
             })}

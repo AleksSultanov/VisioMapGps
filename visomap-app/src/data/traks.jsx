@@ -30,7 +30,7 @@ export const tracks = [
   {
     map: "mapPalatau20230603.html",
     cover: "gif",
-    dscr: "Акбулак 3 июня 2023",
+    dscr: "Акбулак",
     place: "akbulak,tereklisay",
     date: "20230603",
   },

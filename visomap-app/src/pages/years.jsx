@@ -51,6 +51,7 @@ export function Years() {
                 caption=""
                 textdata={year}
                 maplink={fyear(year)}
+                cnt={placeyears[year]["cnt"]}
               />
             );
           })}

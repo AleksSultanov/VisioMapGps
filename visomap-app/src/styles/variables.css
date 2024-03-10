@@ -5,5 +5,15 @@
     --button-background-color: rgba(0,0,0,0.05);
     --button-border-radius:  18px;
     --img-border-radius: 20px;
- 
+
+    --color-black: #041526;
+    --color-black-transparent:rgba(0, 0, 0, 0.3);
+    --color-blue: #1173DA;
+    --color-lightblue: #A4E2FF;
+    --color-pink: #F05B82;
+    --color-yellow: #F2C935;
+    --color-lightgreen: #71DEBE;
+    --color-grey:#F6F8FA;
+    --color-white:#FFF;
+    --color-separator:rgba(66, 73, 82, 0.10);
 }
