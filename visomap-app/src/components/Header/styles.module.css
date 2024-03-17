@@ -3,8 +3,8 @@
   position: fixed; 
   z-index: 9;
   width: 100%; 
-  height: 35px; 
+  height: var(--header-height); 
   opacity: 1;
-  background-color: var(--background-color);
+  background-color: var(--background-colorNT);
   padding-left: 15px;
 }  

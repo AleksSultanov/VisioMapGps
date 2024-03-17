@@ -663,6 +663,11 @@ Object.keys(calendarM)
     mDesc.push(day);
   });
 
-mDesc.map((d) => {
-  console.log(d);
-});
+// mDesc.map((d) => {
+//   console.log(d);
+// });
+
+let idxDay = new Date(2020, 10, 8).getDay();
+console.log(idxDay);
+idxDay = new Date(2020, 10, 1).getDay();
+console.log(idxDay);

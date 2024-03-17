@@ -15,6 +15,6 @@
 
 .page{
   padding-left: var(--padding-left);  
-  top: var(--top);
+  top: var(--header-height);
   position: var(--position); 
 }

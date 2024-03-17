@@ -4,6 +4,10 @@
   --size: 12vw;
 }
 
+.box {
+  width: 100%;
+}
+
 .grid{
   display: grid;
   gap: 5px; 
@@ -17,20 +21,13 @@
   display: flex;
   flex-direction: column;
 }
-.caption{
-  display: flex;
-  justify-content: center;
-  padding-top: 15px;
-  color: var(--color-blue);
-  font-size: 2vw;
-}
 
 .topbox {
   position: fixed; 
   z-index: 8;
   width: 100%; 
-  height: 55px; 
-  background-color: var(--color-white);
+  height: 70px;
+  background-color: var(--background-colorNT);
 }  
 
 .title {
@@ -39,6 +36,15 @@
   width: 100%;
   font-size: 24px;
 }
+
+.caption{
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  color: var(--color-blue);
+  font-size: 24px;
+}
+
 
 .weekdays {
   margin-top: 25px;

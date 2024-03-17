@@ -8,7 +8,12 @@ export function CldMonth({ ymonth, data }) {
   const year = ymonth.substr(0, 4);
   const nameMonth = MonthName(month);
   const cntDays = new Date(year, month, 0).getDate();
-  const idxDay = new Date(year, month - 1, 1).getDay() - 1;
+  let idxDay = new Date(year, month - 1, 1).getDay();
+  if (idxDay === 0) {
+    idxDay = 6;
+  } else {
+    idxDay = idxDay - 1;
+  }
   let i = 1;
   let days = [];
 
