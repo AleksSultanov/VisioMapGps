@@ -613,6 +613,56 @@ tracks.map((track) => {
 //   console.log(placeyears[key]["map"]);
 // }
 
-Object.keys(placeyears).map((y) => {
-  console.log(y);
+// Object.keys(placeyears).map((y) => {
+//   console.log(y);
+// });
+
+let calendar = {};
+
+tracks.map((track) => {
+  let sdatelst = track["date"];
+  if (sdatelst != undefined) {
+    let a_date = sdatelst.split(",");
+    a_date.map((date) => {
+      let sdate = date.substring(0, 8);
+      if (!Object.keys(calendar).includes(sdate) && sdate.length === 8) {
+        calendar[sdate] = {
+          date: sdate,
+          map: track["map"],
+          cover: track["cover"],
+        };
+      }
+    });
+  }
+});
+
+let calendarM = {};
+
+Object.keys(calendar).map((day) => {
+  let m = day.substring(0, 6);
+  if (!Object.keys(calendarM).includes(m)) {
+    calendarM[m] = [calendar[day]];
+  } else {
+    calendarM[m].push(calendar[day]);
+  }
+});
+
+let mDesc = [];
+
+Object.keys(calendarM)
+  .sort(function (a, b) {
+    if (a > b) {
+      return -1;
+    }
+    if (a < b) {
+      return 1;
+    }
+    return 0;
+  })
+  .map((day) => {
+    mDesc.push(day);
+  });
+
+mDesc.map((d) => {
+  console.log(d);
 });

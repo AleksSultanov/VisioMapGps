@@ -53,6 +53,11 @@ export function MainMenu() {
               Треки по годам
             </NavLink>
           </li>
+          <li className={classes.menu__item}>
+            <NavLink to={ROUTE_PATHES.cld} onClick={MenuOpenClose}>
+              Календарь
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>
