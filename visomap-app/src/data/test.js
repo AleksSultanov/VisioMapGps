@@ -667,7 +667,62 @@ Object.keys(calendarM)
 //   console.log(d);
 // });
 
-let idxDay = new Date(2020, 10, 8).getDay();
-console.log(idxDay);
-idxDay = new Date(2020, 10, 1).getDay();
-console.log(idxDay);
+// let idxDay = new Date(2020, 10, 8).getDay();
+// console.log(idxDay);
+// idxDay = new Date(2020, 10, 1).getDay();
+// console.log(idxDay);
+
+function getNumberOfDays(date1, date2) {
+  const oneDay = 1000 * 60 * 60 * 24;
+  const diffInTime = date2.getTime() - date1.getTime();
+  const diffInDays = Math.round(diffInTime / oneDay);
+  return diffInDays;
+}
+
+function getDateStr(date) {
+  function pad(number) {
+    if (number < 10) {
+      return "0" + number;
+    }
+    return number;
+  }
+  return date.getFullYear() + pad(date.getMonth() + 1) + pad(date.getDate());
+}
+
+const sdatelst = "20230222,20230304";
+let a_date = sdatelst.split(",");
+let cntday = 1;
+const date1 = a_date[0];
+const dd1 = new Date(
+  date1.substring(0, 4),
+  Number(date1.substring(4, 6)) - 1,
+  Number(date1.substring(6, 8)),
+  0,
+  0,
+  0
+);
+
+if (a_date.length > 1) {
+  const date2 = a_date[1];
+  if (date2.length === 8) {
+    const dd2 = new Date(
+      date2.substring(0, 4),
+      Number(date2.substring(4, 6)) - 1,
+      Number(date2.substring(6, 8)),
+      0,
+      0,
+      0
+    );
+    cntday = getNumberOfDays(dd1, dd2);
+  }
+}
+
+let i = 0;
+let tmpDate = dd1;
+let startTime = dd1.getTime();
+tmpDate = new Date(startTime + i * 24 * 3600 * 1000);
+while (i <= cntday) {
+  tmpDate = new Date(startTime + i * 24 * 3600 * 1000);
+  console.log(getDateStr(tmpDate));
+  i++;
+}

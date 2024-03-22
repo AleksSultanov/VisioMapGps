@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+src/data/test.js
+
 
 # Editor directories and files
 .vscode/*
@@ -23,5 +25,5 @@ dist-ssr
 *.sln
 *.sw?
 
-test.js
+
 

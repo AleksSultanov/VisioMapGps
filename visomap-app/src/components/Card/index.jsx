@@ -109,5 +109,5 @@ Card.propTypes = {
   gpxZiplink: PropTypes.string,
   menuOpen: PropTypes.bool,
   setMenuOpenIdx: PropTypes.any,
-  cnt: PropTypes.string,
+  cnt: PropTypes.number,
 };

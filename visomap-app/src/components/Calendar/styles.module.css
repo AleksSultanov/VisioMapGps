@@ -70,9 +70,6 @@
 
 .day{
   height: var(--size);
-  max-height: var(--size);
-  width: var(--size);
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items:  center;
@@ -82,6 +79,16 @@
 
 .boximg {
   position: relative;
+  height: var(--size); 
+  width: var(--size); 
+}
+.linkImg {
+  color: var(--color-white);
+  height: var(--size); 
+  width: var(--size); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;  
 }
 .dayImg {
   position: absolute;
@@ -90,9 +97,15 @@
   cursor: pointer;
 }
 
-.linkImg {
-  color: var(--color-white);
+.img{
+  width:auto;
+  height:100%;
+  object-fit:cover;
+  overflow: hidden;
+  border-radius: 50%;
 }
+
+
 
 .linkImg:hover {
   color: var(--color-white);

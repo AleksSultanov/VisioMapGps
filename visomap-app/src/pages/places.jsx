@@ -38,6 +38,12 @@ export function Places() {
     });
   }
 
+  if (Object.keys(prm).includes("date")) {
+    placetrack = tracks.filter((track) =>
+      (track.date + ",").includes(prm.date + ",")
+    );
+  }
+
   const isPlace = placetrack.length > 0;
 
   if (!isPlace) {
