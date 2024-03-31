@@ -1,8 +1,23 @@
 export const tracks = [
   {
+    map: "mapTashkent20240331.html",
+    cover: "gif",
+    dscr: "Ташкент Прогулка от Х.Олимжана до Сквера",
+    place: "tashkent",
+    date: "20240331",
+  },
+  {
+    map: "mapTashkent20240323.html",
+    cover: "gif",
+    dscr: "Ташкент. Поездка в кафе Biqn Dala",
+    place: "tashkent",
+    date: "20240323",
+  },
+
+  {
     map: "map2023.html",
     cover: "jpg",
-    dscr: "Походы",
+    dscr: "Походы за год",
     place: "akbulak,beldersay,palatau,chukuraksu,acsacata,urungach,tereklisay",
     date: "2023",
   },
@@ -65,7 +80,7 @@ export const tracks = [
   {
     map: "map2022.html",
     cover: "gif",
-    dscr: "Походы",
+    dscr: "оходы за год",
     place:
       "karakiya,ispay,koksu,palatau,acsacata,sinegorie,badak,azadbash,tavaksay,charvak,nanay,sukok,chukuraksu,lashkerek,urungach",
     date: "2022",

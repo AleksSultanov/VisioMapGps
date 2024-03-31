@@ -52,7 +52,7 @@ export const places = {
     cover: "coverLashkerek.gif",
   },
   moscow: {
-    name: "Москва",
+    name: "г. Москва",
     cover: "coverMoscow.gif",
   },
   nanay: {
