@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <script>
+   L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+  </script>
+  <style>
+   html, body {width: 100%;height: 100%;margin: 0;padding: 0;}
+  </style>
+  <style>
+   #map {position:absolute;top:0;bottom:0;right:0;left:0;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js">
+  </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js">
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" rel="stylesheet"/>
+  <meta content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <style>
+   #map_25d117f7ba2fbc4d0134aa8690d2a41a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js">
+  </script>
+  <link href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="folium-map" id="map_25d117f7ba2fbc4d0134aa8690d2a41a">
+  </div>
+  <script src="../js/editMappoint.js" type="text/javascript">
+  </script>
+ </body>
+ <script>
+  var map_25d117f7ba2fbc4d0134aa8690d2a41a = L.map(
+                "map_25d117f7ba2fbc4d0134aa8690d2a41a",
+                {
+                    center: [41.3112068, 69.2500373],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_79e42b04fc62e4d69846a3bd73a9e1c5 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_25d117f7ba2fbc4d0134aa8690d2a41a);
+        
+    
+            var tile_layer_417df7f928253a4dc5cae05c7f53af66 = L.tileLayer(
+                "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png",
+                {"attribution": "\u003ca href=\"https://github.com/cyclosm/cyclosm-cartocss-style/releases\" title=\"CyclOSM - Open Bicycle render\"\u003eCyclOSM\u003c/a\u003e | Map data: \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_25d117f7ba2fbc4d0134aa8690d2a41a);
+        
+    
+            var tile_layer_0731e302769d2cf1e03a94c5c7269132 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_25d117f7ba2fbc4d0134aa8690d2a41a);
+        
+    
+            var tile_layer_21646d9918cf4cad2155446adb37ad1c = L.tileLayer(
+                "http://{s}.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "google", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": ["mt0", "mt1", "mt2", "mt3"], "tms": false}
+            ).addTo(map_25d117f7ba2fbc4d0134aa8690d2a41a);
+        
+    
+            var tile_layer_7d83669ad13c218304ac5bcb3b51f418 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_25d117f7ba2fbc4d0134aa8690d2a41a);
+        
+    
+            var feature_group_4ddcf47bf5fbcdde12b95299065c9294 = L.featureGroup(
+                {}
+            ).addTo(map_25d117f7ba2fbc4d0134aa8690d2a41a);
+        
+    
+            var marker_9e02774f9226828d4f1241e318d96561 = L.marker(
+                [41.31, 69.27],
+                {}
+            ).addTo(feature_group_4ddcf47bf5fbcdde12b95299065c9294);
+        
+    
+            var icon_c9f6469c1edeafc46eaedc188ea18f8d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_9e02774f9226828d4f1241e318d96561.setIcon(icon_c9f6469c1edeafc46eaedc188ea18f8d);
+        
+    
+        var popup_67332a4f474c49b2e35bf8c0c91fb0c7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db6854ede8f8eb9bdbe0d8980bb320db = $(`<div id="html_db6854ede8f8eb9bdbe0d8980bb320db" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.31&lon=69.27&detailLat=41.31&detailLon=69.271&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_67332a4f474c49b2e35bf8c0c91fb0c7.setContent(html_db6854ede8f8eb9bdbe0d8980bb320db);
+            
+        
+
+        marker_9e02774f9226828d4f1241e318d96561.bindPopup(popup_67332a4f474c49b2e35bf8c0c91fb0c7)
+        ;
+
+        
+    
+    
+            var marker_e1e827a6908b6f4fc7b363452128106a = L.marker(
+                [41.31, 69.25],
+                {}
+            ).addTo(feature_group_4ddcf47bf5fbcdde12b95299065c9294);
+        
+    
+            var icon_2547cf7bf3472e9de777173f4ec4f77f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e1e827a6908b6f4fc7b363452128106a.setIcon(icon_2547cf7bf3472e9de777173f4ec4f77f);
+        
+    
+        var popup_8276b8800bd04176de59ef7913551a2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb141920d0afdbd5bd455dbcc2cf0e86 = $(`<div id="html_eb141920d0afdbd5bd455dbcc2cf0e86" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.31&lon=69.25&detailLat=41.31&detailLon=69.251&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_8276b8800bd04176de59ef7913551a2a.setContent(html_eb141920d0afdbd5bd455dbcc2cf0e86);
+            
+        
+
+        marker_e1e827a6908b6f4fc7b363452128106a.bindPopup(popup_8276b8800bd04176de59ef7913551a2a)
+        ;
+
+        
+    
+    
+            var feature_group_143d98adc0a0a3c50ad492df53634d03 = L.featureGroup(
+                {}
+            ).addTo(map_25d117f7ba2fbc4d0134aa8690d2a41a);
+        
+    
+            var poly_line_84a64ecafe30fe6b950bf8ae567a3491 = L.polyline(
+                [[41.3112068, 69.2500373], [41.3112048, 69.2498756], [41.3112133, 69.2497304], [41.3112227, 69.2496104], [41.3112247, 69.2494764], [41.3112103, 69.249324], [41.3112148, 69.2491738], [41.311225, 69.249047], [41.3112344, 69.2489149], [41.3112326, 69.2487942], [41.3112547, 69.2486589], [41.3112634, 69.2485241], [41.3113003, 69.2483871], [41.3112991, 69.2482497], [41.3112907, 69.2481001], [41.3113111, 69.2479707], [41.3113122, 69.2478437], [41.3113373, 69.2477064], [41.3113198, 69.247574], [41.3113262, 69.2474316], [41.3113524, 69.2472954], [41.3113435, 69.2471399], [41.3113522, 69.2470142], [41.3113399, 69.2468738], [41.3113518, 69.2467294], [41.311352, 69.2466033], [41.3113693, 69.2464829], [41.3113897, 69.2463498], [41.311403, 69.2462166], [41.3113881, 69.2460912], [41.3113668, 69.2459719], [41.3113611, 69.2458178], [41.3113611, 69.2456865], [41.3113524, 69.2455369], [41.3113614, 69.2453917], [41.3113537, 69.2452501], [41.3113565, 69.2451163], [41.3113507, 69.2449647], [41.3113535, 69.2448287], [41.3113372, 69.2446925], [41.3113346, 69.2445427], [41.3113404, 69.2444103], [41.3113663, 69.2442765], [41.3113819, 69.2441244], [41.3113806, 69.2439749], [41.3114364, 69.2438385], [41.3114742, 69.2437148], [41.3114803, 69.2435945], [41.3113908, 69.2434964], [41.3113183, 69.2433952], [41.3112456, 69.2432844], [41.3111588, 69.2432192], [41.3110614, 69.2432383], [41.31097, 69.2431969], [41.3108621, 69.2431889], [41.310756, 69.2432336], [41.310645, 69.2432491], [41.3105612, 69.2431975], [41.3104681, 69.2431995], [41.3103776, 69.2432038], [41.3102707, 69.2432145], [41.3101647, 69.2431793], [41.3100467, 69.2432089], [41.3099565, 69.2431715], [41.3098535, 69.2431668], [41.3097498, 69.2431543], [41.3096511, 69.2431256], [41.3095567, 69.2430977], [41.3094493, 69.2430957], [41.3093576, 69.2431163], [41.3092589, 69.2431579], [41.309178, 69.2432138], [41.3090955, 69.243286], [41.3089893, 69.2433357], [41.3088983, 69.2434017], [41.3088074, 69.2434872], [41.3087269, 69.2435919], [41.3086281, 69.2436709], [41.3085453, 69.2437455], [41.3084621, 69.2438276], [41.3083621, 69.2439073], [41.3082847, 69.2439824], [41.3081936, 69.2440513], [41.3081105, 69.2441108], [41.3080248, 69.2441852], [41.3079484, 69.2442654], [41.3078754, 69.2443545], [41.3077941, 69.2444502], [41.3077274, 69.2445314], [41.3076485, 69.2445955], [41.3075598, 69.2446578], [41.307482, 69.2447318], [41.30739, 69.244812], [41.3072967, 69.2448778], [41.3071969, 69.244956], [41.3071121, 69.2450399], [41.3070459, 69.2451434], [41.3069516, 69.2452521], [41.3068997, 69.2453546], [41.306818, 69.245449], [41.3067274, 69.2454913], [41.3066474, 69.2455484], [41.3065366, 69.2455951], [41.3064469, 69.2456856], [41.306388, 69.2457957], [41.3062987, 69.2458903], [41.3062085, 69.2459651], [41.3061143, 69.2460509], [41.3060571, 69.2461438], [41.306009, 69.2462875], [41.3059835, 69.2464162], [41.3059363, 69.2465622], [41.305855, 69.2466466], [41.3057659, 69.2466758], [41.3056742, 69.2467129], [41.3055642, 69.2467882], [41.305484, 69.2468509], [41.3054013, 69.2469159], [41.3053156, 69.2470035], [41.3052329, 69.247088], [41.305174, 69.2471904], [41.3050868, 69.2472842], [41.3049949, 69.2473709], [41.3049086, 69.2473118], [41.3048127, 69.2473541], [41.3047578, 69.247453], [41.3046755, 69.2475645], [41.3043863, 69.247643], [41.3043248, 69.2477346], [41.3042114, 69.247742], [41.3041305, 69.2478347], [41.3040374, 69.2478776], [41.3039432, 69.2479064], [41.303868, 69.2479753], [41.3038225, 69.2480884], [41.3037439, 69.2481615], [41.3036718, 69.2482419], [41.3035584, 69.2482625], [41.3034433, 69.2482256], [41.303333, 69.2482233], [41.3032392, 69.2482575], [41.3031501, 69.2482983], [41.3030688, 69.2483774], [41.3029798, 69.2484522], [41.3028879, 69.2484667], [41.3027928, 69.2484547], [41.3026973, 69.2484633], [41.302605, 69.248442], [41.3025005, 69.2484734], [41.3023883, 69.2485244], [41.3022894, 69.2485853], [41.3021773, 69.2486056], [41.3020615, 69.2486197], [41.301968, 69.2486552], [41.3018854, 69.2487057], [41.3017804, 69.2487277], [41.3016791, 69.2487631], [41.3015934, 69.2488073], [41.3014816, 69.248809], [41.3013929, 69.2488368], [41.3012983, 69.2488982], [41.3012024, 69.2489452], [41.3010914, 69.2489711], [41.3009998, 69.2489947], [41.3008729, 69.249039], [41.300784, 69.2490623], [41.3006916, 69.2491127], [41.3005817, 69.2491461], [41.3004847, 69.2491939], [41.3003871, 69.2492351], [41.3004328, 69.2493624], [41.3004946, 69.2492744], [41.3005815, 69.2493184], [41.3006391, 69.2494108], [41.3006826, 69.2495554], [41.3007383, 69.2496678], [41.3007931, 69.2497724], [41.3008666, 69.2498716], [41.3009365, 69.2499717], [41.30099, 69.2500862], [41.3010306, 69.2502055], [41.3010829, 69.2503112], [41.3011552, 69.2504291], [41.3011974, 69.2505487], [41.3012535, 69.2506634], [41.301295, 69.2507892], [41.3012546, 69.2509265], [41.3012662, 69.2510505], [41.3013375, 69.2511284], [41.301423, 69.2512074], [41.301513, 69.2512677], [41.3015934, 69.2513665], [41.3016583, 69.2514799], [41.3017228, 69.2516007], [41.3017564, 69.2517223], [41.3017587, 69.2518789], [41.3017526, 69.2520058], [41.3017584, 69.2521461], [41.301778, 69.2522693], [41.3018307, 69.2524435], [41.3018804, 69.2525488], [41.3019234, 69.2526666], [41.3019705, 69.2527929], [41.3020642, 69.2528521], [41.3021616, 69.2529167], [41.3022412, 69.2529741], [41.3023365, 69.2530037], [41.3024327, 69.2530113], [41.3025415, 69.2530597], [41.3026231, 69.253159], [41.3027164, 69.2532502], [41.3028064, 69.2533604], [41.3028966, 69.2534208], [41.302984, 69.2535056], [41.3030818, 69.253488], [41.3031632, 69.2534056], [41.3032409, 69.2534762], [41.3033135, 69.2535561], [41.3034132, 69.2535975], [41.3035007, 69.2536254], [41.3036119, 69.2536263], [41.3037124, 69.2536526], [41.3038165, 69.2536956], [41.3039343, 69.2537127], [41.3040491, 69.2537021], [41.3041456, 69.2537318], [41.3042353, 69.2537806], [41.3043578, 69.2538599], [41.3044491, 69.2539147], [41.3045258, 69.2539931], [41.3046058, 69.2540889], [41.3047134, 69.2541368], [41.304794, 69.2542036], [41.3048714, 69.2542778], [41.3049605, 69.2543071], [41.3050402, 69.2543708], [41.3051127, 69.2544511], [41.3051962, 69.2545208], [41.3052387, 69.2546265], [41.3052832, 69.2547602], [41.3053752, 69.254777], [41.3054586, 69.2548619], [41.3055196, 69.2549599], [41.3055957, 69.255041], [41.3056642, 69.2551195], [41.3057538, 69.2551808], [41.3058227, 69.2552631], [41.3058794, 69.2553727], [41.3059138, 69.2554883], [41.306017, 69.2555646], [41.306099, 69.2556474], [41.3062031, 69.2557036], [41.3062973, 69.2557672], [41.3063803, 69.2558528], [41.3064574, 69.2559315], [41.3065381, 69.2559986], [41.3066192, 69.2560878], [41.3067028, 69.2561669], [41.3067668, 69.2562535], [41.3068484, 69.2563738], [41.3069254, 69.2564632], [41.3070054, 69.2565508], [41.3070828, 69.256643], [41.3071764, 69.2567294], [41.3072583, 69.256813], [41.3073404, 69.256905], [41.3074284, 69.2569561], [41.3075355, 69.2570241], [41.3076379, 69.257099], [41.3076849, 69.2572912], [41.3077421, 69.2573943], [41.3078265, 69.2574462], [41.3079255, 69.2574978], [41.3080094, 69.2575725], [41.3081005, 69.2576605], [41.3081998, 69.257728], [41.3082966, 69.2578181], [41.3083683, 69.2578977], [41.3084404, 69.2579763], [41.3085325, 69.2580452], [41.3085982, 69.2581272], [41.3086891, 69.2582119], [41.3087713, 69.2582756], [41.3088529, 69.2583635], [41.3089427, 69.2584235], [41.3090445, 69.2584811], [41.3091454, 69.2585254], [41.3092406, 69.2585342], [41.3093393, 69.2585789], [41.3094395, 69.2586259], [41.3095417, 69.258682], [41.3096355, 69.2587904], [41.3097268, 69.258843], [41.3098308, 69.258899], [41.3099107, 69.2589555], [41.3099876, 69.2590276], [41.3100634, 69.2591332], [41.3101284, 69.2592492], [41.3101759, 69.2593693], [41.3102353, 69.259463], [41.3103232, 69.2595294], [41.3103904, 69.2596248], [41.3104603, 69.2597063], [41.3105481, 69.2597844], [41.3106328, 69.2598808], [41.3107283, 69.259909], [41.3108018, 69.2598293], [41.3108705, 69.259712], [41.3109514, 69.2596519], [41.3110537, 69.2596487], [41.3113866, 69.2597782], [41.3114753, 69.2598051], [41.3115638, 69.2598357], [41.3116435, 69.2598971], [41.3117459, 69.2599544], [41.311836, 69.2600023], [41.3119206, 69.2600811], [41.3120112, 69.2601897], [41.3120934, 69.2602958], [41.3121806, 69.2603688], [41.3122589, 69.2604382], [41.3123297, 69.2605431], [41.3123833, 69.260662], [41.3124567, 69.260793], [41.3125343, 69.2609007], [41.3125799, 69.2610267], [41.3126492, 69.2611469], [41.3127143, 69.2612693], [41.3127419, 69.2613977], [41.312799, 69.2615129], [41.3128521, 69.2616219], [41.3128906, 69.2617556], [41.3129234, 69.2618884], [41.3129622, 69.262004], [41.3130204, 69.2621202], [41.3130589, 69.2622335], [41.3131029, 69.2623548], [41.3131537, 69.2624645], [41.3132097, 69.2625694], [41.3132617, 69.2626884], [41.3133081, 69.2628109], [41.3133557, 69.2629144], [41.3133995, 69.2630252], [41.3134581, 69.2631409], [41.3135241, 69.2632457], [41.3135942, 69.2633347], [41.3136861, 69.2634252], [41.3137573, 69.2635032], [41.313847, 69.2635627], [41.3139493, 69.2636248], [41.3140315, 69.2636797], [41.3141148, 69.2637337], [41.3142034, 69.2637755], [41.3142909, 69.2638125], [41.3143976, 69.2638641], [41.3144831, 69.2639086], [41.3145729, 69.2639819], [41.3146721, 69.2640527], [41.3147885, 69.2640793], [41.3148886, 69.2641414], [41.3150065, 69.2641764], [41.3151156, 69.2641912], [41.315219, 69.264218], [41.3153061, 69.2642819], [41.3153882, 69.2643555], [41.3154798, 69.2644305], [41.3155793, 69.2644676], [41.3156676, 69.2645156], [41.3157574, 69.2645612], [41.3158589, 69.2646], [41.3159747, 69.2646594], [41.3160684, 69.2646868], [41.3161688, 69.2647625], [41.3162501, 69.2648212], [41.3163441, 69.2648837], [41.3164371, 69.2649736], [41.3165219, 69.2650404], [41.31663, 69.2650765], [41.3167262, 69.2650991], [41.3168191, 69.2651282], [41.3169188, 69.2651751], [41.3170027, 69.265221], [41.3171094, 69.2652687], [41.3172001, 69.2653234], [41.3172953, 69.265404], [41.31739, 69.2654739], [41.3174931, 69.2655378], [41.317586, 69.2655612], [41.3176629, 69.2656647], [41.3177327, 69.2657418], [41.3178028, 69.2658205], [41.3178813, 69.2659028], [41.3179457, 69.2660598], [41.3180183, 69.2661415], [41.3180966, 69.2662058], [41.3181852, 69.2661525], [41.3182944, 69.2661789], [41.3183733, 69.2662558], [41.3184484, 69.266339], [41.3185314, 69.2663896], [41.3186331, 69.2664587], [41.3187412, 69.26651], [41.318838, 69.2665585], [41.318937, 69.266615], [41.3190276, 69.2666351], [41.319114, 69.2666732], [41.3192121, 69.2666963], [41.3193148, 69.2667338], [41.3194225, 69.2667669], [41.3195281, 69.2668255], [41.3196232, 69.2668846], [41.3197115, 69.2669288], [41.319722, 69.2670698], [41.3197187, 69.267193], [41.3196938, 69.2673233], [41.3196397, 69.2674283], [41.3195817, 69.2675574], [41.3195357, 69.2676899], [41.3195113, 69.2678305], [41.3195035, 69.2679621], [41.3194393, 69.2680798], [41.3194158, 69.2682111], [41.3194045, 69.2683682], [41.3193744, 69.2684997], [41.319334, 69.2686374], [41.3192997, 69.2687797], [41.3192326, 69.2689091], [41.3191359, 69.268898], [41.319042, 69.26889], [41.3189497, 69.268848], [41.3188581, 69.2688108], [41.31875, 69.2687989], [41.3186392, 69.2687686], [41.3185312, 69.2687169], [41.3184497, 69.2686552], [41.3183548, 69.268598], [41.3182476, 69.2685413], [41.3181679, 69.268605], [41.318079, 69.2686623], [41.3179918, 69.2687164], [41.3178857, 69.2687699], [41.3177962, 69.2688563], [41.3177182, 69.2689584], [41.3176402, 69.2690203], [41.3175386, 69.2690659], [41.3174561, 69.2691197], [41.3173629, 69.2692108], [41.317274, 69.2692741], [41.3171751, 69.2693191], [41.3170965, 69.2694149], [41.3170083, 69.2694829], [41.3169026, 69.2695195], [41.3168141, 69.2695946], [41.3167479, 69.2696759], [41.3166866, 69.2697834], [41.3166215, 69.2698676], [41.3165195, 69.2698267], [41.31645, 69.2699057], [41.3163716, 69.2700119], [41.316297, 69.2700833], [41.3162004, 69.2700468], [41.3160797, 69.2699992], [41.3159799, 69.269963], [41.3158904, 69.269932], [41.3157874, 69.2698972], [41.3156838, 69.2698602], [41.3155882, 69.2699161], [41.3155472, 69.2700294], [41.3154939, 69.2701692], [41.3154224, 69.2702829], [41.3153293, 69.2702394], [41.3152397, 69.2702502], [41.315149, 69.2704137], [41.3151208, 69.2705323], [41.3150772, 69.2706476], [41.3150437, 69.2707944], [41.315005, 69.2709277], [41.3149306, 69.2710986]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": "4.5"}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+            var circle_marker_3439809e66cf3d20db110552729ef368 = L.circleMarker(
+                [41.3112068, 69.2500373],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+        var popup_dab06e92e893a3d0b22989a8f0d1aa1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4369b6afdaa72d6218750f908db80916 = $(`<div id="html_4369b6afdaa72d6218750f908db80916" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>406.0 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 17:52</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3112068</td></tr><tr><td>долгота:</td><td>69.2500373</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3112068,69.2500373" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3112068/69.2500373"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3112068&lon=69.2500373&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2500373,41.3112068&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3112068&lon=69.2500373" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3112068/69.2500373&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_dab06e92e893a3d0b22989a8f0d1aa1b.setContent(html_4369b6afdaa72d6218750f908db80916);
+            
+        
+
+        circle_marker_3439809e66cf3d20db110552729ef368.bindPopup(popup_dab06e92e893a3d0b22989a8f0d1aa1b)
+        ;
+
+        
+    
+    
+            var marker_de26aaa8aa1a6f107d9cd7ed7e67cfc0 = L.marker(
+                [41.3112068, 69.2500373],
+                {}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+            var icon_4aecb68520b6bca56024cb4041bd0aae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_de26aaa8aa1a6f107d9cd7ed7e67cfc0.setIcon(icon_4aecb68520b6bca56024cb4041bd0aae);
+        
+    
+        var popup_3c4e56c71a8289e0e31ca18434cc03ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32da939c4b45801f40a569a503d42267 = $(`<div id="html_32da939c4b45801f40a569a503d42267" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>406.0 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 17:52</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3112068</td></tr><tr><td>долгота:</td><td>69.2500373</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3112068,69.2500373" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3112068/69.2500373"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3112068&lon=69.2500373&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2500373,41.3112068&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3112068&lon=69.2500373" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3112068/69.2500373&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_3c4e56c71a8289e0e31ca18434cc03ea.setContent(html_32da939c4b45801f40a569a503d42267);
+            
+        
+
+        marker_de26aaa8aa1a6f107d9cd7ed7e67cfc0.bindPopup(popup_3c4e56c71a8289e0e31ca18434cc03ea)
+        ;
+
+        
+    
+    
+            var circle_marker_7acddbf29c698e5ace7f4707dc2f964d = L.circleMarker(
+                [41.3113908, 69.2434964],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+        var popup_92e99fc8bd596d75402796e03aa952bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90b69a2a9986d9acd893593031311610 = $(`<div id="html_90b69a2a9986d9acd893593031311610" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>452.2 м</td></tr><tr><td>изменение:</td><td>46.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 17:59</nobr></td></tr><tr><td>в пути:</td><td>0:06:49</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>730.91 м</td></tr><tr><td>рассчет 2:</td><td>822.65 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3113908</td></tr><tr><td>долгота:</td><td>69.2434964</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3113908,69.2434964" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3113908/69.2434964"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3113908&lon=69.2434964&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2434964,41.3113908&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3113908&lon=69.2434964" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3113908/69.2434964&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_92e99fc8bd596d75402796e03aa952bd.setContent(html_90b69a2a9986d9acd893593031311610);
+            
+        
+
+        circle_marker_7acddbf29c698e5ace7f4707dc2f964d.bindPopup(popup_92e99fc8bd596d75402796e03aa952bd)
+        ;
+
+        
+    
+    
+            var circle_marker_f4c6df2783056ca5da6214b10894facc = L.circleMarker(
+                [41.3070459, 69.2451434],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+        var popup_4101c3151f5351a0ad77ce444019ee90 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d5169ec395c1f5609ea4501c9b1e3c87 = $(`<div id="html_d5169ec395c1f5609ea4501c9b1e3c87" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>394.0 м</td></tr><tr><td>изменение:</td><td>-12.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:06</nobr></td></tr><tr><td>в пути:</td><td>0:13:13</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.1 км</td></tr><tr><td>рассчет 2:</td><td>1.24 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3070459</td></tr><tr><td>долгота:</td><td>69.2451434</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3070459,69.2451434" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3070459/69.2451434"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3070459&lon=69.2451434&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2451434,41.3070459&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3070459&lon=69.2451434" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3070459/69.2451434&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_4101c3151f5351a0ad77ce444019ee90.setContent(html_d5169ec395c1f5609ea4501c9b1e3c87);
+            
+        
+
+        circle_marker_f4c6df2783056ca5da6214b10894facc.bindPopup(popup_4101c3151f5351a0ad77ce444019ee90)
+        ;
+
+        
+    
+    
+            var marker_3e932b5cfcc158fcbeec073f01372671 = L.marker(
+                [41.3070459, 69.2451434],
+                {}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+            var icon_7b86ad0a0a3694b6865d193be65120ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_3e932b5cfcc158fcbeec073f01372671.setIcon(icon_7b86ad0a0a3694b6865d193be65120ed);
+        
+    
+        var popup_0ee155f98fc7c701c2044da766001b54 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ea6417907bb6e6035465386c5a65a7c2 = $(`<div id="html_ea6417907bb6e6035465386c5a65a7c2" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>394.0 м</td></tr><tr><td>изменение:</td><td>-12.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:06</nobr></td></tr><tr><td>в пути:</td><td>0:13:13</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.1 км</td></tr><tr><td>рассчет 2:</td><td>1.24 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3070459</td></tr><tr><td>долгота:</td><td>69.2451434</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3070459,69.2451434" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3070459/69.2451434"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3070459&lon=69.2451434&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2451434,41.3070459&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3070459&lon=69.2451434" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3070459/69.2451434&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_0ee155f98fc7c701c2044da766001b54.setContent(html_ea6417907bb6e6035465386c5a65a7c2);
+            
+        
+
+        marker_3e932b5cfcc158fcbeec073f01372671.bindPopup(popup_0ee155f98fc7c701c2044da766001b54)
+        ;
+
+        
+    
+    
+            var circle_marker_36691b65136d6f65d7643fea72cb5e04 = L.circleMarker(
+                [41.3028879, 69.2484667],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+        var popup_bf281b7000d21f30f88bf5035904df13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc88aa62473b94b4b0219d9c9f21a745 = $(`<div id="html_cc88aa62473b94b4b0219d9c9f21a745" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>399.0 м</td></tr><tr><td>изменение:</td><td>-7.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:12</nobr></td></tr><tr><td>в пути:</td><td>0:20:01</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.54 км</td></tr><tr><td>рассчет 2:</td><td>1.69 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3028879</td></tr><tr><td>долгота:</td><td>69.2484667</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3028879,69.2484667" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3028879/69.2484667"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3028879&lon=69.2484667&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2484667,41.3028879&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3028879&lon=69.2484667" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3028879/69.2484667&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_bf281b7000d21f30f88bf5035904df13.setContent(html_cc88aa62473b94b4b0219d9c9f21a745);
+            
+        
+
+        circle_marker_36691b65136d6f65d7643fea72cb5e04.bindPopup(popup_bf281b7000d21f30f88bf5035904df13)
+        ;
+
+        
+    
+    
+            var circle_marker_74e8c9c4f4993fb773d74f69bd7d1421 = L.circleMarker(
+                [41.3016583, 69.2514799],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+        var popup_095790ac3dfdd3fe2f03846d0ec5e0c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3f9b837c761e12e5d6927d063b1c17d = $(`<div id="html_b3f9b837c761e12e5d6927d063b1c17d" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>392.0 м</td></tr><tr><td>изменение:</td><td>-14.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:19</nobr></td></tr><tr><td>в пути:</td><td>0:27:04</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.96 км</td></tr><tr><td>рассчет 2:</td><td>2.11 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3016583</td></tr><tr><td>долгота:</td><td>69.2514799</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3016583,69.2514799" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3016583/69.2514799"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3016583&lon=69.2514799&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2514799,41.3016583&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3016583&lon=69.2514799" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3016583/69.2514799&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_095790ac3dfdd3fe2f03846d0ec5e0c2.setContent(html_b3f9b837c761e12e5d6927d063b1c17d);
+            
+        
+
+        circle_marker_74e8c9c4f4993fb773d74f69bd7d1421.bindPopup(popup_095790ac3dfdd3fe2f03846d0ec5e0c2)
+        ;
+
+        
+    
+    
+            var marker_1e1148560dc048666b807ae542028f11 = L.marker(
+                [41.3016583, 69.2514799],
+                {}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+            var icon_6621d7a0433787c2bceeca7fce0d9bb8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_1e1148560dc048666b807ae542028f11.setIcon(icon_6621d7a0433787c2bceeca7fce0d9bb8);
+        
+    
+        var popup_5a3d15a65a3fc0c9fc93291b00ec8f2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24246c39920637ed01722fa55151134e = $(`<div id="html_24246c39920637ed01722fa55151134e" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>392.0 м</td></tr><tr><td>изменение:</td><td>-14.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:19</nobr></td></tr><tr><td>в пути:</td><td>0:27:04</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.96 км</td></tr><tr><td>рассчет 2:</td><td>2.11 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3016583</td></tr><tr><td>долгота:</td><td>69.2514799</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3016583,69.2514799" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3016583/69.2514799"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3016583&lon=69.2514799&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2514799,41.3016583&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3016583&lon=69.2514799" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3016583/69.2514799&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_5a3d15a65a3fc0c9fc93291b00ec8f2a.setContent(html_24246c39920637ed01722fa55151134e);
+            
+        
+
+        marker_1e1148560dc048666b807ae542028f11.bindPopup(popup_5a3d15a65a3fc0c9fc93291b00ec8f2a)
+        ;
+
+        
+    
+    
+            var circle_marker_3147a6e7becb1d8de3721bac0956d133 = L.circleMarker(
+                [41.3053752, 69.254777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+        var popup_c964ab4253e2604bf6788146c82074dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5ded82a749579fd5fb0205228079049 = $(`<div id="html_c5ded82a749579fd5fb0205228079049" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>409.1 м</td></tr><tr><td>изменение:</td><td>3.1 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:27</nobr></td></tr><tr><td>в пути:</td><td>0:34:30</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.4 км</td></tr><tr><td>рассчет 2:</td><td>2.58 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3053752</td></tr><tr><td>долгота:</td><td>69.254777</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3053752,69.254777" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3053752/69.254777"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3053752&lon=69.254777&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.254777,41.3053752&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3053752&lon=69.254777" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3053752/69.254777&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_c964ab4253e2604bf6788146c82074dd.setContent(html_c5ded82a749579fd5fb0205228079049);
+            
+        
+
+        circle_marker_3147a6e7becb1d8de3721bac0956d133.bindPopup(popup_c964ab4253e2604bf6788146c82074dd)
+        ;
+
+        
+    
+    
+            var circle_marker_efe188bf13ba5137b64939f7dcf9cdae = L.circleMarker(
+                [41.3093393, 69.2585789],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+        var popup_f58b8d3f9f573070124076c96bee5294 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c9bcc73237d0316c3acb5a9aa1cfef6 = $(`<div id="html_8c9bcc73237d0316c3acb5a9aa1cfef6" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>413.9 м</td></tr><tr><td>изменение:</td><td>7.9 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:33</nobr></td></tr><tr><td>в пути:</td><td>0:40:57</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.85 км</td></tr><tr><td>рассчет 2:</td><td>3.14 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3093393</td></tr><tr><td>долгота:</td><td>69.2585789</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3093393,69.2585789" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3093393/69.2585789"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3093393&lon=69.2585789&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2585789,41.3093393&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3093393&lon=69.2585789" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3093393/69.2585789&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_f58b8d3f9f573070124076c96bee5294.setContent(html_8c9bcc73237d0316c3acb5a9aa1cfef6);
+            
+        
+
+        circle_marker_efe188bf13ba5137b64939f7dcf9cdae.bindPopup(popup_f58b8d3f9f573070124076c96bee5294)
+        ;
+
+        
+    
+    
+            var marker_97759558207fa96b1c43c05dff22c4a2 = L.marker(
+                [41.3093393, 69.2585789],
+                {}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+            var icon_c4893b05a470b287f2d733091b7b662c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_97759558207fa96b1c43c05dff22c4a2.setIcon(icon_c4893b05a470b287f2d733091b7b662c);
+        
+    
+        var popup_4c49a6b78ba8d6af8428018fd8bbe2e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_07259b5f400d5c8a66b89bec69b35e63 = $(`<div id="html_07259b5f400d5c8a66b89bec69b35e63" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>413.9 м</td></tr><tr><td>изменение:</td><td>7.9 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:33</nobr></td></tr><tr><td>в пути:</td><td>0:40:57</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.85 км</td></tr><tr><td>рассчет 2:</td><td>3.14 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3093393</td></tr><tr><td>долгота:</td><td>69.2585789</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3093393,69.2585789" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3093393/69.2585789"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3093393&lon=69.2585789&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2585789,41.3093393&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3093393&lon=69.2585789" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3093393/69.2585789&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_4c49a6b78ba8d6af8428018fd8bbe2e3.setContent(html_07259b5f400d5c8a66b89bec69b35e63);
+            
+        
+
+        marker_97759558207fa96b1c43c05dff22c4a2.bindPopup(popup_4c49a6b78ba8d6af8428018fd8bbe2e3)
+        ;
+
+        
+    
+    
+            var circle_marker_0685792ac023c7a87c56ef0f727e9bc8 = L.circleMarker(
+                [41.3131029, 69.2623548],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+        var popup_35e3a9023583a636d9d63f6b1552c717 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a468bba2405821eb07e91b286a7deae = $(`<div id="html_5a468bba2405821eb07e91b286a7deae" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>413.2 м</td></tr><tr><td>изменение:</td><td>7.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:40</nobr></td></tr><tr><td>в пути:</td><td>0:47:57</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.37 км</td></tr><tr><td>рассчет 2:</td><td>3.67 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3131029</td></tr><tr><td>долгота:</td><td>69.2623548</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3131029,69.2623548" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3131029/69.2623548"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3131029&lon=69.2623548&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2623548,41.3131029&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3131029&lon=69.2623548" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3131029/69.2623548&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_35e3a9023583a636d9d63f6b1552c717.setContent(html_5a468bba2405821eb07e91b286a7deae);
+            
+        
+
+        circle_marker_0685792ac023c7a87c56ef0f727e9bc8.bindPopup(popup_35e3a9023583a636d9d63f6b1552c717)
+        ;
+
+        
+    
+    
+            var circle_marker_0cf9c17f0f5c0b15afd4c12528d1d58c = L.circleMarker(
+                [41.3172953, 69.265404],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+        var popup_0c5064c0909f088e17a12dd10b133b71 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_57e6fee6985cbb8b057009bf7595dc4e = $(`<div id="html_57e6fee6985cbb8b057009bf7595dc4e" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>416.0 м</td></tr><tr><td>изменение:</td><td>10.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:47</nobr></td></tr><tr><td>в пути:</td><td>0:54:13</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.76 км</td></tr><tr><td>рассчет 2:</td><td>4.07 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3172953</td></tr><tr><td>долгота:</td><td>69.265404</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3172953,69.265404" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3172953/69.265404"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3172953&lon=69.265404&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.265404,41.3172953&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3172953&lon=69.265404" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3172953/69.265404&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_0c5064c0909f088e17a12dd10b133b71.setContent(html_57e6fee6985cbb8b057009bf7595dc4e);
+            
+        
+
+        circle_marker_0cf9c17f0f5c0b15afd4c12528d1d58c.bindPopup(popup_0c5064c0909f088e17a12dd10b133b71)
+        ;
+
+        
+    
+    
+            var marker_28508152c0e99da7ea13a8cb82ba774f = L.marker(
+                [41.3172953, 69.265404],
+                {}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+            var icon_efcc25ebe9ebc491fb3de6ccf1a9d51a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_28508152c0e99da7ea13a8cb82ba774f.setIcon(icon_efcc25ebe9ebc491fb3de6ccf1a9d51a);
+        
+    
+        var popup_563a7374052e1630ae17e1853ab4c3bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f3e44205e542e05716db7dc00a502e5 = $(`<div id="html_8f3e44205e542e05716db7dc00a502e5" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>416.0 м</td></tr><tr><td>изменение:</td><td>10.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:47</nobr></td></tr><tr><td>в пути:</td><td>0:54:13</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.76 км</td></tr><tr><td>рассчет 2:</td><td>4.07 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3172953</td></tr><tr><td>долгота:</td><td>69.265404</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3172953,69.265404" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3172953/69.265404"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3172953&lon=69.265404&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.265404,41.3172953&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3172953&lon=69.265404" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3172953/69.265404&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_563a7374052e1630ae17e1853ab4c3bd.setContent(html_8f3e44205e542e05716db7dc00a502e5);
+            
+        
+
+        marker_28508152c0e99da7ea13a8cb82ba774f.bindPopup(popup_563a7374052e1630ae17e1853ab4c3bd)
+        ;
+
+        
+    
+    
+            var circle_marker_c50f76b0004f12490cf2c7b31e9771de = L.circleMarker(
+                [41.3186392, 69.2687686],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+        var popup_e8b44437791cd6f53a630557afd1dcbd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e4bb39f21793943191820e160651629 = $(`<div id="html_5e4bb39f21793943191820e160651629" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>414.8 м</td></tr><tr><td>изменение:</td><td>8.8 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 18:53</nobr></td></tr><tr><td>в пути:</td><td>1:00:50</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>4.22 км</td></tr><tr><td>рассчет 2:</td><td>4.54 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3186392</td></tr><tr><td>долгота:</td><td>69.2687686</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3186392,69.2687686" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3186392/69.2687686"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3186392&lon=69.2687686&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2687686,41.3186392&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3186392&lon=69.2687686" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3186392/69.2687686&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_e8b44437791cd6f53a630557afd1dcbd.setContent(html_5e4bb39f21793943191820e160651629);
+            
+        
+
+        circle_marker_c50f76b0004f12490cf2c7b31e9771de.bindPopup(popup_e8b44437791cd6f53a630557afd1dcbd)
+        ;
+
+        
+    
+    
+            var marker_49beedebae7c425e782fa7977871d291 = L.marker(
+                [41.3149306, 69.2710986],
+                {}
+            ).addTo(feature_group_143d98adc0a0a3c50ad492df53634d03);
+        
+    
+            var icon_423eb172684999d65a603bec9c9520a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_49beedebae7c425e782fa7977871d291.setIcon(icon_423eb172684999d65a603bec9c9520a8);
+        
+    
+        var popup_79c53b7fc2560bed8e3ae86099c4ea95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_82087c053e603d8acaa93b3c5cce1dd0 = $(`<div id="html_82087c053e603d8acaa93b3c5cce1dd0" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик вокруг анхора(5.5km) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>402.0 м</td></tr><tr><td>изменение:</td><td>-4.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>11.04.2024 19:00</nobr></td></tr><tr><td>в пути:</td><td>1:07:29</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>4.64 км</td></tr><tr><td>рассчет 2:</td><td>4.96 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3149306</td></tr><tr><td>долгота:</td><td>69.2710986</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3149306,69.2710986" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3149306/69.2710986"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3149306&lon=69.2710986&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2710986,41.3149306&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3149306&lon=69.2710986" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3149306/69.2710986&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_79c53b7fc2560bed8e3ae86099c4ea95.setContent(html_82087c053e603d8acaa93b3c5cce1dd0);
+            
+        
+
+        marker_49beedebae7c425e782fa7977871d291.bindPopup(popup_79c53b7fc2560bed8e3ae86099c4ea95)
+        ;
+
+        
+    
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topright", "title": "\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u043d\u0430 \u043f\u043e\u043b\u043d\u043e\u043c \u044d\u043a\u0440\u0430\u043d\u0435", "titleCancel": "\u041d\u0430\u0436\u043c\u0438 \u0434\u043b\u044f \u0432\u044b\u0445\u043e\u0434\u0430"}
+            ).addTo(map_25d117f7ba2fbc4d0134aa8690d2a41a);
+        
+    
+            var layer_control_67fbf404678ea18b5f6ff1273eebf0f5 = {
+                base_layers : {
+                    "OpenStreet Map" : tile_layer_79e42b04fc62e4d69846a3bd73a9e1c5,
+                    "CyclOSM" : tile_layer_417df7f928253a4dc5cae05c7f53af66,
+                    "Stamen Terrain" : tile_layer_0731e302769d2cf1e03a94c5c7269132,
+                    "Google Maps" : tile_layer_21646d9918cf4cad2155446adb37ad1c,
+                    "Cartodb Positron" : tile_layer_7d83669ad13c218304ac5bcb3b51f418,
+                },
+                overlays :  {
+                    "\u003cfont color=\"purple\"\u003e\u041f\u0440\u043e\u0433\u043d\u043e\u0437 \u043f\u043e\u0433\u043e\u0434\u044b\u003c/font\u003e" : feature_group_4ddcf47bf5fbcdde12b95299065c9294,
+                    "\u003cfont color=\"blue\" size=\"4\"\u003e---\u003c/font\u003e \u041c\u0443\u0441\u0442\u0430\u043a\u0438\u043b\u043b\u0438\u043a \u0432\u043e\u043a\u0440\u0443\u0433 \u0430\u043d\u0445\u043e\u0440\u0430(5.5km)   2024-04-11 " : feature_group_143d98adc0a0a3c50ad492df53634d03,
+                },
+            };
+            L.control.layers(
+                layer_control_67fbf404678ea18b5f6ff1273eebf0f5.base_layers,
+                layer_control_67fbf404678ea18b5f6ff1273eebf0f5.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_25d117f7ba2fbc4d0134aa8690d2a41a);
+            tile_layer_417df7f928253a4dc5cae05c7f53af66.remove();
+            tile_layer_0731e302769d2cf1e03a94c5c7269132.remove();
+            tile_layer_21646d9918cf4cad2155446adb37ad1c.remove();
+            tile_layer_7d83669ad13c218304ac5bcb3b51f418.remove();
+            feature_group_4ddcf47bf5fbcdde12b95299065c9294.remove();
+        
+    
+            var mouse_position_af5b393baaa376a0ca409834d9fa5385 = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "", "separator": " : "}
+            );
+            mouse_position_af5b393baaa376a0ca409834d9fa5385.options["latFormatter"] =
+                undefined;
+            mouse_position_af5b393baaa376a0ca409834d9fa5385.options["lngFormatter"] =
+                undefined;
+            map_25d117f7ba2fbc4d0134aa8690d2a41a.addControl(mouse_position_af5b393baaa376a0ca409834d9fa5385);
+ </script>
+</html>

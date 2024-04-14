@@ -1,5 +1,19 @@
 export const tracks = [
   {
+    map: "mapTashkent20240414.html",
+    cover: "gif",
+    dscr: "Ташкент от Мустакиллик в доль анхора до Magic Сity",
+    place: "tashkent",
+    date: "20240414",
+  },
+  {
+    map: "mapTashkent20240411.html",
+    cover: "gif",
+    dscr: "Ташкент Круговая прогулка в доль анхора Мустакиллик",
+    place: "tashkent",
+    date: "20240411",
+  },
+  {
     map: "mapTashkent20240407.html",
     cover: "gif",
     dscr: "Ташкент Круговая прогулка Мустакиллик - Magic Сity",
@@ -17,7 +31,7 @@ export const tracks = [
   {
     map: "mapTashkent20240323.html",
     cover: "gif",
-    dscr: "Ташкент. Поездка в кафе Biqn Dala",
+    dscr: "Ташкент Поездка в кафе Biqn Dala",
     place: "tashkent",
     date: "20240323",
   },
