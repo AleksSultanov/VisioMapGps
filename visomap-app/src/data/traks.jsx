@@ -1,5 +1,12 @@
 export const tracks = [
   {
+    map: "mapTashkent20240512.html",
+    cover: "gif",
+    dscr: "Ташкент от Халклар Дустлиги в доль анхора до Алайского",
+    place: "tashkent",
+    date: "20240513",
+  },
+  {
     map: "mapTashkent20240414.html",
     cover: "gif",
     dscr: "Ташкент от Мустакиллик в доль анхора до Magic Сity",
