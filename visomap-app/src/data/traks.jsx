@@ -1,5 +1,12 @@
 export const tracks = [
   {
+    map: "mapMoscow202405.html",
+    cover: "gif",
+    dscr: "Москва",
+    place: "moscow",
+    date: "20240518,20240526",
+  },
+  {
     map: "mapTashkent20240512.html",
     cover: "gif",
     dscr: "Ташкент от Халклар Дустлиги в доль анхора до Алайского",
