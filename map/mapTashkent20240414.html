@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <script>
+   L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+  </script>
+  <style>
+   html, body {width: 100%;height: 100%;margin: 0;padding: 0;}
+  </style>
+  <style>
+   #map {position:absolute;top:0;bottom:0;right:0;left:0;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js">
+  </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js">
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" rel="stylesheet"/>
+  <meta content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <style>
+   #map_729db9471f3db4439ab113ea7367615b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js">
+  </script>
+  <link href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="folium-map" id="map_729db9471f3db4439ab113ea7367615b">
+  </div>
+  <script src="../js/editMappoint.js" type="text/javascript">
+  </script>
+ </body>
+ <script>
+  var map_729db9471f3db4439ab113ea7367615b = L.map(
+                "map_729db9471f3db4439ab113ea7367615b",
+                {
+                    center: [41.2987047, 69.2493943],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7cc9517d874df6ae41c4d9207a582684 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_729db9471f3db4439ab113ea7367615b);
+        
+    
+            var tile_layer_ef09af1525f3a086945bbe85693b7517 = L.tileLayer(
+                "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png",
+                {"attribution": "\u003ca href=\"https://github.com/cyclosm/cyclosm-cartocss-style/releases\" title=\"CyclOSM - Open Bicycle render\"\u003eCyclOSM\u003c/a\u003e | Map data: \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_729db9471f3db4439ab113ea7367615b);
+        
+    
+            var tile_layer_679391821c3fb00c20569a7af2ef7aac = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_729db9471f3db4439ab113ea7367615b);
+        
+    
+            var tile_layer_d1eaee8f4ff3a0f1984495d6994c6704 = L.tileLayer(
+                "http://{s}.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "google", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": ["mt0", "mt1", "mt2", "mt3"], "tms": false}
+            ).addTo(map_729db9471f3db4439ab113ea7367615b);
+        
+    
+            var tile_layer_85837a95c54aa148ab1d43c19015dcb0 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_729db9471f3db4439ab113ea7367615b);
+        
+    
+            var feature_group_f2f4ea10c1378b04b37c8eee07400b63 = L.featureGroup(
+                {}
+            ).addTo(map_729db9471f3db4439ab113ea7367615b);
+        
+    
+            var marker_ed6e9a0d9d30de9ef50dc296bde9a7ea = L.marker(
+                [41.3, 69.24],
+                {}
+            ).addTo(feature_group_f2f4ea10c1378b04b37c8eee07400b63);
+        
+    
+            var icon_4490b7493994d2d3ec4006fdd674cdd0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ed6e9a0d9d30de9ef50dc296bde9a7ea.setIcon(icon_4490b7493994d2d3ec4006fdd674cdd0);
+        
+    
+        var popup_f725ddcb25e26f8af61ccf300a391c9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6e730824e164f6c6f299283294b9a44c = $(`<div id="html_6e730824e164f6c6f299283294b9a44c" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.3&lon=69.24&detailLat=41.3&detailLon=69.241&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_f725ddcb25e26f8af61ccf300a391c9d.setContent(html_6e730824e164f6c6f299283294b9a44c);
+            
+        
+
+        marker_ed6e9a0d9d30de9ef50dc296bde9a7ea.bindPopup(popup_f725ddcb25e26f8af61ccf300a391c9d)
+        ;
+
+        
+    
+    
+            var marker_8a23bd2093dd087735cc4872d42469da = L.marker(
+                [41.32, 69.27],
+                {}
+            ).addTo(feature_group_f2f4ea10c1378b04b37c8eee07400b63);
+        
+    
+            var icon_c99e9c35281c6b947ab992f12bce4ca9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_8a23bd2093dd087735cc4872d42469da.setIcon(icon_c99e9c35281c6b947ab992f12bce4ca9);
+        
+    
+        var popup_3be50eb441ae83797841e52ac36ae9a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0fc19f8cda9f4913ea0f46d443f1ca36 = $(`<div id="html_0fc19f8cda9f4913ea0f46d443f1ca36" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.32&lon=69.27&detailLat=41.32&detailLon=69.271&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_3be50eb441ae83797841e52ac36ae9a4.setContent(html_0fc19f8cda9f4913ea0f46d443f1ca36);
+            
+        
+
+        marker_8a23bd2093dd087735cc4872d42469da.bindPopup(popup_3be50eb441ae83797841e52ac36ae9a4)
+        ;
+
+        
+    
+    
+            var marker_bf001227ac9ebb0dab7836b2230b10ca = L.marker(
+                [41.3, 69.25],
+                {}
+            ).addTo(feature_group_f2f4ea10c1378b04b37c8eee07400b63);
+        
+    
+            var icon_1c1032d52297c2f5516d3f3303517ee9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_bf001227ac9ebb0dab7836b2230b10ca.setIcon(icon_1c1032d52297c2f5516d3f3303517ee9);
+        
+    
+        var popup_852736d610c4e9353fa7a1dadb249f64 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ac29167221fed6bd0c0d0e88bc68044 = $(`<div id="html_1ac29167221fed6bd0c0d0e88bc68044" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=41.3&lon=69.25&detailLat=41.3&detailLon=69.251&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_852736d610c4e9353fa7a1dadb249f64.setContent(html_1ac29167221fed6bd0c0d0e88bc68044);
+            
+        
+
+        marker_bf001227ac9ebb0dab7836b2230b10ca.bindPopup(popup_852736d610c4e9353fa7a1dadb249f64)
+        ;
+
+        
+    
+    
+            var feature_group_241444406aec92f8ca46faa0e2694157 = L.featureGroup(
+                {}
+            ).addTo(map_729db9471f3db4439ab113ea7367615b);
+        
+    
+            var poly_line_f700d3cebf753f16db153416d340f17b = L.polyline(
+                [[41.3189186, 69.2688957], [41.3190286, 69.2689645], [41.3191028, 69.2690436], [41.3191769, 69.2689671], [41.3192522, 69.268856], [41.3192701, 69.2687136], [41.319312, 69.2685927], [41.3193298, 69.2684601], [41.3193421, 69.268338], [41.3193867, 69.2682317], [41.3194264, 69.2680958], [41.3194334, 69.2679699], [41.319496, 69.2678578], [41.3195219, 69.267728], [41.3195959, 69.267622], [41.3196621, 69.2674927], [41.3196965, 69.2673571], [41.3197219, 69.2672209], [41.3197722, 69.2671174], [41.3196957, 69.2670189], [41.3196183, 69.2669543], [41.3195189, 69.2669456], [41.3194135, 69.2669168], [41.3193151, 69.2668585], [41.3192292, 69.2668153], [41.3191505, 69.2667343], [41.3190429, 69.2667219], [41.318947, 69.2666945], [41.3188521, 69.2666482], [41.3187735, 69.2665693], [41.3186841, 69.266618], [41.3185828, 69.2665537], [41.3184995, 69.2664956], [41.3184056, 69.2665001], [41.3183096, 69.2664862], [41.3182454, 69.266399], [41.3181421, 69.2663604], [41.3180467, 69.2663292], [41.3179984, 69.266207], [41.3179628, 69.2660875], [41.3178733, 69.2660094], [41.3177749, 69.2659359], [41.3176987, 69.2658633], [41.317628, 69.2657792], [41.3175432, 69.2657377], [41.3174676, 69.2656689], [41.317388, 69.2656071], [41.3173054, 69.265551], [41.3172278, 69.2654684], [41.3171395, 69.2654231], [41.3170749, 69.265332], [41.3169799, 69.2653173], [41.3168864, 69.2652753], [41.3167977, 69.2652245], [41.3166918, 69.2651766], [41.3165809, 69.2651433], [41.3164978, 69.2650443], [41.3164419, 69.2649436], [41.3163474, 69.264907], [41.3162476, 69.264894], [41.3161508, 69.2648507], [41.316069, 69.2647557], [41.3159914, 69.2646698], [41.3159001, 69.2646541], [41.3159692, 69.2645386], [41.3159014, 69.2646228], [41.3158009, 69.2646313], [41.3156981, 69.2645912], [41.3156075, 69.2645781], [41.3155171, 69.2644949], [41.3154165, 69.2644421], [41.3153265, 69.2644144], [41.3152294, 69.2643473], [41.3151365, 69.2643716], [41.3150498, 69.2643185], [41.3149487, 69.2642786], [41.3148453, 69.2642309], [41.3147574, 69.2641822], [41.3146688, 69.2641417], [41.3145828, 69.2640573], [41.3144656, 69.2640372], [41.3143677, 69.2640389], [41.3142852, 69.2639859], [41.3141911, 69.2639778], [41.3140992, 69.2638956], [41.3140014, 69.263892], [41.3139087, 69.2638445], [41.3138111, 69.2637868], [41.3137442, 69.2636839], [41.3136593, 69.263639], [41.313582, 69.2635234], [41.3135007, 69.2634541], [41.3134377, 69.2633419], [41.3133726, 69.2632394], [41.3133429, 69.2631184], [41.3132476, 69.2630658], [41.313184, 69.2629611], [41.3131392, 69.2628391], [41.3130929, 69.2627136], [41.3131043, 69.2625747], [41.3130332, 69.2624841], [41.3130076, 69.2623597], [41.3129321, 69.262249], [41.3129153, 69.2621103], [41.3128915, 69.2619846], [41.3128448, 69.2618808], [41.3127966, 69.2617544], [41.3127188, 69.2616565], [41.3127055, 69.2615372], [41.3127714, 69.2616231], [41.3127295, 69.2615115], [41.3126569, 69.2614096], [41.3126188, 69.2612849], [41.3125979, 69.2611668], [41.3125172, 69.261063], [41.3124602, 69.2609453], [41.3124309, 69.2608267], [41.3124102, 69.2607027], [41.3123522, 69.2605886], [41.3122788, 69.2604901], [41.3122664, 69.2603611], [41.312216, 69.2602501], [41.3121193, 69.2602342], [41.3120188, 69.2602173], [41.3119211, 69.2601651], [41.3118243, 69.2601387], [41.3117192, 69.2600823], [41.3116454, 69.2600111], [41.3115699, 69.2599445], [41.3114805, 69.2599277], [41.311402, 69.2598436], [41.3113062, 69.2598286], [41.3110025, 69.2597401], [41.310887, 69.2597656], [41.3108494, 69.2599024], [41.3107886, 69.2599948], [41.3106933, 69.2600754], [41.3106072, 69.2601147], [41.3105185, 69.2600169], [41.3104772, 69.2599027], [41.3103607, 69.2598124], [41.3103051, 69.2597031], [41.3102096, 69.2596692], [41.3101594, 69.2595195], [41.3101165, 69.2594112], [41.3100775, 69.2592989], [41.3100208, 69.2592045], [41.3099302, 69.2591757], [41.3098411, 69.259107], [41.3098072, 69.258978], [41.3097379, 69.2588764], [41.3096352, 69.2588958], [41.3095536, 69.2588346], [41.3094661, 69.2587393], [41.3093803, 69.2587025], [41.3092864, 69.2587227], [41.3092019, 69.2586772], [41.3091207, 69.2585836], [41.3090298, 69.2585411], [41.30892, 69.2585133], [41.3089031, 69.258388], [41.3090011, 69.2583806], [41.3089275, 69.2584544], [41.3090148, 69.2585368], [41.3089249, 69.2584201], [41.3088267, 69.2583939], [41.3087728, 69.2582822], [41.3086792, 69.2582545], [41.3085952, 69.2581761], [41.3084791, 69.2581212], [41.3083638, 69.2580734], [41.3083277, 69.2579539], [41.3082598, 69.2578668], [41.3081985, 69.2577734], [41.3081266, 69.2576922], [41.3080358, 69.2576297], [41.3079505, 69.2575622], [41.3078588, 69.2575189], [41.3077591, 69.2574869], [41.3076713, 69.2574407], [41.3075786, 69.2574642], [41.3075338, 69.2575837], [41.3075007, 69.257717], [41.3074825, 69.257841], [41.3074557, 69.2579722], [41.3074199, 69.2580959], [41.3074066, 69.258216], [41.3074081, 69.2583438], [41.3074493, 69.2584592], [41.3074825, 69.2585803], [41.3075393, 69.2586864], [41.3075946, 69.2588077], [41.3076136, 69.2589267], [41.3076916, 69.2589991], [41.3076595, 69.2591319], [41.3076334, 69.2592683], [41.3076393, 69.2593908], [41.3077286, 69.2594766], [41.3076407, 69.2595636], [41.3077322, 69.2595714], [41.3078266, 69.2596237], [41.3079167, 69.2596676], [41.3078967, 69.2598022], [41.307924, 69.2599483], [41.3080054, 69.2600447], [41.308065, 69.2601359], [41.3081671, 69.2602056], [41.3081907, 69.2603342], [41.3082042, 69.2604725], [41.3082697, 69.2605849], [41.3083571, 69.2606748], [41.3082964, 69.2607665], [41.3082513, 69.2608905], [41.3082878, 69.26102], [41.3082778, 69.2611428], [41.3083191, 69.2612577], [41.3083926, 69.2613633], [41.3084669, 69.2614324], [41.3085558, 69.2614938], [41.3086064, 69.2616131], [41.3085414, 69.2616984], [41.308506, 69.2618107], [41.3085184, 69.2619417], [41.3084564, 69.262058], [41.3083983, 69.2619584], [41.3083122, 69.2618798], [41.3082206, 69.2619429], [41.3081918, 69.2617137], [41.3081617, 69.2615987], [41.3081345, 69.2614755], [41.3080958, 69.2613344], [41.3080654, 69.2612209], [41.3080601, 69.2610963], [41.3080723, 69.2609727], [41.3081532, 69.2608788], [41.3082202, 69.2607706], [41.3082401, 69.2606495], [41.3082414, 69.2605241], [41.3082295, 69.2604035], [41.3081677, 69.2603153], [41.308078, 69.2602449], [41.3079856, 69.2601951], [41.3079827, 69.2600528], [41.3078981, 69.2599345], [41.3078923, 69.2598032], [41.3079429, 69.2596936], [41.3078744, 69.2596133], [41.3077974, 69.2595341], [41.3077075, 69.2594465], [41.3076621, 69.2593411], [41.3076372, 69.2592076], [41.3076594, 69.2590737], [41.3076326, 69.2589214], [41.3075799, 69.2588029], [41.3075019, 69.2587027], [41.3074736, 69.2585881], [41.3074513, 69.2584711], [41.3073645, 69.2584126], [41.3073534, 69.2582868], [41.3073917, 69.2581613], [41.3074297, 69.2580313], [41.3074573, 69.2578941], [41.3074748, 69.2577681], [41.307518, 69.2576566], [41.3074949, 69.2575212], [41.3075156, 69.257384], [41.3076277, 69.2573361], [41.3077223, 69.2573341], [41.3076374, 69.2572607], [41.3075539, 69.2571601], [41.3074893, 69.2570598], [41.30738, 69.2569195], [41.307171, 69.2567332], [41.3070917, 69.2566558], [41.3069914, 69.2566058], [41.3069085, 69.2565252], [41.3068212, 69.2564662], [41.3067441, 69.2564045], [41.3066688, 69.2563338], [41.3065885, 69.2562602], [41.3065085, 69.2562007], [41.3064462, 69.2561092], [41.3063847, 69.2560178], [41.3062812, 69.2559932], [41.3062083, 69.2558956], [41.3061469, 69.255801], [41.306068, 69.2557014], [41.3059824, 69.2556128], [41.3059206, 69.2555072], [41.3058541, 69.2554176], [41.3057793, 69.255336], [41.3057098, 69.2552485], [41.3056173, 69.2551718], [41.3055241, 69.2550863], [41.3054418, 69.2550182], [41.3053589, 69.2549675], [41.3052737, 69.2548955], [41.305202, 69.2548057], [41.3052528, 69.2546935], [41.3052179, 69.2545778], [41.3051327, 69.2545035], [41.3050638, 69.2544171], [41.3049877, 69.2543429], [41.3049061, 69.2542435], [41.3048116, 69.2541765], [41.3047183, 69.2541305], [41.3046222, 69.2540999], [41.3045448, 69.2540234], [41.3044606, 69.2539488], [41.3043748, 69.2538769], [41.3042862, 69.2538116], [41.3041774, 69.2537646], [41.3040769, 69.2537398], [41.3039695, 69.2537232], [41.3038588, 69.2537013], [41.3037538, 69.2536759], [41.3036616, 69.253646], [41.3035718, 69.2536044], [41.3034857, 69.2535562], [41.3033883, 69.2535616], [41.3032851, 69.2535326], [41.3032069, 69.2534637], [41.3031028, 69.2534288], [41.3030195, 69.253505], [41.3029641, 69.2536006], [41.3028926, 69.2534938], [41.3028276, 69.253398], [41.3027436, 69.2533048], [41.3026881, 69.2531947], [41.3026039, 69.2531236], [41.3025123, 69.2531017], [41.3023997, 69.2531178], [41.3023055, 69.2531157], [41.3022114, 69.2530963], [41.3021093, 69.2530631], [41.3020136, 69.2530504], [41.3019398, 69.2529777], [41.3018811, 69.2528751], [41.3018312, 69.2527543], [41.3017811, 69.2526516], [41.3017344, 69.25252], [41.3016989, 69.2524048], [41.3017396, 69.2522745], [41.3017524, 69.2521536], [41.3017601, 69.2520323], [41.3017913, 69.2519072], [41.3017714, 69.2517895], [41.3017363, 69.2516637], [41.3016881, 69.2515486], [41.3015967, 69.2514735], [41.3015232, 69.2514005], [41.3014572, 69.251312], [41.3013677, 69.2512401], [41.3012816, 69.2511845], [41.3012022, 69.2511225], [41.3011073, 69.2510405], [41.301016, 69.2510204], [41.3009602, 69.2509225], [41.300938, 69.2507872], [41.3009045, 69.2506742], [41.3008609, 69.2505498], [41.3008144, 69.2504128], [41.3007792, 69.2502827], [41.3007174, 69.2501798], [41.3006485, 69.2500877], [41.3005917, 69.2499837], [41.3005273, 69.2498881], [41.3005851, 69.2497753], [41.3006908, 69.2497936], [41.3005992, 69.2497924], [41.3005232, 69.2497273], [41.3004885, 69.2496005], [41.3004659, 69.2494819], [41.3003871, 69.2493809], [41.3002817, 69.2493431], [41.3002111, 69.249418], [41.3001095, 69.2494305], [41.3000247, 69.2493685], [41.2999165, 69.249373], [41.2998249, 69.2494389], [41.2996614, 69.2494981], [41.2995589, 69.2495001], [41.2994607, 69.2495637], [41.2993603, 69.2495805], [41.2992854, 69.249669], [41.2991957, 69.2497184], [41.2991065, 69.249752], [41.2990108, 69.2497982], [41.2988976, 69.2497853], [41.2987942, 69.2498056], [41.2987318, 69.2499283], [41.2986375, 69.2499884], [41.2985304, 69.2499972], [41.2984238, 69.250017], [41.2983288, 69.2500115], [41.2982215, 69.2500229], [41.298134, 69.2500706], [41.2980709, 69.2499764], [41.2980526, 69.2498344], [41.2980381, 69.2497014], [41.2979359, 69.2496261], [41.2978734, 69.2495327]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": "4.5"}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+            var circle_marker_f6fd6c4d44cbed4bb8ccd654bf3db9e3 = L.circleMarker(
+                [41.3189186, 69.2688957],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_3dc84160ccdb2e0206b66f669fd90593 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8e7b38fa24559e28d1e8cc169bcb1fc3 = $(`<div id="html_8e7b38fa24559e28d1e8cc169bcb1fc3" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>414.94 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 13:19</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3189186</td></tr><tr><td>долгота:</td><td>69.2688957</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3189186,69.2688957" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3189186/69.2688957"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3189186&lon=69.2688957&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2688957,41.3189186&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3189186&lon=69.2688957" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3189186/69.2688957&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_3dc84160ccdb2e0206b66f669fd90593.setContent(html_8e7b38fa24559e28d1e8cc169bcb1fc3);
+            
+        
+
+        circle_marker_f6fd6c4d44cbed4bb8ccd654bf3db9e3.bindPopup(popup_3dc84160ccdb2e0206b66f669fd90593)
+        ;
+
+        
+    
+    
+            var marker_0030ce14fcf269d9d4329ceaea5e49e6 = L.marker(
+                [41.3189186, 69.2688957],
+                {}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+            var icon_ac86d27e9b0015f200d690004fc63a5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_0030ce14fcf269d9d4329ceaea5e49e6.setIcon(icon_ac86d27e9b0015f200d690004fc63a5a);
+        
+    
+        var popup_c4add2abd9a870bb70c1008156cdeeb3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a84c397339a5be5afa5614b67d02978 = $(`<div id="html_8a84c397339a5be5afa5614b67d02978" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>414.94 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 13:19</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3189186</td></tr><tr><td>долгота:</td><td>69.2688957</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3189186,69.2688957" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3189186/69.2688957"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3189186&lon=69.2688957&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2688957,41.3189186&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3189186&lon=69.2688957" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3189186/69.2688957&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_c4add2abd9a870bb70c1008156cdeeb3.setContent(html_8a84c397339a5be5afa5614b67d02978);
+            
+        
+
+        marker_0030ce14fcf269d9d4329ceaea5e49e6.bindPopup(popup_c4add2abd9a870bb70c1008156cdeeb3)
+        ;
+
+        
+    
+    
+            var circle_marker_43d2e50235de900cd759e7f786398873 = L.circleMarker(
+                [41.3178733, 69.2660094],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_3936af30e5bc3533ed8bb7c7d62072cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_163e233c947bff38c3240d89cb1df281 = $(`<div id="html_163e233c947bff38c3240d89cb1df281" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>410.93 м</td></tr><tr><td>изменение:</td><td>-4.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 13:27</nobr></td></tr><tr><td>в пути:</td><td>0:07:52</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>399.45 м</td></tr><tr><td>рассчет 2:</td><td>407.25 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3178733</td></tr><tr><td>долгота:</td><td>69.2660094</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3178733,69.2660094" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3178733/69.2660094"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3178733&lon=69.2660094&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2660094,41.3178733&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3178733&lon=69.2660094" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3178733/69.2660094&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_3936af30e5bc3533ed8bb7c7d62072cb.setContent(html_163e233c947bff38c3240d89cb1df281);
+            
+        
+
+        circle_marker_43d2e50235de900cd759e7f786398873.bindPopup(popup_3936af30e5bc3533ed8bb7c7d62072cb)
+        ;
+
+        
+    
+    
+            var circle_marker_e389f8c180d53326f3fcb8c65dad0a62 = L.circleMarker(
+                [41.3144656, 69.2640372],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_7cf38db86bf8b4589db4fc8a13dbb21e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6aaa4d934e9b0af719e64d37af16ec4c = $(`<div id="html_6aaa4d934e9b0af719e64d37af16ec4c" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>411.24 м</td></tr><tr><td>изменение:</td><td>-3.7 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 13:36</nobr></td></tr><tr><td>в пути:</td><td>0:17:04</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>693.69 м</td></tr><tr><td>рассчет 2:</td><td>706.81 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3144656</td></tr><tr><td>долгота:</td><td>69.2640372</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3144656,69.2640372" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3144656/69.2640372"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3144656&lon=69.2640372&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2640372,41.3144656&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3144656&lon=69.2640372" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3144656/69.2640372&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_7cf38db86bf8b4589db4fc8a13dbb21e.setContent(html_6aaa4d934e9b0af719e64d37af16ec4c);
+            
+        
+
+        circle_marker_e389f8c180d53326f3fcb8c65dad0a62.bindPopup(popup_7cf38db86bf8b4589db4fc8a13dbb21e)
+        ;
+
+        
+    
+    
+            var marker_c8214d5fd48abbe7c916379e3254bee5 = L.marker(
+                [41.3144656, 69.2640372],
+                {}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+            var icon_01aa49ecf77f0a0c84bfed1eefc7ea33 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_c8214d5fd48abbe7c916379e3254bee5.setIcon(icon_01aa49ecf77f0a0c84bfed1eefc7ea33);
+        
+    
+        var popup_0513760ac4c6c4ec26b625c92cf22613 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_73a9f7c270446ddd98187980d494e25a = $(`<div id="html_73a9f7c270446ddd98187980d494e25a" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>411.24 м</td></tr><tr><td>изменение:</td><td>-3.7 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 13:36</nobr></td></tr><tr><td>в пути:</td><td>0:17:04</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>693.69 м</td></tr><tr><td>рассчет 2:</td><td>706.81 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3144656</td></tr><tr><td>долгота:</td><td>69.2640372</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3144656,69.2640372" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3144656/69.2640372"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3144656&lon=69.2640372&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2640372,41.3144656&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3144656&lon=69.2640372" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3144656/69.2640372&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_0513760ac4c6c4ec26b625c92cf22613.setContent(html_73a9f7c270446ddd98187980d494e25a);
+            
+        
+
+        marker_c8214d5fd48abbe7c916379e3254bee5.bindPopup(popup_0513760ac4c6c4ec26b625c92cf22613)
+        ;
+
+        
+    
+    
+            var circle_marker_34d618e8c86d94d438e2dba80020476e = L.circleMarker(
+                [41.3122664, 69.2603611],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_a8409f97beebc3f4104519a7b95378d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b454e56eb65091fcc3e3127460bb1a8a = $(`<div id="html_b454e56eb65091fcc3e3127460bb1a8a" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>411.67 м</td></tr><tr><td>изменение:</td><td>-3.27 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 13:44</nobr></td></tr><tr><td>в пути:</td><td>0:25:00</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.15 км</td></tr><tr><td>рассчет 2:</td><td>1.16 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3122664</td></tr><tr><td>долгота:</td><td>69.2603611</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3122664,69.2603611" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3122664/69.2603611"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3122664&lon=69.2603611&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2603611,41.3122664&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3122664&lon=69.2603611" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3122664/69.2603611&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_a8409f97beebc3f4104519a7b95378d9.setContent(html_b454e56eb65091fcc3e3127460bb1a8a);
+            
+        
+
+        circle_marker_34d618e8c86d94d438e2dba80020476e.bindPopup(popup_a8409f97beebc3f4104519a7b95378d9)
+        ;
+
+        
+    
+    
+            var circle_marker_6e9573f731642056fb9abad1081f420f = L.circleMarker(
+                [41.3089031, 69.258388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_6914574f030d23bc4157c473349ed26f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_840d0d01112c8969844c877635713e0f = $(`<div id="html_840d0d01112c8969844c877635713e0f" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>412.74 м</td></tr><tr><td>изменение:</td><td>-2.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 13:52</nobr></td></tr><tr><td>в пути:</td><td>0:33:02</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.5 км</td></tr><tr><td>рассчет 2:</td><td>1.52 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3089031</td></tr><tr><td>долгота:</td><td>69.258388</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3089031,69.258388" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3089031/69.258388"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3089031&lon=69.258388&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.258388,41.3089031&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3089031&lon=69.258388" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3089031/69.258388&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_6914574f030d23bc4157c473349ed26f.setContent(html_840d0d01112c8969844c877635713e0f);
+            
+        
+
+        circle_marker_6e9573f731642056fb9abad1081f420f.bindPopup(popup_6914574f030d23bc4157c473349ed26f)
+        ;
+
+        
+    
+    
+            var marker_cfdf1bc40c702ca69d6862262c6860f2 = L.marker(
+                [41.3089031, 69.258388],
+                {}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+            var icon_cf02a5fb3f43b75481921caa23b3498c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_cfdf1bc40c702ca69d6862262c6860f2.setIcon(icon_cf02a5fb3f43b75481921caa23b3498c);
+        
+    
+        var popup_426a0e11b99a7f90c5116f2fa109fae9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c90fb44a30b92a4e93412a338347c222 = $(`<div id="html_c90fb44a30b92a4e93412a338347c222" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>412.74 м</td></tr><tr><td>изменение:</td><td>-2.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 13:52</nobr></td></tr><tr><td>в пути:</td><td>0:33:02</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.5 км</td></tr><tr><td>рассчет 2:</td><td>1.52 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3089031</td></tr><tr><td>долгота:</td><td>69.258388</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3089031,69.258388" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3089031/69.258388"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3089031&lon=69.258388&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.258388,41.3089031&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3089031&lon=69.258388" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3089031/69.258388&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_426a0e11b99a7f90c5116f2fa109fae9.setContent(html_c90fb44a30b92a4e93412a338347c222);
+            
+        
+
+        marker_cfdf1bc40c702ca69d6862262c6860f2.bindPopup(popup_426a0e11b99a7f90c5116f2fa109fae9)
+        ;
+
+        
+    
+    
+            var circle_marker_e0548f942603d06f8d2409bae2c4b425 = L.circleMarker(
+                [41.3078266, 69.2596237],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_8f731c189021043e92d21da78e9ecd6d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5471794cfd9f1815e9a8f29b4cd7f431 = $(`<div id="html_5471794cfd9f1815e9a8f29b4cd7f431" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>405.0 м</td></tr><tr><td>изменение:</td><td>-9.94 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 14:11</nobr></td></tr><tr><td>в пути:</td><td>0:52:23</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.91 км</td></tr><tr><td>рассчет 2:</td><td>1.94 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3078266</td></tr><tr><td>долгота:</td><td>69.2596237</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3078266,69.2596237" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3078266/69.2596237"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3078266&lon=69.2596237&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2596237,41.3078266&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3078266&lon=69.2596237" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3078266/69.2596237&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_8f731c189021043e92d21da78e9ecd6d.setContent(html_5471794cfd9f1815e9a8f29b4cd7f431);
+            
+        
+
+        circle_marker_e0548f942603d06f8d2409bae2c4b425.bindPopup(popup_8f731c189021043e92d21da78e9ecd6d)
+        ;
+
+        
+    
+    
+            var circle_marker_f62f572455ed67492218602cb1c486db = L.circleMarker(
+                [41.308078, 69.2602449],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_d520dbec5a81a98c59924bc660dd319e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_07f736939c7e71c3dc5a591a24aa7b9c = $(`<div id="html_07f736939c7e71c3dc5a591a24aa7b9c" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>420.4 м</td></tr><tr><td>изменение:</td><td>5.46 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 14:41</nobr></td></tr><tr><td>в пути:</td><td>1:22:27</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.41 км</td></tr><tr><td>рассчет 2:</td><td>2.45 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.308078</td></tr><tr><td>долгота:</td><td>69.2602449</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.308078,69.2602449" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.308078/69.2602449"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.308078&lon=69.2602449&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2602449,41.308078&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.308078&lon=69.2602449" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.308078/69.2602449&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_d520dbec5a81a98c59924bc660dd319e.setContent(html_07f736939c7e71c3dc5a591a24aa7b9c);
+            
+        
+
+        circle_marker_f62f572455ed67492218602cb1c486db.bindPopup(popup_d520dbec5a81a98c59924bc660dd319e)
+        ;
+
+        
+    
+    
+            var marker_e8fec3a47fa67f607da81bd1748f30fe = L.marker(
+                [41.308078, 69.2602449],
+                {}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+            var icon_70184a4ec864d469e24c9c449742ad75 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_e8fec3a47fa67f607da81bd1748f30fe.setIcon(icon_70184a4ec864d469e24c9c449742ad75);
+        
+    
+        var popup_bbb0999160a6f2ae847148b86ba89e85 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b75504cd29f64077559bd2dd606cb670 = $(`<div id="html_b75504cd29f64077559bd2dd606cb670" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>420.4 м</td></tr><tr><td>изменение:</td><td>5.46 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 14:41</nobr></td></tr><tr><td>в пути:</td><td>1:22:27</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.41 км</td></tr><tr><td>рассчет 2:</td><td>2.45 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.308078</td></tr><tr><td>долгота:</td><td>69.2602449</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.308078,69.2602449" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.308078/69.2602449"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.308078&lon=69.2602449&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2602449,41.308078&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.308078&lon=69.2602449" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.308078/69.2602449&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_bbb0999160a6f2ae847148b86ba89e85.setContent(html_b75504cd29f64077559bd2dd606cb670);
+            
+        
+
+        marker_e8fec3a47fa67f607da81bd1748f30fe.bindPopup(popup_bbb0999160a6f2ae847148b86ba89e85)
+        ;
+
+        
+    
+    
+            var circle_marker_1da2b13f5a73cb4fdd80a7540eae5bc0 = L.circleMarker(
+                [41.3065085, 69.2562007],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_ddba83b5a824a646b030f88ee6b28287 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc0c40b5c88eea5bcc17c48c0c15cd69 = $(`<div id="html_dc0c40b5c88eea5bcc17c48c0c15cd69" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>410.8 м</td></tr><tr><td>изменение:</td><td>-4.14 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 14:49</nobr></td></tr><tr><td>в пути:</td><td>1:30:26</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.88 км</td></tr><tr><td>рассчет 2:</td><td>2.94 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3065085</td></tr><tr><td>долгота:</td><td>69.2562007</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3065085,69.2562007" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3065085/69.2562007"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3065085&lon=69.2562007&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2562007,41.3065085&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3065085&lon=69.2562007" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3065085/69.2562007&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_ddba83b5a824a646b030f88ee6b28287.setContent(html_dc0c40b5c88eea5bcc17c48c0c15cd69);
+            
+        
+
+        circle_marker_1da2b13f5a73cb4fdd80a7540eae5bc0.bindPopup(popup_ddba83b5a824a646b030f88ee6b28287)
+        ;
+
+        
+    
+    
+            var circle_marker_367ccf7e6be21c42e0d86f46a6cee444 = L.circleMarker(
+                [41.3032851, 69.2535326],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_203befc9bb4ff4ade5fd6bb726c72a3a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd1fd94dc55de8b3479d90fa3e092653 = $(`<div id="html_dd1fd94dc55de8b3479d90fa3e092653" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>408.9 м</td></tr><tr><td>изменение:</td><td>-6.04 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 14:57</nobr></td></tr><tr><td>в пути:</td><td>1:38:34</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.22 км</td></tr><tr><td>рассчет 2:</td><td>3.28 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3032851</td></tr><tr><td>долгота:</td><td>69.2535326</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3032851,69.2535326" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3032851/69.2535326"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3032851&lon=69.2535326&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2535326,41.3032851&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3032851&lon=69.2535326" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3032851/69.2535326&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_203befc9bb4ff4ade5fd6bb726c72a3a.setContent(html_dd1fd94dc55de8b3479d90fa3e092653);
+            
+        
+
+        circle_marker_367ccf7e6be21c42e0d86f46a6cee444.bindPopup(popup_203befc9bb4ff4ade5fd6bb726c72a3a)
+        ;
+
+        
+    
+    
+            var marker_06d75fd173b4809bda2beb27b4441d4c = L.marker(
+                [41.3032851, 69.2535326],
+                {}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+            var icon_c0ef2a3c95bc3fab46fb7e272a070715 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_06d75fd173b4809bda2beb27b4441d4c.setIcon(icon_c0ef2a3c95bc3fab46fb7e272a070715);
+        
+    
+        var popup_bbfbc0f9dd868dae4b9255cf7645f56c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53b94fca99cbdd9964890abfa98d0104 = $(`<div id="html_53b94fca99cbdd9964890abfa98d0104" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>408.9 м</td></tr><tr><td>изменение:</td><td>-6.04 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 14:57</nobr></td></tr><tr><td>в пути:</td><td>1:38:34</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.22 км</td></tr><tr><td>рассчет 2:</td><td>3.28 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3032851</td></tr><tr><td>долгота:</td><td>69.2535326</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3032851,69.2535326" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3032851/69.2535326"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3032851&lon=69.2535326&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2535326,41.3032851&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3032851&lon=69.2535326" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3032851/69.2535326&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_bbfbc0f9dd868dae4b9255cf7645f56c.setContent(html_53b94fca99cbdd9964890abfa98d0104);
+            
+        
+
+        marker_06d75fd173b4809bda2beb27b4441d4c.bindPopup(popup_bbfbc0f9dd868dae4b9255cf7645f56c)
+        ;
+
+        
+    
+    
+            var circle_marker_7078b4dd00baeef2a0d5c77a260dc453 = L.circleMarker(
+                [41.3008609, 69.2505498],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_4c635fa0cd5ae9659408a3cd50f9bedc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_58cd2dc1d2dedf0be715d87caa10b895 = $(`<div id="html_58cd2dc1d2dedf0be715d87caa10b895" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>404.0 м</td></tr><tr><td>изменение:</td><td>-10.94 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 15:05</nobr></td></tr><tr><td>в пути:</td><td>1:45:53</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.63 км</td></tr><tr><td>рассчет 2:</td><td>3.68 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3008609</td></tr><tr><td>долгота:</td><td>69.2505498</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3008609,69.2505498" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3008609/69.2505498"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3008609&lon=69.2505498&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2505498,41.3008609&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3008609&lon=69.2505498" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3008609/69.2505498&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_4c635fa0cd5ae9659408a3cd50f9bedc.setContent(html_58cd2dc1d2dedf0be715d87caa10b895);
+            
+        
+
+        circle_marker_7078b4dd00baeef2a0d5c77a260dc453.bindPopup(popup_4c635fa0cd5ae9659408a3cd50f9bedc)
+        ;
+
+        
+    
+    
+            var circle_marker_3d1da85a3d9da3ae65750991121b4e6a = L.circleMarker(
+                [41.2979359, 69.2496261],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+        var popup_968337cab426b3a7e689b2a46c1097de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a050bab7ff711bc339b5dff403d3c2b = $(`<div id="html_6a050bab7ff711bc339b5dff403d3c2b" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>405.1 м</td></tr><tr><td>изменение:</td><td>-9.84 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 15:14</nobr></td></tr><tr><td>в пути:</td><td>1:55:09</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.97 км</td></tr><tr><td>рассчет 2:</td><td>4.03 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.2979359</td></tr><tr><td>долгота:</td><td>69.2496261</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.2979359,69.2496261" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.2979359/69.2496261"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.2979359&lon=69.2496261&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2496261,41.2979359&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.2979359&lon=69.2496261" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.2979359/69.2496261&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_968337cab426b3a7e689b2a46c1097de.setContent(html_6a050bab7ff711bc339b5dff403d3c2b);
+            
+        
+
+        circle_marker_3d1da85a3d9da3ae65750991121b4e6a.bindPopup(popup_968337cab426b3a7e689b2a46c1097de)
+        ;
+
+        
+    
+    
+            var marker_fb75c081abdd412d4aae46f02e71d780 = L.marker(
+                [41.2979359, 69.2496261],
+                {}
+            ).addTo(feature_group_241444406aec92f8ca46faa0e2694157);
+        
+    
+            var icon_3f601b0e4ab941da5099eae9bd262cc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_fb75c081abdd412d4aae46f02e71d780.setIcon(icon_3f601b0e4ab941da5099eae9bd262cc3);
+        
+    
+        var popup_cadfc9f00dbc33f7f5e93e48238256c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a711173073af52d63e1ed843bb7729c = $(`<div id="html_9a711173073af52d63e1ed843bb7729c" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>Мустакиллик - ТЦ NEXT(4.55 km)</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>405.1 м</td></tr><tr><td>изменение:</td><td>-9.84 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 15:14</nobr></td></tr><tr><td>в пути:</td><td>1:55:09</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.97 км</td></tr><tr><td>рассчет 2:</td><td>4.03 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.2979359</td></tr><tr><td>долгота:</td><td>69.2496261</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.2979359,69.2496261" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.2979359/69.2496261"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.2979359&lon=69.2496261&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2496261,41.2979359&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.2979359&lon=69.2496261" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.2979359/69.2496261&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_cadfc9f00dbc33f7f5e93e48238256c9.setContent(html_9a711173073af52d63e1ed843bb7729c);
+            
+        
+
+        marker_fb75c081abdd412d4aae46f02e71d780.bindPopup(popup_cadfc9f00dbc33f7f5e93e48238256c9)
+        ;
+
+        
+    
+    
+            var feature_group_637fd17acb48f2c48c6cb18929bdb021 = L.featureGroup(
+                {}
+            ).addTo(map_729db9471f3db4439ab113ea7367615b);
+        
+    
+            var poly_line_7ec68852e760633796edee7c45a979ed = L.polyline(
+                [[41.2987047, 69.2493943], [41.2987927, 69.2493264], [41.2988699, 69.249234], [41.2989595, 69.2492201], [41.2990611, 69.2492005], [41.2991417, 69.2491397], [41.2992569, 69.2491302], [41.2993761, 69.2490688], [41.2994589, 69.2490184], [41.299554, 69.2489847], [41.2996465, 69.2489354], [41.2997425, 69.2489178], [41.2998564, 69.2488609], [41.2999516, 69.2488183], [41.3000476, 69.2488067], [41.3001531, 69.2487915], [41.3002523, 69.2487683], [41.300356, 69.2487408], [41.3004484, 69.2486924], [41.3005439, 69.2486536], [41.3006239, 69.2485848], [41.3007147, 69.2485412], [41.3008068, 69.2485136], [41.3009009, 69.2484768], [41.301009, 69.2484494], [41.3010962, 69.2484128], [41.3012016, 69.2483811], [41.3012812, 69.2483205], [41.3013838, 69.2482992], [41.3014737, 69.2482659], [41.3015667, 69.2482279], [41.3016626, 69.2482146], [41.3017509, 69.2481918], [41.3018526, 69.2481631], [41.3019446, 69.2481255], [41.3020564, 69.248087], [41.3021443, 69.2480478], [41.3022682, 69.2479874], [41.3023665, 69.2479553], [41.3024656, 69.247919], [41.3025646, 69.2478823], [41.3026791, 69.2478835], [41.3027665, 69.2478199], [41.3028535, 69.2477841], [41.3029631, 69.2477983], [41.3030465, 69.247751], [41.3031209, 69.2476535], [41.3032207, 69.2476435], [41.3033206, 69.247596], [41.3033987, 69.2475179], [41.3034882, 69.2474814], [41.3035858, 69.2474288], [41.303678, 69.2473834], [41.3037642, 69.2472972], [41.3038453, 69.2472238], [41.3039162, 69.247136], [41.3039847, 69.2470296], [41.3040453, 69.2469024], [41.3040495, 69.2467824], [41.3040646, 69.246664], [41.3040915, 69.2465384], [41.3041619, 69.2464493], [41.3041173, 69.2463215], [41.3041074, 69.24616], [41.3040061, 69.2461825], [41.3039086, 69.2462036], [41.3038694, 69.2463209], [41.3037663, 69.2463691], [41.3036968, 69.2464471], [41.3035855, 69.2464904], [41.3035162, 69.2464111], [41.303454, 69.246308], [41.303346, 69.246254], [41.3031666, 69.245924], [41.3030755, 69.2457633], [41.3031243, 69.2457774], [41.3031552, 69.245518], [41.3030679, 69.2452451], [41.3029761, 69.2451909], [41.3028063, 69.2449026], [41.3027914, 69.2447622], [41.3028006, 69.2446138], [41.3028425, 69.2444881], [41.3028609, 69.2443655], [41.3028669, 69.244229], [41.302881, 69.2440967], [41.3029284, 69.24398], [41.3030039, 69.2438738], [41.3030513, 69.2437696], [41.3031181, 69.2436562], [41.3031608, 69.2435426], [41.3031633, 69.2433962], [41.303158, 69.2432497], [41.3030998, 69.2431497], [41.3029999, 69.2431571], [41.3028674, 69.2431478], [41.3027375, 69.2430598], [41.3026641, 69.2429385], [41.3025698, 69.2428412], [41.3025581, 69.2426976], [41.3025108, 69.242575], [41.302439, 69.2424852], [41.302377, 69.242365], [41.302265, 69.2423391], [41.3021781, 69.2422985], [41.3020854, 69.2422992], [41.3020036, 69.2423722], [41.3019182, 69.2424657], [41.3018433, 69.2425511], [41.3017608, 69.2426309], [41.3016665, 69.2426347], [41.3015792, 69.2425979], [41.301478, 69.2425915], [41.3013771, 69.2425985], [41.3012838, 69.2425808], [41.3011931, 69.2425726], [41.3010983, 69.2425103], [41.3010372, 69.2423954], [41.3009481, 69.2423094], [41.3008596, 69.2422704], [41.3008744, 69.2421491], [41.3008941, 69.2420116], [41.3009784, 69.2419626], [41.3010467, 69.2418542], [41.3011155, 69.2417644], [41.3011548, 69.2416406], [41.3011904, 69.2415301], [41.3012113, 69.2414119], [41.301302, 69.2414401], [41.3013631, 69.241344], [41.301357, 69.2412115], [41.3014223, 69.2411082], [41.3014956, 69.2410347], [41.3015415, 69.2409137], [41.3016195, 69.2408354], [41.3016422, 69.2407085], [41.3017183, 69.2406268], [41.3017745, 69.240488], [41.3018528, 69.2403918], [41.3018889, 69.2402703], [41.3019823, 69.2402472], [41.302082, 69.2401949], [41.3021739, 69.2401779], [41.3022903, 69.2401533], [41.3024007, 69.2402095], [41.3024905, 69.240223], [41.3023976, 69.2401963], [41.3023033, 69.2401444], [41.3021978, 69.2401628], [41.3021048, 69.2401627], [41.3019947, 69.2401957], [41.301876, 69.2401784], [41.3017813, 69.2401448], [41.3016822, 69.240128], [41.301581, 69.2400888], [41.3014757, 69.2400718], [41.3013891, 69.240033], [41.3012835, 69.2400193], [41.3011942, 69.2399905], [41.3011035, 69.2400342], [41.3010131, 69.2399549], [41.3009085, 69.2399537], [41.3008072, 69.2400072], [41.3007217, 69.2400462], [41.3006489, 69.2401276], [41.3005868, 69.2402227], [41.3004985, 69.2401928], [41.3004194, 69.2402842], [41.3003199, 69.2402626], [41.3002183, 69.2403049], [41.300097, 69.2402761], [41.3000991, 69.2402655], [41.3001193, 69.2402467], [41.300033, 69.2401894], [41.2999924, 69.2400816], [41.2998889, 69.2400158], [41.2998048, 69.2399583], [41.2997419, 69.2398473], [41.2996677, 69.2397709], [41.2995991, 69.23967], [41.2995305, 69.2395704], [41.299448, 69.2394975], [41.299493, 69.2393785], [41.2995225, 69.239242], [41.2996128, 69.2392305], [41.2997159, 69.2392848], [41.2998165, 69.2393549], [41.2999222, 69.2394206], [41.3000104, 69.2395016], [41.3001135, 69.2395482], [41.3002042, 69.2396075], [41.3002879, 69.2397119], [41.3003893, 69.2397525], [41.3004926, 69.2397626], [41.300597, 69.2397356], [41.3006897, 69.2397029], [41.3007921, 69.2397089], [41.3008993, 69.239691], [41.3009977, 69.2396977], [41.3010941, 69.2396595], [41.3012062, 69.2396634], [41.3012483, 69.2395445], [41.3012462, 69.2394053], [41.3013179, 69.2394865], [41.3013908, 69.2393877], [41.3013758, 69.2392534], [41.3014019, 69.2391054], [41.3014727, 69.2390289], [41.3015629, 69.2390121], [41.3016549, 69.2389657], [41.3016909, 69.2388474], [41.3016916, 69.2386977], [41.3016948, 69.2385502], [41.301774, 69.238467], [41.3018177, 69.2383503], [41.3018771, 69.2382339], [41.3019623, 69.2381495], [41.3020184, 69.2380196], [41.3020546, 69.2379014], [41.3020325, 69.2377788], [41.3020157, 69.237652], [41.3020362, 69.2375346], [41.3020616, 69.2373689], [41.3020256, 69.2372351], [41.3020383, 69.2370986], [41.3020373, 69.2369787], [41.3020643, 69.236859], [41.3020481, 69.2367284], [41.302018, 69.2365875], [41.3019993, 69.236462], [41.3020399, 69.2363456], [41.3020569, 69.2362156], [41.3020717, 69.2360923], [41.3020488, 69.2359748], [41.3020354, 69.2358448], [41.3020693, 69.2357303], [41.3020718, 69.235585], [41.3020388, 69.2354643], [41.3020494, 69.2353399], [41.3020408, 69.2351873], [41.3020527, 69.2350609], [41.3020625, 69.2349406], [41.3020828, 69.2347974], [41.3021642, 69.2347268], [41.3022545, 69.2347465], [41.3023685, 69.2347941], [41.3024802, 69.2348432], [41.3025676, 69.2347859], [41.30266, 69.234781], [41.3027642, 69.2347743], [41.3028512, 69.2348258], [41.3029376, 69.2348987], [41.3030197, 69.2349584], [41.3031056, 69.2350426], [41.3031917, 69.2350931], [41.3032907, 69.2351748], [41.3033784, 69.2352595], [41.3034603, 69.2353099], [41.3035435, 69.235391], [41.3035917, 69.235494]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": "4.5"}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+            var circle_marker_8beae49cbbe7e0f5292ef30468ed9bc1 = L.circleMarker(
+                [41.2987047, 69.2493943],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+        var popup_f771f23c24608afe6719ae9de6b9de44 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb6393b13f76f94d2591f2a451f87f92 = $(`<div id="html_cb6393b13f76f94d2591f2a451f87f92" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>394.19 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 16:09</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.2987047</td></tr><tr><td>долгота:</td><td>69.2493943</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.2987047,69.2493943" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.2987047/69.2493943"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.2987047&lon=69.2493943&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2493943,41.2987047&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.2987047&lon=69.2493943" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.2987047/69.2493943&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_f771f23c24608afe6719ae9de6b9de44.setContent(html_cb6393b13f76f94d2591f2a451f87f92);
+            
+        
+
+        circle_marker_8beae49cbbe7e0f5292ef30468ed9bc1.bindPopup(popup_f771f23c24608afe6719ae9de6b9de44)
+        ;
+
+        
+    
+    
+            var marker_4485068d01d7b304e6bdf513c9764a50 = L.marker(
+                [41.2987047, 69.2493943],
+                {}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+            var icon_1822b30c1f13b17b04ffab30219bdef3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_4485068d01d7b304e6bdf513c9764a50.setIcon(icon_1822b30c1f13b17b04ffab30219bdef3);
+        
+    
+        var popup_d546568c6afa964e004cabe084f5cf83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c6547e258aa68e620fe5c44c3206987e = $(`<div id="html_c6547e258aa68e620fe5c44c3206987e" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>394.19 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 16:09</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.2987047</td></tr><tr><td>долгота:</td><td>69.2493943</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.2987047,69.2493943" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.2987047/69.2493943"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.2987047&lon=69.2493943&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2493943,41.2987047&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.2987047&lon=69.2493943" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.2987047/69.2493943&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_d546568c6afa964e004cabe084f5cf83.setContent(html_c6547e258aa68e620fe5c44c3206987e);
+            
+        
+
+        marker_4485068d01d7b304e6bdf513c9764a50.bindPopup(popup_d546568c6afa964e004cabe084f5cf83)
+        ;
+
+        
+    
+    
+            var circle_marker_b2ad2a62cfbda7b5374deb7951c66298 = L.circleMarker(
+                [41.3012016, 69.2483811],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+        var popup_065bd52fb4c619d37c5d423d53ff4c86 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9ec816d9556ab48877dbb70682bb4a3 = $(`<div id="html_a9ec816d9556ab48877dbb70682bb4a3" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>402.96 м</td></tr><tr><td>изменение:</td><td>8.78 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 16:14</nobr></td></tr><tr><td>в пути:</td><td>0:04:38</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>155.92 м</td></tr><tr><td>рассчет 2:</td><td>162.25 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3012016</td></tr><tr><td>долгота:</td><td>69.2483811</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3012016,69.2483811" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3012016/69.2483811"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3012016&lon=69.2483811&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2483811,41.3012016&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3012016&lon=69.2483811" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3012016/69.2483811&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_065bd52fb4c619d37c5d423d53ff4c86.setContent(html_a9ec816d9556ab48877dbb70682bb4a3);
+            
+        
+
+        circle_marker_b2ad2a62cfbda7b5374deb7951c66298.bindPopup(popup_065bd52fb4c619d37c5d423d53ff4c86)
+        ;
+
+        
+    
+    
+            var circle_marker_341ec533c6d4418587ce5468630345f3 = L.circleMarker(
+                [41.303678, 69.2473834],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+        var popup_acaf196d4d9eb51c9e3e2dbbf01f3946 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1f81dc387f18fd751804caaf1167edd7 = $(`<div id="html_1f81dc387f18fd751804caaf1167edd7" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>406.69 м</td></tr><tr><td>изменение:</td><td>12.51 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 16:18</nobr></td></tr><tr><td>в пути:</td><td>0:09:10</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>313.0 м</td></tr><tr><td>рассчет 2:</td><td>320.62 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.303678</td></tr><tr><td>долгота:</td><td>69.2473834</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.303678,69.2473834" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.303678/69.2473834"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.303678&lon=69.2473834&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2473834,41.303678&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.303678&lon=69.2473834" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.303678/69.2473834&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_acaf196d4d9eb51c9e3e2dbbf01f3946.setContent(html_1f81dc387f18fd751804caaf1167edd7);
+            
+        
+
+        circle_marker_341ec533c6d4418587ce5468630345f3.bindPopup(popup_acaf196d4d9eb51c9e3e2dbbf01f3946)
+        ;
+
+        
+    
+    
+            var marker_00af93ca28980f6c718633027fdf6b2d = L.marker(
+                [41.303678, 69.2473834],
+                {}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+            var icon_cbe2bb6cee39d5094d2bcde2cb0818f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_00af93ca28980f6c718633027fdf6b2d.setIcon(icon_cbe2bb6cee39d5094d2bcde2cb0818f8);
+        
+    
+        var popup_d0619877ed49f38aaba4df98c19e7d63 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2d6e9a572a2ec2f2bac94942cd7802d = $(`<div id="html_d2d6e9a572a2ec2f2bac94942cd7802d" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>406.69 м</td></tr><tr><td>изменение:</td><td>12.51 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 16:18</nobr></td></tr><tr><td>в пути:</td><td>0:09:10</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>313.0 м</td></tr><tr><td>рассчет 2:</td><td>320.62 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.303678</td></tr><tr><td>долгота:</td><td>69.2473834</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.303678,69.2473834" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.303678/69.2473834"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.303678&lon=69.2473834&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2473834,41.303678&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.303678&lon=69.2473834" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.303678/69.2473834&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_d0619877ed49f38aaba4df98c19e7d63.setContent(html_d2d6e9a572a2ec2f2bac94942cd7802d);
+            
+        
+
+        marker_00af93ca28980f6c718633027fdf6b2d.bindPopup(popup_d0619877ed49f38aaba4df98c19e7d63)
+        ;
+
+        
+    
+    
+            var circle_marker_46d674d3bc3251f875cb71813deab223 = L.circleMarker(
+                [41.3029761, 69.2451909],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+        var popup_20dfd2a2f70d6faa349b8bc9ee591799 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64e5879a9f042cdb8a263351757e3401 = $(`<div id="html_64e5879a9f042cdb8a263351757e3401" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>415.22 м</td></tr><tr><td>изменение:</td><td>21.04 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 17:40</nobr></td></tr><tr><td>в пути:</td><td>1:30:52</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>650.29 м</td></tr><tr><td>рассчет 2:</td><td>670.01 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3029761</td></tr><tr><td>долгота:</td><td>69.2451909</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3029761,69.2451909" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3029761/69.2451909"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3029761&lon=69.2451909&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2451909,41.3029761&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3029761&lon=69.2451909" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3029761/69.2451909&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_20dfd2a2f70d6faa349b8bc9ee591799.setContent(html_64e5879a9f042cdb8a263351757e3401);
+            
+        
+
+        circle_marker_46d674d3bc3251f875cb71813deab223.bindPopup(popup_20dfd2a2f70d6faa349b8bc9ee591799)
+        ;
+
+        
+    
+    
+            var circle_marker_b93dcdd1bbbcd9c810978cfca5500f73 = L.circleMarker(
+                [41.3021781, 69.2422985],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+        var popup_828fc7388f6316eaa3861ea0adecb019 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d282f3cf73a7958408de2ab13a774c59 = $(`<div id="html_d282f3cf73a7958408de2ab13a774c59" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>409.18 м</td></tr><tr><td>изменение:</td><td>15.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 17:46</nobr></td></tr><tr><td>в пути:</td><td>1:36:44</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>990.72 м</td></tr><tr><td>рассчет 2:</td><td>1.01 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3021781</td></tr><tr><td>долгота:</td><td>69.2422985</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3021781,69.2422985" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3021781/69.2422985"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3021781&lon=69.2422985&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2422985,41.3021781&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3021781&lon=69.2422985" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3021781/69.2422985&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_828fc7388f6316eaa3861ea0adecb019.setContent(html_d282f3cf73a7958408de2ab13a774c59);
+            
+        
+
+        circle_marker_b93dcdd1bbbcd9c810978cfca5500f73.bindPopup(popup_828fc7388f6316eaa3861ea0adecb019)
+        ;
+
+        
+    
+    
+            var marker_c84bd8aaab00ad44e9af521a98de2b58 = L.marker(
+                [41.3021781, 69.2422985],
+                {}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+            var icon_20ea11bc34f0f2f8a5d148cb834b1976 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_c84bd8aaab00ad44e9af521a98de2b58.setIcon(icon_20ea11bc34f0f2f8a5d148cb834b1976);
+        
+    
+        var popup_1973ec8f56b815f28ff6a96655a9a897 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9a654b895e937a4ad3ffe8133ecc820 = $(`<div id="html_b9a654b895e937a4ad3ffe8133ecc820" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>409.18 м</td></tr><tr><td>изменение:</td><td>15.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 17:46</nobr></td></tr><tr><td>в пути:</td><td>1:36:44</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>990.72 м</td></tr><tr><td>рассчет 2:</td><td>1.01 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3021781</td></tr><tr><td>долгота:</td><td>69.2422985</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3021781,69.2422985" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3021781/69.2422985"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3021781&lon=69.2422985&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2422985,41.3021781&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3021781&lon=69.2422985" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3021781/69.2422985&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_1973ec8f56b815f28ff6a96655a9a897.setContent(html_b9a654b895e937a4ad3ffe8133ecc820);
+            
+        
+
+        marker_c84bd8aaab00ad44e9af521a98de2b58.bindPopup(popup_1973ec8f56b815f28ff6a96655a9a897)
+        ;
+
+        
+    
+    
+            var circle_marker_87b16928c9550250247dc8b87a4fefa4 = L.circleMarker(
+                [41.301357, 69.2412115],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+        var popup_4b78b29afb56ca60f7035d5e4b82510f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_93a96a006e8c780850636601253d3c20 = $(`<div id="html_93a96a006e8c780850636601253d3c20" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>406.5 м</td></tr><tr><td>изменение:</td><td>12.31 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 17:55</nobr></td></tr><tr><td>в пути:</td><td>1:45:34</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.22 км</td></tr><tr><td>рассчет 2:</td><td>1.24 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.301357</td></tr><tr><td>долгота:</td><td>69.2412115</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.301357,69.2412115" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.301357/69.2412115"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.301357&lon=69.2412115&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2412115,41.301357&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.301357&lon=69.2412115" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.301357/69.2412115&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_4b78b29afb56ca60f7035d5e4b82510f.setContent(html_93a96a006e8c780850636601253d3c20);
+            
+        
+
+        circle_marker_87b16928c9550250247dc8b87a4fefa4.bindPopup(popup_4b78b29afb56ca60f7035d5e4b82510f)
+        ;
+
+        
+    
+    
+            var circle_marker_f65298b751415decee8ac84480beb17e = L.circleMarker(
+                [41.3013891, 69.240033],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+        var popup_5bc603bc64a73deecfca4c68b11c9e08 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f438a1a31e4379a64b1f5f5ba452d739 = $(`<div id="html_f438a1a31e4379a64b1f5f5ba452d739" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>406.16 м</td></tr><tr><td>изменение:</td><td>11.97 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 18:00</nobr></td></tr><tr><td>в пути:</td><td>1:51:06</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.42 км</td></tr><tr><td>рассчет 2:</td><td>1.44 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3013891</td></tr><tr><td>долгота:</td><td>69.240033</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3013891,69.240033" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3013891/69.240033"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3013891&lon=69.240033&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.240033,41.3013891&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3013891&lon=69.240033" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3013891/69.240033&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_5bc603bc64a73deecfca4c68b11c9e08.setContent(html_f438a1a31e4379a64b1f5f5ba452d739);
+            
+        
+
+        circle_marker_f65298b751415decee8ac84480beb17e.bindPopup(popup_5bc603bc64a73deecfca4c68b11c9e08)
+        ;
+
+        
+    
+    
+            var marker_89b9530cb2efade6cdb47137afad09b2 = L.marker(
+                [41.3013891, 69.240033],
+                {}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+            var icon_563dae708f68bead60e3e7aa3cda19b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_89b9530cb2efade6cdb47137afad09b2.setIcon(icon_563dae708f68bead60e3e7aa3cda19b5);
+        
+    
+        var popup_3a9f62999b94c16d666ecf6313528f80 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64955b8e3c852f2983a52c1d722405ca = $(`<div id="html_64955b8e3c852f2983a52c1d722405ca" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>406.16 м</td></tr><tr><td>изменение:</td><td>11.97 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 18:00</nobr></td></tr><tr><td>в пути:</td><td>1:51:06</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.42 км</td></tr><tr><td>рассчет 2:</td><td>1.44 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3013891</td></tr><tr><td>долгота:</td><td>69.240033</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3013891,69.240033" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3013891/69.240033"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3013891&lon=69.240033&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.240033,41.3013891&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3013891&lon=69.240033" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3013891/69.240033&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_3a9f62999b94c16d666ecf6313528f80.setContent(html_64955b8e3c852f2983a52c1d722405ca);
+            
+        
+
+        marker_89b9530cb2efade6cdb47137afad09b2.bindPopup(popup_3a9f62999b94c16d666ecf6313528f80)
+        ;
+
+        
+    
+    
+            var circle_marker_f7d7a89abc56ed155c424618e1a2544b = L.circleMarker(
+                [41.299493, 69.2393785],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+        var popup_0252eddc6654fd6238f7e84768e46723 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1816649d421a5acbf7416be302a3aaf2 = $(`<div id="html_1816649d421a5acbf7416be302a3aaf2" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>406.4 м</td></tr><tr><td>изменение:</td><td>12.22 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 18:06</nobr></td></tr><tr><td>в пути:</td><td>1:56:54</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.62 км</td></tr><tr><td>рассчет 2:</td><td>1.64 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.299493</td></tr><tr><td>долгота:</td><td>69.2393785</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.299493,69.2393785" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.299493/69.2393785"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.299493&lon=69.2393785&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2393785,41.299493&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.299493&lon=69.2393785" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.299493/69.2393785&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_0252eddc6654fd6238f7e84768e46723.setContent(html_1816649d421a5acbf7416be302a3aaf2);
+            
+        
+
+        circle_marker_f7d7a89abc56ed155c424618e1a2544b.bindPopup(popup_0252eddc6654fd6238f7e84768e46723)
+        ;
+
+        
+    
+    
+            var circle_marker_8434f8c28b1ef4db2bbab10500ce89aa = L.circleMarker(
+                [41.3015629, 69.2390121],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+        var popup_5b5fea29c731f7920edd0bbeab30b17e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3dc538c26c01071ac370ef0949b9d686 = $(`<div id="html_3dc538c26c01071ac370ef0949b9d686" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>404.88 м</td></tr><tr><td>изменение:</td><td>10.69 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 18:11</nobr></td></tr><tr><td>в пути:</td><td>2:01:30</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.84 км</td></tr><tr><td>рассчет 2:</td><td>1.86 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3015629</td></tr><tr><td>долгота:</td><td>69.2390121</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3015629,69.2390121" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3015629/69.2390121"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3015629&lon=69.2390121&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2390121,41.3015629&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3015629&lon=69.2390121" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3015629/69.2390121&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_5b5fea29c731f7920edd0bbeab30b17e.setContent(html_3dc538c26c01071ac370ef0949b9d686);
+            
+        
+
+        circle_marker_8434f8c28b1ef4db2bbab10500ce89aa.bindPopup(popup_5b5fea29c731f7920edd0bbeab30b17e)
+        ;
+
+        
+    
+    
+            var marker_26c5c4938b51f55297fb57b1ecf88088 = L.marker(
+                [41.3015629, 69.2390121],
+                {}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+            var icon_a29c9c9ace5c75a2b4d308c3a5a2d420 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_26c5c4938b51f55297fb57b1ecf88088.setIcon(icon_a29c9c9ace5c75a2b4d308c3a5a2d420);
+        
+    
+        var popup_e4825979c3332a9c59efa77e2fb3ed2b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_762164c0a9e0deb6385d9656b1668c89 = $(`<div id="html_762164c0a9e0deb6385d9656b1668c89" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>404.88 м</td></tr><tr><td>изменение:</td><td>10.69 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 18:11</nobr></td></tr><tr><td>в пути:</td><td>2:01:30</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.84 км</td></tr><tr><td>рассчет 2:</td><td>1.86 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3015629</td></tr><tr><td>долгота:</td><td>69.2390121</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3015629,69.2390121" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3015629/69.2390121"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3015629&lon=69.2390121&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2390121,41.3015629&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3015629&lon=69.2390121" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3015629/69.2390121&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_e4825979c3332a9c59efa77e2fb3ed2b.setContent(html_762164c0a9e0deb6385d9656b1668c89);
+            
+        
+
+        marker_26c5c4938b51f55297fb57b1ecf88088.bindPopup(popup_e4825979c3332a9c59efa77e2fb3ed2b)
+        ;
+
+        
+    
+    
+            var circle_marker_37c369e5428721312094c6d9808e9ecd = L.circleMarker(
+                [41.3020354, 69.2358448],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+        var popup_5ce8c5e5e0288e25a912a176d5f235e0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e203f0ccfddb657d4fbab51006adfd1 = $(`<div id="html_7e203f0ccfddb657d4fbab51006adfd1" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>401.57 м</td></tr><tr><td>изменение:</td><td>7.38 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 18:15</nobr></td></tr><tr><td>в пути:</td><td>2:05:58</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.19 км</td></tr><tr><td>рассчет 2:</td><td>2.22 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3020354</td></tr><tr><td>долгота:</td><td>69.2358448</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3020354,69.2358448" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3020354/69.2358448"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3020354&lon=69.2358448&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.2358448,41.3020354&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3020354&lon=69.2358448" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3020354/69.2358448&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_5ce8c5e5e0288e25a912a176d5f235e0.setContent(html_7e203f0ccfddb657d4fbab51006adfd1);
+            
+        
+
+        circle_marker_37c369e5428721312094c6d9808e9ecd.bindPopup(popup_5ce8c5e5e0288e25a912a176d5f235e0)
+        ;
+
+        
+    
+    
+            var marker_ba36a7c6d220847e26e3f00ebb3582f2 = L.marker(
+                [41.3035917, 69.235494],
+                {}
+            ).addTo(feature_group_637fd17acb48f2c48c6cb18929bdb021);
+        
+    
+            var icon_b766adb9b12bfe7546cd64ba6a4d8662 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_ba36a7c6d220847e26e3f00ebb3582f2.setIcon(icon_b766adb9b12bfe7546cd64ba6a4d8662);
+        
+    
+        var popup_e64ce35cee553ac70957852fb1377176 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c48f255d364a0941d928d75c049a356e = $(`<div id="html_c48f255d364a0941d928d75c049a356e" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>ТЦ NEXT - Миллиц Бог(3 км) </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>398.32 м</td></tr><tr><td>изменение:</td><td>4.14 м</td></tr><tr><td><b>Время:</b></td><td><nobr>14.04.2024 18:20</nobr></td></tr><tr><td>в пути:</td><td>2:11:10</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.44 км</td></tr><tr><td>рассчет 2:</td><td>2.47 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>41.3035917</td></tr><tr><td>долгота:</td><td>69.235494</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=41.3035917,69.235494" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/41.3035917/69.235494"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=41.3035917&lon=69.235494&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=69.235494,41.3035917&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=41.3035917&lon=69.235494" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/41.3035917/69.235494&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_e64ce35cee553ac70957852fb1377176.setContent(html_c48f255d364a0941d928d75c049a356e);
+            
+        
+
+        marker_ba36a7c6d220847e26e3f00ebb3582f2.bindPopup(popup_e64ce35cee553ac70957852fb1377176)
+        ;
+
+        
+    
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topright", "title": "\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u043d\u0430 \u043f\u043e\u043b\u043d\u043e\u043c \u044d\u043a\u0440\u0430\u043d\u0435", "titleCancel": "\u041d\u0430\u0436\u043c\u0438 \u0434\u043b\u044f \u0432\u044b\u0445\u043e\u0434\u0430"}
+            ).addTo(map_729db9471f3db4439ab113ea7367615b);
+        
+    
+            var layer_control_08339a307b3a0d4f60a4ba1f5ca01d8a = {
+                base_layers : {
+                    "OpenStreet Map" : tile_layer_7cc9517d874df6ae41c4d9207a582684,
+                    "CyclOSM" : tile_layer_ef09af1525f3a086945bbe85693b7517,
+                    "Stamen Terrain" : tile_layer_679391821c3fb00c20569a7af2ef7aac,
+                    "Google Maps" : tile_layer_d1eaee8f4ff3a0f1984495d6994c6704,
+                    "Cartodb Positron" : tile_layer_85837a95c54aa148ab1d43c19015dcb0,
+                },
+                overlays :  {
+                    "\u003cfont color=\"purple\"\u003e\u041f\u0440\u043e\u0433\u043d\u043e\u0437 \u043f\u043e\u0433\u043e\u0434\u044b\u003c/font\u003e" : feature_group_f2f4ea10c1378b04b37c8eee07400b63,
+                    "\u003cfont color=\"blue\" size=\"4\"\u003e---\u003c/font\u003e \u041c\u0443\u0441\u0442\u0430\u043a\u0438\u043b\u043b\u0438\u043a - \u0422\u0426 NEXT(4.55 km)  2024-04-14 " : feature_group_241444406aec92f8ca46faa0e2694157,
+                    "\u003cfont color=\"blue\" size=\"4\"\u003e---\u003c/font\u003e \u0422\u0426 NEXT - \u041c\u0438\u043b\u043b\u0438\u0446 \u0411\u043e\u0433(3 \u043a\u043c)   2024-04-14 " : feature_group_637fd17acb48f2c48c6cb18929bdb021,
+                },
+            };
+            L.control.layers(
+                layer_control_08339a307b3a0d4f60a4ba1f5ca01d8a.base_layers,
+                layer_control_08339a307b3a0d4f60a4ba1f5ca01d8a.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_729db9471f3db4439ab113ea7367615b);
+            tile_layer_ef09af1525f3a086945bbe85693b7517.remove();
+            tile_layer_679391821c3fb00c20569a7af2ef7aac.remove();
+            tile_layer_d1eaee8f4ff3a0f1984495d6994c6704.remove();
+            tile_layer_85837a95c54aa148ab1d43c19015dcb0.remove();
+            feature_group_f2f4ea10c1378b04b37c8eee07400b63.remove();
+        
+    
+            var mouse_position_5dcab902789087666b21afc8be89be17 = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "", "separator": " : "}
+            );
+            mouse_position_5dcab902789087666b21afc8be89be17.options["latFormatter"] =
+                undefined;
+            mouse_position_5dcab902789087666b21afc8be89be17.options["lngFormatter"] =
+                undefined;
+            map_729db9471f3db4439ab113ea7367615b.addControl(mouse_position_5dcab902789087666b21afc8be89be17);
+ </script>
+</html>
