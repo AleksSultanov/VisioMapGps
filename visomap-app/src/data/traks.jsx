@@ -1,5 +1,12 @@
 export const tracks = [
   {
+    map: "mapTashkent20241006.html",
+    cover: "gif",
+    dscr: "Ташкент от Мустакиллик в доль анхора и обратно через Педагогический институт",
+    place: "tashkent",
+    date: "20241006",
+  },
+  {
     map: "mapBadak20240608.html",
     cover: "gif",
     dscr: "Озеро Бадак",
