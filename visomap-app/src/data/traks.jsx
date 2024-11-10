@@ -1,5 +1,26 @@
 export const tracks = [
   {
+    map: "mapTashkent20241110.html",
+    cover: "gif",
+    dscr: "Ташкент от Бодамзар в доль анхора и в City Mall",
+    place: "tashkent",
+    date: "20241110",
+  },
+  {
+    map: "mapTashkent20241027.html",
+    cover: "gif",
+    dscr: "Ташкент от Мустакиллик в доль анхора и обратно через City Mall",
+    place: "tashkent",
+    date: "20241027",
+  },
+  {
+    map: "mapTashkent20241020.html",
+    cover: "gif",
+    dscr: "Ташкент от Мустакиллик в доль анхора и обратно через парк Бабура",
+    place: "tashkent",
+    date: "20241020",
+  },
+  {
     map: "mapTashkent20241006.html",
     cover: "gif",
     dscr: "Ташкент от Мустакиллик в доль анхора и обратно через Педагогический институт",
