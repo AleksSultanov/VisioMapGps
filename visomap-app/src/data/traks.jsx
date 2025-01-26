@@ -1,5 +1,26 @@
 export const tracks = [
   {
+    map: "mapTashkent20250126.html",
+    cover: "gif",
+    dscr: "Ташкент от Мустакиллик до метро Ешлик",
+    place: "tashkent",
+    date: "20250126",
+  },
+  {
+    map: "mapTashkent20250119.html",
+    cover: "gif",
+    dscr: "Ташкент от Мустакиллик через Анхор к метро А Темура",
+    place: "tashkent",
+    date: "20250119",
+  },
+  {
+    map: "mapTashkent20241222.html",
+    cover: "gif",
+    dscr: "Ташкент от Мустакиллик кольцо через улицы А Навои и И Каримова",
+    place: "tashkent",
+    date: "20241222",
+  },
+  {
     map: "mapTashkent20241201.html",
     cover: "gif",
     dscr: "Ташкент. Дорога в парк Янги Узбекистан",
