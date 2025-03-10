@@ -1,15 +1,15 @@
 export const tracks = [
   {
-    map: "mapAcsacota.html",
-    cover: "gif",
-    dscr: "Аксаката маршруты с 2021 по 2025",
-    place: "acsacata",
-    date: "20210425,20250309",
-  },
-  {
     map: "mapAcsacota20250309.html",
     cover: "gif",
     dscr: "Аксаката прогулка",
+    place: "acsacata",
+    date: "20250309",
+  },
+  {
+    map: "mapAcsacota.html",
+    cover: "gif",
+    dscr: "Аксаката маршруты с 2021 по 2025",
     place: "acsacata",
     date: "20250309",
   },
