@@ -139,4 +139,8 @@ export const places = {
     name: "Таиланд",
     cover: "coverThailand.gif",
   },
+  yangiyol: {
+    name: "г. Янгиюль",
+    cover: "coverYangiyol.gif",
+  },
 };

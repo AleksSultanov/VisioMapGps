@@ -1,5 +1,40 @@
 export const tracks = [
   {
+    map: "mapAcsacota.html",
+    cover: "gif",
+    dscr: "Аксаката маршруты с 2021 по 2025",
+    place: "acsacata",
+    date: "20210425,20250309",
+  },
+  {
+    map: "mapAcsacota20250309.html",
+    cover: "gif",
+    dscr: "Аксаката прогулка",
+    place: "acsacata",
+    date: "20250309",
+  },
+  {
+    map: "mapTashkent20250302.html",
+    cover: "gif",
+    dscr: "Поездка в аквапарк Янгиюля из Ташкента через парк Фуркат",
+    place: "tashkent,yangiyol",
+    date: "20250302",
+  },
+  {
+    map: "mapTashkent20250223.html",
+    cover: "gif",
+    dscr: "Ташкент от Мустакиллик через Некст , ПедИниститут до А Тимура",
+    place: "tashkent",
+    date: "20250223",
+  },
+  {
+    map: "mapTashkent20250222.html",
+    cover: "gif",
+    dscr: "Поездка в аквапарк Янгиюля из Ташкента",
+    place: "tashkent,yangiyol",
+    date: "20250222",
+  },
+  {
     map: "mapTashkent20250216.html",
     cover: "gif",
     dscr: "Ташкент от Мустакиллик парк Анхор до А Тимура",
