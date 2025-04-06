@@ -1,5 +1,11 @@
 export const tracks = [
   {
+    map: "mapTashkent20250331.html",
+    cover: "gif",
+    dscr: "Ташкент кольцо от м. Мустакиллик в доль Ахора, Бешагач, м. Амира Темура", 
+    place: "tashkent",
+    date: "20250331",
+  },{
     map: "mapTashkent20250322.html",
     cover: "gif",
     dscr: "Ташкент От дома до ЭкоБазара", 
