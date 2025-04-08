@@ -1,11 +1,33 @@
 export const tracks = [
   {
+    map: "mapTashkent20250408.html",
+    cover: "gif",
+    dscr: "Ташкент прогулка от дома до м.Х Олимжана и обратно", 
+    place: "tashkent",
+    date: "20250408",
+  },
+  {
+    map: "mapTashkent20250404.html",
+    cover: "gif",
+    dscr: "Ташкент прогулка от дома до Новомосковской и обратно", 
+    place: "tashkent",
+    date: "20250404",
+  },
+  {
+    map: "mapTashkent20250402.html",
+    cover: "gif",
+    dscr: "Ташкент прогулка от дома до м.Пушкина и обратно", 
+    place: "tashkent",
+    date: "20250402",
+  },
+  {
     map: "mapTashkent20250331.html",
     cover: "gif",
     dscr: "Ташкент кольцо от м. Мустакиллик в доль Ахора, Бешагач, м. Амира Темура", 
     place: "tashkent",
     date: "20250331",
-  },{
+  },
+  {
     map: "mapTashkent20250322.html",
     cover: "gif",
     dscr: "Ташкент От дома до ЭкоБазара", 
