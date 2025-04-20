@@ -1,5 +1,12 @@
 export const tracks = [
   {
+    map: "mapTashkent20250420.html",
+    cover: "gif",
+    dscr: "Ташкент м.Мустакиллик - м.Пахтакор - Ахор - м.Амир Темур - м.Буюк Ипак Йули", 
+    place: "tashkent",
+    date: "20250420",
+  },
+  {
     map: "mapTashkent20250408.html",
     cover: "gif",
     dscr: "Ташкент прогулка от дома до м.Х Олимжана и обратно", 
