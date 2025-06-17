@@ -1,5 +1,40 @@
 export const tracks = [
   {
+    map: "mapAntalya20250614.html",
+    cover: "gif",
+    dscr: "Анталия. Дорога в аэропорт Анталии", 
+    place: "antalya",
+    date: "20250614",
+  },
+  {
+    map: "mapAntalya20250613.html",
+    cover: "gif",
+    dscr: "Анталия. Прогулка по парку возле отеля", 
+    place: "antalya",
+    date: "20250613",
+  },
+  {
+    map: "mapAntalya20250611.html",
+    cover: "gif",
+    dscr: "Анталия. Прогулка до ТЦ Анталия", 
+    place: "antalya",
+    date: "20250611",
+  },
+  {
+    map: "mapAntalya20250610.html",
+    cover: "gif",
+    dscr: "Анталия. Поездка The Land of Legends", 
+    place: "antalya",
+    date: "20250610",
+  },
+  {
+    map: "mapAntalya202506.html",
+    cover: "gif",
+    dscr: "Анталия. Путешествие", 
+    place: "antalya",
+    date: "20250609,20250614",
+  },
+  {
     map: "mapIstambul20250609.html",
     cover: "gif",
     dscr: "Стамбул. Дорога в аэропорт имени Сабихи Гёкчен", 
