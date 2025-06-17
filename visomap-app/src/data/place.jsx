@@ -143,4 +143,8 @@ export const places = {
     name: "г. Янгиюль",
     cover: "coverYangiyol.gif",
   },
+  istambul: {
+    name: "г. Стамбул",
+    cover: "coverIstambul.gif",
+  },
 };

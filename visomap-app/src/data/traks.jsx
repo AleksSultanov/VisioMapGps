@@ -1,5 +1,33 @@
 export const tracks = [
   {
+    map: "mapIstambul20250609.html",
+    cover: "gif",
+    dscr: "Стамбул. Дорога в аэропорт имени Сабихи Гёкчен", 
+    place: "istambul",
+    date: "20250609",
+  },
+  {
+    map: "mapIstambul20250608.html",
+    cover: "gif",
+    dscr: "Стамбул. Центр, Галатская башня", 
+    place: "istambul",
+    date: "20250608",
+  },
+  {
+    map: "mapIstambul20250607.html",
+    cover: "gif",
+    dscr: "Стамбул. Центр, плавание по Босфору, ТЦ Венеция", 
+    place: "istambul",
+    date: "20250607",
+  },
+  {
+    map: "mapIstambul202506.html",
+    cover: "gif",
+    dscr: "Стамбул. Путешествие", 
+    place: "istambul",
+    date: "20250607,20250609",
+  },
+  {
     map: "mapTashkent20250420.html",
     cover: "gif",
     dscr: "Ташкент м.Мустакиллик - м.Пахтакор - Ахор - м.Амир Темур - м.Буюк Ипак Йули", 
