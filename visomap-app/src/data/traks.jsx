@@ -4,7 +4,7 @@ export const tracks = [
     cover: "gif",
     dscr: "Москва",
     place: "moscow",
-    date: "20251128,201231",
+    date: "20251128,20251231",
   },
   {
     map: "mapAntalya20250614.html",
