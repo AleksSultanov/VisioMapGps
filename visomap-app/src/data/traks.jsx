@@ -2,7 +2,7 @@ export const tracks = [
   {
     map: "mapMoscow2025.html",
     cover: "gif",
-    dscr: "Москва",
+    dscr: "Москва 2025",
     place: "moscow",
     date: "20251128,20251231",
   },
