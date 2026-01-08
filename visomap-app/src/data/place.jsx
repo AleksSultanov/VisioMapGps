@@ -1,4 +1,44 @@
 export const places = {
+  antalya: {
+    name: "г. Анталья",
+    cover: "coverAntalya.gif",
+  },
+  kl: {
+    name: "г. Куала-Лумпур",
+    cover: "coverKL.gif",
+  },
+  krabi: {
+    name: "Краби",
+    cover: "coverKrabi.gif",
+  },
+  minsk: {
+    name: "г. Минск",
+    cover: "coverMinsk.gif",
+  },
+  moscow: {
+    name: "г. Москва",
+    cover: "coverMoscow.gif",
+  },
+  tashkent: {
+    name: "г. Ташкент",
+    cover: "coverTashkent.gif",
+  },
+  thailand: {
+    name: "Таиланд",
+    cover: "coverThailand.gif",
+  },
+  istanbul: {
+    name: "г. Стамбул",
+    cover: "coverIstambul.gif",
+  },
+  samarkand: {
+    name: "г. Самарканд",
+    cover: "coverSamarkand.gif",
+  },
+  yangiyol: {
+    name: "г. Янгиюль",
+    cover: "coverYangiyol.gif",
+  },
   arashan: {
     name: "оз. Арашан",
     cover: "coverArashan.gif",
@@ -27,14 +67,6 @@ export const places = {
     name: "Испай",
     cover: "coverIspay.gif",
   },
-  kl: {
-    name: "г. Куала-Лумпур",
-    cover: "coverKL.gif",
-  },
-  krabi: {
-    name: "Краби",
-    cover: "coverKrabi.gif",
-  },
   karankul: {
     name: "Каранкуль",
     cover: "coverKarankul.gif",
@@ -50,10 +82,6 @@ export const places = {
   lashkerek: {
     name: "Лашкерек",
     cover: "coverLashkerek.gif",
-  },
-  moscow: {
-    name: "г. Москва",
-    cover: "coverMoscow.gif",
   },
   nanay: {
     name: "Нанай",
@@ -126,29 +154,5 @@ export const places = {
   syrdarya: {
     name: "р. Сырдарья",
     cover: "coverSyrdarya.gif",
-  },
-  samarkand: {
-    name: "г. Самарканд",
-    cover: "coverSamarkand.gif",
-  },
-  tashkent: {
-    name: "г. Ташкент",
-    cover: "coverTashkent.gif",
-  },
-  thailand: {
-    name: "Таиланд",
-    cover: "coverThailand.gif",
-  },
-  yangiyol: {
-    name: "г. Янгиюль",
-    cover: "coverYangiyol.gif",
-  },
-  istanbul: {
-    name: "г. Стамбул",
-    cover: "coverIstambul.gif",
-  },
-  antalya: {
-    name: "г. Анталья",
-    cover: "coverAntalya.gif",
   },
 };
