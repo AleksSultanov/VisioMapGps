@@ -1,5 +1,26 @@
 export const tracks = [
   {
+    map: "mapTashkent20260411.html",
+    cover: "gif",
+    dscr: "от Малики (мечеть Минор) до дома",
+    place: "tashkent",
+    date: "20260411",
+  },
+  {
+    map: "mapTashkent20260330.html",
+    cover: "gif",
+    dscr: "Вечерняя прогулка до перекрестка на Новомсковской и обратно",
+    place: "tashkent",
+    date: "20260330",
+  },
+  {
+    map: "mapThailand202603.html",
+    cover: "gif",
+    dscr: "Пхукет",
+    place: "thailand",
+    date: "20260315,20260321",
+  },
+  {
     map: "mapMoscow20260109.html",
     cover: "gif",
     dscr: "Москва. Прогулка до метро Кожуховская",
@@ -19,6 +40,13 @@ export const tracks = [
     dscr: "Москва 2025",
     place: "moscow",
     date: "20251128,20251231",
+  },
+  {
+    map: "mapTashkent20251116.html",
+    cover: "gif",
+    dscr: "Ташкент м.Мустакиллик - Ташкент Сити через театр Кукол",
+    place: "tashkent",
+    date: "20251116",
   },
   {
     map: "mapAntalya20250614.html",
