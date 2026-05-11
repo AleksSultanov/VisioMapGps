@@ -1,5 +1,27 @@
 export const tracks = [
   {
+    map: "mapTashkent20260510.html",
+    cover: "gif",
+    dscr:
+      "Ташкент кольцо от Мустакиллик в доль Ахора, ул. Сеульская, Сити Молл, кафе Бухара",
+    place: "tashkent",
+    date: "20260510",
+  },
+  {
+    map: "mapTashkent20260506.html",
+    cover: "gif",
+    dscr: "Поездка к Рамилю",
+    place: "tashkent",
+    date: "20260506",
+  },
+  {
+    map: "mapTashkent20260504.html",
+    cover: "gif",
+    dscr: "Вечерняя прогулка до Хамида Олимжана и обратно",
+    place: "tashkent",
+    date: "20260504",
+  },
+  {
     map: "mapAcsacota20260424.html",
     cover: "gif",
     dscr: "Аксаката пикник в роще",
