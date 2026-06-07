@@ -3,6 +3,10 @@ export const places = {
     name: "г. Анталья",
     cover: "coverAntalya.gif",
   },
+  egypt: {
+    name: "Египет",
+    cover: "coverEgypt.gif",
+  },
   kl: {
     name: "г. Куала-Лумпур",
     cover: "coverKL.gif",

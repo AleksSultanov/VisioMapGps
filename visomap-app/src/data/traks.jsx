@@ -115,6 +115,14 @@ export const tracks = [
     date: "20251116",
   },
   {
+    map: "mapEgypt2025.html",
+    cover: "gif",
+    dscr: "Шарм-эль-Шейх. Reef Oasis Blue Bay Resort",
+    place: "egypt",
+    date: "20250622,20250628",
+  },
+
+  {
     map: "mapAntalya20250614.html",
     cover: "gif",
     dscr: "Анталия. Дорога в аэропорт Анталии",

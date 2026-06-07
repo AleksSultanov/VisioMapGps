@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <script>
+   L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+  </script>
+  <style>
+   html, body {width: 100%;height: 100%;margin: 0;padding: 0;}
+  </style>
+  <style>
+   #map {position:absolute;top:0;bottom:0;right:0;left:0;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js">
+  </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js">
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" rel="stylesheet"/>
+  <meta content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <style>
+   #map_184ff67fdc4f129361605a960f586536 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js">
+  </script>
+  <link href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="folium-map" id="map_184ff67fdc4f129361605a960f586536">
+  </div>
+  <script src="../js/editMappoint.js" type="text/javascript">
+  </script>
+ </body>
+ <script>
+  var map_184ff67fdc4f129361605a960f586536 = L.map(
+                "map_184ff67fdc4f129361605a960f586536",
+                {
+                    center: [27.9170924, 34.3608328],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4f1f50f6f02c8e7c21fd0e0fe9da8e62 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_184ff67fdc4f129361605a960f586536);
+        
+    
+            var tile_layer_e24a8a9d8f685c62259c1888a0508b94 = L.tileLayer(
+                "https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png",
+                {"attribution": "\u003ca href=\"https://github.com/cyclosm/cyclosm-cartocss-style/releases\" title=\"CyclOSM - Open Bicycle render\"\u003eCyclOSM\u003c/a\u003e | Map data: \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_184ff67fdc4f129361605a960f586536);
+        
+    
+            var tile_layer_82fa43dcea6e78850cedde07db8c64bc = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_184ff67fdc4f129361605a960f586536);
+        
+    
+            var tile_layer_8ab4f706751932dfb7022856d6c2a6e4 = L.tileLayer(
+                "http://{s}.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "google", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": ["mt0", "mt1", "mt2", "mt3"], "tms": false}
+            ).addTo(map_184ff67fdc4f129361605a960f586536);
+        
+    
+            var tile_layer_4f0d5d96f03bc3479d71f760e264f3e3 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "tms": false}
+            ).addTo(map_184ff67fdc4f129361605a960f586536);
+        
+    
+            var feature_group_160c11e71dab0d961099cd4aaa21e0c4 = L.featureGroup(
+                {}
+            ).addTo(map_184ff67fdc4f129361605a960f586536);
+        
+    
+            var marker_059416cbf0b7d5c099202f804f0a0ace = L.marker(
+                [27.91, 34.32],
+                {}
+            ).addTo(feature_group_160c11e71dab0d961099cd4aaa21e0c4);
+        
+    
+            var icon_8bdc381556ecb5699fc3ba8eee92c20c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_059416cbf0b7d5c099202f804f0a0ace.setIcon(icon_8bdc381556ecb5699fc3ba8eee92c20c);
+        
+    
+        var popup_ae944dfee706d096519aed2376daeb51 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_688db8f35a095b050f3c6d4b37f4d3bd = $(`<div id="html_688db8f35a095b050f3c6d4b37f4d3bd" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=27.91&lon=34.32&detailLat=27.91&detailLon=34.321&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_ae944dfee706d096519aed2376daeb51.setContent(html_688db8f35a095b050f3c6d4b37f4d3bd);
+            
+        
+
+        marker_059416cbf0b7d5c099202f804f0a0ace.bindPopup(popup_ae944dfee706d096519aed2376daeb51)
+        ;
+
+        
+    
+    
+            var marker_163e044029107753ac15448a870f531e = L.marker(
+                [27.92, 34.36],
+                {}
+            ).addTo(feature_group_160c11e71dab0d961099cd4aaa21e0c4);
+        
+    
+            var icon_313798cfd74ed123cdb607223a3da12c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "umbrella", "iconAnchor": [0, 0], "iconColor": "purple", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_163e044029107753ac15448a870f531e.setIcon(icon_313798cfd74ed123cdb607223a3da12c);
+        
+    
+        var popup_d15fa353e5fd4a79bbb1a70b493c8c56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_16c63799e0911bf8f0e7cb2b6a99244d = $(`<div id="html_16c63799e0911bf8f0e7cb2b6a99244d" style="width: 100.0%; height: 100.0%;">             <iframe width="400" height="400"             src="https://embed.windy.com/embed2.html?lat=27.92&lon=34.36&detailLat=27.92&detailLon=34.361&width=400&height=400&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"             frameborder="0"></iframe>  </div>`)[0];
+                popup_d15fa353e5fd4a79bbb1a70b493c8c56.setContent(html_16c63799e0911bf8f0e7cb2b6a99244d);
+            
+        
+
+        marker_163e044029107753ac15448a870f531e.bindPopup(popup_d15fa353e5fd4a79bbb1a70b493c8c56)
+        ;
+
+        
+    
+    
+            var feature_group_1352e33ea1868e5980d92c04241154ae = L.featureGroup(
+                {}
+            ).addTo(map_184ff67fdc4f129361605a960f586536);
+        
+    
+            var poly_line_f45020cbb71e6d3afaa882308f879fe6 = L.polyline(
+                [[27.9211948, 34.3617917], [27.9213293, 34.3618609], [27.9213679, 34.3618752], [27.9214294, 34.3618972], [27.9216042, 34.3619828], [27.9217082, 34.3620646], [27.9218092, 34.3621351], [27.9218702, 34.3621721], [27.9220722, 34.3622578], [27.9222922, 34.3623013], [27.9225276, 34.3622974], [27.9227071, 34.3622651], [27.9227913, 34.362233], [27.9228384, 34.3622174], [27.9228702, 34.3622127], [27.922908, 34.362206], [27.9229975, 34.3622028], [27.9230975, 34.3622077], [27.923169, 34.3622189], [27.9231874, 34.3622179], [27.9232134, 34.3622234], [27.9232172, 34.3622281], [27.9232187, 34.3622271], [27.9232237, 34.3622269], [27.9232236, 34.3622277], [27.923223, 34.362227], [27.9232358, 34.3622332], [27.9232745, 34.3622455], [27.9233266, 34.3622681], [27.923375, 34.362293], [27.9234252, 34.3623139], [27.9234805, 34.3623112], [27.9235072, 34.3622945], [27.9235615, 34.3622403], [27.9236239, 34.3621698], [27.9236965, 34.3620862], [27.9237271, 34.3620269], [27.923792, 34.3618433], [27.9238271, 34.361738], [27.9239122, 34.361514], [27.9240212, 34.3612476], [27.9241652, 34.3609487], [27.9242506, 34.3607918], [27.9244246, 34.3604707], [27.9246217, 34.3601193], [27.9248285, 34.3597453], [27.9250469, 34.3593472], [27.9252782, 34.3589216], [27.9255249, 34.3584802], [27.9256482, 34.3582471], [27.9258884, 34.3578006], [27.9261424, 34.357333], [27.9264021, 34.3568524], [27.926671, 34.3563573], [27.9269443, 34.35585], [27.9272261, 34.3553257], [27.9275147, 34.3547875], [27.9278142, 34.3542366], [27.9281126, 34.3536772], [27.9284077, 34.3531307], [27.9286933, 34.3526054], [27.9289726, 34.3520889], [27.9292406, 34.351591], [27.9295009, 34.3511074], [27.9296288, 34.3508722], [27.9298717, 34.3504184], [27.9300933, 34.3500205], [27.9301892, 34.3498497], [27.9303547, 34.3495631], [27.9304923, 34.3493859], [27.9306117, 34.3493214], [27.9306694, 34.3493263], [27.9308037, 34.3494045], [27.9309591, 34.3495623], [27.9311288, 34.3497227], [27.9313329, 34.3499051], [27.9314494, 34.3500005], [27.9316998, 34.3502131], [27.9319599, 34.350436], [27.9320975, 34.3505544], [27.9323579, 34.3507798], [27.9325652, 34.3509444], [27.9327042, 34.3510322], [27.932764, 34.3510229], [27.932782, 34.3510087], [27.9327975, 34.3509436], [27.9327306, 34.3508578], [27.9326061, 34.3507503], [27.9324469, 34.3506053], [27.9322532, 34.3504394], [27.9320237, 34.3502267], [27.9318931, 34.3501062], [27.9316248, 34.3498601], [27.9313291, 34.3495935], [27.931172, 34.3494503], [27.9308326, 34.349148], [27.9304712, 34.3488244], [27.9301115, 34.3485025], [27.9299324, 34.3483377], [27.9297488, 34.3481702], [27.9293752, 34.3478286], [27.9289902, 34.3474718], [27.9285965, 34.3471159], [27.9284028, 34.3469413], [27.9280241, 34.3465832], [27.9278363, 34.3464061], [27.9274661, 34.3460714], [27.9271115, 34.345752], [27.9267667, 34.345433], [27.9264263, 34.3451181], [27.9260908, 34.3448205], [27.9257528, 34.3445296], [27.9254243, 34.3442426], [27.9251179, 34.343989], [27.924979, 34.3438837], [27.9247555, 34.3437294], [27.9246704, 34.3436716], [27.9245588, 34.3436007], [27.9245187, 34.3435771], [27.9244788, 34.343553], [27.9244094, 34.3435154], [27.9242966, 34.3434404], [27.9241435, 34.3433384], [27.9239624, 34.3432005], [27.9237284, 34.343042], [27.9234574, 34.3428748], [27.9231614, 34.3426931], [27.9228414, 34.342496], [27.9224932, 34.3422937], [27.9221336, 34.3420774], [27.921773, 34.3418611], [27.921412, 34.341644], [27.9210614, 34.3414279], [27.920728, 34.3412186], [27.9204268, 34.3409838], [27.920295, 34.3408481], [27.9200639, 34.3405494], [27.9199717, 34.3403969], [27.9198229, 34.3401019], [27.9197026, 34.3398387], [27.9196513, 34.3397141], [27.9195502, 34.3394531], [27.9194464, 34.3391986], [27.9193489, 34.338948], [27.919259, 34.3387233], [27.9191707, 34.3385302], [27.9190835, 34.3383578], [27.919051, 34.3382838], [27.9190205, 34.3381972], [27.9190002, 34.3381369], [27.9189783, 34.3380794], [27.918966, 34.3380538], [27.9189477, 34.3380016], [27.9189229, 34.3379164], [27.9188782, 34.3377937], [27.9188072, 34.3376084], [27.9187295, 34.3373891], [27.9186225, 34.3371265], [27.9185117, 34.3368232], [27.9183798, 34.3364948], [27.918315, 34.336319], [27.918181, 34.3359454], [27.9180423, 34.33556], [27.9178893, 34.3351518], [27.9177412, 34.3347576], [27.9175947, 34.3343658], [27.9174437, 34.3339588], [27.917292, 34.3335677], [27.9171612, 34.3332267], [27.9171055, 34.3330755], [27.9170197, 34.332835], [27.9169681, 34.3326736], [27.916936, 34.3325801], [27.9169151, 34.332524], [27.916889, 34.3324626], [27.9168613, 34.3324011], [27.9168401, 34.3323514], [27.9168184, 34.3322996], [27.9168028, 34.3322623], [27.9167594, 34.3321498], [27.9167297, 34.3320635], [27.9166564, 34.331853], [27.9165673, 34.331606], [27.9164698, 34.3313513], [27.9163905, 34.3311433], [27.9163332, 34.3309943], [27.9163078, 34.3309449], [27.9162724, 34.3308714], [27.9162347, 34.3308128], [27.9162209, 34.3307777], [27.9161997, 34.3307336], [27.9161403, 34.3306081], [27.9160651, 34.330412], [27.9160254, 34.3302983], [27.9159264, 34.3300414], [27.9158722, 34.3298918], [27.9157441, 34.3295676], [27.9156803, 34.3294019], [27.9155409, 34.3290609], [27.9154007, 34.328705], [27.9152687, 34.3283473], [27.9152059, 34.3281744], [27.9151032, 34.3278774], [27.9150114, 34.3276386], [27.9149342, 34.3274501], [27.9149085, 34.3273744], [27.9148842, 34.327295], [27.9148738, 34.3272531], [27.914856, 34.3272058], [27.9148451, 34.3271784], [27.9148248, 34.3271243], [27.9148059, 34.3270717], [27.9147862, 34.3270174], [27.9147746, 34.3269892], [27.9147509, 34.3269333], [27.914731, 34.3268836], [27.9147129, 34.3268175], [27.9146705, 34.3267114], [27.9146076, 34.3265322], [27.9145228, 34.3263342], [27.9144365, 34.3261075], [27.9143362, 34.3258354], [27.9142253, 34.3255418], [27.9141017, 34.3252252], [27.91404, 34.3250511], [27.9139334, 34.3247456], [27.9138633, 34.3245485], [27.9138196, 34.3244357], [27.9137956, 34.3243866], [27.9137756, 34.3243453], [27.9137582, 34.3243071], [27.9137376, 34.3242545], [27.9136822, 34.3241064], [27.913614, 34.3239181], [27.9135733, 34.3238163], [27.9134829, 34.3235997], [27.9134316, 34.3235025], [27.9133517, 34.3232864], [27.9133107, 34.3231876], [27.9132182, 34.323014], [27.9131799, 34.3229306], [27.9131211, 34.3227793], [27.9130836, 34.3226553], [27.9130614, 34.3225771], [27.9130523, 34.3225461], [27.9130402, 34.3224778], [27.913017, 34.3223973], [27.9129877, 34.3223185], [27.9129744, 34.3222821], [27.9129454, 34.3222137], [27.9129178, 34.3221453], [27.9128944, 34.3220816], [27.9128707, 34.3220225], [27.9128461, 34.3219622], [27.9128331, 34.3219335], [27.9128045, 34.3218769], [27.9127795, 34.3218232], [27.9127669, 34.3217964], [27.9127434, 34.3217428], [27.9127175, 34.3216815], [27.9126733, 34.3215748], [27.9126056, 34.3214219], [27.9125249, 34.3212338], [27.9124411, 34.3210338], [27.912396, 34.3209267], [27.9123032, 34.3207028], [27.9122069, 34.3205056], [27.9121766, 34.3204243], [27.912114, 34.3203061], [27.9120808, 34.3202212], [27.9120683, 34.3201956], [27.9120314, 34.3201684], [27.9120272, 34.320165], [27.9120271, 34.3201649], [27.9120247, 34.3201619], [27.9120226, 34.3201606], [27.9120189, 34.320162], [27.9120142, 34.3201548], [27.9120159, 34.320149], [27.912017, 34.3201456], [27.9120162, 34.3201447], [27.9120157, 34.3201446], [27.9120167, 34.3201451], [27.9120166, 34.3201457], [27.9120166, 34.3201458], [27.9120166, 34.3201458], [27.9120085, 34.320147], [27.9119963, 34.320154], [27.911968, 34.3201914], [27.9119603, 34.3202659], [27.9119775, 34.3203375], [27.9119853, 34.3203601], [27.9120001, 34.3203916], [27.9120266, 34.3204434], [27.9120604, 34.3205353], [27.9120728, 34.3205806], [27.9120814, 34.320648]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": "4"}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+            var circle_marker_761a0397bba2f46ee0cb3d1cf96e4898 = L.circleMarker(
+                [27.9211948, 34.3617917],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+        var popup_0da7c9696428d487c4f50e03cd21ce1e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_99867356a90172292ca4e19763cd1ed0 = $(`<div id="html_99867356a90172292ca4e19763cd1ed0" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>50.8 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:43</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9211948</td></tr><tr><td>долгота:</td><td>34.3617917</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9211948,34.3617917" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9211948/34.3617917"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9211948&lon=34.3617917&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3617917,27.9211948&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9211948&lon=34.3617917" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9211948/34.3617917&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_0da7c9696428d487c4f50e03cd21ce1e.setContent(html_99867356a90172292ca4e19763cd1ed0);
+            
+        
+
+        circle_marker_761a0397bba2f46ee0cb3d1cf96e4898.bindPopup(popup_0da7c9696428d487c4f50e03cd21ce1e)
+        ;
+
+        
+    
+    
+            var marker_ccf1fb4e70a5b1bf9e9d8ee34163631c = L.marker(
+                [27.9211948, 34.3617917],
+                {}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+            var icon_c814f5aa18f54da2cf4fabf851e0e951 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_ccf1fb4e70a5b1bf9e9d8ee34163631c.setIcon(icon_c814f5aa18f54da2cf4fabf851e0e951);
+        
+    
+        var popup_1ba3b51b0ca6a8348e604f3e8dc34aff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_009b9a9a039ba26dd590aa29aa97d58d = $(`<div id="html_009b9a9a039ba26dd590aa29aa97d58d" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>50.8 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:43</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9211948</td></tr><tr><td>долгота:</td><td>34.3617917</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9211948,34.3617917" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9211948/34.3617917"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9211948&lon=34.3617917&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3617917,27.9211948&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9211948&lon=34.3617917" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9211948/34.3617917&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_1ba3b51b0ca6a8348e604f3e8dc34aff.setContent(html_009b9a9a039ba26dd590aa29aa97d58d);
+            
+        
+
+        marker_ccf1fb4e70a5b1bf9e9d8ee34163631c.bindPopup(popup_1ba3b51b0ca6a8348e604f3e8dc34aff)
+        ;
+
+        
+    
+    
+            var circle_marker_f1df271f898fc062790e9ab27f82a162 = L.circleMarker(
+                [27.9234252, 34.3623139],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+        var popup_5152b5b9ee8cc469a3127ac099a7f444 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2964d0000c802f019b62795a59bbf6b = $(`<div id="html_d2964d0000c802f019b62795a59bbf6b" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>49.8 м</td></tr><tr><td>изменение:</td><td>-1.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:44</nobr></td></tr><tr><td>в пути:</td><td>0:00:53</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>226.29 м</td></tr><tr><td>рассчет 2:</td><td>227.59 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9234252</td></tr><tr><td>долгота:</td><td>34.3623139</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9234252,34.3623139" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9234252/34.3623139"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9234252&lon=34.3623139&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3623139,27.9234252&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9234252&lon=34.3623139" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9234252/34.3623139&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_5152b5b9ee8cc469a3127ac099a7f444.setContent(html_d2964d0000c802f019b62795a59bbf6b);
+            
+        
+
+        circle_marker_f1df271f898fc062790e9ab27f82a162.bindPopup(popup_5152b5b9ee8cc469a3127ac099a7f444)
+        ;
+
+        
+    
+    
+            var circle_marker_bc4b1ac22f068585d7b00361a078b511 = L.circleMarker(
+                [27.9286933, 34.3526054],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+        var popup_4be00feb2fb3336f0398d9cd24857569 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf43557503667fc68edf925d5effe626 = $(`<div id="html_cf43557503667fc68edf925d5effe626" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>66.1 м</td></tr><tr><td>изменение:</td><td>15.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:45</nobr></td></tr><tr><td>в пути:</td><td>0:01:48</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.41 км</td></tr><tr><td>рассчет 2:</td><td>1.41 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9286933</td></tr><tr><td>долгота:</td><td>34.3526054</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9286933,34.3526054" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9286933/34.3526054"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9286933&lon=34.3526054&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3526054,27.9286933&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9286933&lon=34.3526054" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9286933/34.3526054&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_4be00feb2fb3336f0398d9cd24857569.setContent(html_cf43557503667fc68edf925d5effe626);
+            
+        
+
+        circle_marker_bc4b1ac22f068585d7b00361a078b511.bindPopup(popup_4be00feb2fb3336f0398d9cd24857569)
+        ;
+
+        
+    
+    
+            var marker_19a39b55a148a968df83b378fc3c8a90 = L.marker(
+                [27.9286933, 34.3526054],
+                {}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+            var icon_93392fc5df38661580f8dba193a6d95f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_19a39b55a148a968df83b378fc3c8a90.setIcon(icon_93392fc5df38661580f8dba193a6d95f);
+        
+    
+        var popup_e042d1420be1192afdcd1cb8a776a770 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2fb35093b7257d99f039e57fdf7cb459 = $(`<div id="html_2fb35093b7257d99f039e57fdf7cb459" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>66.1 м</td></tr><tr><td>изменение:</td><td>15.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:45</nobr></td></tr><tr><td>в пути:</td><td>0:01:48</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>1.41 км</td></tr><tr><td>рассчет 2:</td><td>1.41 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9286933</td></tr><tr><td>долгота:</td><td>34.3526054</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9286933,34.3526054" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9286933/34.3526054"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9286933&lon=34.3526054&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3526054,27.9286933&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9286933&lon=34.3526054" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9286933/34.3526054&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_e042d1420be1192afdcd1cb8a776a770.setContent(html_2fb35093b7257d99f039e57fdf7cb459);
+            
+        
+
+        marker_19a39b55a148a968df83b378fc3c8a90.bindPopup(popup_e042d1420be1192afdcd1cb8a776a770)
+        ;
+
+        
+    
+    
+            var circle_marker_f2d630e0b2fea9e1090755db2c49d6a4 = L.circleMarker(
+                [27.9320237, 34.3502267],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+        var popup_f0b92ae748ba20a965b06e2bae4a58f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_96c260f44e117471026e8bebb9e68b6c = $(`<div id="html_96c260f44e117471026e8bebb9e68b6c" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>58.4 м</td></tr><tr><td>изменение:</td><td>7.6 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:46</nobr></td></tr><tr><td>в пути:</td><td>0:02:42</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>2.21 км</td></tr><tr><td>рассчет 2:</td><td>2.22 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9320237</td></tr><tr><td>долгота:</td><td>34.3502267</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9320237,34.3502267" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9320237/34.3502267"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9320237&lon=34.3502267&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3502267,27.9320237&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9320237&lon=34.3502267" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9320237/34.3502267&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_f0b92ae748ba20a965b06e2bae4a58f6.setContent(html_96c260f44e117471026e8bebb9e68b6c);
+            
+        
+
+        circle_marker_f2d630e0b2fea9e1090755db2c49d6a4.bindPopup(popup_f0b92ae748ba20a965b06e2bae4a58f6)
+        ;
+
+        
+    
+    
+            var circle_marker_0055c7fd88d26283ec49dd5ec02fb6bc = L.circleMarker(
+                [27.9244094, 34.3435154],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+        var popup_8d7abf53aa049468d96173ae5ff2d9f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74e3477c7434da3fa01636f5365cc7d1 = $(`<div id="html_74e3477c7434da3fa01636f5365cc7d1" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>41.0 м</td></tr><tr><td>изменение:</td><td>-9.8 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:47</nobr></td></tr><tr><td>в пути:</td><td>0:03:34</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.24 км</td></tr><tr><td>рассчет 2:</td><td>3.24 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9244094</td></tr><tr><td>долгота:</td><td>34.3435154</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9244094,34.3435154" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9244094/34.3435154"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9244094&lon=34.3435154&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3435154,27.9244094&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9244094&lon=34.3435154" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9244094/34.3435154&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_8d7abf53aa049468d96173ae5ff2d9f5.setContent(html_74e3477c7434da3fa01636f5365cc7d1);
+            
+        
+
+        circle_marker_0055c7fd88d26283ec49dd5ec02fb6bc.bindPopup(popup_8d7abf53aa049468d96173ae5ff2d9f5)
+        ;
+
+        
+    
+    
+            var marker_e28475ffb2be5f889397e5da5a53ac2a = L.marker(
+                [27.9244094, 34.3435154],
+                {}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+            var icon_324b31d3d64dc8ea12163e9d47635a14 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_e28475ffb2be5f889397e5da5a53ac2a.setIcon(icon_324b31d3d64dc8ea12163e9d47635a14);
+        
+    
+        var popup_7bead90b878d441ba474e5c4cda83cfc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eab58ae46c1cb3f170e72d451709db9f = $(`<div id="html_eab58ae46c1cb3f170e72d451709db9f" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>41.0 м</td></tr><tr><td>изменение:</td><td>-9.8 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:47</nobr></td></tr><tr><td>в пути:</td><td>0:03:34</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>3.24 км</td></tr><tr><td>рассчет 2:</td><td>3.24 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9244094</td></tr><tr><td>долгота:</td><td>34.3435154</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9244094,34.3435154" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9244094/34.3435154"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9244094&lon=34.3435154&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3435154,27.9244094&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9244094&lon=34.3435154" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9244094/34.3435154&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_7bead90b878d441ba474e5c4cda83cfc.setContent(html_eab58ae46c1cb3f170e72d451709db9f);
+            
+        
+
+        marker_e28475ffb2be5f889397e5da5a53ac2a.bindPopup(popup_7bead90b878d441ba474e5c4cda83cfc)
+        ;
+
+        
+    
+    
+            var circle_marker_a530782c32b94dcde5a013dfd4c84909 = L.circleMarker(
+                [27.9189783, 34.3380794],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+        var popup_06a48d54a9aa9f940e680405475a57ed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fba977d033f29b2da9ce3d0a2db8d818 = $(`<div id="html_fba977d033f29b2da9ce3d0a2db8d818" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>23.1 м</td></tr><tr><td>изменение:</td><td>-27.7 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:48</nobr></td></tr><tr><td>в пути:</td><td>0:04:30</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>4.05 км</td></tr><tr><td>рассчет 2:</td><td>4.05 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9189783</td></tr><tr><td>долгота:</td><td>34.3380794</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9189783,34.3380794" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9189783/34.3380794"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9189783&lon=34.3380794&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3380794,27.9189783&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9189783&lon=34.3380794" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9189783/34.3380794&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_06a48d54a9aa9f940e680405475a57ed.setContent(html_fba977d033f29b2da9ce3d0a2db8d818);
+            
+        
+
+        circle_marker_a530782c32b94dcde5a013dfd4c84909.bindPopup(popup_06a48d54a9aa9f940e680405475a57ed)
+        ;
+
+        
+    
+    
+            var circle_marker_e88a2b266b1696b8a35d9aaff1f83865 = L.circleMarker(
+                [27.9167297, 34.3320635],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+        var popup_c84d84cf92ae2800ecdd93fe4200121d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ea419b2c3e774d73c7a43f2732e8a37f = $(`<div id="html_ea419b2c3e774d73c7a43f2732e8a37f" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>20.6 м</td></tr><tr><td>изменение:</td><td>-30.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:49</nobr></td></tr><tr><td>в пути:</td><td>0:05:25</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>4.75 км</td></tr><tr><td>рассчет 2:</td><td>4.75 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9167297</td></tr><tr><td>долгота:</td><td>34.3320635</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9167297,34.3320635" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9167297/34.3320635"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9167297&lon=34.3320635&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3320635,27.9167297&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9167297&lon=34.3320635" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9167297/34.3320635&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_c84d84cf92ae2800ecdd93fe4200121d.setContent(html_ea419b2c3e774d73c7a43f2732e8a37f);
+            
+        
+
+        circle_marker_e88a2b266b1696b8a35d9aaff1f83865.bindPopup(popup_c84d84cf92ae2800ecdd93fe4200121d)
+        ;
+
+        
+    
+    
+            var marker_c40c80c68c29b673f20601f207cdd0f1 = L.marker(
+                [27.9167297, 34.3320635],
+                {}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+            var icon_2ff574b5ed5d45a18400ca5dce3ae4be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_c40c80c68c29b673f20601f207cdd0f1.setIcon(icon_2ff574b5ed5d45a18400ca5dce3ae4be);
+        
+    
+        var popup_ba83c98a445763a7189ee9e9928b7299 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_89c1a9e011e634a906a68e208e7589fe = $(`<div id="html_89c1a9e011e634a906a68e208e7589fe" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>20.6 м</td></tr><tr><td>изменение:</td><td>-30.2 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:49</nobr></td></tr><tr><td>в пути:</td><td>0:05:25</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>4.75 км</td></tr><tr><td>рассчет 2:</td><td>4.75 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9167297</td></tr><tr><td>долгота:</td><td>34.3320635</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9167297,34.3320635" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9167297/34.3320635"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9167297&lon=34.3320635&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3320635,27.9167297&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9167297&lon=34.3320635" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9167297/34.3320635&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_ba83c98a445763a7189ee9e9928b7299.setContent(html_89c1a9e011e634a906a68e208e7589fe);
+            
+        
+
+        marker_c40c80c68c29b673f20601f207cdd0f1.bindPopup(popup_ba83c98a445763a7189ee9e9928b7299)
+        ;
+
+        
+    
+    
+            var circle_marker_89364a8363bd97a8b961f683996620c2 = L.circleMarker(
+                [27.9148248, 34.3271243],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+        var popup_81a2b58733dcdd3b53854e4b44df1853 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c61d5abd55ebc817d7500062add4432f = $(`<div id="html_c61d5abd55ebc817d7500062add4432f" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>21.9 м</td></tr><tr><td>изменение:</td><td>-28.9 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:49</nobr></td></tr><tr><td>в пути:</td><td>0:06:16</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>5.32 км</td></tr><tr><td>рассчет 2:</td><td>5.33 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9148248</td></tr><tr><td>долгота:</td><td>34.3271243</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9148248,34.3271243" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9148248/34.3271243"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9148248&lon=34.3271243&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3271243,27.9148248&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9148248&lon=34.3271243" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9148248/34.3271243&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_81a2b58733dcdd3b53854e4b44df1853.setContent(html_c61d5abd55ebc817d7500062add4432f);
+            
+        
+
+        circle_marker_89364a8363bd97a8b961f683996620c2.bindPopup(popup_81a2b58733dcdd3b53854e4b44df1853)
+        ;
+
+        
+    
+    
+            var circle_marker_c7022be3ad7b4b1fe1f8baeb5b66ff0a = L.circleMarker(
+                [27.9131799, 34.3229306],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+        var popup_70807f1885f4d32d8c04a7f67d36a939 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_215fa3b0ab79ca69f31a53be45a77f34 = $(`<div id="html_215fa3b0ab79ca69f31a53be45a77f34" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>25.4 м</td></tr><tr><td>изменение:</td><td>-25.4 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:50</nobr></td></tr><tr><td>в пути:</td><td>0:07:08</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>5.81 км</td></tr><tr><td>рассчет 2:</td><td>5.82 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9131799</td></tr><tr><td>долгота:</td><td>34.3229306</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9131799,34.3229306" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9131799/34.3229306"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9131799&lon=34.3229306&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3229306,27.9131799&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9131799&lon=34.3229306" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9131799/34.3229306&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_70807f1885f4d32d8c04a7f67d36a939.setContent(html_215fa3b0ab79ca69f31a53be45a77f34);
+            
+        
+
+        circle_marker_c7022be3ad7b4b1fe1f8baeb5b66ff0a.bindPopup(popup_70807f1885f4d32d8c04a7f67d36a939)
+        ;
+
+        
+    
+    
+            var marker_b924c6b92891c8c52cfcef4b42a86791 = L.marker(
+                [27.9131799, 34.3229306],
+                {}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+            var icon_7a99e252f4a326a5000ea885d2a697b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_b924c6b92891c8c52cfcef4b42a86791.setIcon(icon_7a99e252f4a326a5000ea885d2a697b6);
+        
+    
+        var popup_7cd4a978640f80702a90b326f2c85c62 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bdb845a0e496874062d5bde8a1f7fb84 = $(`<div id="html_bdb845a0e496874062d5bde8a1f7fb84" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>25.4 м</td></tr><tr><td>изменение:</td><td>-25.4 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:50</nobr></td></tr><tr><td>в пути:</td><td>0:07:08</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>5.81 км</td></tr><tr><td>рассчет 2:</td><td>5.82 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9131799</td></tr><tr><td>долгота:</td><td>34.3229306</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9131799,34.3229306" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9131799/34.3229306"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9131799&lon=34.3229306&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3229306,27.9131799&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9131799&lon=34.3229306" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9131799/34.3229306&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_7cd4a978640f80702a90b326f2c85c62.setContent(html_bdb845a0e496874062d5bde8a1f7fb84);
+            
+        
+
+        marker_b924c6b92891c8c52cfcef4b42a86791.bindPopup(popup_7cd4a978640f80702a90b326f2c85c62)
+        ;
+
+        
+    
+    
+            var circle_marker_3c7a2cc9571e08b78ebceb2846b72315 = L.circleMarker(
+                [27.9120683, 34.3201956],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightred", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+        var popup_a5332b850d272106457d7cf3ce16461c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b037369b1b3d130d4c37786f2b03c74 = $(`<div id="html_4b037369b1b3d130d4c37786f2b03c74" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>28.9 м</td></tr><tr><td>изменение:</td><td>-21.9 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:51</nobr></td></tr><tr><td>в пути:</td><td>0:08:01</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>6.13 км</td></tr><tr><td>рассчет 2:</td><td>6.14 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9120683</td></tr><tr><td>долгота:</td><td>34.3201956</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9120683,34.3201956" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9120683/34.3201956"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9120683&lon=34.3201956&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3201956,27.9120683&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9120683&lon=34.3201956" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9120683/34.3201956&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_a5332b850d272106457d7cf3ce16461c.setContent(html_4b037369b1b3d130d4c37786f2b03c74);
+            
+        
+
+        circle_marker_3c7a2cc9571e08b78ebceb2846b72315.bindPopup(popup_a5332b850d272106457d7cf3ce16461c)
+        ;
+
+        
+    
+    
+            var marker_341026a013042aec999a20fb474970bb = L.marker(
+                [27.9120814, 34.320648],
+                {}
+            ).addTo(feature_group_1352e33ea1868e5980d92c04241154ae);
+        
+    
+            var icon_d6c6c6ba10546daecb30c3cf5b354483 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "car", "iconAnchor": [0, 0], "iconColor": "black", "iconSize": [5, 5], "markerColor": "red", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_341026a013042aec999a20fb474970bb.setIcon(icon_d6c6c6ba10546daecb30c3cf5b354483);
+        
+    
+        var popup_f8c88f0c1b4dec1ebdef10359af136bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ced183329795af73751c1a44700bf5d4 = $(`<div id="html_ced183329795af73751c1a44700bf5d4" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort  - улица El-Salam 6.11 км  </b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>29.1 м</td></tr><tr><td>изменение:</td><td>-21.7 м</td></tr><tr><td><b>Время:</b></td><td><nobr>23.08.2025 19:52</nobr></td></tr><tr><td>в пути:</td><td>0:08:48</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>6.2 км</td></tr><tr><td>рассчет 2:</td><td>6.21 км</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9120814</td></tr><tr><td>долгота:</td><td>34.320648</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9120814,34.320648" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9120814/34.320648"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9120814&lon=34.320648&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.320648,27.9120814&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9120814&lon=34.320648" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9120814/34.320648&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_f8c88f0c1b4dec1ebdef10359af136bd.setContent(html_ced183329795af73751c1a44700bf5d4);
+            
+        
+
+        marker_341026a013042aec999a20fb474970bb.bindPopup(popup_f8c88f0c1b4dec1ebdef10359af136bd)
+        ;
+
+        
+    
+    
+            var feature_group_097ceb5a5590c9d601c1102473c5fe7d = L.featureGroup(
+                {}
+            ).addTo(map_184ff67fdc4f129361605a960f586536);
+        
+    
+            var poly_line_92f4cea27d1566543e5f185c2a13e718 = L.polyline(
+                [[27.9170924, 34.3608328], [27.9170873, 34.3608365], [27.9170777, 34.3608436], [27.9170643, 34.3608567], [27.9170545, 34.3608666], [27.9170483, 34.3608742], [27.9170435, 34.3608819], [27.9170365, 34.3608977], [27.917018, 34.3609338], [27.9170054, 34.3609448], [27.9169843, 34.360966], [27.916976, 34.360974], [27.9169661, 34.3609818], [27.9169602, 34.360995], [27.9169581, 34.3610121], [27.9169508, 34.3610247], [27.9169419, 34.3610327], [27.916936, 34.3610388], [27.9169253, 34.361046], [27.9169184, 34.3610503], [27.9169042, 34.3610626], [27.9168986, 34.3610715], [27.9168896, 34.361084], [27.9168817, 34.3610928], [27.9168728, 34.3610998], [27.9168678, 34.3611055], [27.9168593, 34.3611115], [27.9168528, 34.3611169], [27.9168476, 34.3611145], [27.9168417, 34.3611108], [27.9168249, 34.3611078], [27.9168104, 34.361104], [27.9167961, 34.3611037], [27.9167781, 34.361106], [27.9167585, 34.3611118], [27.9167483, 34.3611141], [27.9167348, 34.3611181], [27.9167214, 34.3611223], [27.9167126, 34.3611237], [27.9166997, 34.3611276], [27.9166898, 34.3611287], [27.9166784, 34.3611267], [27.9166684, 34.3611274], [27.9166562, 34.3611289], [27.9166435, 34.3611309], [27.9166344, 34.3611328], [27.9166228, 34.3611344], [27.9166093, 34.361139], [27.9165959, 34.3611437], [27.9165869, 34.3611454], [27.9165724, 34.3611512], [27.9165612, 34.361158], [27.9165501, 34.3611673], [27.9165376, 34.3611746], [27.9165287, 34.3611811], [27.916519, 34.3611896], [27.916509, 34.3611993], [27.9165007, 34.3612098], [27.916492, 34.3612217], [27.9164851, 34.3612291], [27.9164722, 34.3612412], [27.9164625, 34.3612484], [27.9164559, 34.3612526], [27.916442, 34.3612634], [27.9164345, 34.3612722], [27.9164281, 34.3612869], [27.9164232, 34.3613015], [27.9164159, 34.3613111], [27.9164105, 34.3613172], [27.9164032, 34.3613236], [27.9163954, 34.3613323], [27.9163827, 34.3613373], [27.9163694, 34.3613431], [27.9163565, 34.3613496], [27.9163444, 34.3613471], [27.9163338, 34.3613463], [27.916317, 34.3613543], [27.9163131, 34.3613551], [27.9163092, 34.3613501], [27.9163035, 34.3613475], [27.9162949, 34.3613526], [27.9162856, 34.3613513], [27.916276, 34.361346], [27.9162645, 34.3613363], [27.916257, 34.3613267], [27.91625, 34.3613192], [27.9162398, 34.3613135], [27.9162222, 34.3613058], [27.9162084, 34.3613], [27.9161951, 34.361298], [27.9161834, 34.3613019], [27.9161711, 34.3613058], [27.9161565, 34.3613108], [27.9161438, 34.3613183], [27.9161346, 34.3613267], [27.9161336, 34.3613491], [27.9161281, 34.3613629], [27.9161226, 34.3613783], [27.9160978, 34.3613857], [27.9160775, 34.3613807], [27.9160602, 34.3613793], [27.9160487, 34.3613776], [27.9160335, 34.3613814], [27.9160123, 34.3613824], [27.9159947, 34.3613858], [27.9159798, 34.361392], [27.9159663, 34.3613975], [27.9159541, 34.3614011], [27.9159361, 34.3614183], [27.9159211, 34.361423], [27.9159066, 34.3614239], [27.9158919, 34.3614258], [27.9158767, 34.3614312], [27.9158667, 34.3614331], [27.915846, 34.3614317], [27.9158345, 34.3614294], [27.9158241, 34.3614251], [27.9158174, 34.3614051], [27.9158147, 34.3613896], [27.9158152, 34.3613757], [27.9158165, 34.3613609], [27.9158182, 34.3613441], [27.9158183, 34.3613289], [27.9158183, 34.3613186], [27.9158173, 34.3613022], [27.9158137, 34.3612898], [27.9158045, 34.3612748], [27.9157973, 34.3612645], [27.9157818, 34.3612507], [27.9157704, 34.3612482], [27.9157652, 34.3612499], [27.9157549, 34.3612504], [27.9157426, 34.3612489], [27.9157267, 34.3612624], [27.9157172, 34.3612811], [27.915711, 34.3612984], [27.9157056, 34.3613167], [27.9157061, 34.361323], [27.9157178, 34.3613531], [27.915725, 34.3613708], [27.9157334, 34.3613856], [27.9157403, 34.3613972], [27.9157557, 34.36142], [27.915759, 34.3614313], [27.9157605, 34.361439], [27.915758, 34.3614464], [27.9157531, 34.3614555], [27.9157469, 34.3614634], [27.9157405, 34.3614699], [27.9157365, 34.3614784], [27.9157303, 34.3614886], [27.9157276, 34.3615005], [27.9157245, 34.3615136], [27.9157225, 34.3615253], [27.9157238, 34.3615375], [27.9157255, 34.3615554], [27.9157332, 34.3615659], [27.9157391, 34.361578], [27.9157443, 34.3615877], [27.915748, 34.3616013], [27.9157533, 34.3616174], [27.9157557, 34.36163], [27.9157575, 34.3616426], [27.9157589, 34.3616593], [27.9157599, 34.3616719], [27.9157556, 34.3616789], [27.9157479, 34.3616856], [27.9157343, 34.3616852], [27.9157195, 34.3616853], [27.9157097, 34.3616884], [27.9156965, 34.3616931], [27.9156781, 34.3616946], [27.9156584, 34.3616908], [27.9156473, 34.361681], [27.9156361, 34.3616807], [27.9156329, 34.3616847], [27.9156336, 34.3616862], [27.9156323, 34.3616817], [27.9156244, 34.3616759], [27.9156157, 34.3616715], [27.9156081, 34.3616666], [27.9155948, 34.3616539], [27.9155844, 34.3616533], [27.9155736, 34.3616508], [27.9155618, 34.361654], [27.9155558, 34.3616558], [27.9155446, 34.3616539], [27.9155345, 34.3616617], [27.9155257, 34.3616655], [27.915511, 34.3616672], [27.9155025, 34.3616716], [27.9154986, 34.3616812], [27.915485, 34.3616873], [27.9154755, 34.3616907], [27.9154703, 34.3617009], [27.9154629, 34.3617012], [27.9154547, 34.3616939], [27.9154491, 34.3616811], [27.9154426, 34.3616726], [27.9154307, 34.3616692], [27.9154268, 34.3616723], [27.9154232, 34.3616788], [27.9154195, 34.3616812], [27.9154183, 34.3616818], [27.9154167, 34.3616831], [27.9154152, 34.3616833], [27.9154144, 34.3616837], [27.9154134, 34.3616844], [27.9154121, 34.3616838], [27.9154126, 34.361685], [27.9154128, 34.3616858], [27.9154137, 34.361687], [27.9154078, 34.3616866], [27.9154056, 34.3616996], [27.9153965, 34.3617143], [27.9154004, 34.3617291], [27.9153944, 34.3617359], [27.9154004, 34.3617429], [27.9153953, 34.3617504], [27.9153952, 34.3617632], [27.9153946, 34.3617861], [27.9153943, 34.3618017], [27.9153929, 34.3618113], [27.915392, 34.3618281], [27.9153881, 34.3618417], [27.9153836, 34.3618504], [27.9153765, 34.3618665], [27.91537, 34.3618796], [27.9153626, 34.3618889], [27.9153552, 34.3619018], [27.9153495, 34.3619168], [27.9153443, 34.3619284], [27.9153374, 34.361938], [27.915329, 34.3619453], [27.9153194, 34.361954], [27.9153128, 34.3619605], [27.9153064, 34.3619677], [27.9152988, 34.361973], [27.9152907, 34.3619816], [27.9152842, 34.3619911], [27.9152764, 34.362002], [27.9152707, 34.3620143], [27.9152666, 34.3620253], [27.9152631, 34.3620366], [27.9152571, 34.3620453], [27.9152472, 34.3620477], [27.9152328, 34.3620431], [27.9152225, 34.3620373], [27.9152079, 34.3620322], [27.9151938, 34.3620359], [27.9151874, 34.3620473], [27.915185, 34.3620595], [27.9151852, 34.3620763], [27.9151879, 34.3620869], [27.9151898, 34.362102], [27.9151838, 34.3621153], [27.9151747, 34.3621256], [27.9151687, 34.3621371], [27.9151632, 34.3621493], [27.9151589, 34.3621596], [27.915155, 34.3621694]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": "4.5"}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+            var circle_marker_3c419f8fd4f01a73aaf9e42c1cbac193 = L.circleMarker(
+                [27.9170924, 34.3608328],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+        var popup_6c3571f415f4aed6246b32a6904bdff8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a077af0741601b35f17aa0266930f62 = $(`<div id="html_8a077af0741601b35f17aa0266930f62" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>46.7 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:08</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9170924</td></tr><tr><td>долгота:</td><td>34.3608328</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9170924,34.3608328" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9170924/34.3608328"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9170924&lon=34.3608328&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3608328,27.9170924&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9170924&lon=34.3608328" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9170924/34.3608328&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_6c3571f415f4aed6246b32a6904bdff8.setContent(html_8a077af0741601b35f17aa0266930f62);
+            
+        
+
+        circle_marker_3c419f8fd4f01a73aaf9e42c1cbac193.bindPopup(popup_6c3571f415f4aed6246b32a6904bdff8)
+        ;
+
+        
+    
+    
+            var marker_4299d18e4fa4e9441c4de293e6dc55e1 = L.marker(
+                [27.9170924, 34.3608328],
+                {}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+            var icon_bd397d321429f29335edde0f28f59b1b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_4299d18e4fa4e9441c4de293e6dc55e1.setIcon(icon_bd397d321429f29335edde0f28f59b1b);
+        
+    
+        var popup_37fff47e38eba9a9e801ea7d2fca353c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1368ab9d8d71ae528e0cf6e3bef6264 = $(`<div id="html_e1368ab9d8d71ae528e0cf6e3bef6264" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>46.7 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:08</nobr></td></tr><tr><td>в пути:</td><td>0:00:00</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9170924</td></tr><tr><td>долгота:</td><td>34.3608328</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9170924,34.3608328" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9170924/34.3608328"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9170924&lon=34.3608328&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3608328,27.9170924&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9170924&lon=34.3608328" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9170924/34.3608328&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_37fff47e38eba9a9e801ea7d2fca353c.setContent(html_e1368ab9d8d71ae528e0cf6e3bef6264);
+            
+        
+
+        marker_4299d18e4fa4e9441c4de293e6dc55e1.bindPopup(popup_37fff47e38eba9a9e801ea7d2fca353c)
+        ;
+
+        
+    
+    
+            var circle_marker_5f9efccb63acc31f0337c760e05971e0 = L.circleMarker(
+                [27.9168593, 34.3611115],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+        var popup_79a9975012b4036fdda14ceafee57e90 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ace49243446abc1f72437bc26a4e3278 = $(`<div id="html_ace49243446abc1f72437bc26a4e3278" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>46.7 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:09</nobr></td></tr><tr><td>в пути:</td><td>0:00:59</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>38.42 м</td></tr><tr><td>рассчет 2:</td><td>38.42 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9168593</td></tr><tr><td>долгота:</td><td>34.3611115</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9168593,34.3611115" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9168593/34.3611115"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9168593&lon=34.3611115&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3611115,27.9168593&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9168593&lon=34.3611115" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9168593/34.3611115&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_79a9975012b4036fdda14ceafee57e90.setContent(html_ace49243446abc1f72437bc26a4e3278);
+            
+        
+
+        circle_marker_5f9efccb63acc31f0337c760e05971e0.bindPopup(popup_79a9975012b4036fdda14ceafee57e90)
+        ;
+
+        
+    
+    
+            var circle_marker_7779e197c3937702c8809dc651fa2000 = L.circleMarker(
+                [27.9165501, 34.3611673],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+        var popup_df6b36b0377c036dbd52f5d7bb81ac58 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5fee08e4c271d54035833d4d517bba78 = $(`<div id="html_5fee08e4c271d54035833d4d517bba78" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>47.0 м</td></tr><tr><td>изменение:</td><td>0.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:10</nobr></td></tr><tr><td>в пути:</td><td>0:01:33</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>68.99 м</td></tr><tr><td>рассчет 2:</td><td>69.08 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9165501</td></tr><tr><td>долгота:</td><td>34.3611673</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9165501,34.3611673" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9165501/34.3611673"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9165501&lon=34.3611673&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3611673,27.9165501&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9165501&lon=34.3611673" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9165501/34.3611673&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_df6b36b0377c036dbd52f5d7bb81ac58.setContent(html_5fee08e4c271d54035833d4d517bba78);
+            
+        
+
+        circle_marker_7779e197c3937702c8809dc651fa2000.bindPopup(popup_df6b36b0377c036dbd52f5d7bb81ac58)
+        ;
+
+        
+    
+    
+            var marker_5328d71b56be69d78b747850dc01ea22 = L.marker(
+                [27.9165501, 34.3611673],
+                {}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+            var icon_6237b49750816af67b46bc94c886f7a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_5328d71b56be69d78b747850dc01ea22.setIcon(icon_6237b49750816af67b46bc94c886f7a0);
+        
+    
+        var popup_7f47b534194e884824837063486fac04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_50a05b7003f8034f9a32eb4a13015c6b = $(`<div id="html_50a05b7003f8034f9a32eb4a13015c6b" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>47.0 м</td></tr><tr><td>изменение:</td><td>0.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:10</nobr></td></tr><tr><td>в пути:</td><td>0:01:33</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>68.99 м</td></tr><tr><td>рассчет 2:</td><td>69.08 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9165501</td></tr><tr><td>долгота:</td><td>34.3611673</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9165501,34.3611673" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9165501/34.3611673"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9165501&lon=34.3611673&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3611673,27.9165501&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9165501&lon=34.3611673" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9165501/34.3611673&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_7f47b534194e884824837063486fac04.setContent(html_50a05b7003f8034f9a32eb4a13015c6b);
+            
+        
+
+        marker_5328d71b56be69d78b747850dc01ea22.bindPopup(popup_7f47b534194e884824837063486fac04)
+        ;
+
+        
+    
+    
+            var circle_marker_0fcae916c73842e298cabf8172cc49d6 = L.circleMarker(
+                [27.9163092, 34.3613501],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+        var popup_88d1d670fff6351399378d9cde9d650a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_69482fdbcfa8bc45883c577b74bcf35f = $(`<div id="html_69482fdbcfa8bc45883c577b74bcf35f" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>47.0 м</td></tr><tr><td>изменение:</td><td>0.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:10</nobr></td></tr><tr><td>в пути:</td><td>0:02:06</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>101.58 м</td></tr><tr><td>рассчет 2:</td><td>101.68 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9163092</td></tr><tr><td>долгота:</td><td>34.3613501</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9163092,34.3613501" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9163092/34.3613501"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9163092&lon=34.3613501&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3613501,27.9163092&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9163092&lon=34.3613501" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9163092/34.3613501&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_88d1d670fff6351399378d9cde9d650a.setContent(html_69482fdbcfa8bc45883c577b74bcf35f);
+            
+        
+
+        circle_marker_0fcae916c73842e298cabf8172cc49d6.bindPopup(popup_88d1d670fff6351399378d9cde9d650a)
+        ;
+
+        
+    
+    
+            var circle_marker_d03a313c6a8dd465907e9001ad725255 = L.circleMarker(
+                [27.9159947, 34.3613858],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+        var popup_037a67be246eb58fcf3da22cd62c8376 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_912d19c624609e8a2d4248a5e1c2b0ce = $(`<div id="html_912d19c624609e8a2d4248a5e1c2b0ce" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>47.0 м</td></tr><tr><td>изменение:</td><td>0.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:13</nobr></td></tr><tr><td>в пути:</td><td>0:04:16</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>139.03 м</td></tr><tr><td>рассчет 2:</td><td>139.16 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9159947</td></tr><tr><td>долгота:</td><td>34.3613858</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9159947,34.3613858" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9159947/34.3613858"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9159947&lon=34.3613858&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3613858,27.9159947&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9159947&lon=34.3613858" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9159947/34.3613858&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_037a67be246eb58fcf3da22cd62c8376.setContent(html_912d19c624609e8a2d4248a5e1c2b0ce);
+            
+        
+
+        circle_marker_d03a313c6a8dd465907e9001ad725255.bindPopup(popup_037a67be246eb58fcf3da22cd62c8376)
+        ;
+
+        
+    
+    
+            var marker_81856a12896b32a2be13be4e6f29ae91 = L.marker(
+                [27.9159947, 34.3613858],
+                {}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+            var icon_14a18c139945dd68463562a07990b5cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_81856a12896b32a2be13be4e6f29ae91.setIcon(icon_14a18c139945dd68463562a07990b5cb);
+        
+    
+        var popup_d53145c0261294c09ed578c3a289b19e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f7e9c5ba5f2897cf2debc1e7ca31a5d = $(`<div id="html_8f7e9c5ba5f2897cf2debc1e7ca31a5d" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>47.0 м</td></tr><tr><td>изменение:</td><td>0.3 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:13</nobr></td></tr><tr><td>в пути:</td><td>0:04:16</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>139.03 м</td></tr><tr><td>рассчет 2:</td><td>139.16 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9159947</td></tr><tr><td>долгота:</td><td>34.3613858</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9159947,34.3613858" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9159947/34.3613858"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9159947&lon=34.3613858&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3613858,27.9159947&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9159947&lon=34.3613858" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9159947/34.3613858&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_d53145c0261294c09ed578c3a289b19e.setContent(html_8f7e9c5ba5f2897cf2debc1e7ca31a5d);
+            
+        
+
+        marker_81856a12896b32a2be13be4e6f29ae91.bindPopup(popup_d53145c0261294c09ed578c3a289b19e)
+        ;
+
+        
+    
+    
+            var circle_marker_aa6be13686624975447fedb5ac51b4e4 = L.circleMarker(
+                [27.9157652, 34.3612499],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+        var popup_c380a6702a070a1a0f574523c05654af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eec473edfa64f77d9a2109a7e7bd8e9c = $(`<div id="html_eec473edfa64f77d9a2109a7e7bd8e9c" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>46.7 м</td></tr><tr><td>изменение:</td><td>0.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:13</nobr></td></tr><tr><td>в пути:</td><td>0:04:50</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>178.41 м</td></tr><tr><td>рассчет 2:</td><td>178.86 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9157652</td></tr><tr><td>долгота:</td><td>34.3612499</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9157652,34.3612499" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9157652/34.3612499"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9157652&lon=34.3612499&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3612499,27.9157652&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9157652&lon=34.3612499" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9157652/34.3612499&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_c380a6702a070a1a0f574523c05654af.setContent(html_eec473edfa64f77d9a2109a7e7bd8e9c);
+            
+        
+
+        circle_marker_aa6be13686624975447fedb5ac51b4e4.bindPopup(popup_c380a6702a070a1a0f574523c05654af)
+        ;
+
+        
+    
+    
+            var circle_marker_cd4d537965ec5094103bf3ce48f6f990 = L.circleMarker(
+                [27.9157332, 34.3615659],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+        var popup_2140507ed6ae2a14b9c7c94b93d69d5e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_777370a910824bae3503ea833999da12 = $(`<div id="html_777370a910824bae3503ea833999da12" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>43.9 м</td></tr><tr><td>изменение:</td><td>-2.8 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:14</nobr></td></tr><tr><td>в пути:</td><td>0:05:22</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>218.57 м</td></tr><tr><td>рассчет 2:</td><td>227.33 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9157332</td></tr><tr><td>долгота:</td><td>34.3615659</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9157332,34.3615659" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9157332/34.3615659"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9157332&lon=34.3615659&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3615659,27.9157332&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9157332&lon=34.3615659" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9157332/34.3615659&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_2140507ed6ae2a14b9c7c94b93d69d5e.setContent(html_777370a910824bae3503ea833999da12);
+            
+        
+
+        circle_marker_cd4d537965ec5094103bf3ce48f6f990.bindPopup(popup_2140507ed6ae2a14b9c7c94b93d69d5e)
+        ;
+
+        
+    
+    
+            var marker_1aafd0d8a7ed161faecbe69812102dcb = L.marker(
+                [27.9157332, 34.3615659],
+                {}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+            var icon_edb54481b789cd88446b2318f915c62a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_1aafd0d8a7ed161faecbe69812102dcb.setIcon(icon_edb54481b789cd88446b2318f915c62a);
+        
+    
+        var popup_f7d20b14794958c4fea444fefc0b791e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf46497ddee5a45f88f31a7658f3c48e = $(`<div id="html_bf46497ddee5a45f88f31a7658f3c48e" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>43.9 м</td></tr><tr><td>изменение:</td><td>-2.8 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:14</nobr></td></tr><tr><td>в пути:</td><td>0:05:22</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>218.57 м</td></tr><tr><td>рассчет 2:</td><td>227.33 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9157332</td></tr><tr><td>долгота:</td><td>34.3615659</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9157332,34.3615659" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9157332/34.3615659"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9157332&lon=34.3615659&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3615659,27.9157332&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9157332&lon=34.3615659" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9157332/34.3615659&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_f7d20b14794958c4fea444fefc0b791e.setContent(html_bf46497ddee5a45f88f31a7658f3c48e);
+            
+        
+
+        marker_1aafd0d8a7ed161faecbe69812102dcb.bindPopup(popup_f7d20b14794958c4fea444fefc0b791e)
+        ;
+
+        
+    
+    
+            var circle_marker_cd5525ff538678056d19f57198c8cbbe = L.circleMarker(
+                [27.9155844, 34.3616533],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+        var popup_74c74ac9ca24a53f92156beaffb5889f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_54f709daaeae4f9c1ff52b91fb18f037 = $(`<div id="html_54f709daaeae4f9c1ff52b91fb18f037" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>44.3 м</td></tr><tr><td>изменение:</td><td>-2.4 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:14</nobr></td></tr><tr><td>в пути:</td><td>0:05:57</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>250.41 м</td></tr><tr><td>рассчет 2:</td><td>259.22 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9155844</td></tr><tr><td>долгота:</td><td>34.3616533</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9155844,34.3616533" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9155844/34.3616533"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9155844&lon=34.3616533&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3616533,27.9155844&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9155844&lon=34.3616533" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9155844/34.3616533&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_74c74ac9ca24a53f92156beaffb5889f.setContent(html_54f709daaeae4f9c1ff52b91fb18f037);
+            
+        
+
+        circle_marker_cd5525ff538678056d19f57198c8cbbe.bindPopup(popup_74c74ac9ca24a53f92156beaffb5889f)
+        ;
+
+        
+    
+    
+            var circle_marker_9676c83b9a50fedf7ae78506d7a3038a = L.circleMarker(
+                [27.9154121, 34.3616838],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+        var popup_dc765fd506bae21864a63c84145deab0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_180974d20397624b309ab431c52a1eeb = $(`<div id="html_180974d20397624b309ab431c52a1eeb" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>31.3 м</td></tr><tr><td>изменение:</td><td>-15.4 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:15</nobr></td></tr><tr><td>в пути:</td><td>0:06:35</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>271.54 м</td></tr><tr><td>рассчет 2:</td><td>294.26 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9154121</td></tr><tr><td>долгота:</td><td>34.3616838</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9154121,34.3616838" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9154121/34.3616838"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9154121&lon=34.3616838&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3616838,27.9154121&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9154121&lon=34.3616838" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9154121/34.3616838&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_dc765fd506bae21864a63c84145deab0.setContent(html_180974d20397624b309ab431c52a1eeb);
+            
+        
+
+        circle_marker_9676c83b9a50fedf7ae78506d7a3038a.bindPopup(popup_dc765fd506bae21864a63c84145deab0)
+        ;
+
+        
+    
+    
+            var marker_bf8145a9bf8ea74756cd41364e9e286d = L.marker(
+                [27.9154121, 34.3616838],
+                {}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+            var icon_e51eca279ffd83f3d57376efe8014e7e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_bf8145a9bf8ea74756cd41364e9e286d.setIcon(icon_e51eca279ffd83f3d57376efe8014e7e);
+        
+    
+        var popup_cda572644e4040baaed9b042f726e632 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2d5e3fae46e5a8fbbce151caa46964c = $(`<div id="html_d2d5e3fae46e5a8fbbce151caa46964c" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>31.3 м</td></tr><tr><td>изменение:</td><td>-15.4 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:15</nobr></td></tr><tr><td>в пути:</td><td>0:06:35</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>271.54 м</td></tr><tr><td>рассчет 2:</td><td>294.26 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9154121</td></tr><tr><td>долгота:</td><td>34.3616838</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9154121,34.3616838" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9154121/34.3616838"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9154121&lon=34.3616838&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3616838,27.9154121&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9154121&lon=34.3616838" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9154121/34.3616838&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_cda572644e4040baaed9b042f726e632.setContent(html_d2d5e3fae46e5a8fbbce151caa46964c);
+            
+        
+
+        marker_bf8145a9bf8ea74756cd41364e9e286d.bindPopup(popup_cda572644e4040baaed9b042f726e632)
+        ;
+
+        
+    
+    
+            var circle_marker_1abd1a9f3a92712f17dbe1ccff510775 = L.circleMarker(
+                [27.9153194, 34.361954],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+        var popup_77bdb0384d5aa88991d455d1b2491691 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_372f9d875966ada2d9c48417c9e7c11b = $(`<div id="html_372f9d875966ada2d9c48417c9e7c11b" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>27.7 м</td></tr><tr><td>изменение:</td><td>-19.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:16</nobr></td></tr><tr><td>в пути:</td><td>0:07:11</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>304.58 м</td></tr><tr><td>рассчет 2:</td><td>331.14 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.9153194</td></tr><tr><td>долгота:</td><td>34.361954</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.9153194,34.361954" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.9153194/34.361954"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.9153194&lon=34.361954&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.361954,27.9153194&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.9153194&lon=34.361954" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.9153194/34.361954&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_77bdb0384d5aa88991d455d1b2491691.setContent(html_372f9d875966ada2d9c48417c9e7c11b);
+            
+        
+
+        circle_marker_1abd1a9f3a92712f17dbe1ccff510775.bindPopup(popup_77bdb0384d5aa88991d455d1b2491691)
+        ;
+
+        
+    
+    
+            var marker_ba2f513274d161f0d35fab694ac74e28 = L.marker(
+                [27.915155, 34.3621694],
+                {}
+            ).addTo(feature_group_097ceb5a5590c9d601c1102473c5fe7d);
+        
+    
+            var icon_dbfe17a0cd8e964d27311141b2075bd8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "male", "iconAnchor": [0, 0], "iconColor": "blue", "iconSize": [5, 5], "markerColor": "blue", "prefix": "fa", "shadowSize": [5, 5]}
+            );
+            marker_ba2f513274d161f0d35fab694ac74e28.setIcon(icon_dbfe17a0cd8e964d27311141b2075bd8);
+        
+    
+        var popup_6ad46f00c187ce1abf323f960b037402 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1c0f8a1924d419ed077abd181d0bb46 = $(`<div id="html_d1c0f8a1924d419ed077abd181d0bb46" style="width: 100.0%; height: 100.0%;"><nobr><font color="purple"><b>отель Reef Oasis Blue Bay Resort . Дорога из корпуса на пляж</b></font></nobr><br><br><table><tr><td><b>Высота:</b></td><td>27.7 м</td></tr><tr><td>изменение:</td><td>-19.0 м</td></tr><tr><td><b>Время:</b></td><td><nobr>22.08.2025 19:16</nobr></td></tr><tr><td>в пути:</td><td>0:07:43</td></tr><tr><td><b>Расстояние:</b></td><td></td></tr><tr><td>рассчет 1:</td><td>338.41 м</td></tr><tr><td>рассчет 2:</td><td>364.98 м</td></tr><tr><td><b>Координаты:</b></td><td></td></tr><tr><td>широта:</td><td>27.915155</td></tr><tr><td>долгота:</td><td>34.3621694</td></tr><tr><td><br></td><td></td></tr><tr><td><b>На картах:</b></td><td><nobr><a href = "http://www.google.com/maps?q=27.915155,34.3621694" title="Точка на карте google" target = "_blank"><img src="http://www.google.com/favicon.ico" width="20" ></a><a href = "https://www.openstreetmap.org/#map=16/27.915155/34.3621694"  title="Точка на карте openstreetmap" target = "_blank"><img src="https://openstreetmap.org/favicon.ico" width="20" ></a><a href = "https://osmand.net/go?lat=27.915155&lon=34.3621694&z=16" title="Точка на карте osmand" target = "_blank"><img src="https://osmand.net/images/favicons/favicon.ico" width="20" ></a><a href = "https://yandex.ru/maps?pt=34.3621694,27.915155&z=16" title="Точка на карте yandex" target = "_blank"><img src="https://yandex.ru/maps/favicon.ico" width="20" ></a><a href = "https://yandex.ru/pogoda/maps/nowcast?lat=27.915155&lon=34.3621694" title="Карта осадков яндекс"  target = "_blank"><img src="https://yandex.ru/pogoda/favicon.ico" width="20" ></a><a href = "https://windy.com/27.915155/34.3621694&z=16" title="Прогноз погоды windy" target = "_blank"><img src="https://windy.com/favicon.ico" width="20" ></a></nobr></td></tr></table></div>`)[0];
+                popup_6ad46f00c187ce1abf323f960b037402.setContent(html_d1c0f8a1924d419ed077abd181d0bb46);
+            
+        
+
+        marker_ba2f513274d161f0d35fab694ac74e28.bindPopup(popup_6ad46f00c187ce1abf323f960b037402)
+        ;
+
+        
+    
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topright", "title": "\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u043d\u0430 \u043f\u043e\u043b\u043d\u043e\u043c \u044d\u043a\u0440\u0430\u043d\u0435", "titleCancel": "\u041d\u0430\u0436\u043c\u0438 \u0434\u043b\u044f \u0432\u044b\u0445\u043e\u0434\u0430"}
+            ).addTo(map_184ff67fdc4f129361605a960f586536);
+        
+    
+            var layer_control_eba44148b61cd1578f70c38fc4fbd3db = {
+                base_layers : {
+                    "OpenStreet Map" : tile_layer_4f1f50f6f02c8e7c21fd0e0fe9da8e62,
+                    "CyclOSM" : tile_layer_e24a8a9d8f685c62259c1888a0508b94,
+                    "Stamen Terrain" : tile_layer_82fa43dcea6e78850cedde07db8c64bc,
+                    "Google Maps" : tile_layer_8ab4f706751932dfb7022856d6c2a6e4,
+                    "Cartodb Positron" : tile_layer_4f0d5d96f03bc3479d71f760e264f3e3,
+                },
+                overlays :  {
+                    "\u003cfont color=\"purple\"\u003e\u041f\u0440\u043e\u0433\u043d\u043e\u0437 \u043f\u043e\u0433\u043e\u0434\u044b\u003c/font\u003e" : feature_group_160c11e71dab0d961099cd4aaa21e0c4,
+                    "\u003cfont color=\"red\" size=\"4\"\u003e---\u003c/font\u003e \u043e\u0442\u0435\u043b\u044c Reef Oasis Blue Bay Resort  - \u0443\u043b\u0438\u0446\u0430 El-Salam 6.11 \u043a\u043c    2025-08-23 \u003cfont color=\"red\"\u003e \u003ci\u003e \u0430\u0432\u0442\u043e \u003c/i\u003e\u003c/font\u003e" : feature_group_1352e33ea1868e5980d92c04241154ae,
+                    "\u003cfont color=\"blue\" size=\"4\"\u003e---\u003c/font\u003e \u043e\u0442\u0435\u043b\u044c Reef Oasis Blue Bay Resort . \u0414\u043e\u0440\u043e\u0433\u0430 \u0438\u0437 \u043a\u043e\u0440\u043f\u0443\u0441\u0430 \u043d\u0430 \u043f\u043b\u044f\u0436  2025-08-22 " : feature_group_097ceb5a5590c9d601c1102473c5fe7d,
+                },
+            };
+            L.control.layers(
+                layer_control_eba44148b61cd1578f70c38fc4fbd3db.base_layers,
+                layer_control_eba44148b61cd1578f70c38fc4fbd3db.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_184ff67fdc4f129361605a960f586536);
+            tile_layer_e24a8a9d8f685c62259c1888a0508b94.remove();
+            tile_layer_82fa43dcea6e78850cedde07db8c64bc.remove();
+            tile_layer_8ab4f706751932dfb7022856d6c2a6e4.remove();
+            tile_layer_4f0d5d96f03bc3479d71f760e264f3e3.remove();
+            feature_group_160c11e71dab0d961099cd4aaa21e0c4.remove();
+        
+    
+            var mouse_position_90e74dde16857edd7313025f9626723c = new L.Control.MousePosition(
+                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "bottomright", "prefix": "", "separator": " : "}
+            );
+            mouse_position_90e74dde16857edd7313025f9626723c.options["latFormatter"] =
+                undefined;
+            mouse_position_90e74dde16857edd7313025f9626723c.options["lngFormatter"] =
+                undefined;
+            map_184ff67fdc4f129361605a960f586536.addControl(mouse_position_90e74dde16857edd7313025f9626723c);
+ </script>
+</html>
