@@ -1,5 +1,13 @@
 export const tracks = [
   {
+    map: "mapTashkent20260606.html",
+    cover: "gif",
+    dscr:
+      "Вечерняя прогулка до ул Х. Олимажана (старая консверватория) и обратно",
+    place: "tashkent",
+    date: "20260606",
+  },
+  {
     map: "mapTashkent20260603.html",
     cover: "gif",
     dscr: "парк Янги Узбекистан",
